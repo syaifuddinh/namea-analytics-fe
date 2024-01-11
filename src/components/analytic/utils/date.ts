@@ -25,7 +25,7 @@ export function getMonthLabelByDate(targetDate: Date): string {
 }
 
 export function getLastMonthLabel(): string {
-	return getMonthLabel(getCurrentMonth() - 1)
+	return getMonthLabel(getCurrentMonth())
 }
 
 export function getFirstDayOfLastWeek() {

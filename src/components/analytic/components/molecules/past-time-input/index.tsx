@@ -32,11 +32,12 @@ const options = [
 	}
 ]
 
-export default function PastTimeInput({ }) {
-  return (
-    <SelectInput
-    	placeholder="Select period"
-    	options={options}
-    />
-  )
+export default function PastTimeInput({ onChange }) {
+	return (
+		<SelectInput
+			placeholder="Select period"
+			options={options}
+			onChange={onChange}
+		/>
+	)
 }
