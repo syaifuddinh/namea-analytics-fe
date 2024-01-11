@@ -1,0 +1,9 @@
+.base-card {
+    border: 1px solid var(--base-border-color);
+    border-radius: var(--base-card-radius);
+    overflow: hidden;
+}
+
+.base-card_header {
+    background: var(--base-linear-gradient);
+}

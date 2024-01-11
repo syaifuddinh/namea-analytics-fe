@@ -1,0 +1,14 @@
+:root {
+	--base-gray: rgba(204, 240, 244, 0.6);
+	--base-warning: rgba(255, 209, 121, 1);
+	--base-primary: rgba(8, 189, 213, 1);
+	--base-danger: rgba(222, 108, 44, 1);
+	--base-border-color: rgba(255, 255, 255, 0.1);
+	--base-radius: 0.25rem;
+	--base-card-radius: calc(var(--base-radius) * 3);
+	--base-spacing: 1rem;
+	--base-input-height: 2.375rem;
+	--base-linear-gradient: linear-gradient(78.3deg, rgba(255, 255, 255, 0.2) -109.23%, rgba(0, 0, 0, 0) 91.42%),
+		linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+		linear-gradient(0deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02));
+}

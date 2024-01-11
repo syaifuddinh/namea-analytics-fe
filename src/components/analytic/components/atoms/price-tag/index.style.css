@@ -1,0 +1,11 @@
+.price-tag {
+	font-weight: 600;
+}
+
+.price-tag_prefix {
+	color: var(--base-gray);
+}
+
+.price-tag_value.danger {
+	color: var(--base-danger);
+}

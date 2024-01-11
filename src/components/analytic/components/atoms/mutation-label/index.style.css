@@ -1,0 +1,19 @@
+.mutation-label {
+	border-radius: 1rem;
+}
+
+.mutation-label.primary {
+	background: rgba(12, 186, 197, 0.1);
+}
+
+.mutation-label.primary * {
+	color: var(--base-primary);
+}
+
+.mutation-label.danger {
+	background: rgba(222, 108, 44, 0.1);
+}
+
+.mutation-label.danger * {
+	color: var(--base-danger);
+}

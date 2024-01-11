@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	background: linear-gradient(0deg, #001619, #001619),
+	radial-gradient(72.12% 111.12% at -1.42% 79.69%, #002F2D 0%, rgba(0, 22, 25, 0) 83.07%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+	radial-gradient(135.33% 146.29% at 100% 2.34%, #002F2D 0%, rgba(0, 22, 25, 0) 60.5%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}

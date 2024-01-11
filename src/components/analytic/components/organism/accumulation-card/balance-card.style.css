@@ -1,0 +1,17 @@
+.balance-card {
+	border-radius: var(--base-radius);	
+	border: 1px solid var(--base-border-color);
+}
+
+.balance-card_title {
+	border-bottom: 1px solid var(--base-border-color);
+}
+
+.balance-card_price-tag * {
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.balance-card_price-prefix {
+	color: var(--base-gray);
+}

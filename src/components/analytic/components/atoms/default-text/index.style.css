@@ -1,0 +1,11 @@
+body .default-text {
+	color: var(--base-gray);
+}
+
+body .default-text.warning {
+	color: var(--base-warning);
+}
+
+body .default-text.white {
+	color: white;
+}

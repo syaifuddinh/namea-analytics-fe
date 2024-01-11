@@ -1,0 +1,35 @@
+.costing-detail-card{
+	border: 1px solid var(--base-border-color);
+    border-radius: var(--base-card-radius);
+    overflow: hidden;
+}
+
+.costing-detail-card_header {
+	border-bottom: 1px solid var(--base-border-color);
+}
+
+.costing-detail-card_price-prefix {
+	color: var(--base-gray);
+}
+
+.costing-detail-card_badge {
+	width: 0.2rem;
+	height: 0.825rem;
+	border-radius: 1rem;
+}
+
+.costing-detail-card_badge.primary {
+	background: linear-gradient(180deg, #08BDD5 0%, #0561B7 100%);
+	box-shadow: 0px 0px 0px 3px rgba(8, 189, 213, 0.2);
+}
+
+.costing-detail-card_badge.warning {
+	background: linear-gradient(180deg, #DF832F 0%, #CD482B 100%);
+	box-shadow: 0px 0px 0px 3px rgba(223, 131, 47, 0.2);
+}
+
+.costing-detail-card_badge.success {
+	background: linear-gradient(180deg, #CB52F5 0%, #7A04C2 100%);
+	box-shadow: 0px 0px 0px 3px rgba(203, 82, 245, 0.2);
+}
+
