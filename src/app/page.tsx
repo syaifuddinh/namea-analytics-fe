@@ -12,6 +12,7 @@ import ProfitSummaryCard from "@/components/organisms/dashboard/profit-summary-c
 import WalletCard from "@/components/organisms/dashboard/wallet-card"
 import MemberOverviewCard from "@/components/organisms/dashboard/member-overview-card"
 import CashflowOverviewCard from "@/components/organisms/dashboard/cashflow-overview-card"
+import ReactChart from "@/components/atoms/react-chart"
 
 export default function Home() {
   return (
@@ -40,7 +41,11 @@ export default function Home() {
   		</div>
 
       <div className="dashboard_content mt-5">
+          <div style={{width: "20rem", height: "10rem", background: "white" }}>
+            <ReactChart />
+          </div>
           <div className="grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-3">
+
               <MonthlyInsightCard
                   title={"December Total Profit"}
                   mutationVariant="primary"
