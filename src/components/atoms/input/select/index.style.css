@@ -1,0 +1,24 @@
+.select-input * {
+    color: theme("colors.gray.500");
+}
+
+.select-input [class$="-control"] {
+	border-color: var(--base-border-theme-color);
+	border-width: 2px;
+}
+
+.select-input #react-select-5-placeholder {
+    color: theme("colors.gray.500");
+}
+
+.select-input [class$="singleValue"] {
+	color: var(--mute-theme-color);
+}
+
+.select-input [class$="ValueContainer"] {
+	background-color: transparent;
+}
+
+.select-input [class$="control"] {
+	background-color: transparent;
+}

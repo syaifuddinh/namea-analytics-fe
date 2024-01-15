@@ -60,7 +60,7 @@ export default function AnalyticComponent() {
     } = useAnalyticController()
 
   return (
-    <div className="analytic-container text-white p-5">
+    <div className="analytic-container text-white">
     	<BaseCard
             profit={monthProfit}
             year={yearValue}

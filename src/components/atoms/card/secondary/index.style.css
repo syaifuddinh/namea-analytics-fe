@@ -1,0 +1,7 @@
+.secondary-card {
+	border: 1px solid var(--base-border-theme-color);
+	border-radius: 0.5rem;	
+	background: var(--base-bg5);
+
+
+}

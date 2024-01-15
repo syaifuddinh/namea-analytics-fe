@@ -1,0 +1,50 @@
+:root {
+	--dropdown-radius: 0.5rem;
+}
+
+.menubar .menubar_item, .menubar_logo {
+	color: var(--white-theme-color);
+}
+
+.menubar_dropdown-item {
+	color: var(--white-theme-color);
+	background: var(--dark-gray-theme-color);
+	border-bottom: 1px solid var(--primary-theme-color);
+}
+
+.menubar_dropdown-item:hover {
+	color: white;
+}
+
+.menubar_user-profile_greeting {
+	color: var(--gray-theme-color);
+}
+
+.menubar_user-profile_username {
+	color: var(--white-theme-color);
+}
+
+.menubar_dropdown-item:first-child {
+	border-top-left-radius: var(--dropdown-radius);
+	border-top-right-radius: var(--dropdown-radius);
+}
+
+.menubar_dropdown-item:last-child {
+	border-bottom-left-radius: var(--dropdown-radius);
+	border-bottom-right-radius: var(--dropdown-radius);
+	border-bottom: none;
+}
+
+.menubar_user-profile_photo img {
+	width: 3rem;
+	height: auto;
+}
+
+.menubar_user-profile_photo {
+	width: 3rem;
+	height: 3rem;
+	min-width: 3rem;
+	min-height: 3rem;
+	overflow: hidden;
+	border-radius: 100rem;
+}

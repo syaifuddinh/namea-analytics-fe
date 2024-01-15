@@ -1,0 +1,32 @@
+.panel_label {
+	border-radius: var(--base-radius);
+	color: var(--white-theme-color);
+}
+
+.panel_label.primary {
+	background: linear-gradient(180deg, #0CBAC5 0%, #015B77 100%);
+}
+
+.panel_label.danger {
+	background: linear-gradient(180deg, #DE6C2C 0%, #A62F14 100%);
+}
+
+.panel_label.success {
+	background: linear-gradient(180deg, #CB52F5 0%, #7A04C2 100%);
+}
+
+.panel_body.primary {
+	
+}
+
+.panel_body {
+	
+}
+
+.panel_value {
+	color: var(--warning-theme-color);
+}
+
+.panel_value-suffix {
+	color: var(--gray-theme-color);
+}

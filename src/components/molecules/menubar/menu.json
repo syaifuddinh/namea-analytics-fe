@@ -1,0 +1,48 @@
+{
+	"items": [
+		{
+			"id": "home",
+			"name": "home",
+			"childrens": []
+		},
+		{
+			"id": "user-management",
+			"name": "user management",
+			"childrens": []
+		},
+		{
+			"id": "super-agent",
+			"name": "super agent",
+			"childrens": []
+		},
+		{
+			"id": "agent",
+			"name": "agent",
+			"childrens": []
+		},
+		{
+			"id": "cashflow",
+			"name": "cashflow",
+			"childrens": [
+				{
+					"id": "cashflow-item",
+					"name": "cashflow item"
+				},
+				{
+					"id": "cashflow-item-2",
+					"name": "cashflow item 2"
+				}
+			]
+		},
+		{
+			"id": "costing",
+			"name": "costing",
+			"childrens": [
+				{
+					"id": "costing-item",
+					"name": "costing item"
+				}
+			]
+		}
+	]
+}

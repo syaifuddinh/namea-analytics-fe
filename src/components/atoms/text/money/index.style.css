@@ -1,0 +1,6 @@
+.money-text {
+	color: var(--white-theme-color);
+}
+.money-text .money-text_suffix {
+	color: var(--gray-theme-color);
+}

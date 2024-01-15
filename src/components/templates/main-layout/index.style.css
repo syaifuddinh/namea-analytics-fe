@@ -1,0 +1,15 @@
+:root {
+	--main-layout-padding: 4rem;
+}
+
+.main-layout_menubar {
+	padding-right: var(--main-layout-padding);
+	padding-left: var(--main-layout-padding);
+	border-bottom: 1px solid var(--base-border-theme-color);
+}
+
+.main-layout_content {
+	margin-right: var(--main-layout-padding);
+	margin-left: var(--main-layout-padding);
+	padding-top: 2rem;
+}

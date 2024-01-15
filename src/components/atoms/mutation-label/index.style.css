@@ -1,0 +1,30 @@
+.mutation-label {
+	border-radius: 1rem;
+	color: var(--white-theme-color1);
+}
+
+.mutation-label.primary {
+	background: rgba(12, 186, 197, 0.1);
+}
+
+.mutation-label.primary * {
+	color: var(--base-primary);
+}
+
+.mutation-label.danger {
+	background: rgba(222, 108, 44, 0.1);
+}
+
+.mutation-label.danger * {
+	color: var(--base-danger);
+}
+
+.mutation-label.warning {
+	background: rgba(255, 209, 121, 0.1);
+}
+
+.mutation-label.warning * {
+	color: var(--warning-theme-color);
+;
+
+}

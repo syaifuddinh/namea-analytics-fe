@@ -1,0 +1,9 @@
+.costing-overview-card_footer {
+	border-top: 1px solid var(--base-border-theme-color);
+}
+
+.costing-overview-card_review {
+	border-radius: 0.25rem;
+	border: 1px solid var(--base-border-theme-color);
+	background: linear-gradient(0deg, rgba(205, 251, 255, 0.02), rgba(205, 251, 255, 0.02));
+}
