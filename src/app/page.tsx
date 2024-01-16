@@ -41,9 +41,6 @@ export default function Home() {
   		</div>
 
       <div className="dashboard_content mt-5">
-          <div style={{width: "20rem", height: "10rem", background: "white" }}>
-            <ReactChart />
-          </div>
           <div className="grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-3">
 
               <MonthlyInsightCard

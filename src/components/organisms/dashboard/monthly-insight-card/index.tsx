@@ -8,6 +8,7 @@ import MoneyText from "@/components/atoms/text/money"
 import TinyText from "@/components/atoms/text/tiny"
 import MutationLabel from "@/components/atoms/mutation-label"
 import "./index.style.css"
+import { simplifyNumber } from "@/utils/number";
 
 const Header = ({ title, mutationVariant }) => {
 	return (
@@ -67,6 +68,7 @@ const MonthlyInsightCard = ({
 					labels={labels}
 					datasets={datasets}
 					variant="line"
+					yTicksCallback={oldValue => simplifyNumber(oldValue) }
 				/>
 			</div>
 		</Card>

@@ -32,8 +32,13 @@ const labels = ["2020", "2021", "2022", "2023"]
 const createGradient = () => {
 	const ctx = document.createElement('canvas').getContext('2d');
 	const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-	gradient.addColorStop(0, 'rgba(7, 183, 172, 1)');
-	gradient.addColorStop(1, 'rgba(8, 121, 129, 1)');
+	gradient.addColorStop(0, '#07B7AC');
+	gradient.addColorStop(1, '#087981');
+	// ctx.shadowColor = 'rgba(20, 10, 0, 0.5)';
+ //    ctx.shadowBlur = 5;
+ //    ctx.shadowOffsetX = 3;
+ //    ctx.shadowOffsetY = 3;
+
 	return gradient;
 };
 
@@ -52,9 +57,11 @@ const CostingOverviewCard = () => {
 		>
 			<div class="costing-overview-card_content pt-5 px-3">
 				<Chart
+					id="profit-summary-chart"
 					labels={labels}
 					datasets={datasets}
 					variant="bar"
+					isYTicksVisible={false}
 				/>
 			</div>
 

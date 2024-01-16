@@ -72,6 +72,7 @@ const ReactChart = () => {
           <>
              <Chart
                options={{
+                 id: "react-charts-el",
                  data,
                  primaryAxis,
                  secondaryAxes,

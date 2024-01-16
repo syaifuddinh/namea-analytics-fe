@@ -9,6 +9,7 @@ import {
   Tooltip,
   PointElement,
   LineElement,
+  Color,
   Legend
 } from 'chart.js';
 import { Bar, Line } from 'react-chartjs-2';
@@ -42,25 +43,34 @@ type TicksType = {
     callback?: (value: any) => string
 }
 
-type YScales = {
+type YScalesType = {
     ticks?: TicksType
 }
 
 type ChartType = {
+    id?: string,
     labels: string[],
     variant: "bar"|"stacked",
-    yScales: YScalesType[],
+    yTicksCallback: (value: number) => number | string,
+    isYTicksVisible?: boolean,
+    isXTicksVisible?: boolean,
     datasets: DatasetType[]
 }
 
 export default function Chart({ 
+    id,
     labels,
     datasets,
-    yScales,
+    yTicksCallback,
+    isYTicksVisible,
+    isXTicksVisible,
     variant = "bar"
 }: ChartType) {
     const options = {
         responsive: true,
+        defaults: {
+          color: "red",
+        },
         plugins: {
           legend: {
             position: 'top' as const,
@@ -68,10 +78,26 @@ export default function Chart({
           },
           title: {
               display: false,
+          },
+          tooltip: {
+              mode: "index",
+              intersect: false
           }
         },
         scales: {
-            yAxes: yScales
+            y: {
+              ticks: {
+                 color: "#CDFBFF99",
+                 callback: yTicksCallback,
+                 display: isYTicksVisible
+              }
+            },
+            x: {
+              ticks: {
+                 color: "#CDFBFF99",
+                 display: isXTicksVisible
+              }
+            }
         }
     };
   if(variant === "stacked")
@@ -96,11 +122,10 @@ export default function Chart({
         datasets: chartDatasets
     };
 
-    console.log({ yScales })
     console.log({ options })
   
     return (
-        <>
+        <div id={id}>
           { (variant === "bar" || variant === "stacked") && (
               <Bar
                   options={options}
@@ -113,6 +138,6 @@ export default function Chart({
                   data={data}
               />
           ) }
-        </>
+        </div>
     )
 }
