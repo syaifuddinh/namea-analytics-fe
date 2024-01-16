@@ -52,6 +52,8 @@ type ChartType = {
     labels: string[],
     variant: "bar"|"stacked",
     yTicksCallback: (value: number) => number | string,
+    yStacked?: boolean,
+    xStacked?: boolean,
     isYTicksVisible?: boolean,
     isXTicksVisible?: boolean,
     datasets: DatasetType[]
@@ -62,6 +64,8 @@ export default function Chart({
     labels,
     datasets,
     yTicksCallback,
+    yStacked = false,
+    xStacked = false,
     isYTicksVisible,
     isXTicksVisible,
     variant = "bar"
@@ -70,6 +74,9 @@ export default function Chart({
         responsive: true,
         defaults: {
           color: "red",
+        },
+        interaction: {
+          intersect: false,
         },
         plugins: {
           legend: {
@@ -86,6 +93,7 @@ export default function Chart({
         },
         scales: {
             y: {
+              stacked: yStacked,
               ticks: {
                  color: "#CDFBFF99",
                  callback: yTicksCallback,
@@ -93,6 +101,7 @@ export default function Chart({
               }
             },
             x: {
+              stacked: xStacked,
               ticks: {
                  color: "#CDFBFF99",
                  display: isXTicksVisible

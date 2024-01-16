@@ -3,10 +3,11 @@ import "./index.style.css"
 
 const Card = ({
 	children,
-	headerElement
+	headerElement,
+	paddingBottom = 1
 }) => {
 	return (
-		<div className="card">
+		<div className={`card pt-1 pb-${paddingBottom}`}>
 			<div className="card_container">
 				{ headerElement } 
 				<div className="card_divider">

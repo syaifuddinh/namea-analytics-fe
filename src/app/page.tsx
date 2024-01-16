@@ -62,9 +62,11 @@ export default function Home() {
           <div className="grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-3 mt-3">
               <WalletCard
                   title="Turn Over"
+                  variant="turnover"
               />
               <WalletCard
                   title="Revenue"
+                  variant="revenue"
               />
           </div>
 

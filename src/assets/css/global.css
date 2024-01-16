@@ -1,3 +1,31 @@
 .text-gray-theme {
 	color: var(--gray-theme-color);
 }
+
+.text-gray6 {
+	color: var(--Gray6);
+}
+
+.text-white-theme-color {
+	color: var(--white-theme-color);
+}
+
+.bg-base-bg5 {
+	background: var(--base-bg5);
+}
+
+.border-base-bg3 {
+	border-color: var(--base-bg3);
+}
+
+.border-t-1 {
+	border-top-width: 1px;
+}
+
+.border-r-1 {
+	border-right-width: 1px;
+}
+
+.border-r-2 {
+	border-right-width: 2px;
+}
