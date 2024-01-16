@@ -2,6 +2,7 @@ import CardCashflowOverview from "@/components/atoms/card/cashflow-overview";
 import Checkbox from "@/components/atoms/input/select/checkbox";
 import IconPlusSquare from "@/assets/icons/plus-square";
 import IconMinusSquare from "@/assets/icons/minus-square";
+import { BarChart } from "@/components/molecules/chart";
 
 const MemberOverviewCard = () => {
   return (
@@ -35,6 +36,10 @@ const MemberOverviewCard = () => {
 					<Checkbox id="cashflow" label="Cashflow" />
 					<Checkbox id="outstanding" label="Outstanding" />
 				</div>
+			</div>
+			<div>
+				<BarChart />
+				<div className="border-b border-base-bg3 border-radius-2"></div>
 			</div>
     </CardCashflowOverview>
   );
