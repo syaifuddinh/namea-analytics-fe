@@ -1,22 +1,5 @@
 {
-  "extends": "next/core-web-vitals",
-
   "extends": [
-    "eslint:recommended",  
-    "plugin:@typescript-eslint/recommended"  
-  ],
-
-  "parser": "@typescript-eslint/parser", 
-
-  "plugins": [
-    "@typescript-eslint" 
-  ],
-
-  "rules": {
-    "@typescript-eslint/explicit-module-boundary-types": "error",
-    "@typescript-eslint/no-explicit-any": "error",
-    "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/no-empty-interface": "error",
-    "@typescript-eslint/interface-name-prefix": ["error", { "prefixWithI": "always" }] 
-  }
+    "next/core-web-vitals"
+  ]
 }
