@@ -88,6 +88,7 @@ const MonthlyInsightCard = ({
 }) => {
 	return (
 		<Card
+			className="w-full"
 			headerElement={<Header 
 				title={title}
 				mutationVariant={mutationVariant}
