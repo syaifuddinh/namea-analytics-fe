@@ -4,39 +4,67 @@ import Card from "@/components/atoms/card"
 import Chart from "@/components/atoms/chart"
 import SubtitleText from "@/components/atoms/text/subtitle"
 import Icon from "@/components/atoms/icon"
+import Pile from "@/components/atoms/pile"
 import MoneyText from "@/components/atoms/text/money"
 import TinyText from "@/components/atoms/text/tiny"
 import MutationLabel from "@/components/atoms/mutation-label"
 import "./index.style.css"
 import { simplifyNumber } from "@/utils/number";
 
-const Header = ({ title, mutationVariant }) => {
+const Header = ({ 
+	title, 
+	mutationVariant,
+	isShowProfitMargin,
+	profitMargin
+}) => {
 	return (
-		<div className="card_header">
-			<div className="card_header_title flex items-center gap-2">
-				<Icon
-					src="dollar.svg"
-					alt="dollar"
-				/>
+		<div className="card_header flex items-center justify-between">
+			<div className="card_header-container flex flex-col items-between">	
+				<div className="card_header_title flex items-center gap-2">
+					<Icon
+						src="dollar.svg"
+						alt="dollar"
+					/>
 
-				<SubtitleText>
-					{ title }
-				</SubtitleText>
+					<SubtitleText>
+						{ title }
+					</SubtitleText>
+				</div>
+
+				<div className="card_header_description mt-1 flex items-center gap-3">
+					<MoneyText>
+						500.950.450
+					</MoneyText>				
+
+					<div className="card_header_description__divider"> </div>
+
+					<MutationLabel value="23.8% (+24)" variant={mutationVariant} />
+
+					<TinyText>
+						compared to last year
+					</TinyText>
+				</div>
 			</div>
 
-			<div className="card_header_description mt-1 flex items-center gap-3">
-				<MoneyText>
-					500.950.450
-				</MoneyText>				
-
-				<div className="card_header_description__divider"> </div>
-
-				<MutationLabel value="23.8% (+24)" variant={mutationVariant} />
-
-				<TinyText>
-					compared to last year
-				</TinyText>
-			</div>
+			{
+					isShowProfitMargin === true && (
+						<div className="profit-margin flex flex-col items-end">	
+							<div className="flex gap-2 items-center">
+								<Icon
+									src="transparent/kanban.svg"
+									alt="profit-margin-thumbnail"
+								/>
+								<SubtitleText>
+									Profit Margin
+								</SubtitleText>
+							</div>
+							<div className="text-white-theme-color mt-2 font-medium flex items-center gap-2">
+								<Pile variant="primary" />
+								{ profitMargin }%
+							</div>
+						</div>
+					)
+				}
 		</div>
 	)
 }
@@ -54,13 +82,17 @@ const datasets = [
 
 const MonthlyInsightCard = ({
 	title,
-	mutationVariant
+	mutationVariant,
+	isShowProfitMargin,
+	profitMargin
 }) => {
 	return (
 		<Card
 			headerElement={<Header 
 				title={title}
 				mutationVariant={mutationVariant}
+				isShowProfitMargin={isShowProfitMargin}
+				profitMargin={profitMargin}
 			/>}
 		>
 			<div className="pt-5 px-3">

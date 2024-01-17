@@ -46,6 +46,8 @@ export default function Home() {
               <MonthlyInsightCard
                   title={"December Total Profit"}
                   mutationVariant="primary"
+                  isShowProfitMargin={true}
+                  profitMargin={24}
               />
               <MonthlyInsightCard
                   title={"December Total Cost"}
@@ -53,13 +55,13 @@ export default function Home() {
               />
           </div>
 
-          <div className="grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-3 mt-3">
+          <div className="grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-3 mt-6">
               <CostingOverviewCard
               />
               <ProfitSummaryCard />              
           </div>
 
-          <div className="grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-3 mt-3">
+          <div className="grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-3 mt-6">
               <WalletCard
                   title="Turn Over"
                   variant="turnover"
@@ -70,11 +72,11 @@ export default function Home() {
               />
           </div>
 
-          <div className="mt-3">
+          <div className="mt-6">
               <MemberOverviewCard />
           </div>
 
-          <div className="mt-3">
+          <div className="mt-6">
               <CashflowOverviewCard />
           </div>
 
