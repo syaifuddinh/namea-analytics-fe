@@ -19,7 +19,7 @@ const Header = ({
 }) => {
 	return (
 		<div className="card_header flex items-center justify-between">
-			<div className="card_header-container flex flex-col items-between">	
+			<div className="card_header-container flex flex-col items-between pr-4">	
 				<div className="card_header_title flex items-center gap-2">
 					<Icon
 						src="dollar.svg"
@@ -96,7 +96,7 @@ const MonthlyInsightCard = ({
 				profitMargin={profitMargin}
 			/>}
 		>
-			<div className="pt-5 px-3">
+			<div className="py-5 px-4">
 				<Chart
 					labels={labels}
 					datasets={datasets}

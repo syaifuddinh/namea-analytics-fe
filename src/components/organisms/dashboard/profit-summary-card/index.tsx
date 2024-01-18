@@ -6,6 +6,7 @@ import MoneyText from "@/components/atoms/text/money";
 import TitleText from "@/components/atoms/text/title";
 import SubtitleText from "@/components/atoms/text/subtitle";
 import Icon from "@/components/atoms/icon";
+import ProfitLossChart from "@/components/atoms/profit-loss-chart"
 
 const Header = () => {
 	return (
@@ -56,13 +57,7 @@ const CostingOverviewCard = () => {
 			headerElement={<Header />}
 		>
 			<div class="costing-overview-card_content pt-5 px-3">
-				<Chart
-					id="profit-summary-chart"
-					labels={labels}
-					datasets={datasets}
-					variant="bar"
-					isYTicksVisible={false}
-				/>
+				
 			</div>
 
 			<div className="p-5 flex flex-col items-center">

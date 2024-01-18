@@ -12,6 +12,7 @@ import MutationLabel from "@/components/atoms/mutation-label";
 import SecondaryCard from "@/components/atoms/card/secondary";
 import { simplifyNumber } from "@/utils/number";
 import CurrencyCard from "./currency-card"
+import FrequencyInput from "@/components/molecules/input/frequency"
 
 const labels = ["Dec Week 1", "Dec Week 2", "Dec Week 3", "Dec Week 4"]
 const datasets = [
@@ -47,6 +48,8 @@ const Header = ({ title }) => {
 			<TitleText>
 				{ title }
 			</TitleText>
+			
+			<FrequencyInput />
 		</div>	
 	)
 }

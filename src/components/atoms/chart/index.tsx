@@ -72,9 +72,7 @@ export default function Chart({
 }: ChartType) {
     const options = {
         responsive: true,
-        defaults: {
-          color: "red",
-        },
+        maintainAspectRatio: false,
         interaction: {
           intersect: false,
         },
