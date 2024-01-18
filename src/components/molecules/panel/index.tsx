@@ -8,9 +8,11 @@ export default function Panel({
     variant
 }) {
   return (
-    <div className="panel p-3">
-        <div className={`panel_label px-4 py-2 ${variant} font-medium text-sm`}>
-            { label }
+    <div className="panel">
+        <div className={`panel_label ${variant}`}>
+            <div className="stripped px-4 py-2 font-medium text-sm">
+                { label }
+            </div>
         </div>
         <div className="panel_body flex justify-end gap-1 pt-3 pb-2 px-3">
             <div className="panel_value text-sm">

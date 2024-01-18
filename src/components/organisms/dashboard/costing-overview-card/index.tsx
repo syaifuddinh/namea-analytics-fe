@@ -25,7 +25,7 @@ const CostingOverviewCard = () => {
 		<Card
 			headerElement={<Header />}
 		>
-			<div className="p-2 grid grid-rows-3 md:grid-rows-1 grid-flow-col gap-3">
+			<div className="p-5 grid grid-rows-3 md:grid-rows-1 grid-flow-col gap-2">
 				<Panel
 					label="Operation Cost"
 					value="50"
