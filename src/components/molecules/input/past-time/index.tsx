@@ -1,4 +1,4 @@
-import SelectInput from "@/components/atoms/input/select";
+import Icon from "@/components/atoms/icon";
 import {
 	getCurrentYear,
 	getLastMonthLabel,
@@ -34,10 +34,20 @@ const options = [
 
 export default function PastTimeInput({ onChange }) {
 	return (
-		<SelectInput
-			placeholder="Select period"
-			options={options}
-			onChange={onChange}
-		/>
+		<div className="past-time-input rounded-[6px] border border-gray1 text-gray2 text-sm flex items-center p-1 bg-base-bg3">
+			<div className="past-time-input_days p-[6px] bg-base-bg3 mr-5 rounded">
+				Last 30 Days
+			</div>
+			<div className="past-time-input_date mr-[24px]">
+				Nov 13 - Dec 10, 2023
+			</div>
+
+			<div className="cursor-pointer">
+				<Icon
+					src="transparent/chevron-down.svg"
+					alt="period input"
+				/>
+			</div>
+		</div>
 	)
 }

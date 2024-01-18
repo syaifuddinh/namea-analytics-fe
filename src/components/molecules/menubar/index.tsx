@@ -46,12 +46,12 @@ const Menubar = () => {
 
 					LX Analytics
 				</div>
-				<div className="menubar_items flex gap-5">
+				<div className="menubar_items flex gap-[28px]">
 					{
 						Menu.items.map(item => (
 							<div
 								key={item.id}
-								className="menubar_item capitalize cursor-pointer font-medium flex gap-2 items-center"
+								className="menubar_item capitalize cursor-pointer font-medium flex gap-2 items-center text-sm leading-5 tracking"
 								onMouseEnter={e => { e.stopPropagation(); onMenuOver(e, item.childrens)}}
 							>
 								{ item.name }

@@ -6,12 +6,20 @@
 	color: var(--Gray6);
 }
 
+.text-gray2 {
+	color: var(--Gray2);
+}
+
 .text-white-theme-color {
 	color: var(--white-theme-color);
 }
 
 .bg-base-bg5 {
 	background: var(--base-bg5);
+}
+
+.bg-base-bg3 {
+	background: var(--base-bg3);
 }
 
 .border-base-bg3 {
@@ -28,4 +36,8 @@
 
 .border-r-2 {
 	border-right-width: 2px;
+}
+
+.border-gray1 {
+	border-color: var(--Gray1);
 }

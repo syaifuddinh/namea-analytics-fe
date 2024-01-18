@@ -14,7 +14,7 @@ export default function Panel({
                 { label }
             </div>
         </div>
-        <div className="panel_body flex justify-end gap-1 pt-3 pb-2 px-3">
+        <div className={`panel_body flex justify-end gap-1 pt-3 pb-2 px-3 ${variant}`}>
             <div className="panel_value text-sm">
                 { value }%
             </div>

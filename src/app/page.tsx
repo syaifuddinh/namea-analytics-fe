@@ -17,7 +17,7 @@ import ReactChart from "@/components/atoms/react-chart"
 export default function Home() {
   return (
   	<>
-  		<div className="dashboard_header pb-5 flex flex-col md:flex-row gap-3 md:items-center justify-between">	
+  		<div className="dashboard_header pb-5 flex flex-col md:flex-row gap-3 md:items-center justify-between mt-[44px]">	
   			<div className="dashboard_header_title flex items-center">	
   				<div className="dashboard_header_thumbnail mr-3">
   					  <Image
@@ -31,7 +31,7 @@ export default function Home() {
 			  		<TitleText>
 			  			Overview
 			  		</TitleText>		
-			  		<SubtitleText>
+  		  		<SubtitleText>
 			  			Show a comprehensive overview of data from different sources.
 			  		</SubtitleText>		
   				</div>
@@ -41,7 +41,7 @@ export default function Home() {
   		</div>
 
       <div className="dashboard_content mt-5">
-          <div className="flex gap-3">
+          <div className="flex gap-[20px]">
 
               <MonthlyInsightCard
                   title={"December Total Profit"}
@@ -55,13 +55,13 @@ export default function Home() {
               />
           </div>
 
-          <div className="grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-3 mt-6">
+          <div className="grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-[20px] mt-[60px]">
               <CostingOverviewCard
               />
               <ProfitSummaryCard />              
           </div>
 
-          <div className="grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-3 mt-6">
+          <div className="grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-[20px] mt-[60px]">
               <WalletCard
                   title="Turn Over"
                   variant="turnover"
@@ -72,11 +72,11 @@ export default function Home() {
               />
           </div>
 
-          <div className="mt-6">
+          <div className="mt-[60px]">
               <MemberOverviewCard />
           </div>
 
-          <div className="mt-6">
+          <div className="mt-[60px]">
               <CashflowOverviewCard />
           </div>
 

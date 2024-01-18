@@ -38,8 +38,16 @@
 	
 }
 
-.panel_body {
-	
+.panel_body.success {
+	background: linear-gradient(270deg, rgba(117, 91, 223, 0.30) -118.58%, rgba(117, 91, 223, 0.00) 100%);
+}
+
+.panel_body.primary {
+	background: linear-gradient(270deg, rgba(91, 128, 223, 0.30) -118.58%, rgba(91, 128, 223, 0.00) 100%);
+}
+
+.panel_body.danger {
+	background: linear-gradient(270deg, rgba(223, 115, 91, 0.30) -118.58%, rgba(223, 115, 91, 0.00) 100%);
 }
 
 .panel_value {
