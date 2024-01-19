@@ -1,5 +1,5 @@
 :root {
-	--pile-size: 10px;
+	--pile-size: 8px;
 }
 
 .pile {
@@ -8,6 +8,8 @@
 	min-width: var(--pile-size);
 	min-height: var(--pile-size);
 	border-radius: 1rem;
+	outline-width: 3px;
+	outline-style: solid;
 }
 
 .pile.success {
@@ -16,8 +18,8 @@
 }
 
 .pile.primary {
-	background: #2BCDB9;
-	box-shadow: 0px 0px 0px 3px rgba(12, 186, 197, 0.3);
+	background: var(--Success10);
+	outline-color: var(--Success2);
 }
 
 .pile.danger {
