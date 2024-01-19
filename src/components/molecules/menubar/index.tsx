@@ -51,7 +51,7 @@ const Menubar = () => {
 						Menu.items.map(item => (
 							<div
 								key={item.id}
-								className="menubar_item capitalize cursor-pointer font-medium flex gap-2 items-center text-sm leading-5 tracking px-[10px] py-[6px] text-[var(--Gray10)]"
+								className="menubar_item capitalize cursor-pointer flex gap-2 items-center text-sm leading-5 tracking px-[10px] py-[6px] text-[var(--Gray10)]"
 								onMouseEnter={e => { e.stopPropagation(); onMenuOver(e, item.childrens)}}
 							>
 								{ item.name }

@@ -76,6 +76,7 @@ const WalletCard = ({
 					<CustomChart
 						values={["500K", "400K", "300K", "200K", "100K", "0"]}
 						labels={["Dec Week 1", "Dec Week 2", "Dec Week 3", "Dec Week 4"]}	
+						isShowYAxes={false}
 					/>
 				) }
 			</div>
