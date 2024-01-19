@@ -8,6 +8,7 @@ import Pile from "@/components/atoms/pile"
 import MoneyText from "@/components/atoms/text/money"
 import TinyText from "@/components/atoms/text/tiny"
 import MutationLabel from "@/components/atoms/mutation-label"
+import CustomChart from "@/components/atoms/custom-chart"
 import "./index.style.css"
 import { simplifyNumber } from "@/utils/number";
 
@@ -18,7 +19,7 @@ const Header = ({
 	profitMargin
 }) => {
 	return (
-		<div className="card_header flex items-center justify-between">
+		<div className="card_header flex items-center justify-between max-h-[90px]">
 			<div className="card_header-container flex flex-col items-between pr-4">	
 				<div className="card_header_title flex items-center gap-2">
 					<Icon
@@ -47,24 +48,24 @@ const Header = ({
 			</div>
 
 			{
-					isShowProfitMargin === true && (
-						<div className="profit-margin flex flex-col items-end">	
-							<div className="flex gap-2 items-center">
-								<Icon
-									src="transparent/kanban.svg"
-									alt="profit-margin-thumbnail"
-								/>
-								<SubtitleText>
-									Profit Margin
-								</SubtitleText>
-							</div>
-							<div className="text-white-theme-color mt-2 font-medium flex items-center gap-2">
-								<Pile variant="primary" />
-								{ profitMargin }%
-							</div>
+				isShowProfitMargin === true && (
+					<div className="profit-margin flex flex-col items-end">	
+						<div className="flex gap-2 items-center">
+							<Icon
+								src="transparent/kanban.svg"
+								alt="profit-margin-thumbnail"
+							/>
+							<SubtitleText>
+								Profit Margin
+							</SubtitleText>
 						</div>
-					)
-				}
+						<div className="text-white-theme-color mt-2 font-medium flex items-center gap-2">
+							<Pile variant="primary" />
+							{ profitMargin }%
+						</div>
+					</div>
+				)
+			}
 		</div>
 	)
 }
@@ -96,12 +97,10 @@ const MonthlyInsightCard = ({
 				profitMargin={profitMargin}
 			/>}
 		>
-			<div className="py-5 px-4">
-				<Chart
-					labels={labels}
-					datasets={datasets}
-					variant="line"
-					yTicksCallback={oldValue => simplifyNumber(oldValue) }
+			<div className="">
+				<CustomChart
+					values={["500K", "400K", "300K", "200K", "100K", "0"]}
+					labels={["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]}	
 				/>
 			</div>
 		</Card>

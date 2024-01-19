@@ -41,3 +41,7 @@
 .border-gray1 {
 	border-color: var(--Gray1);
 }
+
+.border-gray6 {
+	border-color: var(--Gray6);
+}

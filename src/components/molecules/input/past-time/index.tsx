@@ -34,11 +34,11 @@ const options = [
 
 export default function PastTimeInput({ onChange }) {
 	return (
-		<div className="past-time-input rounded-[6px] border border-gray1 text-gray2 text-sm flex items-center p-1 bg-base-bg3">
-			<div className="past-time-input_days p-[6px] bg-base-bg3 mr-5 rounded">
+		<div className="past-time-input rounded-[6px] border border-gray1 text-gray2 flex items-center p-[4px] bg-base-bg3 leading-5">
+			<div className="past-time-input_days px-[6px] py-[2px] bg-base-bg3 mr-5 rounded text-sm">
 				Last 30 Days
 			</div>
-			<div className="past-time-input_date mr-[24px]">
+			<div className="past-time-input_date mr-[24px] text-sm">
 				Nov 13 - Dec 10, 2023
 			</div>
 

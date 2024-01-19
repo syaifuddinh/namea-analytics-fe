@@ -44,10 +44,10 @@ const revenueDatasets = [
 ]
 const Header = ({ title }) => {
 	return (
-		<div className="card_header flex items-center justify-between">
-			<TitleText>
+		<div className="card_header  p-[20px] flex items-center justify-between">
+			<div className="text-[var(--Gray10)] text-base font-medium">
 				{ title }
-			</TitleText>
+			</div>
 			
 			<FrequencyInput />
 		</div>	

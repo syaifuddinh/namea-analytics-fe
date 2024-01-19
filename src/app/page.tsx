@@ -19,7 +19,7 @@ export default function Home() {
   	<>
   		<div className="dashboard_header pb-5 flex flex-col md:flex-row gap-3 md:items-center justify-between mt-[44px]">	
   			<div className="dashboard_header_title flex items-center">	
-  				<div className="dashboard_header_thumbnail mr-3">
+  				<div className="dashboard_header_thumbnail mr-[10px]">
   					  <Image
                   src="/images/dashboard/thumbnail.svg"
                   alt="dashboard thumbnail"
@@ -31,16 +31,16 @@ export default function Home() {
 			  		<TitleText>
 			  			Overview
 			  		</TitleText>		
-  		  		<SubtitleText>
+  		  		<div className="text-gray6 text-sm leading-5">
 			  			Show a comprehensive overview of data from different sources.
-			  		</SubtitleText>		
+			  		</div>		
   				</div>
   			</div>
 
         <PastTimeInput />
   		</div>
 
-      <div className="dashboard_content mt-5">
+      <div className="dashboard_content mt-[32px]">
           <div className="flex gap-[20px]">
 
               <MonthlyInsightCard
@@ -55,9 +55,11 @@ export default function Home() {
               />
           </div>
 
-          <div className="grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-[20px] mt-[60px]">
-              <CostingOverviewCard
-              />
+          <div className="flex gap-[20px] mt-[60px]">
+              <div className="w-5/6">
+                  <CostingOverviewCard
+                  />
+              </div>
               <ProfitSummaryCard />              
           </div>
 

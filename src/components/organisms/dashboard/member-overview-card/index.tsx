@@ -10,7 +10,7 @@ import CardMemberOverview from "@/components/atoms/card/member-overview";
 
 const Header = () => {
 	return (
-		<div className="card_header">
+		<div className="@apply card_header p-[20px]">
 			<TitleText>
 				Member Overview
 			</TitleText>

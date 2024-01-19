@@ -10,8 +10,8 @@ import ProfitLossChart from "@/components/atoms/profit-loss-chart"
 
 const Header = () => {
 	return (
-		<div className="card_header">
-			<div className="mb-1 flex items-center gap-2">
+		<div className="card_header p-[20px]">
+			<div className="mb-1 flex items-center gap-[8px]">
 				<Icon
 					src="dollar.svg"
 					alt="dollar icon"
@@ -21,7 +21,9 @@ const Header = () => {
 				</SubtitleText>
 			</div>
 
-			<MoneyText>
+			<MoneyText
+				className="mt-[6px]"
+			>
 				492.509.249
 			</MoneyText>
 		</div>
@@ -61,12 +63,13 @@ const CostingOverviewCard = () => {
 			</div>
 
 			<div className="p-5 flex flex-col items-center">
-				<TitleText>
+				<div className="text-sm text-[var(--Gray10)] font-medium leading-5">
 					Total Profit
-				</TitleText>
-				<SubtitleText>
+				</div>
+
+				<div className="text-center text-[var(--Gray6)] text-sm leading-5 mt-[4px]">
 					Has been generated from the previous year.
-				</SubtitleText>
+				</div>
 			</div>
 		</Card> 
 	)

@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { useEffect } from "react"
-import "./index.style.css";
 
 const frequencies = [
 	{
@@ -52,17 +51,17 @@ export default function FrequencyInput({
 	}, [value])
 
  	return (
-	    <div className="frequency-input flex p-1">
+	    <div className="frequency-input border border-[var(--Gray4)] rounded-[10px] p-[4px] flex">
 	    	{ 
 	    		datasets.map(item => (
 			    	<div
 			    		key={item.value}
-			    		className={`frequency-input_item py-2 px-3 cursor-pointer ${item.value === dataValue ? "active" : ""}`}
+			    		className={`frequency-input_item py-[4px] px-[10px] cursor-pointer ${item.value === dataValue ? "text-[var(--Gray10)] bg-[var(--base-bg3)] rounded-[6px] border border-[var(--Gray1)]" : "text-[var(--Gray6)]"}`}
 			    		onClick={() => onChangeData(item.value)}
 			    	>
 
 			    		<div
-			    			className="font-medium text-sm text-white-theme-color"
+			    			className="font-medium text-sm leading-5"
 			    		>
 			    			
 				    		{ item.label }

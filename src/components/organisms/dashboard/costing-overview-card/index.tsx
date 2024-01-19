@@ -9,7 +9,7 @@ import Review from "./review"
 
 const Header = () => {
 	return (
-		<div className="card_header">
+		<div className="card_header p-[20px]">
 			<TitleText>
 				Costing Overview
 			</TitleText>
@@ -24,23 +24,30 @@ const CostingOverviewCard = () => {
 	return (
 		<Card
 			headerElement={<Header />}
+			isDividerVisible={false}
 		>
-			<div className="p-5 grid grid-rows-3 md:grid-rows-1 grid-flow-col gap-2">
-				<Panel
-					label="Operation Cost"
-					value="50"
-					variant="success"
-				/>
-				<Panel
-					label="Promotion Cost"
-					value="25"
-					variant="primary"
-				/>
-				<Panel
-					label="Total Cost"
-					value="25"
-					variant="danger"
-				/>
+			<div className="p-[20px] bg-[#03020C0D] flex gap-[8px]">
+				<div className="w-1/2">
+					<Panel
+						label="Operation Cost"
+						value="50"
+						variant="success"
+					/>
+				</div>
+				<div className="w-1/4">
+					<Panel
+						label="Promotion Cost"
+						value="25"
+						variant="primary"
+					/>
+				</div>
+				<div className="w-1/4">
+					<Panel
+						label="Total Cost"
+						value="25"
+						variant="danger"
+					/>
+				</div>
 			</div>
 
 			<div className="costing-overview-card_footer p-3 grid grid-rows-3 md:grid-rows-1 grid-flow-col gap-3">
