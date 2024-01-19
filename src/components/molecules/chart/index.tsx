@@ -118,7 +118,7 @@ export const data = {
 
 export function BarChart() {
   return (
-    <div className="h-[256px] w-full pt-5 pl-2">
+    <div className="h-[calc(100%_-_1px)] w-full pt-5 pl-2">
       <Bar options={options} data={data} />
     </div>
   );

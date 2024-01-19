@@ -13,7 +13,7 @@ const MemberOverviewCard = () => {
       <div className="flex items-start gap-4 p-5">
         <div className="w-2/4 bg-base-bg4 border border-gray-1 rounded-xl border-solid pl-5 pr-[22px] py-5">
           <div className="flex items-center justify-between bg-base-bg4 flex items-center pl-[7px] pr-[18px] py-[7px] border border-base-bg3 rounded-lg border-solid">
-            <div className="flex items-center gap-10">
+            <div className="flex items-center gap-[10px]">
               <div><IconPlusSquare /></div>
               <div className="caption-1-400 text-gray-6">Total Cash Balance</div>
             </div>
@@ -22,7 +22,7 @@ const MemberOverviewCard = () => {
         </div>
         <div className="w-2/4 bg-base-bg4 border border-gray-1 rounded-xl border-solid pl-5 pr-[22px] py-5">
           <div className="flex items-center justify-between bg-base-bg4 flex items-center pl-[7px] pr-[18px] py-[7px] border border-base-bg3 rounded-lg border-solid">
-            <div className="flex items-center gap-10">
+            <div className="flex items-center gap-[10px]">
               <div><IconMinusSquare /></div>
               <div className="caption-1-400 text-gray-6">Total Outstanding Debt</div>
             </div>
@@ -37,9 +37,8 @@ const MemberOverviewCard = () => {
 					<Checkbox id="outstanding" label="Outstanding" />
 				</div>
 			</div>
-			<div>
+			<div className="h-full border-b border-base-bg3 rounded-bl-[16px] rounded-br-[16px] border-radius-2">
 				<BarChart />
-				<div className="border-b border-base-bg3 border-radius-2"></div>
 			</div>
     </CardCashflowOverview>
   );
