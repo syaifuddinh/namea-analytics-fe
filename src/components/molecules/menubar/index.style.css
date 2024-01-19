@@ -3,7 +3,6 @@
 }
 
 .menubar .menubar_item, .menubar_logo {
-	color: var(--white-theme-color);
 }
 
 .menubar_dropdown-item {
