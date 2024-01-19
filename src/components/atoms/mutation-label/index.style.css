@@ -4,11 +4,11 @@
 }
 
 .mutation-label.primary {
-	background: rgba(12, 186, 197, 0.1);
+	background: var(--Success1);
 }
 
 .mutation-label.primary * {
-	color: var(--base-primary);
+	color: var(--Success10);
 }
 
 .mutation-label.danger {
@@ -16,11 +16,11 @@
 }
 
 .mutation-label.danger * {
-	color: var(--base-danger);
+	color: var(--Alert10);
 }
 
 .mutation-label.warning {
-	background: rgba(255, 209, 121, 0.1);
+	background: var(--Alert1);
 }
 
 .mutation-label.warning * {
