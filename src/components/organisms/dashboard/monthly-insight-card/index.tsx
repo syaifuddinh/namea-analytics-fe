@@ -90,6 +90,7 @@ const MonthlyInsightCard = ({
 	return (
 		<Card
 			className="w-full"
+			paddingBottom="6px"
 			headerElement={<Header 
 				title={title}
 				mutationVariant={mutationVariant}
@@ -97,7 +98,7 @@ const MonthlyInsightCard = ({
 				profitMargin={profitMargin}
 			/>}
 		>
-			<div className="">
+			<div className="border-y border-[var(--base-bg3)]">
 				<CustomChart
 					values={["500K", "400K", "300K", "200K", "100K", "0"]}
 					labels={["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]}	

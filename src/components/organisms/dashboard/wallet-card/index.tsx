@@ -13,6 +13,7 @@ import SecondaryCard from "@/components/atoms/card/secondary";
 import { simplifyNumber } from "@/utils/number";
 import CurrencyCard from "./currency-card"
 import FrequencyInput from "@/components/molecules/input/frequency"
+import CustomChart from "@/components/atoms/custom-chart"
 
 const labels = ["Dec Week 1", "Dec Week 2", "Dec Week 3", "Dec Week 4"]
 const datasets = [
@@ -61,26 +62,20 @@ const WalletCard = ({
 	return (
 		<Card
 			headerElement={<Header title={title} />}
-			paddingBottom={0}
+			isUsePaddingBottom={false}
 		>
-			<div className="p-4">	
+			<div className="">	
 				{ variant === "turnover" && (
-					<Chart
-						labels={labels}
-						datasets={datasets}
-						variant="bar"
-						yTicksCallback={oldValue => simplifyNumber(oldValue) }
+					<CustomChart
+						values={["500K", "400K", "300K", "200K", "100K", "0"]}
+						labels={["Dec Week 1", "Dec Week 2", "Dec Week 3", "Dec Week 4"]}	
 					/>
 				) }
 
 				{ variant === "revenue" && (
-					<Chart
-						labels={revenueLabels}
-						datasets={revenueDatasets}
-						variant="bar"
-						yTicksCallback={oldValue => simplifyNumber(oldValue) }
-						yStacked={true}
-						xStacked={true}
+					<CustomChart
+						values={["500K", "400K", "300K", "200K", "100K", "0"]}
+						labels={["Dec Week 1", "Dec Week 2", "Dec Week 3", "Dec Week 4"]}	
 					/>
 				) }
 			</div>
