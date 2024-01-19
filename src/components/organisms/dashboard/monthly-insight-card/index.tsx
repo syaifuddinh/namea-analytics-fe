@@ -27,9 +27,9 @@ const Header = ({
 						alt="dollar"
 					/>
 
-					<SubtitleText>
+					<div className="font-light text-sm text-gray6">
 						{ title }
-					</SubtitleText>
+					</div>
 				</div>
 
 				<div className="card_header_description mt-1 flex items-center gap-3">

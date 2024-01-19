@@ -10,7 +10,7 @@ const UserProfile = () => {
 				/>	
 			</div>
 			<div className="menubar_user-profile_user">
-				<div className="menubar_user-profile_greeting text-xs">
+				<div className="menubar_user-profile_greeting text-xs font-light">
 					Let explore
 				</div>
 				<div className="menubar_user-profile_username text-sm flex items-center gap-2 cursor-pointer">
