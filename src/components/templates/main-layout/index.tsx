@@ -4,7 +4,7 @@ import "./index.style.css";
 const MainLayout = ({ children }) => {
 	return (
 		<div className="main-layout">
-			<div className="main-layout_menubar py-[10px] px-[92px]">
+			<div className="main-layout_menubar py-[8px] px-[92px]">
 				<Menubar />
 			</div>
 
