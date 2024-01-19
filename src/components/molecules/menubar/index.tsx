@@ -51,7 +51,7 @@ const Menubar = () => {
 						Menu.items.map(item => (
 							<div
 								key={item.id}
-								className="menubar_item capitalize cursor-pointer font-medium flex gap-2 items-center text-sm leading-5 tracking p-[10px]"
+								className="menubar_item capitalize cursor-pointer font-medium flex gap-2 items-center text-sm leading-5 tracking px-[10px] py-[6px]"
 								onMouseEnter={e => { e.stopPropagation(); onMenuOver(e, item.childrens)}}
 							>
 								{ item.name }
@@ -66,15 +66,6 @@ const Menubar = () => {
 					}
 				</div>
 			</div>
-
-			{ isDropdownVisible === true && (
-				<DropdownMenu
-					top={dropdownPosition.top}
-					left={dropdownPosition.left}
-					dropdownItems={dropdownItems}
-					onMenuClick={onMenuClick}
-				/>
-			) }
 
 			<UserProfile />
 		</div>
