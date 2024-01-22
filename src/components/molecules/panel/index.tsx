@@ -8,13 +8,13 @@ export default function Panel({
     variant
 }) {
   return (
-    <div className="panel">
-        <div className={`panel_label ${variant}`}>
+    <div className="panel relative min-h-[87px]">
+        <div className={`panel_label ${variant} relative z-10`}>
             <div className="stripped px-4 py-2 font-base text-sm">
                 { label }
             </div>
         </div>
-        <div className={`panel_body flex justify-end gap-1 pt-3 pb-2 px-3 ${variant} font-light`}>
+        <div className={`panel_body w-full absolute top-[31px] flex justify-end gap-1 pt-[28px] pb-[6px] px-[14px] ${variant} font-light`}>
             <div className="panel_value text-sm">
                 { value }%
             </div>
