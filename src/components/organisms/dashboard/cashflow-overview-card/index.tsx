@@ -4,13 +4,13 @@ import IconPlusSquare from "@/assets/icons/plus-square";
 import IconMinusSquare from "@/assets/icons/minus-square";
 import { BarChart } from "@/components/molecules/chart";
 
-const MemberOverviewCard = () => {
+const CashflowOverviewCard = () => {
   return (
     <CardCashflowOverview
       title="Cash Flow Overview"
       description="Record your ideas and to-do’s easily, so you never miss a thing."
     >
-      <div className="flex items-start gap-4 p-5">
+      <div className="flex items-start gap-4 p-[20px]">
         <div className="w-2/4 bg-base-bg4 border border-gray-1 rounded-xl border-solid pl-5 pr-[22px] py-5">
           <div className="flex items-center justify-between bg-base-bg4 flex items-center pl-[7px] pr-[18px] py-[7px] border border-base-bg3 rounded-lg border-solid">
             <div className="flex items-center gap-[10px]">
@@ -30,6 +30,7 @@ const MemberOverviewCard = () => {
           </div>
         </div>
       </div>
+
 			<div className="bg-base-bg5 border-y-base-bg3 border-y border-solid flex items-center justify-between items-start px-5 py-3">
 				<div className="caption-1-400 text-gray-6">2023 Yearly Cashflow Breakdown</div>
 				<div className="caption-1-400 text-gray-6 flex items-center gap-5">
@@ -44,4 +45,4 @@ const MemberOverviewCard = () => {
   );
 };
 
-export default MemberOverviewCard;
+export default CashflowOverviewCard;

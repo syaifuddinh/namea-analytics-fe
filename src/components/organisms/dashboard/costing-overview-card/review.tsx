@@ -13,7 +13,9 @@ const Review = ({
 	iconSrc
 }) => {
 	return (
-		<SecondaryCard>
+		<SecondaryCard
+			className="bg-[var(--base-bg5)]"
+		>
 			<div className="p-5">
 				<Icon
 					src={iconSrc}

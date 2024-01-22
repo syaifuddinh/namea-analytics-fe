@@ -33,10 +33,6 @@
 }
 
 .panel_body {
-	border-right-color: black;
-	border-right-width: 2px;
-	border-right-style: solid;
-
 	&.success {
 		background: linear-gradient(270deg, rgba(117, 91, 223, 0.30) -118.58%, rgba(117, 91, 223, 0.00) 100%);
 		border-image: linear-gradient(#755BDF, white) 30;

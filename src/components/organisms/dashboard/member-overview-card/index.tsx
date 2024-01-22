@@ -1,8 +1,9 @@
 "use client"
+
 import React from "react";
 
 import Card from "@/components/atoms/card";
-// import MoneyText from "@/components/atoms/text/money";
+import MoneyText from "@/components/atoms/text/money";
 import TitleText from "@/components/atoms/text/title";
 import SubtitleText from "@/components/atoms/text/subtitle";
 // import Icon from "@/components/atoms/icon";
@@ -46,21 +47,21 @@ const listMemberOverview = [
 	{
 		key: 3,
 		title: "Total Deposit",
-		value: "500.950.450,00",
+		value: <MoneyText>500.950.450</MoneyText>,
 		comparison: "-16.5%",
 		compareLastYear: -8
 	},
 	{
 		key: 4,
 		title: "New Deposit",
-		value: "37.695.800,00",
+		value: <MoneyText>37.695.800</MoneyText>,
 		comparison: "23.8%",
 		compareLastYear: 24
 	},
 	{
 		key: 5,
 		title: "Total Withdraw",
-		value: "37.695.800,00",
+		value: <MoneyText>37.695.800</MoneyText>,
 		comparison: "-16.5%",
 		compareLastYear: -8
 	}
@@ -71,7 +72,7 @@ const MemberOverviewCard: React.FC = () => {
 		<Card
 			headerElement={<Header />}
 		>
-			<div className="grid grid-cols-[auto_auto_auto] gap-x-5 gap-y-5 p-5">
+			<div className="grid grid-cols-[auto_auto_auto] gap-x-5 gap-y-5 p-5 bg-[var(--base-bg5)]">
 				{listMemberOverview.map((values) => <CardMemberOverview {...values} key={values.key} />)}
 			</div>
 		</Card> 
