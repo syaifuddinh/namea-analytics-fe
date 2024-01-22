@@ -42,14 +42,14 @@ const Review = ({
 				</div>
 			</div>
 
-			<div className="costing-overview-card_review flex flex-col items-center gap-1 p-4 m-1">
-				<TitleText>
+			<div className="costing-overview-card_review flex flex-col items-center gap-1 px-4 py-[19px] m-1">
+				<div className="text-sm text-white-theme-color leading-5">
 					{ title }
-				</TitleText>			
+				</div>			
 
-				<SubtitleText>
+				<div className="text-center text-[var(--Gray6)] font-light text-sm">
 					{ description }
-				</SubtitleText>
+				</div>
 			</div>
 		</SecondaryCard>
 	)

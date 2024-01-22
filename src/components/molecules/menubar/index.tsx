@@ -38,7 +38,7 @@ const Menubar = () => {
 	return (
 		<div className="menubar flex items-center justify-between">
 			<div className="flex items-center">
-				<div className="menubar_logo flex text-[var(--Gray10)] gap-2 font-medium mr-[30px] items-center">
+				<div className="menubar_logo flex text-[var(--Gray10)] gap-2 font-base mr-[30px] items-center">
 					<Image
 						src={Logo}
 						alt="logo"
@@ -46,12 +46,12 @@ const Menubar = () => {
 
 					LX Analytics
 				</div>
-				<div className="menubar_items flex gap-[8px] ">
+				<div className="menubar_items flex gap-[8px]">
 					{
 						Menu.items.map(item => (
 							<div
 								key={item.id}
-								className="menubar_item capitalize cursor-pointer flex gap-2 items-center text-sm leading-5 tracking px-[10px] py-[6px] text-[var(--Gray10)]"
+								className={`menubar_item capitalize cursor-pointer flex gap-2 items-center text-sm leading-5 tracking px-[10px] py-[6px] text-[var(--Gray10)] hover:bg-[var(--base-bg3)] rounded-[6px] ${item.id == 'home' ? 'active' : ''}`}
 								onMouseEnter={e => { e.stopPropagation(); onMenuOver(e, item.childrens)}}
 							>
 								{ item.name }

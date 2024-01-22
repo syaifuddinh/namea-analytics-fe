@@ -21,8 +21,8 @@
 
 .card .card_divider__border {
 	height: 0.5rem;
-	width: 80%;
-	min-width: 80%;
+	width: 100%;
+	min-width: 100%;
 
 	border-width: 0 2px;
 	border-color: var(--base-border-theme-color);

@@ -26,7 +26,7 @@ const CustomChart = ({
                         { values.map(item => (
                               <div
                                 key={item}
-                                className="text-xs text-gray6 text-right"
+                                className="text-xs text-gray6 text-right font-light"
                               >
                                 { item }
                             </div>  
@@ -48,7 +48,7 @@ const CustomChart = ({
                 { labels.map(item => (
                       <div
                         key={item}
-                        className="text-sm text-gray6"
+                        className="text-sm text-gray6 font-light"
                       >
                         { item }
                     </div>

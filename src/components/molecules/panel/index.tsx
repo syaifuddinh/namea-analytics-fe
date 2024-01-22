@@ -10,15 +10,15 @@ export default function Panel({
   return (
     <div className="panel">
         <div className={`panel_label ${variant}`}>
-            <div className="stripped px-4 py-2 font-medium text-sm">
+            <div className="stripped px-4 py-2 font-base text-sm">
                 { label }
             </div>
         </div>
-        <div className={`panel_body flex justify-end gap-1 pt-3 pb-2 px-3 ${variant}`}>
+        <div className={`panel_body flex justify-end gap-1 pt-3 pb-2 px-3 ${variant} font-light`}>
             <div className="panel_value text-sm">
                 { value }%
             </div>
-            <div className="panel_value-suffix text-sm">
+            <div className="panel_value-suffix text-sm font-light">
                 of total allocation
             </div>
         </div>        

@@ -39,7 +39,7 @@ const Header = ({
 
 					<div className="card_header_description__divider"> </div>
 
-					<MutationLabel value="23.8% (+24)" variant={mutationVariant} />
+					<MutationLabel value="23.8% (+24)" variant={mutationVariant} className="min-w-[144px]" />
 
 					<TinyText>
 						compared to last year
@@ -55,11 +55,11 @@ const Header = ({
 								src="transparent/kanban.svg"
 								alt="profit-margin-thumbnail"
 							/>
-							<SubtitleText>
+							<div className="text-sm font-light text-[var(--Gray6)]">
 								Profit Margin
-							</SubtitleText>
+							</div>
 						</div>
-						<div className="text-white-theme-color mt-2 font-medium flex items-center gap-2">
+						<div className="text-white-theme-color mt-2 font-base flex items-center gap-2">
 							<Pile variant="primary" />
 							{ profitMargin }%
 						</div>
@@ -98,7 +98,7 @@ const MonthlyInsightCard = ({
 				profitMargin={profitMargin}
 			/>}
 		>
-			<div className="border-y border-[var(--base-bg3)]">
+			<div className="border-y border-[var(--base-bg3)] bg-[var(--base-bg5)]">
 				<CustomChart
 					values={["500K", "400K", "300K", "200K", "100K", "0"]}
 					labels={["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]}	

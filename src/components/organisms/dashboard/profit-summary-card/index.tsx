@@ -63,11 +63,11 @@ const CostingOverviewCard = () => {
 			</div>
 
 			<div className="p-5 flex flex-col items-center">
-				<div className="text-sm text-[var(--Gray10)] font-medium leading-5">
+				<div className="text-sm text-[var(--Gray10)] font-base leading-5">
 					Total Profit
 				</div>
 
-				<div className="text-center text-[var(--Gray6)] text-sm leading-5 mt-[4px]">
+				<div className="text-center text-[var(--Gray6)] text-sm leading-5 mt-[4px] font-light">
 					Has been generated from the previous year.
 				</div>
 			</div>

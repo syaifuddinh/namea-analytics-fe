@@ -43,14 +43,14 @@ const CostingOverviewCard = () => {
 				</div>
 				<div className="w-1/4">
 					<Panel
-						label="Total Cost"
+						label="Other Cost"
 						value="25"
 						variant="danger"
 					/>
 				</div>
 			</div>
 
-			<div className="costing-overview-card_footer p-3 grid grid-rows-3 md:grid-rows-1 grid-flow-col gap-3 bg-[var(--base-bg5)]">
+			<div className="costing-overview-card_footer p-[20px] grid grid-rows-3 md:grid-rows-1 grid-flow-col gap-[16px] bg-[var(--base-bg5)]">
 				<Review
 					title="Operation Cost"
 					description="To run company operations."

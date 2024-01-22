@@ -17,9 +17,9 @@ import ReactChart from "@/components/atoms/react-chart"
 export default function Home() {
   return (
   	<>
-  		<div className="dashboard_header pb-5 flex flex-col md:flex-row gap-3 md:items-center justify-between mt-[44px]">	
+  		<div className="dashboard_header pb-[20px] flex flex-col md:flex-row gap-3 md:items-center justify-between mt-[44px]">	
   			<div className="dashboard_header_title flex items-center">	
-  				<div className="dashboard_header_thumbnail mr-[10px]">
+  				<div className="dashboard_header_thumbnail mr-[16px]">
   					  <Image
                   src="/images/dashboard/thumbnail.svg"
                   alt="dashboard thumbnail"

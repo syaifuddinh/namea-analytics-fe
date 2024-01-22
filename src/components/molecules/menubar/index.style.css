@@ -2,7 +2,8 @@
 	--dropdown-radius: 0.5rem;
 }
 
-.menubar .menubar_item, .menubar_logo {
+.menubar_item.active {
+	@apply bg-[var(--base-bg3)]
 }
 
 .menubar_dropdown-item {
