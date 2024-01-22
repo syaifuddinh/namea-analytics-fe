@@ -18,6 +18,9 @@
 
 body {
 	background: radial-gradient(156.62% 152.5% at 100% 2.34%, #002F2D 0%, rgba(0, 22, 25, 0.00) 60.5%), radial-gradient(132.48% 101.02% at -1.42% 79.69%, #002F2D 0%, rgba(0, 22, 25, 0.00) 83.07%), #001619;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+	background-position: center;
 	padding-bottom: 60px;
 }
 
