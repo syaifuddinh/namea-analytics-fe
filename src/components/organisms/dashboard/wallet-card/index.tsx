@@ -63,8 +63,9 @@ const WalletCard = ({
 		<Card
 			headerElement={<Header title={title} />}
 			isUsePaddingBottom={false}
+			className="bg-base-bg2"
 		>
-			<div className="">	
+			<div className="bg-[var(--base-bg5)]">	
 				{ variant === "turnover" && (
 					<CustomChart
 						values={["500K", "400K", "300K", "200K", "100K", "0"]}
@@ -81,7 +82,7 @@ const WalletCard = ({
 				) }
 			</div>
 
-			<div className="p-4 grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-4 border-t-1 border-base-bg3">	
+			<div className="p-[20px] grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-4 border-t-1 border-base-bg3">	
 				<CurrencyCard
 					currencyName="Ethereum"
 					mutationVariant="primary"
@@ -94,8 +95,10 @@ const WalletCard = ({
 	
 			</div>
 
-			<div className="border-t-1 border-base-bg3 flex justify-between items-center px-4 py-3">
-				<SecondaryCard className="p-2 text-sm text-gray6 flex items-center gap-2">	
+			<div className="border-t-1 border-base-bg3 flex justify-between items-center px-4 py-3 bg-[var(--Gray7)]">
+				<SecondaryCard
+					className="bg-base-bg4 p-2 text-sm text-gray6 flex items-center gap-2"
+				>	
 					<div className="pr-2 border-r-2 border-base-bg3">	
 						<Icon
 							src="transparent/blend.svg"

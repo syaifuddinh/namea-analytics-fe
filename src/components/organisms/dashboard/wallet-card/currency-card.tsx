@@ -12,6 +12,7 @@ const CurrencyCard = ({
 }) => {
 	return (
 		<SecondaryCard
+			className="bg-base-bg5"
 		>	
 			<div className="p-4">	
 				<div className="text-sm text-gray6 mb-2">	
@@ -30,7 +31,7 @@ const CurrencyCard = ({
 			</div>
 
 			<div className="p-1 mt-2">
-				<SecondaryCard className="p-3 bg-base-5">
+				<SecondaryCard className="p-3 bg-base-bg5">
 					<div className="flex gap-3 items-center justify-center">
 						<Pile variant={"primary"}/>
 						<div className="text-white-theme-color">

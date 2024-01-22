@@ -10,13 +10,16 @@
 	--mute-theme-color: rgba(223, 244, 246, 0.6);
 	--background-card-color: linear-gradient(0deg, rgba(205, 251, 255, 0.06), rgba(205, 251, 255, 0.06));
 	--base-bg5: rgba(205, 251, 255, 0.02);
+	--base-bg4: rgba(205, 251, 255, 0.04);
 	--base-bg3: rgba(205, 251, 255, 0.06);
-	--base-bg4: #CDFBFF0A;
+	--base-bg2: radial-gradient(100% 120.05% at 50% 50%, rgba(205, 251, 255, 0.00) 33.78%, rgba(205, 251, 255, 0.04) 100%), rgba(205, 251, 255, 0.00);
 	--Gray1: rgba(205, 251, 255, 0.1);
-	--Gray6: rgba(205, 251, 255, 0.60);
 	--Gray2: rgba(223, 244, 246, 0.60);
 	--Gray3: rgba(205, 251, 255, 0.06);
 	--Gray4: rgba(223, 244, 246, 0.10);
+	--Gray6: rgba(205, 251, 255, 0.60);
+	--Gray7: rgba(223, 244, 246, 0.02);
+
 	--Gray10: #CDFBFF;
 	--Success1: rgba(43, 205, 185, 0.10);
 	--Success2: rgba(43, 205, 185, 0.20);
