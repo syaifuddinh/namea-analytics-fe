@@ -1,4 +1,5 @@
 import "./index.style.css";
+import Image from "next/image";
 import SubtitleText from "@/components/atoms/text/subtitle"
 import TitleText from "@/components/atoms/text/title"
 
@@ -20,6 +21,29 @@ export default function Panel({
             </div>
             <div className="panel_value-suffix text-sm font-light">
                 of total allocation
+            </div>
+            <div className="absolute h-full right-[-5px] top-[6px]">
+                {variant === 'success' && <Image
+                    src="/icons/background/operation-cost.svg"
+                    alt="dashboard thumbnail"
+                    width={40}
+                    height={40}
+                    className="h-full w-full"
+                />}
+                {variant === 'primary' && <Image
+                    src="/icons/background/promotion-cost.svg"
+                    alt="dashboard thumbnail"
+                    width={40}
+                    height={40}
+                    className="h-full w-full"
+                />}
+                {variant === 'danger' && <Image
+                    src="/icons/background/other-cost.svg"
+                    alt="dashboard thumbnail"
+                    width={40}
+                    height={40}
+                    className="h-full w-full"
+                />}
             </div>
         </div>        
     </div>
