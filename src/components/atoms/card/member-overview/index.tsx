@@ -18,10 +18,10 @@ const CardMemberOverview: React.FC<CardMemberOverviewTypes> = ({
 }: CardMemberOverviewTypes) => (
   <div className="@apply border shadow-[0px_-28px_84px_-24px_rgba(223,244,246,0.06)_inset] pt-1.5 rounded-xl border-solid border-[rgba(205,251,255,0.10)] bg-base-bg2">
     <div className="@apply p-5 rounded-[10px_10px_0px_0px] border-t-[rgba(205,251,255,0.06)] border-t border-solid bg-base-bg5">
-      <div className="@apply text-[rgba(205,251,255,0.60)] text-sm font-normal leading-5 tracking-[-0.14px]">
+      <div className="@apply text-[rgba(205,251,255,0.60)] text-sm font-light leading-5 tracking-[-0.14px]">
         {title}
       </div>
-      <div className="@apply text-[#CDFBFF] text-base not-italic font-medium leading-6 tracking-[-0.16px] mb-4">
+      <div className="@apply text-[#CDFBFF] text-base not-italic font-base leading-6 tracking-[-0.16px] mb-4">
         {value}
       </div>
       <div className="flex items-center gap-2">

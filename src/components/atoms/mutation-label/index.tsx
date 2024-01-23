@@ -31,7 +31,7 @@ export default function MutationLabel({
                 />
             )}
     	</div>
-    	<div className="mutation-label_value">
+    	<div className="mutation-label_value font-light">
     		{ value }
     	</div>
     </div>

@@ -97,15 +97,16 @@ const WalletCard = ({
 
 			<div className="border-t-1 border-base-bg3 flex justify-between items-center px-4 py-3 bg-[var(--Gray7)]">
 				<SecondaryCard
-					className="bg-base-bg4 p-2 text-sm text-gray6 flex items-center gap-2"
+					className="bg-base-bg4 py-[4px] px-[8px] text-sm text-gray6 flex items-center gap-[8px]"
 				>	
-					<div className="pr-2 border-r-2 border-base-bg3">	
 						<Icon
 							src="transparent/blend.svg"
 							alt="blend"
 						/>
-					</div>
-					Total { title }
+
+						<div className="w-[1px] h-[15px] bg-[var(--Gray8)]"></div>
+
+						Total { title }
 				</SecondaryCard>		
 
 				<div className="flex gap-3">

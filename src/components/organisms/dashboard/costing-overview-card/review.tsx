@@ -22,7 +22,7 @@ const Review = ({
 					alt="review icon"
 				/>
 
-				<div className="costing-overview_label mt-2 text-sm mb-1 text-gray-theme">
+				<div className="costing-overview_label mt-[12px] text-sm mb-1 text-[var(--Gray6)] font-light">
 					Total Cost
 				</div>
 
@@ -36,14 +36,14 @@ const Review = ({
 						variant="warning"
 					/>
 
-					<div className="costing-overview-card_hint text-gray-theme text-xs">
+					<div className="costing-overview-card_hint font-light text-gray-theme text-xs">
 						of total allocation
 					</div>
 				</div>
 			</div>
 
 			<div className="costing-overview-card_review flex flex-col items-center gap-1 px-4 py-[19px] m-1">
-				<div className="text-sm text-white-theme-color leading-5">
+				<div className="text-sm font-base text-white-theme-color leading-5">
 					{ title }
 				</div>			
 
