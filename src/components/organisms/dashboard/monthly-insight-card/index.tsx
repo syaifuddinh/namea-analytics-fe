@@ -39,7 +39,7 @@ const Header = ({
 
 					<div className="card_header_description__divider"> </div>
 
-					<MutationLabel value="23.8% (+24)" variant={mutationVariant} className="min-w-[144px]" />
+					<MutationLabel value="23.8% (+24)" variant={mutationVariant} className="" />
 
 					<TinyText>
 						compared to last year
