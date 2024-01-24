@@ -46,7 +46,7 @@ const revenueDatasets = [
 const Header = ({ title }) => {
 	return (
 		<div className="card_header  p-[20px] flex items-center justify-between">
-			<div className="text-[var(--Gray10)] text-base font-medium">
+			<div className="text-[var(--Gray10)] text-base font-normal">
 				{ title }
 			</div>
 			
@@ -113,7 +113,7 @@ const WalletCard = ({
 
 			<div className="border-t-1 border-base-bg3 flex justify-between items-center px-4 py-3 bg-[var(--Gray7)]">
 				<SecondaryCard
-					className="bg-base-bg4 py-[4px] px-[8px] text-sm text-gray6 flex items-center gap-[8px]"
+					className="bg-base-bg4 font-light py-[4px] px-[8px] text-sm text-gray6 flex items-center gap-[8px]"
 				>	
 						<Icon
 							src="transparent/blend.svg"

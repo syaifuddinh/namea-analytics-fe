@@ -12,9 +12,9 @@ import CardMemberOverview from "@/components/atoms/card/member-overview";
 const Header = () => {
 	return (
 		<div className="@apply card_header p-[20px]">
-			<TitleText>
+			<div className="text-base font-light text-[var(--Gray10)] leading-6">
 				Member Overview
-			</TitleText>
+			</div>
 			<SubtitleText>
 				Record your ideas and to-do’s easily, so you never miss a thing.
 			</SubtitleText>

@@ -23,7 +23,7 @@ const CurrencyCard = ({
 					500.000.000
 				</MoneyText>
 
-				<div className="mt-2 flex gap-2 items-center">	
+				<div className="mt-3 flex gap-2 items-center">	
 					<MutationLabel value="23.8% (+24)" variant={mutationVariant} />
 					<TinyText>
 						compared to last week
@@ -41,7 +41,7 @@ const CurrencyCard = ({
 					</div>
 					<div className="flex gap-2.5 items-center justify-center">
 						<Pile variant={"primary"}/>
-						<div className="text-white-theme-color font-base">
+						<div className="text-white-theme-color font-normal">
 							{ currencyName }
 						</div>
 					</div>

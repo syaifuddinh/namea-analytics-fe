@@ -15,7 +15,8 @@ const CustomChart = ({
     values,
     variant,
     isShowYAxes = true,
-    maxValue = 0
+    maxValue = 0,
+    contentHeight = 200
 }) => {
     const gridElement = useRef(null)
     const [itemValues, setItemValues] = useState([])
@@ -108,7 +109,8 @@ const CustomChart = ({
                 <div className="custom-chart_content pt-[28px] px-[20px]">
                     <div
                         ref={gridElement}
-                        className="custom-chart_grid relative flex gap-[12px] flex-wrap max-h-[200px] overflow-hidden"
+                        className={`custom-chart_grid relative flex gap-[12px] flex-wrap overflow-hidden`}
+                        style={{height: contentHeight + "px", maxHeight: contentHeight + "px"}}    
                      >
                         {  
                             dotList.map(item => (

@@ -15,7 +15,7 @@ const CashflowOverviewCard = () => {
           <div className="flex items-center justify-between bg-base-bg4 flex items-center pl-[7px] pr-[18px] py-[7px] border border-base-bg3 rounded-lg border-solid">
             <div className="flex items-center gap-[10px]">
               <div><IconPlusSquare /></div>
-              <div className="caption-1-400 font-light text-gray-6">Total Cash Balance</div>
+              <div className="font-light text-gray-6 text-sm">Total Cash Balance</div>
             </div>
             <div className="body-2-400 text-gray-10 font-base">Rp694.354.766,<span className="text-gray-6">00</span></div>
           </div>
@@ -25,7 +25,7 @@ const CashflowOverviewCard = () => {
           <div className="flex items-center justify-between bg-base-bg4 flex items-center pl-[7px] pr-[18px] py-[7px] border border-base-bg3 rounded-lg border-solid">
             <div className="flex items-center gap-[10px]">
               <div><IconMinusSquare /></div>
-              <div className="caption-1-400 text-gray-6">Total Outstanding Debt</div>
+              <div className="text-gray-6 text-sm font-light">Total Outstanding Debt</div>
             </div>
             <div className="body-2-500 text-alert-10">Rp694.354.766,<span className="text-alert-6">00</span></div>
           </div>

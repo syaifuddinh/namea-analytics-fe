@@ -32,12 +32,12 @@ const Header = () => {
 
 const labels = ["2020", "2021", "2022", "2023"]
 
-const CostingOverviewCard = () => {
+const ProfitSummaryCard = () => {
 	return (
 		<Card
 			headerElement={<Header />}
 		>
-			<div class="costing-overview-card_content">
+			<div class="costing-overview-card_content bg-[var(--Gray7)]">
 				<CustomChart
 					labels={labels}
 					values={[
@@ -51,6 +51,7 @@ const CostingOverviewCard = () => {
 					isShowYAxes={false}
 					variant="bar"
 					maxValue={100000000}
+					contentHeight={268}
 				/>
 			</div>
 
@@ -67,4 +68,4 @@ const CostingOverviewCard = () => {
 	)
 }
 
-export default CostingOverviewCard;
+export default ProfitSummaryCard;
