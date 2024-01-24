@@ -56,11 +56,11 @@ export default function Home() {
           </div>
 
           <div className="flex gap-[20px] mt-[60px]">
-              <div className="w-3/4">
+              <div className="w-[62.5%]">
                   <CostingOverviewCard
                   />
               </div>
-              <div className="w-1/4">
+              <div className="w-[37.5%]">
                   <ProfitSummaryCard />              
               </div>
           </div>

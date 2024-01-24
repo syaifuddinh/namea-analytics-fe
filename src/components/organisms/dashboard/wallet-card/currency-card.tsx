@@ -16,7 +16,7 @@ const CurrencyCard = ({
 			className="bg-base-bg5"
 		>	
 			<div className="p-4">	
-				<div className="text-sm text-gray6 mb-2">	
+				<div className="text-sm text-gray6 mb-2 font-light">	
 					Total
 				</div>
 				<MoneyText>
@@ -41,7 +41,7 @@ const CurrencyCard = ({
 					</div>
 					<div className="flex gap-2.5 items-center justify-center">
 						<Pile variant={"primary"}/>
-						<div className="text-white-theme-color font-normal">
+						<div className="text-white-theme-color font-normal text-sm">
 							{ currencyName }
 						</div>
 					</div>

@@ -51,7 +51,7 @@ const ProfitSummaryCard = () => {
 					isShowYAxes={false}
 					variant="bar"
 					maxValue={100000000}
-					contentHeight={268}
+					contentHeight={266}
 				/>
 			</div>
 

@@ -61,7 +61,7 @@ const CostingOverviewCard = () => {
 
 				<Review
 					title="Promotion Cost"
-					description="Marketing or promotion activity."
+					description="Marketing or promotional activity."
 					iconSrc="transparent/megaphone.svg"
 				/>			
 				
