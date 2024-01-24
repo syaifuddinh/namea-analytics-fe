@@ -24,7 +24,7 @@ const CurrencyCard = ({
 				</MoneyText>
 
 				<div className="mt-2 flex gap-2 items-center">	
-					<MutationLabel value="23.8% (+24)" variant={mutationVariant} className="min-w-[104px]" />
+					<MutationLabel value="23.8% (+24)" variant={mutationVariant} />
 					<TinyText>
 						compared to last week
 					</TinyText>		

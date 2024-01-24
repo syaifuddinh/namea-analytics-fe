@@ -51,7 +51,7 @@ export default function FrequencyInput({
 	}, [value])
 
  	return (
-	    <div className="frequency-input border border-[var(--Gray4)] rounded-[10px] p-[4px] flex">
+	    <div className="frequency-input border border-[var(--Gray4)] rounded-[10px] p-[4px] flex gap-1">
 	    	{ 
 	    		datasets.map(item => (
 			    	<div
