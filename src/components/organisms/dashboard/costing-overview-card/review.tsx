@@ -6,6 +6,7 @@ import MoneyText from "@/components/atoms/text/money";
 import TitleText from "@/components/atoms/text/title";
 import SubtitleText from "@/components/atoms/text/subtitle";
 import MutationLabel from "@/components/atoms/mutation-label"
+import PercentageLabel from "@/components/atoms/percentage-label"
 
 const Review = ({
 	title,
@@ -31,7 +32,7 @@ const Review = ({
 				</MoneyText>
 
 				<div className="flex gap-2 mt-3 items-center">
-					<MutationLabel
+					<PercentageLabel
 						value={"50%"}
 						variant="warning"
 					/>
@@ -42,7 +43,7 @@ const Review = ({
 				</div>
 			</div>
 
-			<div className="costing-overview-card_review flex flex-col items-center gap-1 px-[44px] py-[19px] m-1">
+			<div className="costing-overview-card_review flex flex-col items-center gap-1 px-[26px] py-[19px] m-1">
 				<div className="text-sm font-base text-white-theme-color leading-5">
 					{ title }
 				</div>			

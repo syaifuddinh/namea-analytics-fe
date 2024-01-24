@@ -1,19 +1,19 @@
 import "./index.style.css";
 import Icon from "@/components/atoms/icon";
 
-type MutationLabelType = {
+type PercentageLabelType = {
     value: string,
     variant: "primary"|"danger" | "warning",
     className?: string
 }
 
-export default function MutationLabel({ 
+export default function PercentageLabel({ 
 	value,
     variant,
 	className = ""
-}: MutationLabelType) {
+}: PercentageLabelType) {
   return (
-    <div className={`mutation-label inline-flex items-center gap-[3px] font-medium text-xs ${variant} ${className} pl-1 pr-1.5 py-0.5`}>
+    <div className={`mutation-label inline-flex items-center gap-[3px] font-medium text-xs ${variant} ${className} px-2 py-0.5`}>
     	<div className="mutation-label_prefix">
             { variant === "primary" && (
                 <Icon

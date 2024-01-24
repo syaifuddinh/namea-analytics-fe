@@ -20,6 +20,7 @@ const CashflowOverviewCard = () => {
             <div className="body-2-400 text-gray-10 font-base">Rp694.354.766,<span className="text-gray-6">00</span></div>
           </div>
         </div>
+        
         <div className="w-2/4 bg-base-bg4 border border-gray-1 rounded-xl border-solid pl-5 pr-[22px] py-5">
           <div className="flex items-center justify-between bg-base-bg4 flex items-center pl-[7px] pr-[18px] py-[7px] border border-base-bg3 rounded-lg border-solid">
             <div className="flex items-center gap-[10px]">

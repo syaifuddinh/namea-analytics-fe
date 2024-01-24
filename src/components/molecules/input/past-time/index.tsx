@@ -42,7 +42,7 @@ export default function PastTimeInput({ onChange }) {
 				Nov 13 - Dec 10, 2023
 			</div>
 
-			<div className="cursor-pointer">
+			<div className="cursor-pointer py-2 px-1.5 my-1.5 mr-1.5">
 				<Icon
 					src="transparent/chevron-down.svg"
 					alt="period input"

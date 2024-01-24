@@ -72,7 +72,7 @@ const MemberOverviewCard: React.FC = () => {
 		<Card
 			headerElement={<Header />}
 		>
-			<div className="grid grid-cols-[auto_auto_auto] gap-x-5 gap-y-5 p-5 bg-[var(--base-bg5)]">
+			<div className="grid grid-cols-[auto_auto_auto] gap-4 p-5 bg-[var(--base-bg5)]">
 				{listMemberOverview.map((values) => <CardMemberOverview {...values} key={values.key} />)}
 			</div>
 		</Card> 

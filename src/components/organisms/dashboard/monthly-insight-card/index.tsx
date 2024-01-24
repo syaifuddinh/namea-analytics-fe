@@ -32,16 +32,24 @@ const Header = ({
 					</div>
 				</div>
 
-				<div className="card_header_description mt-1.5 flex items-center gap-3">
-					<MoneyText>
+				<div className="card_header_description mt-1.5 flex items-center">
+					<MoneyText
+						className="mr-3"
+					>
 						500.950.450
 					</MoneyText>				
 
-					<div className="card_header_description__divider"> </div>
+					<div className="card_header_description__divider"></div>
 
-					<MutationLabel value="23.8% (+24)" variant={mutationVariant} className="" />
+					<MutationLabel
+						value="23.8% (+24)" 
+						variant={mutationVariant} 
+						className="ml-3"
+					/>
 
-					<TinyText>
+					<TinyText
+						className="ml-2"
+					>
 						compared to last year
 					</TinyText>
 				</div>
@@ -59,7 +67,7 @@ const Header = ({
 								Profit Margin
 							</div>
 						</div>
-						<div className="text-white-theme-color mt-2 font-base flex items-center gap-2">
+						<div className="text-white-theme-color mt-2.5 font-base flex items-center gap-2.5">
 							<Pile variant="primary" />
 							{ profitMargin }%
 						</div>
