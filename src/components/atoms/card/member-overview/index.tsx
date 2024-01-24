@@ -21,7 +21,7 @@ const CardMemberOverview: React.FC<CardMemberOverviewTypes> = ({
       <div className="@apply text-[rgba(205,251,255,0.60)] text-sm font-light leading-5 tracking-[-0.14px]">
         {title}
       </div>
-      <div className="@apply text-[#CDFBFF] text-base not-italic font-base leading-6 tracking-[-0.16px] mb-4">
+      <div className="@apply text-[#CDFBFF] text-base not-italic font-base leading-6 tracking-[-0.16px] mb-4 mt-1">
         {value}
       </div>
       <div className="flex items-center gap-2">
@@ -33,9 +33,9 @@ const CardMemberOverview: React.FC<CardMemberOverviewTypes> = ({
           }`}
         >
           {compareLastYear > 0 ? (
-            <Image src={ArrowUpIcon} alt="arrow-up icon" loading="lazy" className="inline mr-1" />
+            <Image src={ArrowUpIcon} alt="arrow-up icon" loading="lazy" className="inline mr-[3px]" />
           ) : (
-            <Image src={ArrowDownIcon} alt="arrow-down icon" loading="lazy" className="inline mr-1" />
+            <Image src={ArrowDownIcon} alt="arrow-down icon" loading="lazy" className="inline mr-[3px]" />
           )}
           {comparison}
           {` (${compareLastYear > 0 ? "+" : "-"}${Math.abs(

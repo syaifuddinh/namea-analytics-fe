@@ -6,7 +6,7 @@ import MoneyText from "@/components/atoms/text/money";
 import TitleText from "@/components/atoms/text/title";
 import SubtitleText from "@/components/atoms/text/subtitle";
 import Icon from "@/components/atoms/icon";
-import ProfitLossChart from "@/components/atoms/profit-loss-chart"
+import CustomChart from "@/components/atoms/custom-chart"
 
 const Header = () => {
 	return (
@@ -32,37 +32,29 @@ const Header = () => {
 
 const labels = ["2020", "2021", "2022", "2023"]
 
-const createGradient = () => {
-	const ctx = document.createElement('canvas').getContext('2d');
-	const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-	gradient.addColorStop(0, '#07B7AC');
-	gradient.addColorStop(1, '#087981');
-	// ctx.shadowColor = 'rgba(20, 10, 0, 0.5)';
- //    ctx.shadowBlur = 5;
- //    ctx.shadowOffsetX = 3;
- //    ctx.shadowOffsetY = 3;
-
-	return gradient;
-};
-
-const datasets = [
-	{
-		borderRadius: 16,
-		backgroundColor: createGradient(),
-		data: [20000000, 30000000, 25000000, 19000000]
-	}
-]
-
 const CostingOverviewCard = () => {
 	return (
 		<Card
 			headerElement={<Header />}
 		>
-			<div class="costing-overview-card_content pt-5 px-3">
-				
+			<div class="costing-overview-card_content">
+				<CustomChart
+					labels={labels}
+					values={[
+						[
+							45300000,
+							78500000,
+							55900000,
+							25300000
+						]
+					]}
+					isShowYAxes={false}
+					variant="bar"
+					maxValue={100000000}
+				/>
 			</div>
 
-			<div className="p-5 flex flex-col items-center">
+			<div className="p-5 flex flex-col items-center border-t border-[var(--base-bg3)]">
 				<div className="text-sm text-[var(--Gray10)] font-base leading-5">
 					Total Profit
 				</div>

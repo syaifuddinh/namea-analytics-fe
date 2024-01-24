@@ -39,7 +39,7 @@ const CurrencyCard = ({
 							alt="dot pattern"
 						/>
 					</div>
-					<div className="flex gap-3 items-center justify-center">
+					<div className="flex gap-2.5 items-center justify-center">
 						<Pile variant={"primary"}/>
 						<div className="text-white-theme-color font-base">
 							{ currencyName }

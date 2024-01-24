@@ -56,11 +56,13 @@ export default function Home() {
           </div>
 
           <div className="flex gap-[20px] mt-[60px]">
-              <div className="w-5/6">
+              <div className="w-4/6">
                   <CostingOverviewCard
                   />
               </div>
-              <ProfitSummaryCard />              
+              <div className="w-2/6">
+                  <ProfitSummaryCard />              
+              </div>
           </div>
 
           <div className="grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-[20px] mt-[60px]">
