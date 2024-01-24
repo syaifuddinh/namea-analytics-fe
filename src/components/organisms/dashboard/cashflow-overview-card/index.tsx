@@ -2,7 +2,7 @@ import CardCashflowOverview from "@/components/atoms/card/cashflow-overview";
 import Checkbox from "@/components/atoms/input/select/checkbox";
 import IconPlusSquare from "@/assets/icons/plus-square";
 import IconMinusSquare from "@/assets/icons/minus-square";
-import { BarChart } from "@/components/molecules/chart";
+import CustomChart from "@/components/atoms/custom-chart"
 
 const CashflowOverviewCard = () => {
   return (
@@ -39,7 +39,41 @@ const CashflowOverviewCard = () => {
 				</div>
 			</div>
 			<div className="h-full border-b border-base-bg3 rounded-bl-[16px] rounded-br-[16px] border-radius-2">
-				<BarChart />
+        <CustomChart
+            labels={["Jan 23", "Feb 23", "Mar 23", "Apr 23", "May 23", "Jun 23", "Jul 23", "Aug 23", "Sept 23", "Oct 23", "Nov 23", "Dec 23"]}  
+            maxValue={500000}
+            values={[
+              [
+                450000,
+                450000,
+                450000,
+                450000,
+                450000,
+                450000,
+                450000,
+                450000,
+                450000,
+                450000,
+                450000,
+                450000
+              ],
+              [
+                300000,
+                300000,
+                300000,
+                300000,
+                300000,
+                300000,
+                300000,
+                300000,
+                300000,
+                300000,
+                300000,
+                300000,
+              ]
+            ]}
+            variant="bar"
+          />
 			</div>
     </CardCashflowOverview>
   );

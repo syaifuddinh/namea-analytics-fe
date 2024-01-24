@@ -16,7 +16,7 @@ const Review = ({
 		<SecondaryCard
 			className="bg-[var(--base-bg5)]"
 		>
-			<div className="p-5">
+			<div className="px-[20px] pt-[20px] pb-[16px]">
 				<Icon
 					src={iconSrc}
 					alt="review icon"
@@ -42,7 +42,7 @@ const Review = ({
 				</div>
 			</div>
 
-			<div className="costing-overview-card_review flex flex-col items-center gap-1 px-4 py-[19px] m-1">
+			<div className="costing-overview-card_review flex flex-col items-center gap-1 px-[44px] py-[19px] m-1">
 				<div className="text-sm font-base text-white-theme-color leading-5">
 					{ title }
 				</div>			

@@ -68,8 +68,23 @@ const WalletCard = ({
 			<div className="bg-[var(--base-bg5)]">	
 				{ variant === "turnover" && (
 					<CustomChart
-						values={["500K", "400K", "300K", "200K", "100K", "0"]}
 						labels={["Dec Week 1", "Dec Week 2", "Dec Week 3", "Dec Week 4"]}	
+						maxValue={500000}
+						values={[
+							[
+								450000,
+								300000,
+								400000,
+								500000
+							],
+							[
+								300000,
+								350000,
+								250000,
+								350000
+							]
+						]}
+						variant="bar"
 					/>
 				) }
 
@@ -77,6 +92,7 @@ const WalletCard = ({
 					<CustomChart
 						values={["500K", "400K", "300K", "200K", "100K", "0"]}
 						labels={["Dec Week 1", "Dec Week 2", "Dec Week 3", "Dec Week 4"]}	
+						maxValue={500000}
 						
 					/>
 				) }

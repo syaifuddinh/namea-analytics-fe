@@ -20,11 +20,11 @@
 	--Gray6: rgba(205, 251, 255, 0.60);
 	--Gray7: rgba(223, 244, 246, 0.02);
 	--Gray8: rgba(210, 250, 255, 0.20);
-
 	--Gray10: #CDFBFF;
 	--Success1: rgba(43, 205, 185, 0.10);
 	--Success2: rgba(43, 205, 185, 0.20);
 	--Success10: #2BCDB9;
 	--Alert1: rgba(255, 140, 103, 0.10);
 	--Alert10: #FF8C67;
-}
+	--bar-color:linear-gradient(270deg, #07B7AC 0%, #087981 100%);
+}	

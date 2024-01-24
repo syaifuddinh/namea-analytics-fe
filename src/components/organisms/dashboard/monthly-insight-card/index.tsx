@@ -100,8 +100,16 @@ const MonthlyInsightCard = ({
 		>
 			<div className="border-y border-[var(--base-bg3)] bg-[var(--base-bg5)]">
 				<CustomChart
-					values={["500K", "400K", "300K", "200K", "100K", "0"]}
+					values={[
+						[
+							450000,
+							300000,
+							400000,
+							500000
+						]
+					]}
 					labels={["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]}	
+					maxValue={500000}
 				/>
 			</div>
 		</Card>

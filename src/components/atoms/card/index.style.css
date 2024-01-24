@@ -29,5 +29,5 @@
 }
 
 .card .card_header {
-	@apply p-[20px] border-y border-[var(--Gray3)] bg-[var(--base-bg5)];
+	@apply rounded-t-[12px] p-[20px] border-y border-[var(--Gray3)] bg-[var(--base-bg5)];
 }

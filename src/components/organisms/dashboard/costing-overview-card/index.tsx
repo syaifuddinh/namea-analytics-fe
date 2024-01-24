@@ -13,7 +13,9 @@ const Header = () => {
 			<TitleText>
 				Costing Overview
 			</TitleText>
-			<SubtitleText>
+			<SubtitleText
+				className="mt-[4px]"
+			>
 				Record your ideas and to-do’s easily, so you never miss a thing.
 			</SubtitleText>
 		</div>
