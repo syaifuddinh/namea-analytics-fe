@@ -10,9 +10,9 @@ import Review from "./review"
 const Header = () => {
 	return (
 		<div className="card_header p-[20px]">
-			<TitleText>
+			<div className="font-base text-[var(--Gray10)] leading-6">
 				Costing Overview
-			</TitleText>
+			</div>
 			<SubtitleText
 				className="mt-[4px]"
 			>

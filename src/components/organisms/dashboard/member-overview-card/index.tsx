@@ -15,7 +15,9 @@ const Header = () => {
 			<div className="text-base font-light text-[var(--Gray10)] leading-6">
 				Member Overview
 			</div>
-			<SubtitleText>
+			<SubtitleText
+				className="mt-[4px]"
+			>
 				Record your ideas and to-do’s easily, so you never miss a thing.
 			</SubtitleText>
 		</div>
