@@ -32,7 +32,7 @@ const Header = ({
 					</div>
 				</div>
 
-				<div className="card_header_description mt-1 flex items-center gap-3">
+				<div className="card_header_description mt-1.5 flex items-center gap-3">
 					<MoneyText>
 						500.950.450
 					</MoneyText>				

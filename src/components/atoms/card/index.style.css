@@ -14,13 +14,11 @@
 .card .card_divider {
 	width: 100%;
 	min-width: 100%;
-	height: 0.5rem;
 	display: flex;
 	justify-content: center;
 }
 
 .card .card_divider__border {
-	height: 0.5rem;
 	width: 100%;
 	min-width: 100%;
 
