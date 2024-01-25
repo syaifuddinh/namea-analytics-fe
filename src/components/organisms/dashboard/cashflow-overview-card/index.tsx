@@ -74,6 +74,7 @@ const CashflowOverviewCard = () => {
               ]
             ]}
             variant="bar"
+            xClassname="pl-[36px] pr-[35px]"
           />
 			</div>
     </CardCashflowOverview>

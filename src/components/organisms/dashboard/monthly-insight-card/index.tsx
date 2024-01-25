@@ -124,7 +124,7 @@ const MonthlyInsightCard = ({
 					]}
 					labels={["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]}	
 					maxValue={500000}
-					xClassname="pl-[10px]"
+					xClassname="pl-[10px] pr-[20px]"
 				/>
 			</div>
 		</Card>

@@ -145,7 +145,7 @@ const CustomChart = ({
             <div className="grid grid-flow-col x-container">
                 <div className="w-[55px]"></div>
 
-                <div className={`custom-chart_x flex justify-between py-[6px] pr-[20px] ${xClassname}`}>
+                <div className={`custom-chart_x flex justify-between py-[6px] ${xClassname}`}>
                     { labels.map(item => (
                           <div
                             key={item}
