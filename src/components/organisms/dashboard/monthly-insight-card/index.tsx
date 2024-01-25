@@ -16,7 +16,9 @@ const Header = ({
 	title, 
 	mutationVariant,
 	isShowProfitMargin,
-	profitMargin
+	profitMargin,
+	balance,
+	mutationPercentage
 }) => {
 	return (
 		<div className="card_header flex items-center justify-between max-h-[90px]">
@@ -36,13 +38,13 @@ const Header = ({
 					<MoneyText
 						className="mr-3"
 					>
-						500.950.450
+						{ balance }
 					</MoneyText>				
 
 					<div className="card_header_description__divider"></div>
 
 					<MutationLabel
-						value="23.8% (+24)" 
+						value={mutationPercentage}
 						variant={mutationVariant} 
 						className="ml-3"
 					/>
@@ -67,7 +69,7 @@ const Header = ({
 								Profit Margin
 							</div>
 						</div>
-						<div className="text-white-theme-color mt-2.5 font-base flex items-center gap-2.5">
+						<div className="text-white-theme-color mt-1.5 font-base flex items-center gap-2.5">
 							<Pile variant="primary" />
 							{ profitMargin }%
 						</div>
@@ -93,7 +95,9 @@ const MonthlyInsightCard = ({
 	title,
 	mutationVariant,
 	isShowProfitMargin,
-	profitMargin
+	profitMargin,
+	balance,
+	mutationPercentage
 }) => {
 	return (
 		<Card
@@ -101,6 +105,8 @@ const MonthlyInsightCard = ({
 			paddingBottom="6px"
 			headerElement={<Header 
 				title={title}
+				balance={balance}
+				mutationPercentage={mutationPercentage}
 				mutationVariant={mutationVariant}
 				isShowProfitMargin={isShowProfitMargin}
 				profitMargin={profitMargin}
@@ -118,6 +124,7 @@ const MonthlyInsightCard = ({
 					]}
 					labels={["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]}	
 					maxValue={500000}
+					xClassname="pl-[65px]"
 				/>
 			</div>
 		</Card>

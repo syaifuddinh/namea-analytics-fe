@@ -48,7 +48,7 @@ const Menubar = () => {
 						LX Analytics
 					</div>
 				</div>
-				<div className="menubar_items flex gap-[8px]">
+				<div className="menubar_items flex gap-2">
 					{
 						Menu.items.map(item => (
 							<div
@@ -58,7 +58,7 @@ const Menubar = () => {
 							>
 								{ item.name }
 								{ item.childrens.length > 0 && (
-									<div className="py-2 px-1.5">
+									<div className="py-1.5 px-2.5">
 										<Icon
 											src="transparent/chevron-down.svg"
 											alt="expanding-menu-icon"

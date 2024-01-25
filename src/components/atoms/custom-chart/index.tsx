@@ -14,6 +14,7 @@ const CustomChart = ({
     labels, 
     values,
     variant,
+    xClassname,
     isShowYAxes = true,
     maxValue = 0,
     contentHeight = 200
@@ -140,7 +141,7 @@ const CustomChart = ({
                 </div>
             </div>
 
-            <div className="custom-chart_x border-t-1 border-base-bg3 flex justify-between py-[6px] pl-[87px] pr-[20px]">
+            <div className={`custom-chart_x border-t-1 border-base-bg3 flex justify-between py-[6px] pr-[20px] ${xClassname}`}>
                 { labels.map(item => (
                       <div
                         key={item}

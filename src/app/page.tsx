@@ -48,19 +48,23 @@ export default function Home() {
                   mutationVariant="primary"
                   isShowProfitMargin={true}
                   profitMargin={24}
+                  balance="500.950.450"
+                  mutationPercentage="23.8% (+24)"
               />
               <MonthlyInsightCard
                   title={"December Total Cost"}
                   mutationVariant="danger"
+                  balance="492.509.249"
+                  mutationPercentage="-16.5% (-8)"
               />
           </div>
 
           <div className="flex gap-[20px] mt-[60px]">
-              <div className="w-[72%]">
+              <div className="w-[73.29%]">
                   <CostingOverviewCard
                   />
               </div>
-              <div className="w-[28%]">
+              <div className="w-[26.71%]">
                   <ProfitSummaryCard />              
               </div>
           </div>
