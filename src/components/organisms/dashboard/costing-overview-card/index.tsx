@@ -52,7 +52,7 @@ const CostingOverviewCard = () => {
 				</div>
 			</div>
 
-			<div className="costing-overview-card_footer p-[20px] grid grid-rows-3 md:grid-rows-1 grid-flow-col gap-[16px] bg-[var(--base-bg5)]">
+			<div className="costing-overview-card_footer p-[20px] grid grid-rows-3 md:grid-rows-1 grid-cols-3 gap-[16px] bg-[var(--base-bg5)]">
 				<Review
 					title="Operation Cost"
 					description="To run company operations."
