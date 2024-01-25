@@ -43,7 +43,7 @@ const Review = ({
 				</div>
 			</div>
 
-			<div className={`max-h-[82px] costing-overview-card_review flex flex-col items-center gap-1 px-[26px] py-[19px] m-1`}>
+			<div className={`max-h-[82px] costing-overview-card_review flex flex-col items-center gap-1 px-1 py-[19px] m-1`}>
 				<div className="text-sm font-base text-white-theme-color leading-5">
 					{ title }
 				</div>			
