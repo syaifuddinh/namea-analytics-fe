@@ -57,18 +57,21 @@ const CostingOverviewCard = () => {
 					title="Operation Cost"
 					description="To run company operations."
 					iconSrc="transparent/cpu.svg"
+					balance="500.950.450"
 				/>			
 
 				<Review
 					title="Promotion Cost"
 					description="Marketing or promotional activity."
 					iconSrc="transparent/megaphone.svg"
+					balance="500.950.450"
 				/>			
 				
 				<Review
 					title="Other Cost"
 					description="Include various types of costs."
 					iconSrc="transparent/more.svg"
+					balance="500.950.450"
 				/>			
 			</div>
 		</Card> 

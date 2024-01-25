@@ -11,7 +11,8 @@ import PercentageLabel from "@/components/atoms/percentage-label"
 const Review = ({
 	title,
 	description,
-	iconSrc
+	iconSrc,
+	balance
 }) => {
 	return (
 		<SecondaryCard
@@ -28,7 +29,7 @@ const Review = ({
 				</div>
 
 				<MoneyText>
-					500.000.000
+					{ balance }
 				</MoneyText>
 
 				<div className="flex gap-2 mt-3 items-center">
