@@ -20,10 +20,6 @@
 	color: var(--gray-theme-color);
 }
 
-.menubar_user-profile_username {
-	color: var(--white-theme-color);
-}
-
 .menubar_dropdown-item:first-child {
 	border-top-left-radius: var(--dropdown-radius);
 	border-top-right-radius: var(--dropdown-radius);
