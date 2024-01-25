@@ -1,6 +1,14 @@
+@font-face {
+	font-family:'Neue Montreal';
+	src: url('/fonts/neue-montreal/NeueMontreal-Regular.otf');
+}
+
+.font-neue-montreal {
+	font-family: "Neue Montreal";
+}
+
 .bg-base-bg2 {
 	background: radial-gradient(100% 120.05% at 50% 50%, rgba(205, 251, 255, 0.00) 33.78%, rgba(205, 251, 255, 0.04) 100%, rgba(205, 251, 255, 0.00));
-
 }
 
 .text-gray-theme {

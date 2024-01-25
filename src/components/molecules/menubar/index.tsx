@@ -38,28 +38,32 @@ const Menubar = () => {
 	return (
 		<div className="menubar flex items-center justify-between">
 			<div className="flex items-center">
-				<div className="menubar_logo flex text-[var(--Gray10)] gap-2 font-base mr-[30px] items-center">
+				<div className="menubar_logo font-neue-montreal flex text-[var(--Gray10)] leading-5 gap-3 font-base mr-[30px] flex items-center">
 					<Image
 						src={Logo}
 						alt="logo"
+						className="w-[24px] h-[25px]"
 					/>
-
-					LX Analytics
+					<div className="-tracking-[0.16px]">
+						LX Analytics
+					</div>
 				</div>
 				<div className="menubar_items flex gap-[8px]">
 					{
 						Menu.items.map(item => (
 							<div
 								key={item.id}
-								className={`menubar_item capitalize cursor-pointer flex gap-2 items-center text-sm leading-5 tracking px-[10px] py-[6px] text-[var(--Gray10)] hover:bg-[var(--base-bg3)] rounded-[6px] ${item.id == 'home' ? 'active' : ''}`}
+								className={`menubar_item capitalize cursor-pointer flex gap-2.5 items-center text-sm leading-5 tracking px-[10px] py-[6px] text-[var(--Gray10)] hover:bg-[var(--base-bg3)] rounded-[6px] ${item.id == 'home' ? 'active' : ''}`}
 								onMouseEnter={e => { e.stopPropagation(); onMenuOver(e, item.childrens)}}
 							>
 								{ item.name }
 								{ item.childrens.length > 0 && (
-									<Icon
-										src="transparent/chevron-down.svg"
-										alt="expanding-menu-icon"
-									/>
+									<div className="py-2 px-1.5">
+										<Icon
+											src="transparent/chevron-down.svg"
+											alt="expanding-menu-icon"
+										/>
+									</div>
 								) }
 							</div>
 						))	
