@@ -97,7 +97,7 @@ const CustomChart = ({
         <div className="custom-chart">
             <div className="flex">
                 { isShowYAxes === true && (
-                    <div className="custom-chart_y max-w-[55px] flex flex-col gap-[24px] py-[20px] px-[12px] border-r border-base-bg3 max-w-[55px]">
+                    <div className="custom-chart_y flex flex-col gap-[24px] py-[20px] px-[12px] border-r border-base-bg3 max-w-[3.4378rem] min-w-[3.4378rem] min-h-[16rem]">
                         { yAxeLabels.map(item => (
                               <div
                                 key={item}
@@ -142,7 +142,7 @@ const CustomChart = ({
                 </div>
             </div>
 
-            <div className="grid grid-flow-col x-container">
+            <div className="x-container min-h-[1.75rem] border-t border-[var(--base-bg3)] flex items-center">
                 <div className="w-[55px]"></div>
 
                 <div className={`custom-chart_x flex justify-between py-[6px] ${xClassname}`}>

@@ -1,6 +1,18 @@
 @font-face {
 	font-family:'Neue Montreal';
-	src: url('/fonts/neue-montreal/NeueMontreal-Regular.otf');
+	src: url(/fonts/neue-montreal/NeueMontreal-Regular.otf);
+}
+
+@font-face {
+  font-family:'Neue Montreal 2';
+  src: url('/fonts/neue-montreal-by-pangram/PPNeueMontreal-Book.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family:'Neue Montreal 2';
+  src: url('/fonts/neue-montreal-by-pangram/PPNeueMontreal-Medium.otf');
+  font-weight: 500;
 }
 
 /* cyrillic-ext */
@@ -322,6 +334,11 @@
 
 .font-neue-montreal {
 	font-family: "Neue Montreal";
+}
+
+
+.font-neue-montreal2 {
+  font-family: "Neue Montreal 2";
 }
 
 * {

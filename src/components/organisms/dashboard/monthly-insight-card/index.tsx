@@ -21,7 +21,7 @@ const Header = ({
 	mutationPercentage
 }) => {
 	return (
-		<div className="card_header flex items-center justify-between max-h-[90px]">
+		<div className="card_header flex items-center justify-between max-h-[5.626rem]">
 			<div className="card_header-container flex flex-col items-between pr-4">	
 				<div className="card_header_title flex items-center gap-2">
 					<Icon
