@@ -1,11 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import '@/assets/css/_variables.css'
 import '@/assets/css/global.css'
 import MainLayout from "@/components/templates/main-layout";
-
-const inter = Inter({ subsets: ['latin'] })
+import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +17,12 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<Head>
+				<link rel="preconnect" href="https://fonts.googleapis.com"/>
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+				<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+			</Head>
+			<body>
 				<MainLayout>
 				  	{ children }
 				</MainLayout>

@@ -5,7 +5,7 @@ const MoneyText = ({
 	className = ""
 }) => {
 	return (
-		<div className={`money-text font-base text-base flex ${className}`}>	
+		<div className={`money-text font-base text-base flex ${className} -tracking-[0.16px]`}>	
 			Rp{ children }
 			<div className="money-text_suffix">
 				,00

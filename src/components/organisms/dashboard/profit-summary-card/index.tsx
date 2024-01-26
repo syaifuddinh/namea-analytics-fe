@@ -55,7 +55,7 @@ const ProfitSummaryCard = () => {
 				/>
 			</div>
 
-			<div className="p-5 flex flex-col items-center border-t border-[var(--base-bg3)]">
+			<div className="p-5 flex flex-col items-center border-t border-[var(--base-bg3)] -tracking-[0.14px]">
 				<div className="text-sm text-[var(--Gray10)] font-base leading-5">
 					Total Profit
 				</div>

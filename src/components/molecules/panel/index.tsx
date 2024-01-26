@@ -11,15 +11,15 @@ export default function Panel({
   return (
     <div className="panel relative min-h-[87px]">
         <div className={`panel_label ${variant} relative z-10`}>
-            <div className="stripped px-4 py-2 font-base text-sm">
+            <div className="stripped px-4 py-2 font-base text-sm -tracking-[0.14px]">
                 { label }
             </div>
         </div>
         <div className={`panel_body w-full absolute top-[31px] flex justify-end gap-1 pt-[28px] pb-[6px] px-[14px] ${variant} font-light`}>
-            <div className="panel_value text-sm">
+            <div className="panel_value text-sm -tracking-[0.14px]">
                 { value }%
             </div>
-            <div className="panel_value-suffix text-sm font-light">
+            <div className="panel_value-suffix text-sm font-light -tracking-[0.14px]">
                 of total allocation
             </div>
             <div className="absolute h-full right-[-5px] top-[6px]">

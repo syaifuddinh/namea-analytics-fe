@@ -1,29 +1,29 @@
-.mutation-label {
+.percentage-label {
 	border-radius: 1rem;
 	color: var(--white-theme-color1);
 }
 
-.mutation-label.primary {
+.percentage-label.primary {
 	background: var(--Success1);
 }
 
-.mutation-label.primary * {
+.percentage-label.primary * {
 	color: var(--Success10);
 }
 
-.mutation-label.danger {
+.percentage-label.danger {
 	background: rgba(222, 108, 44, 0.1);
 }
 
-.mutation-label.danger * {
+.percentage-label.danger * {
 	color: var(--Alert10);
 }
 
-.mutation-label.warning {
+.percentage-label.warning {
 	background: var(--Alert1);
 }
 
-.mutation-label.warning * {
+.percentage-label.warning * {
 	color: var(--warning-theme-color);
 ;
 

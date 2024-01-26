@@ -12,7 +12,8 @@ const Review = ({
 	title,
 	description,
 	iconSrc,
-	balance
+	balance,
+	percentage,
 }) => {
 	return (
 		<SecondaryCard
@@ -24,7 +25,7 @@ const Review = ({
 					alt="review icon"
 				/>
 
-				<div className="costing-overview_label mt-[12px] text-sm mb-1 text-[var(--Gray6)] font-light">
+				<div className="costing-overview_label mt-[12px] text-sm mb-1 text-[var(--Gray6)] font-light -tracking-[0.14px]">
 					Total Cost
 				</div>
 
@@ -34,17 +35,17 @@ const Review = ({
 
 				<div className="flex gap-2 mt-3 items-center">
 					<PercentageLabel
-						value={"50%"}
+						value={percentage}
 						variant="warning"
 					/>
 
-					<div className="costing-overview-card_hint font-light text-gray-theme text-xs">
+					<div className="costing-overview-card_hint font-light text-gray-theme text-xs -tracking-[0.12px]">
 						of total allocation
 					</div>
 				</div>
 			</div>
 
-			<div className={`max-h-[82px] costing-overview-card_review flex flex-col items-center gap-1 px-1 py-[19px] m-1`}>
+			<div className={`max-h-[82px] costing-overview-card_review flex flex-col items-center gap-1 px-1 py-[19px] m-1 -tracking-[0.14px] leading-5`}>
 				<div className="text-sm font-base text-white-theme-color leading-5">
 					{ title }
 				</div>			

@@ -10,7 +10,7 @@ import Review from "./review"
 const Header = () => {
 	return (
 		<div className="card_header p-[20px]">
-			<div className="font-base text-[var(--Gray10)] leading-6">
+			<div className="font-base text-[var(--Gray10)] leading-6 -tracking-[0.16px]">
 				Costing Overview
 			</div>
 			<SubtitleText
@@ -58,6 +58,7 @@ const CostingOverviewCard = () => {
 					description="To run company operations."
 					iconSrc="transparent/cpu.svg"
 					balance="500.950.450"
+					percentage="50%"
 				/>			
 
 				<Review
@@ -65,6 +66,7 @@ const CostingOverviewCard = () => {
 					description="Marketing or promotional activity."
 					iconSrc="transparent/megaphone.svg"
 					balance="500.950.450"
+					percentage="25%"
 				/>			
 				
 				<Review
@@ -72,6 +74,7 @@ const CostingOverviewCard = () => {
 					description="Include various types of costs."
 					iconSrc="transparent/more.svg"
 					balance="500.950.450"
+					percentage="25%"
 				/>			
 			</div>
 		</Card> 

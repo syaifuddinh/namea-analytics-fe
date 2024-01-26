@@ -13,8 +13,8 @@ export default function PercentageLabel({
 	className = ""
 }: PercentageLabelType) {
   return (
-    <div className={`mutation-label inline-flex items-center gap-[3px] font-medium text-xs ${variant} ${className} px-2 py-0.5`}>
-    	<div className="mutation-label_prefix">
+    <div className={`percentage-label inline-flex items-center gap-[3px] font-medium text-xs ${variant} ${className} px-2 py-0.5`}>
+    	<div className="percentage-label_prefix">
             { variant === "primary" && (
                 <Icon
                     src={"primary/arrow-up.svg"}
@@ -31,7 +31,7 @@ export default function PercentageLabel({
                 />
             )}
     	</div>
-    	<div className="mutation-label_value font-light">
+    	<div className="percentage-label_value font-light -tracking-[0.12px]">
     		{ value }
     	</div>
     </div>

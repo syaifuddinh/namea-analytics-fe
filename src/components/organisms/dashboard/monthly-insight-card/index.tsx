@@ -69,7 +69,7 @@ const Header = ({
 								Profit Margin
 							</div>
 						</div>
-						<div className="text-white-theme-color mt-1.5 font-base flex items-center gap-2.5">
+						<div className="text-white-theme-color mt-1.5 font-base flex items-center gap-2.5 -tracking-[0.16px]">
 							<Pile variant="primary" />
 							{ profitMargin }%
 						</div>
