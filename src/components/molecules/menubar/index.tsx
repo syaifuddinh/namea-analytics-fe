@@ -38,13 +38,13 @@ const Menubar = () => {
 	return (
 		<div className="menubar flex items-center justify-between">
 			<div className="flex items-center">
-				<div className="menubar_logo font-neue-montreal flex text-[var(--Gray10)] leading-5 gap-3 font-base mr-[30px] flex items-center">
+				<div className="menubar_logo flex text-[var(--Gray10)] leading-5 gap-3 font-base mr-[30px] flex items-center">
 					<Image
 						src={Logo}
 						alt="logo"
 						className="w-[24px] h-[25px]"
 					/>
-					<div className="-tracking-[0.16px]">
+					<div className="-tracking-[0.16px] font-neue-montreal">
 						LX Analytics
 					</div>
 				</div>
