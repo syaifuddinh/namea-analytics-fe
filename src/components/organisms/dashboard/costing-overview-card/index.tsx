@@ -9,7 +9,7 @@ import Review from "./review"
 
 const Header = () => {
 	return (
-		<div className="card_header p-[20px]">
+		<div className="card_header p-[20px] min-h-[88px] max-h-[88px]">
 			<div className="font-base text-[var(--Gray10)] leading-6 -tracking-[0.16px]">
 				Costing Overview
 			</div>

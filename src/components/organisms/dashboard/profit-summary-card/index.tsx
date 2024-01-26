@@ -10,7 +10,7 @@ import CustomChart from "@/components/atoms/custom-chart"
 
 const Header = () => {
 	return (
-		<div className="card_header p-[20px]">
+		<div className="card_header p-[20px] max-h-[90px]">
 			<div className="mb-1 flex items-center gap-[8px]">
 				<Icon
 					src="dollar.svg"

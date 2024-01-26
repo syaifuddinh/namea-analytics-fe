@@ -9,6 +9,7 @@ import Icon from "@/components/atoms/icon";
 
 const CurrencyCard = ({ 
 	currencyName,
+	balance,
 	mutationVariant
 }) => {
 	return (
@@ -16,11 +17,11 @@ const CurrencyCard = ({
 			className="bg-base-bg5"
 		>	
 			<div className="p-4">	
-				<div className="text-sm text-gray6 mb-2 font-light -tracking-[0.14px]">	
+				<div className="text-sm text-gray6 mb-1 font-light -tracking-[0.14px] leading-5">	
 					Total
 				</div>
 				<MoneyText>
-					500.000.000
+					{ balance }
 				</MoneyText>
 
 				<div className="mt-3 flex gap-2 items-center">	

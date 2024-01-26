@@ -2,7 +2,7 @@ import "./index.style.css"
 
 const SubtitleText = ({ children, className = "" }) => {
 	return (
-		<div className={`subtitle-text text-sm font-light -tracking-[0.14px]  ${className}`}>	
+		<div className={`subtitle-text text-sm font-light -tracking-[0.14px] leading-5 ${className}`}>	
 			{ children }
 		</div>	
 	)

@@ -45,8 +45,8 @@ const revenueDatasets = [
 ]
 const Header = ({ title }) => {
 	return (
-		<div className="card_header  p-[20px] flex items-center justify-between">
-			<div className="text-[var(--Gray10)] text-base font-normal -tracking-[0.16px]">
+		<div className="card_header p-[20px] flex items-center justify-between max-h-[76px]">
+			<div className="text-[var(--Gray10)] text-base font-normal -tracking-[0.16px] leading-6">
 				{ title }
 			</div>
 			
@@ -103,11 +103,13 @@ const WalletCard = ({
 				<CurrencyCard
 					currencyName="Ethereum"
 					mutationVariant="primary"
+					balance="339.450.965"
 				/>	
 	
 				<CurrencyCard
 					currencyName="Bitcoin"
 					mutationVariant="danger"
+					balance="245.300.685"
 				/>	
 	
 			</div>
