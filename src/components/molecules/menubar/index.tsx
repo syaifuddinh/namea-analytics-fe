@@ -58,10 +58,11 @@ const Menubar = () => {
 							>
 								{ item.name }
 								{ item.childrens.length > 0 && (
-									<div className="py-1.5 px-2.5">
+									<div className="px-[4px] py-[7px]">
 										<Icon
-											src="transparent/chevron-down.svg"
+											src="transparent/menu-chevron-down2.svg"
 											alt="expanding-menu-icon"
+											className="w-[12px] h-[6px]"
 										/>
 									</div>
 								) }

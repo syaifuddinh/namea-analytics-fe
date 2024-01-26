@@ -15,7 +15,9 @@ const UserProfile = () => {
 					Let explore
 				</div>
 				<div className="menubar_user-profile_username text-sm flex items-center gap-2 cursor-pointer leading-5 text-[#DFF4F6]">
-					Julia D. Quon
+					<div>
+						Julia D. Quon
+					</div>
 
 					<Icon
 						src="transparent/chevron-down.svg"
