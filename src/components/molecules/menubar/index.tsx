@@ -44,7 +44,7 @@ const Menubar = () => {
 						alt="logo"
 						className="w-[24px] h-[25px]"
 					/>
-					<div className="-tracking-[0.16px] font-neue-montreal2 font-medium">
+					<div className="-tracking-[0.16px] font-neue-montreal2">
 						LX Analytics
 					</div>
 				</div>
