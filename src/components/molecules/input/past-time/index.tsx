@@ -39,7 +39,7 @@ export default function PastTimeInput({ onChange }) {
 				<div className="past-time-input_days ml-[4px] mr-[1.063rem] px-[6px] py-[2px] bg-base-bg3 rounded text-sm -tracking-[0.14px]">
 					Last 30 Days
 				</div>
-				<div className="past-time-input_date text-sm -tracking-[0.14px]">
+				<div className="past-time-input_date text-sm">
 					Nov 13 - Dec 10, 2023
 				</div>
 			</div>
