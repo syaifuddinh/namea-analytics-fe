@@ -21,11 +21,14 @@ const Header = () => {
 				</SubtitleText>
 			</div>
 
-			<MoneyText
-				className="mt-[6px]"
+			<div
+				className="mt-[6px] font-light tracking-[0.14px] text-base text-[var(--Gray10)]"
 			>
-				492.509.249
-			</MoneyText>
+				<span>	
+					Rp492.509.249
+				</span>
+				<span className="text-[var(--Gray6)]">,00</span>
+			</div>
 		</div>
 	)
 }
