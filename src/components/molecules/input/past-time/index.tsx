@@ -44,7 +44,7 @@ export default function PastTimeInput({ onChange }) {
 				</div>
 			</div>
 
-			<div className="cursor-pointer py-2 my-1.5 mr-1.5 pr-1.5">
+			<div className="cursor-pointer py-2 my-1.5 mr-1.5 pr-[0.125rem]">
 				<Icon
 					src="transparent/select-chevron-down.svg"
 					alt="period input"
