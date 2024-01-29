@@ -19,7 +19,7 @@ export default function Panel({
             <div className="panel_value text-sm tracking-[0.06px] font-extralight">
                 { value }%
             </div>
-            <div className="panel_value-suffix text-sm font-light tracking-[0.06px]">
+            <div className="panel_value-suffix text-sm font-extralight tracking-[0.06px]">
                 of total allocation
             </div>
             <div className="absolute h-full right-[-5px] top-[6px]">
