@@ -29,7 +29,7 @@ const Header = ({
 						alt="dollar"
 					/>
 
-					<div className="font-light text-sm text-gray6">
+					<div className="font-extralight text-sm text-gray6">
 						{ title }
 					</div>
 				</div>
