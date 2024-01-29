@@ -65,7 +65,7 @@ const Header = ({
 								src="transparent/kanban.svg"
 								alt="profit-margin-thumbnail"
 							/>
-							<div className="text-sm font-light text-[var(--Gray6)] -tracking-[0.14px]">
+							<div className="text-sm font-normal text-[var(--Gray6)]">
 								Profit Margin
 							</div>
 						</div>
