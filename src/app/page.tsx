@@ -31,7 +31,7 @@ export default function Home() {
 			  		<TitleText>
 			  			Overview
 			  		</TitleText>		
-  		  		<div className="text-gray6 text-sm leading-5 font-light mt-[2px] tracking-[0.06px]">
+  		  		<div className="text-gray6 text-sm leading-5 font-extralight mt-[2px] tracking-[0.06px]">
 			  			Show a comprehensive overview of data from different sources.
 			  		</div>		
   				</div>
