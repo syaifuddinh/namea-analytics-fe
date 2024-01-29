@@ -10,7 +10,7 @@ export default function Panel({
 }) {
   return (
     <div className="panel relative min-h-[87px]">
-        <div className={`panel_label ${variant} relative z-10`}>
+        <div className={`panel_label ${variant} relative z-10 h-[2.501rem]`}>
             <div className="stripped px-4 py-2 font-base text-sm -tracking-[0.14px]">
                 { label }
             </div>
