@@ -11,11 +11,11 @@ const UserProfile = () => {
 				/>	
 			</div>
 			<div className="menubar_user-profile_user">
-				<div className="menubar_user-profile_greeting text-xs font-extralight -tracking-[0.12px]">
+				<div className="menubar_user-profile_greeting text-xs font-extralight ">
 					Let's explore
 				</div>
 				<div className="menubar_user-profile_username text-sm flex items-center gap-2 cursor-pointer leading-5 text-[#DFF4F6]">
-					<div className="font-light -tracking-[0.14px]">
+					<div className="font-light ">
 						Julia D. Quon
 					</div>
 
