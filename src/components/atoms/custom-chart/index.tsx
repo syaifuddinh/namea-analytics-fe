@@ -101,7 +101,7 @@ const CustomChart = ({
                         { yAxeLabels.map(item => (
                               <div
                                 key={item}
-                                className="text-xs text-gray6 text-right font-light -tracking-[0.12px]"
+                                className="text-xs text-gray6 text-right font-extralight"
                               >
                                 { item }
                             </div>  

@@ -17,6 +17,18 @@
   font-weight: 500;
 }
 
+@font-face {
+  font-family:'Neue Montreal 3';
+  src: url('/fonts/neue-montreal-free-demo-pangram-pangram-030418/NeueMontreal-Regular.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family:'Neue Montreal 3';
+  src: url('/fonts/neue-montreal-free-demo-pangram-pangram-030418/NeueMontreal-Medium.otf');
+  font-weight: 500;
+}
+
 
 .font-neue-montreal {
 	font-family: "Neue Montreal";
@@ -25,6 +37,10 @@
 
 .font-neue-montreal2 {
   font-family: "Neue Montreal 2";
+}
+
+.font-neue-montreal3 {
+  font-family: "Neue Montreal 3";
 }
 
 * {
