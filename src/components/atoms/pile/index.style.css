@@ -3,10 +3,6 @@
 }
 
 .pile {
-	width: var(--pile-size);
-	height: var(--pile-size);
-	min-width: var(--pile-size);
-	min-height: var(--pile-size);
 	border-radius: 1rem;
 	outline-width: 3px;
 	outline-style: solid;
