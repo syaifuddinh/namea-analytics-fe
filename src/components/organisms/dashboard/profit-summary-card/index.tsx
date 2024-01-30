@@ -16,7 +16,7 @@ const Header = () => {
 					src="dollar.svg"
 					alt="dollar icon"
 				/>
-				<div className="text-sm font-extralight leading-5">
+				<div className="text-sm text-[var(--Gray6)] font-extralight leading-5">
 					Year to Date Profit/Lost
 				</div>
 			</div>
