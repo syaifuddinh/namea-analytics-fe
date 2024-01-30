@@ -16,9 +16,9 @@ const Header = () => {
 					src="dollar.svg"
 					alt="dollar icon"
 				/>
-				<SubtitleText>
+				<div className="text-sm font-extralight leading-5">
 					Year to Date Profit/Lost
-				</SubtitleText>
+				</div>
 			</div>
 
 			<div
