@@ -19,7 +19,7 @@ const Review = ({
 		<SecondaryCard
 			className="bg-[var(--base-bg5)] flex flex-col justify-between"
 		>
-			<div className="px-[20px] pt-[20px] pb-[16px]">
+			<div className="px-[20px] pt-[20px] pb-3">
 				<Icon
 					src={iconSrc}
 					alt="review icon"
