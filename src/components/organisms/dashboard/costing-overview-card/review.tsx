@@ -25,13 +25,16 @@ const Review = ({
 					alt="review icon"
 				/>
 
-				<div className="costing-overview_label mt-[12px] text-sm mb-1 text-[var(--Gray6)] font-light -tracking-[0.14px]">
+				<div className="costing-overview_label mt-[12px] text-sm mb-1 text-[var(--Gray6)] font-extralight">
 					Total Cost
 				</div>
 
-				<MoneyText>
-					{ balance }
-				</MoneyText>
+				<div className="font-light text-[var(--Gray10)] tracking-[0.15px]">
+					<span>
+						Rp{ balance },
+					</span>
+					<span className="text-[var(--Gray6)]">00</span>
+				</div>
 
 				<div className="flex gap-2 mt-3 items-center">
 					<PercentageLabel
@@ -46,11 +49,11 @@ const Review = ({
 			</div>
 
 			<div className={`max-h-[82px] costing-overview-card_review flex flex-col items-center gap-1 px-1 py-[19px] m-1 -tracking-[0.14px] leading-5`}>
-				<div className="text-sm font-base text-white-theme-color leading-5">
+				<div className="text-sm font-light tracking-[0.06px] text-white-theme-color leading-5">
 					{ title }
 				</div>			
 
-				<div className="text-center text-[var(--Gray6)] font-light text-sm">
+				<div className="text-center text-[var(--Gray6)] font-extralight text-sm tracking-[0.06px]">
 					{ description }
 				</div>
 			</div>
