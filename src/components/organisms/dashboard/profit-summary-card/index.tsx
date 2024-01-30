@@ -55,7 +55,7 @@ const ProfitSummaryCard = () => {
 					variant="bar"
 					maxValue={100000000}
 					contentHeight={266}
-					chartPaddingTop="1.375rem"
+					chartPaddingTop="1.125rem"
 					xClassname="px-[1.575rem]"
 				/>
 			</div>
