@@ -25,7 +25,7 @@ const Review = ({
 					alt="review icon"
 				/>
 
-				<div className="costing-overview_label mt-[12px] text-sm mb-1 text-[var(--Gray6)] font-extralight">
+				<div className="costing-overview_label mt-[12px] text-sm mb-1 text-[var(--Gray6)] font-extralight tracking-[0.2px]">
 					Total Cost
 				</div>
 
