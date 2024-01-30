@@ -10,13 +10,14 @@ import Icon from "@/components/atoms/icon";
 const CurrencyCard = ({ 
 	currencyName,
 	balance,
+	mutationValue,
 	mutationVariant
 }) => {
 	return (
 		<SecondaryCard
 			className="bg-base-bg5"
 		>	
-			<div className="p-4">	
+			<div className="p-5 pb-2.5">	
 				<div className="text-sm text-gray6 mb-1 font-light -tracking-[0.14px] leading-5">	
 					Total
 				</div>
@@ -25,7 +26,7 @@ const CurrencyCard = ({
 				</MoneyText>
 
 				<div className="mt-3 flex gap-2 items-center">	
-					<MutationLabel value="23.8% (+24)" variant={mutationVariant} />
+					<MutationLabel value={mutationValue} variant={mutationVariant} />
 					<TinyText>
 						compared to last week
 					</TinyText>		

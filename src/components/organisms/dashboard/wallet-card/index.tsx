@@ -46,7 +46,7 @@ const revenueDatasets = [
 const Header = ({ title }) => {
 	return (
 		<div className="card_header p-[20px] flex items-center justify-between max-h-[76px]">
-			<div className="text-[var(--Gray10)] text-base font-normal -tracking-[0.16px] leading-6">
+			<div className="text-[var(--Gray10)] text-base font-light leading-6">
 				{ title }
 			</div>
 			
@@ -92,7 +92,7 @@ const WalletCard = ({
 				{ variant === "revenue" && (
 					<CustomChart
 						values={["500K", "400K", "300K", "200K", "100K", "0"]}
-						labels={["Dec Week 1", "Dec Week 2", "Dec Week 3", "Dec Week 4"]}	
+						labels={["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]}	
 						maxValue={500000}
 						
 					/>
@@ -104,12 +104,14 @@ const WalletCard = ({
 					currencyName="Ethereum"
 					mutationVariant="primary"
 					balance="339.450.965"
+					mutationValue="23.8% (+24)"
 				/>	
 	
 				<CurrencyCard
 					currencyName="Bitcoin"
 					mutationVariant="danger"
 					balance="245.300.685"
+					mutationValue="-16.5% (-8)"
 				/>	
 	
 			</div>

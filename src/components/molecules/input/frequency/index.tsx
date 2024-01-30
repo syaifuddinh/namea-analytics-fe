@@ -61,7 +61,7 @@ export default function FrequencyInput({
 			    	>
 
 			    		<div
-			    			className="font-light text-sm leading-5"
+			    			className="font-extralight tracking-[0.06px] text-sm leading-5"
 			    		>
 			    			
 				    		{ item.label }
