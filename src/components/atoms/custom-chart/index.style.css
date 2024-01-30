@@ -1,7 +1,0 @@
-.x-container {
-    grid-template-columns: 55px calc(100% - 55px);
-}
-
-.custom-chart_x {
-	width: calc(100% - 55px);
-}
