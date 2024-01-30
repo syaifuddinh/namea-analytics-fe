@@ -42,7 +42,7 @@ const Review = ({
 						variant="warning"
 					/>
 
-					<div className="costing-overview-card_hint font-light text-gray-theme text-xs -tracking-[0.12px]">
+					<div className="costing-overview-card_hint font-extralight text-gray-theme text-xs tracking-[0.06px]">
 						of total allocation
 					</div>
 				</div>

@@ -58,12 +58,12 @@ const ProfitSummaryCard = () => {
 				/>
 			</div>
 
-			<div className="p-5 flex flex-col items-center border-t border-[var(--base-bg3)] -tracking-[0.14px]">
-				<div className="text-sm text-[var(--Gray10)] font-base leading-5">
+			<div className="p-5 flex flex-col items-center border-t border-[var(--base-bg3)]">
+				<div className="text-sm text-[var(--Gray10)] font-light tracking-[0.06px] leading-5">
 					Total Profit
 				</div>
 
-				<div className="text-center text-[var(--Gray6)] text-sm leading-5 mt-[4px] font-light">
+				<div className="text-center text-[var(--Gray6)] text-sm leading-5 mt-[4px] font-extralight tracking-[0.06px]">
 					Has been generated from the previous year.
 				</div>
 			</div>
