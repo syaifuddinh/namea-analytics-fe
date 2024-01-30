@@ -15,11 +15,11 @@ export default function Panel({
                 { label }
             </div>
         </div>
-        <div className={`panel_body w-full absolute top-[31px] flex justify-end gap-1 pt-[28px] pb-[6px] px-[14px] ${variant} font-light`}>
-            <div className="panel_value text-sm tracking-[0.06px] font-extralight">
+        <div className={`panel_body w-full text-[13px] tracking-[0.3px] absolute top-[31px] flex justify-end gap-1 pt-[28px] pb-[6px] px-[14px] ${variant} font-light`}>
+            <div className="panel_value font-extralight">
                 { value }%
             </div>
-            <div className="panel_value-suffix text-sm font-extralight tracking-[0.06px]">
+            <div className="panel_value-suffix font-extralight">
                 of total allocation
             </div>
             <div className="absolute h-full right-[-5px] top-[6px]">

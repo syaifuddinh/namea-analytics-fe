@@ -13,11 +13,11 @@ const Header = () => {
 			<div className="font-light text-[var(--Gray10)] leading-6 tracking-[0.06px]">
 				Costing Overview
 			</div>
-			<SubtitleText
-				className="mt-[4px]"
+			<div
+				className="mt-[4px] text-sm font-extralight leading-5 text-[var(--Gray6)]"
 			>
 				Record your ideas and to-do’s easily, so you never miss a thing.
-			</SubtitleText>
+			</div>
 		</div>
 	)
 }
