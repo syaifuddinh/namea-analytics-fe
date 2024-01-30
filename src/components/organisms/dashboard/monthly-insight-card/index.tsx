@@ -21,8 +21,8 @@ const Header = ({
 	mutationPercentage
 }) => {
 	return (
-		<div className="card_header flex items-center justify-between max-h-[5.626rem]">
-			<div className="card_header-container flex flex-col items-between pr-4">	
+		<div className="card_header max-h-[5.626rem]">
+			<div className="card_header-container flex justify-between items-start">
 				<div className="card_header_title flex items-center gap-2">
 					<Icon
 						src="dollar.svg"
@@ -34,7 +34,26 @@ const Header = ({
 					</div>
 				</div>
 
-				<div className="card_header_description mt-1.5 flex items-center">
+				{
+					isShowProfitMargin === true && (
+						<div className="profit-margin flex flex-col">	
+							<div className="flex gap-2 items-center">
+								<Icon
+									src="transparent/kanban.svg"
+									alt="profit-margin-thumbnail"
+								/>
+								<div className="text-sm font-extralight text-[var(--Gray6)] tracking-[0.06px]">
+									Profit Margin
+								</div>
+							</div>
+						</div>
+					)
+				}
+			</div>
+
+
+			<div className="flex justify-between items-start mt-1.5">	
+				<div className="card_header_description flex items-center">
 					<MoneyText
 						className="mr-3"
 					>
@@ -55,27 +74,16 @@ const Header = ({
 						compared to last year
 					</TinyText>
 				</div>
-			</div>
 
-			{
-				isShowProfitMargin === true && (
-					<div className="profit-margin flex flex-col items-end">	
-						<div className="flex gap-2 items-center">
-							<Icon
-								src="transparent/kanban.svg"
-								alt="profit-margin-thumbnail"
-							/>
-							<div className="text-sm font-extralight text-[var(--Gray6)] tracking-[0.06px]">
-								Profit Margin
-							</div>
-						</div>
-						<div className="text-white-theme-color mt-1.5 font-light flex items-center gap-2.5 -tracking-[0.16px]">
+				{
+					isShowProfitMargin === true && (
+						<div className="text-white-theme-color font-light flex items-center gap-2.5 -tracking-[0.16px]">
 							<Pile variant="primary" />
 							{ profitMargin }%
 						</div>
-					</div>
-				)
-			}
+					)
+				}
+			</div>
 		</div>
 	)
 }

@@ -18,6 +18,7 @@ const CustomChart = ({
     xClassname,
     isShowYAxes = true,
     maxValue = 0,
+    chartPaddingTop = "1.75rem",
     contentHeight = 200
 }) => {
     const gridElement = useRef(null)
@@ -108,7 +109,10 @@ const CustomChart = ({
                         )) }                  
                     </div>
                 ) }
-                <div className="custom-chart_content pt-[28px] px-[20px]">
+                <div
+                    className={`custom-chart_content px-[20px]`}
+                    style={{paddingTop: chartPaddingTop}}
+                >
                     <div
                         ref={gridElement}
                         className={`custom-chart_grid relative flex gap-[12px] flex-wrap overflow-hidden`}
