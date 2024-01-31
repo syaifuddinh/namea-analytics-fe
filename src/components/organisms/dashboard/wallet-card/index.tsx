@@ -131,7 +131,7 @@ const WalletCard = ({
 						Total { title }
 				</SecondaryCard>		
 
-				<div className="flex gap-3">
+				<div className="flex items-center gap-3">
 					<CurrencyText>	
 						339.450.965
 					</CurrencyText>
