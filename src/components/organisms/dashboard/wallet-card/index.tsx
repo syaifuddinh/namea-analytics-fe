@@ -116,9 +116,9 @@ const WalletCard = ({
 	
 			</div>
 
-			<div className="border-t-1 border-base-bg3 flex justify-between items-center px-4 py-3 bg-[var(--Gray7)]">
+			<div className="border-t-1 border-base-bg3 flex justify-between items-center pl-2.5 pr-[1.25rem] py-2 bg-[var(--Gray7)]">
 				<SecondaryCard
-					className="bg-base-bg4 font-light py-[4px] px-[8px] text-sm text-gray6 flex items-center gap-[8px]"
+					className="bg-base-bg4 font-extralight py-[4px] pl-2 pr-3 text-sm text-gray6 flex items-center gap-2.5"
 				>	
 						<Icon
 							src="transparent/blend.svg"
