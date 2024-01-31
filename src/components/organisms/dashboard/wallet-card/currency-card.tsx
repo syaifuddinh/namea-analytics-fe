@@ -17,7 +17,7 @@ const CurrencyCard = ({
 		<SecondaryCard
 			className="bg-base-bg5"
 		>	
-			<div className="p-[1.125rem]">	
+			<div className="p-[1.125rem] pb-2.5">	
 				<div className="text-sm text-gray6 mb-1 font-light -tracking-[0.14px] leading-5">	
 					Total
 				</div>
@@ -46,7 +46,7 @@ const CurrencyCard = ({
 							variant={"primary"}
 							size="0.6255rem"
 						/>
-						<div className="text-white-theme-color font-normal text-sm -tracking-[0.14px]">
+						<div className="text-white-theme-color font-light text-sm tracking-[0.15px]">
 							{ currencyName }
 						</div>
 					</div>
