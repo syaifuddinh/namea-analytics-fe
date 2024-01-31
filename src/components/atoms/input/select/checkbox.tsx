@@ -29,7 +29,7 @@ const Checkbox = (props: CheckboxProps) => (
     >
       <polyline points="20 6 9 17 4 12"></polyline>
     </svg>
-    <label className="font-light" htmlFor={props.id}>
+    <label className="font-extralight tracking-[0.08px] pt-[0.02px] flex items-center min-h-[20px] inline-block" htmlFor={props.id}>
       {props.label}
     </label>
   </div>
