@@ -16,7 +16,7 @@ const CardMemberOverview: React.FC<CardMemberOverviewTypes> = ({
   comparison,
   compareLastYear,
 }: CardMemberOverviewTypes) => (
-  <div className="@apply border shadow-[0px_-28px_84px_-24px_rgba(223,244,246,0.06)_inset] pt-1.5 rounded-xl border-solid border-[rgba(205,251,255,0.10)] bg-base-bg2">
+  <div className="@apply border shadow-[0px_-28px_84px_-24px_rgba(223,244,246,0.06)_inset] pt-1 rounded-xl border-solid border-[rgba(205,251,255,0.10)] bg-base-bg2">
     <div className="@apply p-5 rounded-[10px_10px_0px_0px] border-t-[rgba(205,251,255,0.06)] border-t border-solid bg-base-bg5">
       <div className="@apply text-[rgba(205,251,255,0.60)] text-sm font-extralight leading-5 tracking-[0.02px]">
         {title}
@@ -33,9 +33,9 @@ const CardMemberOverview: React.FC<CardMemberOverviewTypes> = ({
           }`}
         >
           {compareLastYear > 0 ? (
-            <Image src={ArrowUpIcon} alt="arrow-up icon" loading="lazy" className="inline mr-[0.125rem]" />
+            <Image src={ArrowUpIcon} alt="arrow-up icon" loading="lazy" className="inline mr-[3px]" />
           ) : (
-            <Image src={ArrowDownIcon} alt="arrow-down icon" loading="lazy" className="inline mr-[0.125rem]" />
+            <Image src={ArrowDownIcon} alt="arrow-down icon" loading="lazy" className="inline mr-[3px]" />
           )}
           <span>  
             {comparison}

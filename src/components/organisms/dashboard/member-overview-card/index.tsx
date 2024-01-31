@@ -63,7 +63,7 @@ const listMemberOverview = [
 	{
 		key: 5,
 		title: "Total Withdraw",
-		value: <MoneyText>37.695.800</MoneyText>,
+		value: <MoneyText>492.201.500</MoneyText>,
 		comparison: "-16.5%",
 		compareLastYear: -8
 	}
