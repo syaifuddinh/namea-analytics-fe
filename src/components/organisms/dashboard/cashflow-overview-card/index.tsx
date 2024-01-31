@@ -11,23 +11,23 @@ const CashflowOverviewCard = () => {
       description="Record your ideas and to-do’s easily, so you never miss a thing."
     >
       <div className="flex items-start gap-4 p-[20px]">
-        <div className="w-2/4 bg-base-bg4 border border-gray-1 rounded-xl border-solid pl-5 pr-[22px] py-5">
-          <div className="flex items-center justify-between bg-base-bg4 flex items-center pl-[7px] pr-[18px] py-[7px] border border-base-bg3 rounded-lg border-solid">
+        <div className="w-2/4 bg-base-bg4 border border-gray-1 rounded-xl border-solid pl-5 pr-[22px] py-[1.125rem]">
+          <div className="flex items-center justify-between bg-base-bg4 flex items-center pl-[5px] pr-4 py-[7px] border border-base-bg3 rounded-lg border-solid">
             <div className="flex items-center gap-[10px]">
               <div><IconPlusSquare /></div>
-              <div className="font-light text-gray-6 text-sm -tracking-[0.14px]">Total Cash Balance</div>
+              <div className="font-extralight text-gray-6 text-sm tracking-[0.02px]">Total Cash Balance</div>
             </div>
-            <div className="body-2-400 text-gray-10 font-normal -tracking-[0.16px]">Rp694.354.766,<span className="text-gray-6">00</span></div>
+            <div className="tracking-[0.2px] text-gray-10 font-light -tracking-[0.16px]">Rp694.354.766,<span className="text-gray-6">00</span></div>
           </div>
         </div>
         
-        <div className="w-2/4 bg-base-bg4 border border-gray-1 rounded-xl border-solid pl-5 pr-[22px] py-5">
-          <div className="flex items-center justify-between bg-base-bg4 flex items-center pl-[7px] pr-[18px] py-[7px] border border-base-bg3 rounded-lg border-solid">
+        <div className="w-2/4 bg-base-bg4 border border-gray-1 rounded-xl border-solid pl-5 pr-[22px] py-[1.125rem]">
+          <div className="flex items-center justify-between bg-base-bg4 flex items-center pl-[5px] pr-4 py-[7px] border border-base-bg3 rounded-lg border-solid">
             <div className="flex items-center gap-[10px]">
               <div><IconMinusSquare /></div>
-              <div className="text-gray-6 text-sm font-light -tracking-[0.14px]">Total Outstanding Debt</div>
+              <div className="text-gray-6 text-sm font-extralight tracking-[0.02px]">Total Outstanding Debt</div>
             </div>
-            <div className="body-2-500 text-alert-10 -tracking-[0.16px]">Rp694.354.766,<span className="text-alert-6">00</span></div>
+            <div className="font-light tracking-[0.2px] text-alert-10 -tracking-[0.16px]">Rp694.354.766,<span className="text-alert-6">00</span></div>
           </div>
         </div>
       </div>
