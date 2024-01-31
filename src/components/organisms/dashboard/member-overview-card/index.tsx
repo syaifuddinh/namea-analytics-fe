@@ -12,14 +12,14 @@ import CardMemberOverview from "@/components/atoms/card/member-overview";
 const Header = () => {
 	return (
 		<div className="@apply card_header p-[20px]">
-			<div className="text-base font-light text-[var(--Gray10)] leading-6 -tracking-[0.16px]">
+			<div className="text-base font-light text-[var(--Gray10)] leading-6 tracking-[0.08px]">
 				Member Overview
 			</div>
-			<SubtitleText
-				className="mt-[4px]"
+			<div
+				className="mt-1 text-sm font-extralight tracking-[0.02px] text-[var(--Gray6)] leading-5"
 			>
 				Record your ideas and to-do’s easily, so you never miss a thing.
-			</SubtitleText>
+			</div>
 		</div>
 	)
 }
