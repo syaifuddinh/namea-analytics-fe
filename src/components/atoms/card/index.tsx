@@ -10,7 +10,7 @@ const Card = ({
 	isDividerVisible = true
 }) => {
 	return (
-		<div className={`card pt-[5px] ${ isUsePaddingBottom === true ? 'pb-[5px]' : ''} border border-gray1 rounded-[16px] ${className}`}>
+		<div className={`card pt-1 ${ isUsePaddingBottom === true ? 'pb-[5px]' : ''} border border-gray1 rounded-[16px] ${className}`}>
 			<div className="card_container">
 				{ headerElement } 
 				{ isDividerVisible === true && (
