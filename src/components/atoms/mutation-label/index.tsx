@@ -13,7 +13,7 @@ export default function MutationLabel({
 	className = ""
 }: MutationLabelType) {
   return (
-    <div className={`mutation-label inline-flex items-center gap-[3px] font-medium text-xs ${variant} ${className} pl-1 pr-1.5 py-0.5`}>
+    <div className={`mutation-label inline-flex items-center gap-[3px] font-medium text-xs ${variant} ${className} pl-1 pr-1.5 py-0.5 max-h-[1.25rem]`}>
     	<div className="mutation-label_prefix">
             { variant === "primary" && (
                 <Icon

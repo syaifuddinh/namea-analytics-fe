@@ -1,7 +1,7 @@
 "use client"
 
 import Card from "@/components/atoms/card";
-import MoneyText from "@/components/atoms/text/money";
+import CurrencyText from "@/components/atoms/text/currency";
 import TitleText from "@/components/atoms/text/title";
 import SubtitleText from "@/components/atoms/text/subtitle";
 import TinyText from "@/components/atoms/text/tiny";
@@ -94,6 +94,7 @@ const WalletCard = ({
 						values={["500K", "400K", "300K", "200K", "100K", "0"]}
 						labels={["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]}	
 						maxValue={500000}
+						xClassname="pl-2.5 pr-5"
 						
 					/>
 				) }
@@ -131,9 +132,9 @@ const WalletCard = ({
 				</SecondaryCard>		
 
 				<div className="flex gap-3">
-					<MoneyText>	
+					<CurrencyText>	
 						339.450.965
-					</MoneyText>
+					</CurrencyText>
 
 					<MutationLabel
 						value="23.8% (+24)"
