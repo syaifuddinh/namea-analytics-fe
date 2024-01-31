@@ -9,7 +9,7 @@ const Checkbox = (props: CheckboxProps) => (
   <div className="flex items-center gap-[6px] hover:cursor-pointer">
     <input
       className="
-        peer relative appearance-none shrink-0 w-4 h-4 rounded border border-solid border-[rgba(223,244,246,0.10)] bg-checkbox
+        peer relative appearance-none shrink-0 w-[18px] h-[18px] rounded border border-solid border-[rgba(223,244,246,0.10)] bg-checkbox
         focus:outline-none focus:ring-offset-0 focus:ring-1 focus:ring-blue-100
         checked:bg-blue-500 checked:border-0
         disabled:border-steel-400 disabled:bg-steel-400
