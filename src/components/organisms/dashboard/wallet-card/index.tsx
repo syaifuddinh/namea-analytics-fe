@@ -85,7 +85,7 @@ const WalletCard = ({
 							]
 						]}
 						variant="bar"
-						xClassname="pl-[32px]"
+						xClassname="pl-[32px] pr-5"
 					/>
 				) }
 
