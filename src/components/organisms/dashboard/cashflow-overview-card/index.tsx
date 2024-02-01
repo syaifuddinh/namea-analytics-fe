@@ -32,7 +32,7 @@ const CashflowOverviewCard = () => {
         </div>
       </div>
 
-			<div className="bg-base-bg5 border-y-base-bg3 border-y border-solid flex items-center justify-between items-start px-5 py-3">
+			<div className="bg-base-bg5 border-y-base-bg3 border-y border-solid flex items-center justify-between px-5 py-3">
 				<div className="font-extralight text-sm text-gray-6 tracking-[0.08px]">2023 Yearly Cashflow Breakdown</div>
 				<div className="caption-1-400 text-gray-6 flex items-center gap-5">
 					<Checkbox id="cashflow" label="Cashflow" />
