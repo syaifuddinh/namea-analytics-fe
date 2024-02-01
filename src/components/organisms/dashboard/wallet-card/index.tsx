@@ -45,7 +45,7 @@ const revenueDatasets = [
 ]
 const Header = ({ title }) => {
 	return (
-		<div className="card_header p-[20px] flex items-center justify-between max-h-[76px]">
+		<div className="card_header p-[20px] flex items-center justify-between max-h-[76px] min-h-[76px]">
 			<div className="text-[var(--Gray10)] text-base font-light leading-6">
 				{ title }
 			</div>
@@ -117,7 +117,7 @@ const WalletCard = ({
 	
 			</div>
 
-			<div className="border-t-1 border-base-bg3 flex justify-between items-center pl-2.5 pr-[1.25rem] py-2 bg-[var(--Gray7)]">
+			<div className="border-t-1 border-base-bg3 flex justify-between items-center pl-2.5 pr-[1.25rem] py-2 bg-[var(--Gray7)] min-h-[3.00049rem]">
 				<SecondaryCard
 					className="bg-base-bg4 font-extralight py-[4px] pl-2 pr-3 text-sm text-gray6 flex items-center gap-2.5"
 				>	

@@ -15,7 +15,7 @@ const CurrencyCard = ({
 }) => {
 	return (
 		<SecondaryCard
-			className="bg-base-bg5"
+			className="bg-base-bg5 max-h-[11.5rem]"
 		>	
 			<div className="p-[1.125rem] pb-2.5">	
 				<div className="text-sm text-gray6 mb-1 font-light -tracking-[0.14px] leading-5">	
@@ -33,8 +33,8 @@ const CurrencyCard = ({
 				</div>
 			</div>
 
-			<div className="p-1 mt-2">
-				<div className="px-[12px] flex justify-between bg-base-bg5 rounded-t-[4px] rounded-b-[6px] border border-[var(--base-bg3)]">
+			<div className="px-1 pb-1">
+				<div className="px-[12px] flex justify-between bg-base-bg5 rounded-t-[4px] rounded-b-[6px] border border-[var(--base-bg3)] max-h-[3.75rem]">
 					<div className="mt-[12px] mb-[29px]">
 						<Icon
 							src="dot-pattern.svg"
