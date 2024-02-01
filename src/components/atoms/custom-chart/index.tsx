@@ -150,7 +150,7 @@ const CustomChart = ({
                     <div className="w-[55px]"></div>
                 ) }
 
-                <div className={`custom-chart_x flex grow justify-between pt-2 pb-1 ${xClassname}`}>
+                <div className={`custom-chart_x flex grow justify-between py-1.5 ${xClassname}`}>
                     { labels.map(item => (
                           <div
                             key={item}
