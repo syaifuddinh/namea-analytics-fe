@@ -6,7 +6,6 @@ import { useState } from "react"
 import { useRef } from "react"
 import { useEffect } from "react"
 import { simplifyNumber } from "@/utils/number"
-import "./index.style.css"
 
 const itemGap = 16
 const subitemGap = 6
