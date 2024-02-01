@@ -17,7 +17,7 @@ const CurrencyCard = ({
 		<SecondaryCard
 			className="bg-base-bg5 max-h-[11.5rem] min-h-[11.5rem] flex flex-col justify-between"
 		>	
-			<div className="p-[1.125rem] pb-2.5">	
+			<div className="p-2.5">	
 				<div className="text-sm text-gray6 mb-1 font-light -tracking-[0.14px] leading-5">	
 					Total
 				</div>
