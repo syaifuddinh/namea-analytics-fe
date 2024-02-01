@@ -34,7 +34,7 @@ const CurrencyCard = ({
 				</div>
 			</div>
 
-			<div className="px-1 pb-1">
+			<div className="px-[3px] pb-[3px]">
 				<div className="px-[12px] flex justify-between bg-base-bg5 rounded-t-[4px] rounded-b-[6px] border border-[var(--base-bg3)] max-h-[3.75rem]">
 					<div className="mt-[12px] mb-[29px]">
 						<Icon

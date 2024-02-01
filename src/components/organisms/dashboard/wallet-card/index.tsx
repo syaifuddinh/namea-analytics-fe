@@ -114,7 +114,7 @@ const WalletCard = ({
 					mutationVariant="danger"
 					balance="245.300.685"
 					mutationValue="-16.5% (-8)"
-					contentPaddingLeft="1.19rem"
+					contentPaddingLeft="1.18rem"
 				/>	
 	
 			</div>
