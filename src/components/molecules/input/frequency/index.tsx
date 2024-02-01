@@ -51,12 +51,12 @@ export default function FrequencyInput({
 	}, [value])
 
  	return (
-	    <div className="frequency-input border border-[var(--Gray4)] rounded-[10px] p-[4px] flex gap-1 -tracking-[0.14px]">
+	    <div className="frequency-input border border-[var(--Gray4)] rounded-[6px] p-[0.125rem] flex gap-1 -tracking-[0.14px]">
 	    	{ 
 	    		datasets.map(item => (
 			    	<div
 			    		key={item.value}
-			    		className={`frequency-input_item py-[4px] px-[10px] cursor-pointer ${item.value === dataValue ? "text-[var(--Gray10)] bg-[var(--base-bg3)] rounded-[6px] border border-[var(--Gray1)]" : "text-[var(--Gray6)]"}`}
+			    		className={`frequency-input_item max-h-[1.75rem] py-[4px] px-[10px] cursor-pointer ${item.value === dataValue ? "text-[var(--Gray10)] bg-[var(--base-bg3)] rounded-[6px] border border-[var(--Gray1)]" : "text-[var(--Gray6)]"}`}
 			    		onClick={() => onChangeData(item.value)}
 			    	>
 
