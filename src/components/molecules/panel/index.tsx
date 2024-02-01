@@ -15,7 +15,7 @@ export default function Panel({
                 { label }
             </div>
         </div>
-        <div className={`panel_body w-full text-[13px] tracking-[0.4px] absolute top-[31px] flex justify-end gap-1 flex items-end pb-[0.25rem] h-[53.5px] px-[14px] ${variant} font-light`}>
+        <div className={`panel_body w-full text-[13px] tracking-[0.4px] absolute top-[31px] right-[0px] flex justify-end gap-1 flex items-end pb-[0.25rem] h-[53.5px] max-w-[200px] px-[14px] ${variant} font-light`}>
             <div className="panel_value font-light">
                 { value }%
             </div>
