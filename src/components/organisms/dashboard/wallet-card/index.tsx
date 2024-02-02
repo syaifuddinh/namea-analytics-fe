@@ -119,9 +119,9 @@ const WalletCard = ({
 	
 			</div>
 
-			<div className="border-t-1 border-base-bg3 flex justify-between items-center pl-2.5 pr-[1.25rem] py-2 bg-[var(--Gray7)] min-h-[3.00049rem]">
+			<div className="border-t-1 border-base-bg3 flex justify-between items-center pl-2.5 pr-[1.125rem] py-2 bg-[var(--Gray7)] min-h-[3.00049rem]">
 				<SecondaryCard
-					className="bg-base-bg4 font-extralight py-[4px] pl-2 pr-3 text-sm text-gray6 flex items-center gap-2.5"
+					className="bg-base-bg4 font-extralight py-[4px] pl-[0.438rem] pr-3 text-sm text-gray6 flex items-center gap-2.5"
 				>	
 						<Icon
 							src="transparent/blend.svg"
@@ -129,18 +129,22 @@ const WalletCard = ({
 						/>
 
 						<div className="w-[1px] h-[15px] bg-[var(--Gray8)]"></div>
-
-						Total { title }
+						<span>
+							Total { title }
+						</span>
 				</SecondaryCard>		
 
 				<div className="flex items-center gap-3">
-					<CurrencyText>	
+					<CurrencyText
+						letterSpacing="0.2px"
+					>	
 						339.450.965
 					</CurrencyText>
 
 					<MutationLabel
 						value="23.8% (+24)"
 						variant="primary"
+						radius="0.625rem"
 					/>		
 				</div>
 			</div>

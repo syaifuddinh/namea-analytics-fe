@@ -1,9 +1,13 @@
 const CurrencyText = ({ 
 	children,
-	className = ""
+	className = "",
+	letterSpacing="0.15px"
 }) => {
 	return (
-		<div className={`currency-text font-light tracking-[0.15px] text-base flex ${className} leading-6`}>	
+		<div
+			className={`currency-text font-light text-base flex ${className} leading-6`}
+			style={{ letterSpacing }}
+		>	
 			<div className="text-[var(--Gray10)]">
 				Rp{ children }
 			</div>
