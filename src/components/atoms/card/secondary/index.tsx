@@ -3,10 +3,11 @@ import "./index.style.css"
 
 const SecondaryCard = ({
 	children,
-	className = ""
+	className = "",
+	style
 }) => {
 	return (
-		<div className={`secondary-card ${className}`}>
+		<div className={`secondary-card ${className}`} style={style}>
 			{ children }
 		</div>
 	)

@@ -100,13 +100,14 @@ const WalletCard = ({
 				) }
 			</div>
 
-			<div className="p-[20px] grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-4 border-t-1 border-base-bg3">	
+			<div className="p-[20px] flex gap-[1rem] border-t-1 border-base-bg3">	
 				<CurrencyCard
 					currencyName="Ethereum"
 					mutationVariant="primary"
 					balance="339.450.965"
 					mutationValue="23.8% (+24)"
 					contentPaddingLeft="1.18rem"
+					style={{width: "45.8%"}}
 				/>	
 	
 				<CurrencyCard

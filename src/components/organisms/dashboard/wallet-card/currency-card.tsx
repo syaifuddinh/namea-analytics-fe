@@ -12,11 +12,13 @@ const CurrencyCard = ({
 	balance,
 	mutationValue,
 	mutationVariant,
+	style = {},
 	contentPaddingLeft = "1.18rem"
 }) => {
 	return (
 		<SecondaryCard
-			className="bg-base-bg5 max-h-[11.5rem] min-h-[11.5rem] flex flex-col justify-between"
+			className="bg-base-bg5 max-h-[11.5rem] min-h-[11.5rem] flex flex-col justify-between grow"
+			style={style}
 		>	
 			<div className="p-[1.25rem]" style={{"paddingLeft": contentPaddingLeft}}>	
 				<div className="text-sm text-gray6 mb-1 font-light -tracking-[0.14px] leading-5">	
