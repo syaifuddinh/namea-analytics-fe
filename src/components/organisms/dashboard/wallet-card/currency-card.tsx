@@ -13,8 +13,10 @@ const CurrencyCard = ({
 	mutationValue,
 	mutationVariant,
 	style = {},
+	mutationStyle = {},
 	contentPaddingLeft = "1.18rem"
 }) => {
+
 	return (
 		<SecondaryCard
 			className="bg-base-bg5 max-h-[11.5rem] min-h-[11.5rem] flex flex-col justify-between grow"
@@ -29,7 +31,11 @@ const CurrencyCard = ({
 				</MoneyText>
 
 				<div className="mt-3 flex gap-2 items-center">	
-					<MutationLabel value={mutationValue} variant={mutationVariant} />
+					<MutationLabel
+						value={mutationValue} 
+						variant={mutationVariant} 
+						style={mutationStyle}
+					/>
 					<TinyText>
 						compared to last week
 					</TinyText>		

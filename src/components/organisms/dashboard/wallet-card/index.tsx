@@ -118,6 +118,7 @@ const WalletCard = ({
 					balance="245.300.685"
 					mutationValue="-16.5% (-8)"
 					contentPaddingLeft="1.18rem"
+					mutationStyle={{minWidth: "88px"}}
 				/>	
 	
 			</div>
