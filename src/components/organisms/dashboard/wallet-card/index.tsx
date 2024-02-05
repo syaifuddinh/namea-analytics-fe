@@ -45,8 +45,8 @@ const revenueDatasets = [
 ]
 const Header = ({ title }) => {
 	return (
-		<div className="card_header p-[20px] relative flex items-center justify-between max-h-[76px] min-h-[76px]">
-			<div className="text-[var(--Gray10)] text-base font-light leading-6">
+		<div className="card_header pt-5 relative flex items-center justify-between max-h-[76px] min-h-[76px]">
+			<div className="text-[var(--Gray10)] text-base font-light leading-6 absolute left-[1.25rem] top-[1.7rem]">
 				{ title }
 			</div>
 			
