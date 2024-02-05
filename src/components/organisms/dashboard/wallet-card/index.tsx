@@ -138,7 +138,7 @@ const WalletCard = ({
 						</span>
 				</SecondaryCard>		
 
-				<div className="flex items-center gap-3">
+				<div className="flex items-center gap-[0.78rem] justify-between">
 					<CurrencyText
 						letterSpacing="0.2px"
 					>	
