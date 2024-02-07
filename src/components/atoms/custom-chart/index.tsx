@@ -7,9 +7,7 @@ import { useRef } from "react"
 import { useEffect } from "react"
 import { simplifyNumber } from "@/utils/number"
 import useLineController from "./line.controller"
-
-const itemGap = 16
-const subitemGap = 6
+import useBarController from "./bar.controller"
 
 const CustomChart = ({
     labels, 
@@ -19,11 +17,11 @@ const CustomChart = ({
     isShowYAxes = true,
     maxValue = 0,
     chartPaddingTop = "1.75rem",
-    contentHeight = 200
+    contentHeight = 200,
+    offsetY = "0px"
 }) => {
     const gridElement = useRef(null)
     const canvasElement = useRef(null)
-    const [itemValues, setItemValues] = useState([])
     const [yAxeLabels, setYAxeLabels] = useState(() => {
         const response = []
         if(maxValue < 1) return []
@@ -48,55 +46,15 @@ const CustomChart = ({
         return response;
     })
 
-    const onInitiateBarItem = () => {
-        if(gridElement.current === null) return;
-        if(values.length === 0) return;
-        if(values[0].length === 0) return;
-        if(typeof values[0] !== "object") return;
-        const gridHeight = gridElement.current.clientHeight
-        const gridWidth = gridElement.current.clientWidth
-        const itemAmount = values[0].length
-        const proportionalWidth = gridWidth / itemAmount
-        let newItemValues = []
-        newItemValues = values[0].map((item, index) => {
-            // console.log({ valueBar: item})
-            let newValues = {}
-            const newList = values.map((item2, index2) => {
-                const newData = {}
-                const newValue = values[index2][index]
-                newData.value = newValue
-                const proportional = maxValue / newValue
-                newData.height = gridHeight / proportional 
-                newData.width = (gridWidth / itemAmount) / 3
+    let itemValues = []
 
-                console.log({newData})
-
-                return newData
-            })
-            newValues.left = (index * (proportionalWidth + subitemGap + 2))
-            // if(index > 0)
-            //     newValues.left += (gridWidth / (itemAmount * 8) )
-            newValues.items = newList
-            console.log({"new item value": newValues})
-
-            return newValues
-        })
-
-        console.log({ newItemValues })
-        newItemValues = newItemValues.filter(item => item != null)
-
-        setItemValues(newItemValues)
+    if(variant === "line") {
+        useLineController(canvasElement, values, maxValue, labels.length);
     }
-
-    if(variant === "line")
-        useLineController(canvasElement, values, maxValue, labels.length)
-
-    useEffect(() => {
-        onInitiateBarItem()
-
-
-        return () => false
-    }, [gridElement])
+    else if(variant === "bar") {
+        const bar = useBarController(gridElement, values, maxValue)
+        itemValues = bar.itemValues
+    }
 
     return (
         <div className="custom-chart">
@@ -135,7 +93,7 @@ const CustomChart = ({
                         }
 
                         { variant === "bar" && (
-                           <div className="absolute w-full" style={{bottom: "0px"}}>
+                           <div className="absolute w-full" style={{bottom: offsetY}}>
                                 { itemValues.map((data, index) => (
                                     <>
                                         <div key={index} className="absolute flex gap-[6px] items-end" style={{bottom: "0%", left: data.left + "px"}}>

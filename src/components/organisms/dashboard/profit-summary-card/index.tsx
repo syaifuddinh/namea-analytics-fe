@@ -57,6 +57,7 @@ const ProfitSummaryCard = () => {
 					contentHeight={266}
 					chartPaddingTop="1.125rem"
 					xClassname="px-[1.575rem]"
+					offsetY="0.8rem"
 				/>
 			</div>
 
