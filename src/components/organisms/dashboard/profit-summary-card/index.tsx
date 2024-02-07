@@ -40,7 +40,7 @@ const ProfitSummaryCard = () => {
 		<Card
 			headerElement={<Header />}
 		>
-			<div class="costing-overview-card_content bg-[var(--Gray7)]">
+			<div className="costing-overview-card_content bg-[var(--Gray7)]">
 				<CustomChart
 					labels={labels}
 					values={[
