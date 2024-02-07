@@ -6,6 +6,7 @@ import { useState } from "react"
 import { useRef } from "react"
 import { useEffect } from "react"
 import { simplifyNumber } from "@/utils/number"
+import useLineController from "./line.controller"
 
 const itemGap = 16
 const subitemGap = 6
@@ -21,6 +22,7 @@ const CustomChart = ({
     contentHeight = 200
 }) => {
     const gridElement = useRef(null)
+    const canvasElement = useRef(null)
     const [itemValues, setItemValues] = useState([])
     const [yAxeLabels, setYAxeLabels] = useState(() => {
         const response = []
@@ -86,6 +88,9 @@ const CustomChart = ({
         setItemValues(newItemValues)
     }
 
+    if(variant === "line")
+        useLineController(canvasElement, values, maxValue, labels.length)
+
     useEffect(() => {
         onInitiateBarItem()
 
@@ -109,9 +114,15 @@ const CustomChart = ({
                     </div>
                 ) }
                 <div
-                    className={`custom-chart_content px-[20px]`}
+                    className={`custom-chart_content px-[20px] relative`}
                     style={{paddingTop: chartPaddingTop}}
                 >
+                    <div
+                        ref={canvasElement}
+                        className="absolute"
+                    >
+                        
+                    </div>
                     <div
                         ref={gridElement}
                         className={`custom-chart_grid relative flex gap-[12px] flex-wrap overflow-hidden`}

@@ -40,6 +40,7 @@ export default function MonthlyProfitComponent({
             <Chart
                 labels={labels}
                 datasets={chartDataset}
+                variant="line"
             />
         </div>
     </ContentCard>

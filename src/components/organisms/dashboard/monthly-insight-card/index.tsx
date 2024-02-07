@@ -124,12 +124,12 @@ const MonthlyInsightCard = ({
 				<CustomChart
 					values={[
 						[
-							450000,
-							300000,
-							400000,
-							500000
+							100000,
+							200000,
+							300000	
 						]
 					]}
+					variant="line"
 					labels={["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]}	
 					maxValue={500000}
 					xClassname="pl-[10px] pr-[20px]"

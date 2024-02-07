@@ -28,9 +28,9 @@ export default function Home() {
               />
   				</div>
   				<div className="dashboard_header_content">	
-			  		<TitleText>
+			  		<div className="text-[1.063rem] font-light leading-[26px] tracking-[0.5px] text-[var(--white-theme-color)]">
 			  			Overview
-			  		</TitleText>		
+			  		</div>		
   		  		<div className="text-gray6 text-sm leading-5 font-extralight mt-[2px] tracking-[0.06px]">
 			  			Show a comprehensive overview of data from different sources.
 			  		</div>		
