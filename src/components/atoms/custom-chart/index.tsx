@@ -8,6 +8,7 @@ import { useEffect } from "react"
 import { simplifyNumber } from "@/utils/number"
 import useLineController from "./line.controller"
 import useBarController from "./bar.controller"
+import useStackedBarController from "./stacked-bar.controller"
 
 const CustomChart = ({
     labels, 
@@ -47,6 +48,7 @@ const CustomChart = ({
     })
 
     let itemValues = []
+    let stackedValues = []
 
     if(variant === "line") {
         useLineController(canvasElement, values, maxValue, labels.length);
@@ -54,6 +56,10 @@ const CustomChart = ({
     else if(variant === "bar") {
         const bar = useBarController(gridElement, values, maxValue)
         itemValues = bar.itemValues
+    }
+    else if(variant === "stacked-bar") {
+        const bar = useStackedBarController(gridElement, values, maxValue)
+        stackedValues = bar.stackedValues
     }
 
     return (
@@ -92,8 +98,9 @@ const CustomChart = ({
                             ))
                         }
 
+                       <div className="absolute w-full" style={{bottom: offsetY}}>
                         { variant === "bar" && (
-                           <div className="absolute w-full" style={{bottom: offsetY}}>
+                            <>
                                 { itemValues.map((data, index) => (
                                     <>
                                         <div key={index} className="absolute flex gap-[6px] items-end" style={{bottom: "0%", left: data.left + "px"}}>
@@ -108,8 +115,28 @@ const CustomChart = ({
                                         </div>
                                     </>
                                 ))}
-                           </div>
+                            </>
                         ) }
+
+                        { variant === "stacked-bar" && (
+                            <>
+                                { stackedValues.map((data, index) => (
+                                    <>
+                                        <div key={index} className="absolute flex flex-col-reverse gap-[6px]" style={{bottom: "0%", left: data.left + "px"}}>
+                                            { data.items.map((item, index2) => (
+                                                <BarChartItem
+                                                    key={index2}
+                                                    height={item.height + "px"}
+                                                    width={item.width + "px"}
+                                                    variant={index2 > 0 ? "secondary" : "primary"}
+                                                />
+                                            )) }
+                                        </div>
+                                    </>
+                                ))}
+                            </>
+                        ) }
+                       </div>
                     </div>
                 </div>
             </div>
