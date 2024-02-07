@@ -41,6 +41,18 @@ export default function MonthlyProfitComponent({
                 labels={labels}
                 datasets={chartDataset}
                 variant="line"
+                values={[
+                    [
+                        100000,
+                        150000,
+                        200000,
+                        100000,
+                        350000,
+                        400000,
+                        10000,
+                        500000
+                    ]
+                ]}
             />
         </div>
     </ContentCard>

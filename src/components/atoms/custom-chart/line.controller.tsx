@@ -67,16 +67,44 @@ const useLineController = (canvasElement, values, maxValue, labelLength) => {
         if(isDone.current === true) return;
         canvasElement.current.style.top = "0px"
         canvasElement.current.style.left = "0px"
-        canvasElement.current.style.width = "calc(100% - 5rem)"
+        canvasElement.current.style.width = "100%"
         const chartData = {
-            x: [1, 2, 3, 4, 5],
-            y: [10, 20, 15, 25, 30, 20, 25, 15]
+            y: values[0]
         };
         const chartOptions = {
+            stroke: {
+                colors: ["#07B7AC"],
+            },
             chart: {
+                height: 400,
+                width: "90%",
                 type: 'line',
+                offsetX: 20,
+                offsetY: -130,
                 toolbar: {
                     show: false
+                },
+                sparkline: {
+                    enabled: true
+                },
+                type: "area"
+            },
+            grid: {
+                show: false
+            },
+            fill: {
+                type: "gradient",
+                gradient: {
+                    shade: 'dark',
+                    type: "vertical",
+                    shadeIntensity: 1,
+                    inverseColors: false,
+                    opacityFrom: 0.5,
+                    opacityTo: 0.1,
+                    stops: [0, 70],
+                    gradientToColors: ["#07B7AC", "#07B7AC", "#07B7AC"],
+                    gradientFromColors: ["#07B7AC"],
+                    colorStops: undefined,
                 }
             },
             series: [{
@@ -84,11 +112,19 @@ const useLineController = (canvasElement, values, maxValue, labelLength) => {
                 data: chartData.y
             }],
             xaxis: {
+                lines: {
+                    show: false
+                },
                 labels: {
                     show: false
                 }
             },
             yaxis: {
+                min: 0,
+                max: 500000,
+                lines: {
+                    show: false
+                },
                 labels: {
                     show: false
                 }
