@@ -28,7 +28,7 @@ const useStackedBarController = (gridElement, values, maxValue, labelLength) => 
                 newData.value = newValue
                 const proportional = maxValue / newValue
                 newData.height = gridHeight / proportional 
-                newData.width = (gridWidth / itemAmount) / 3
+                newData.width = (gridWidth / (itemAmount * 5))
                 widthTotal = newData.width
 
 
