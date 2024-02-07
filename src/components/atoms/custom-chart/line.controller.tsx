@@ -74,6 +74,7 @@ const useLineController = (canvasElement, values, maxValue, labelLength) => {
         const chartOptions = {
             stroke: {
                 colors: ["#07B7AC"],
+                width: 2,
             },
             chart: {
                 height: 400,
