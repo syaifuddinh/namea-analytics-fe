@@ -19,7 +19,6 @@ const useStackedBarController = (gridElement, values, maxValue, labelLength) => 
         const proportionalWidth = gridWidth / itemAmount
         let newItemValues = []
         newItemValues = values[0].map((item, index) => {
-            // console.log({ valueBar: item})
             let newValues = {}
             let widthTotal = 0
             const newList = values.map((item2, index2) => {
@@ -40,10 +39,8 @@ const useStackedBarController = (gridElement, values, maxValue, labelLength) => 
                 newValues.left = index * (widthTotal + itemMargin)
             else if(index >= values[0].length - 1)
                 newValues.left = gridWidth - widthTotal
-            // if(index > 0)
-            //     newValues.left += (gridWidth / (itemAmount * 8) )
+            
             newValues.items = newList
-            console.log({"new item value": newValues})
 
             return newValues
         })

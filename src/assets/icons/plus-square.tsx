@@ -9,7 +9,7 @@ function IconPlusSquare(props: SVGProps<SVGSVGElement>) {
       viewBox="0 0 28 28"
       fill="none"
     >
-      <rect width="28" height="28" rx="4" fill="#CDFBFF" fill-opacity="0.06" />
+      <rect width="28" height="28" rx="4" fill="#CDFBFF" fillOpacity="0.06" />
       <rect
         x="0.5"
         y="0.5"
@@ -17,14 +17,14 @@ function IconPlusSquare(props: SVGProps<SVGSVGElement>) {
         height="27"
         rx="3.5"
         stroke="#CDFBFF"
-        stroke-opacity="0.1"
+        strokeOpacity="0.1"
       />
       <path
         d="M14 9.625V14M14 14V18.375M14 14H9.625M14 14H18.375"
         stroke="#CDFBFF"
-        stroke-opacity="0.6"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeOpacity="0.6"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
     </svg>
   );

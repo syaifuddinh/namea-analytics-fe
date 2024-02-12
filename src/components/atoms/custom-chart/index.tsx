@@ -19,7 +19,8 @@ const CustomChart = ({
     maxValue = 0,
     chartPaddingTop = "1.75rem",
     contentHeight = 200,
-    offsetY = "0px"
+    offsetY = "0px",
+    onGenerateLegend
 }) => {
     const gridElement = useRef(null)
     const canvasElement = useRef(null)
@@ -48,14 +49,16 @@ const CustomChart = ({
     })
 
     let itemValues = []
+    let barLegends = []
     let stackedValues = []
 
     if(variant === "line") {
         useLineController(canvasElement, values, maxValue, labels.length);
     }
     else if(variant === "bar") {
-        const bar = useBarController(gridElement, values, maxValue)
+        const bar = useBarController(gridElement, values, maxValue, onGenerateLegend)
         itemValues = bar.itemValues
+        barLegends = bar.barLegends
     }
     else if(variant === "stacked-bar") {
         const bar = useStackedBarController(gridElement, values, maxValue)
@@ -103,15 +106,22 @@ const CustomChart = ({
                             <>
                                 { itemValues.map((data, index) => (
                                     <>
-                                        <div key={index} className="absolute flex gap-[6px] items-end" style={{bottom: "0%", left: data.left + "px"}}>
-                                            { data.items.map((item, index2) => (
-                                                <BarChartItem
-                                                    key={index2}
-                                                    height={item.height + "px"}
-                                                    width={item.width + "px"}
-                                                    variant={index2 > 0 ? "secondary" : "primary"}
-                                                />
-                                            )) }
+                                        <div key={index} className="absolute flex flex-col gap-2" style={{bottom: "0%", left: data.left + "px"}}>
+                                            { index <= barLegends.length - 1 && (
+                                                <div key={index} className="flex justify-center">
+                                                    { barLegends[index] }
+                                                </div>
+                                            ) }
+                                            <div className="flex gap-1.5 items-end">
+                                                { data.items.map((item, index2) => (
+                                                    <BarChartItem
+                                                        key={index2}
+                                                        height={item.height + "px"}
+                                                        width={item.width + "px"}
+                                                        variant={index2 > 0 ? "secondary" : "primary"}
+                                                    />
+                                                )) }
+                                            </div>
                                         </div>
                                     </>
                                 ))}
@@ -121,8 +131,8 @@ const CustomChart = ({
                         { variant === "stacked-bar" && (
                             <>
                                 { stackedValues.map((data, index) => (
-                                    <>
-                                        <div key={index} className="absolute flex flex-col-reverse gap-[6px]" style={{bottom: "0%", left: data.left + "px"}}>
+                                    <div key={index}>
+                                        <div className="absolute flex flex-col-reverse gap-[6px]" style={{bottom: "0%", left: data.left + "px"}}>
                                             { data.items.map((item, index2) => (
                                                 <BarChartItem
                                                     key={index2}
@@ -132,7 +142,7 @@ const CustomChart = ({
                                                 />
                                             )) }
                                         </div>
-                                    </>
+                                    </div>
                                 ))}
                             </>
                         ) }

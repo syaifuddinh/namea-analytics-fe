@@ -7,6 +7,7 @@ import TitleText from "@/components/atoms/text/title";
 import SubtitleText from "@/components/atoms/text/subtitle";
 import Icon from "@/components/atoms/icon";
 import CustomChart from "@/components/atoms/custom-chart"
+import { simplifyNumber } from "@/utils/number"
 
 const Header = () => {
 	return (
@@ -53,11 +54,23 @@ const ProfitSummaryCard = () => {
 					]}
 					isShowYAxes={false}
 					variant="bar"
-					maxValue={100000000}
+					maxValue={110000000}
 					contentHeight={266}
 					chartPaddingTop="1.125rem"
 					xClassname="px-[1.575rem]"
 					offsetY="0.8rem"
+					onGenerateLegend={newValue => {
+						const currentVal = newValue[0].value 
+						const shortVal = simplifyNumber(currentVal) 
+						const element = <div className="flex flex-col justify-center items-center">
+							<Icon src="dollar-circle.svg" className="w-[18px] h-[18px]" />
+							<div className="mt-1 text-xs text-[var(--Gray6)] font-extralight">
+								{ shortVal }
+							</div>
+						</div>
+
+						return element
+					}}
 				/>
 			</div>
 

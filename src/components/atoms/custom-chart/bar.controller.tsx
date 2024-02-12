@@ -5,8 +5,14 @@ import { useState } from "react"
 const itemGap = 16
 const subitemGap = 6
 
-const useBarController = (gridElement, values, maxValue, labelLength) => {
+const useBarController = (
+    gridElement, 
+    values, 
+    maxValue, 
+    onGenerateLegend
+) => {
     const [itemValues, setItemValues] = useState([])
+    const barLegends= useRef([])
 
     const onInitiateBarItem = () => {
         if(gridElement.current === null) return;
@@ -19,7 +25,6 @@ const useBarController = (gridElement, values, maxValue, labelLength) => {
         const proportionalWidth = gridWidth / itemAmount
         let newItemValues = []
         newItemValues = values[0].map((item, index) => {
-            // console.log({ valueBar: item})
             let newValues = {}
             let widthTotal = 0
             const newList = values.map((item2, index2) => {
@@ -40,15 +45,15 @@ const useBarController = (gridElement, values, maxValue, labelLength) => {
                 newValues.left = index * (widthTotal + itemMargin)
             else if(index >= values[0].length - 1)
                 newValues.left = gridWidth - widthTotal
-            // if(index > 0)
-            //     newValues.left += (gridWidth / (itemAmount * 8) )
+
             newValues.items = newList
-            console.log({"new item value": newValues})
+            if(onGenerateLegend) {
+                barLegends.current = [...barLegends.current, onGenerateLegend(newList)]
+            }
 
             return newValues
         })
 
-        console.log({ newItemValues })
         newItemValues = newItemValues.filter(item => item != null)
 
         setItemValues(newItemValues)
@@ -65,7 +70,7 @@ const useBarController = (gridElement, values, maxValue, labelLength) => {
     }, [gridElement])
 
 
-    return { itemValues };
+    return { itemValues, barLegends: barLegends.current };
 }
 
 export default useBarController
