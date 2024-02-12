@@ -4,7 +4,23 @@ import PriceTag from "../../../components/atoms/price-tag"
 import Chart from "../../../components/atoms/chart";
 import Pile from "../../../components/atoms/pile";
 
-const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"];
+const labels = [
+    "Jan", 
+    "",
+    "Feb", 
+    "",
+    "Mar", 
+    "",
+    "Apr", 
+    "",
+    "May", 
+    "",
+    "Jun", 
+    "",
+    "Jul", 
+    "",
+    "Aug"
+];
 
 type DatasetType = {
     data: number[]
@@ -43,14 +59,14 @@ export default function MonthlyProfitComponent({
                 variant="line"
                 values={[
                     [
-                        100000,
-                        150000,
-                        200000,
-                        100000,
-                        350000,
-                        400000,
-                        10000,
-                        500000
+                        100000, 150000,
+                        150000, 200000,
+                        200000, 125000,
+                        250000, 250000,
+                        350000, 375000,
+                        450000, 450000,
+                        375000, 400000,
+                        450000
                     ]
                 ]}
             />
