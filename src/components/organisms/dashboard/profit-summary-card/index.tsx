@@ -59,6 +59,7 @@ const ProfitSummaryCard = () => {
 					chartPaddingTop="1.125rem"
 					xClassname="px-[1.575rem]"
 					offsetY="0.8rem"
+					fixedBarWidth={40}
 					onGenerateLegend={newValue => {
 						const currentVal = newValue[0].value 
 						const shortVal = simplifyNumber(currentVal) 

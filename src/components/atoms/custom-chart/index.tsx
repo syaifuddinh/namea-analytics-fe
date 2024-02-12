@@ -20,6 +20,7 @@ const CustomChart = ({
     chartPaddingTop = "1.75rem",
     contentHeight = 200,
     offsetY = "0px",
+    fixedBarWidth = null,
     onGenerateTooltip,
     onGenerateLegend
 }) => {
@@ -60,7 +61,7 @@ const CustomChart = ({
         useLineController(canvasElement, values, maxValue, labels.length);
     }
     else if(variant === "bar") {
-        const bar = useBarController(gridElement, values, maxValue, onGenerateLegend, onGenerateTooltip)
+        const bar = useBarController(gridElement, values, maxValue, fixedBarWidth, onGenerateLegend, onGenerateTooltip)
         itemValues = bar.itemValues
         barLegends = bar.barLegends
         barTooltips = bar.barTooltips

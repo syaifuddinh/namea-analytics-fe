@@ -10,6 +10,7 @@ const useBarController = (
     gridElement, 
     values, 
     maxValue, 
+    fixedBarWidth, 
     onGenerateLegend,
     onGenerateTooltip
 ) => {
@@ -40,6 +41,7 @@ const useBarController = (
                 const proportional = maxValue / newValue
                 newData.height = gridHeight / proportional 
                 newData.width = (gridWidth / itemAmount) / (values.length + 1)
+                if(fixedBarWidth) newData.width = fixedBarWidth
                 widthTotal += newData.width
 
                 highest = highest < newData.height ? newData.height : highest; 
