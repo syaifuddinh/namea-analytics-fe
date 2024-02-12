@@ -20,6 +20,7 @@ const CustomChart = ({
     chartPaddingTop = "1.75rem",
     contentHeight = 200,
     offsetY = "0px",
+    onGenerateTooltip,
     onGenerateLegend
 }) => {
     const gridElement = useRef(null)
@@ -50,15 +51,21 @@ const CustomChart = ({
 
     let itemValues = []
     let barLegends = []
+    let barTooltips = []
     let stackedValues = []
+    let activeTooltipId = null
+    let setActiveTooltipId = () => {}
 
     if(variant === "line") {
         useLineController(canvasElement, values, maxValue, labels.length);
     }
     else if(variant === "bar") {
-        const bar = useBarController(gridElement, values, maxValue, onGenerateLegend)
+        const bar = useBarController(gridElement, values, maxValue, onGenerateLegend, onGenerateTooltip)
         itemValues = bar.itemValues
         barLegends = bar.barLegends
+        barTooltips = bar.barTooltips
+        activeTooltipId = bar.activeTooltipId
+        setActiveTooltipId = bar.setActiveTooltipId
     }
     else if(variant === "stacked-bar") {
         const bar = useStackedBarController(gridElement, values, maxValue)
@@ -104,6 +111,19 @@ const CustomChart = ({
                        <div className="absolute w-full" style={{bottom: offsetY}}>
                         { variant === "bar" && (
                             <>
+                                { barTooltips.map((item, index) => (
+                                    <>
+                                        { activeTooltipId === item.id && (
+                                            <div
+                                                key={item.id}
+                                                className="z-10 absolute"
+                                                style={{"bottom": item.bottom, "left": item.left}}
+                                            >
+                                                { item.element }
+                                            </div>
+                                        ) }
+                                    </>
+                                 )) }
                                 { itemValues.map((data, index) => (
                                     <>
                                         <div key={index} className="absolute flex flex-col gap-2" style={{bottom: "0%", left: data.left + "px"}}>
@@ -112,7 +132,17 @@ const CustomChart = ({
                                                     { barLegends[index] }
                                                 </div>
                                             ) }
-                                            <div className="flex gap-1.5 items-end">
+
+                                            <div
+                                                key={data.id}
+                                                className="flex gap-1.5 items-end"
+                                                onMouseEnter={() => {
+                                                    setActiveTooltipId(data.id)
+                                                }}
+                                                onMouseLeave={() => {
+                                                    setActiveTooltipId(null)
+                                                }}
+                                            >
                                                 { data.items.map((item, index2) => (
                                                     <BarChartItem
                                                         key={index2}

@@ -9,3 +9,19 @@ export function simplifyNumber(number) {
         return number.toString();
     }
 }
+
+export function toCurrency(number) {
+	let currencyString = number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+	currencyString = currencyString.replace("$", "")
+	currencyString = currencyString.replace(/\./g, "#")
+	currencyString = currencyString.replace(/,/g, ".")
+	currencyString = currencyString.replace(/\#/g, ",")
+
+	return currencyString
+}
+
+export function generateId() {
+	const id = Math.round(Math.random() * 999999999)
+
+	return id
+}

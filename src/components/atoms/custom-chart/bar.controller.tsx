@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useRef } from "react"
 import { useState } from "react"
+import { generateId } from "@/utils/number"
 
 const itemGap = 16
 const subitemGap = 6
@@ -9,10 +10,13 @@ const useBarController = (
     gridElement, 
     values, 
     maxValue, 
-    onGenerateLegend
+    onGenerateLegend,
+    onGenerateTooltip
 ) => {
     const [itemValues, setItemValues] = useState([])
+    const barTooltips = useRef([])
     const barLegends= useRef([])
+    const [activeTooltipId, setActiveTooltipId] = useState(null)
 
     const onInitiateBarItem = () => {
         if(gridElement.current === null) return;
@@ -27,6 +31,8 @@ const useBarController = (
         newItemValues = values[0].map((item, index) => {
             let newValues = {}
             let widthTotal = 0
+            let highest = 0  
+            const id = generateId()
             const newList = values.map((item2, index2) => {
                 const newData = {}
                 const newValue = values[index2][index]
@@ -36,6 +42,7 @@ const useBarController = (
                 newData.width = (gridWidth / itemAmount) / (values.length + 1)
                 widthTotal += newData.width
 
+                highest = highest < newData.height ? newData.height : highest; 
 
                 return newData
             })
@@ -47,8 +54,29 @@ const useBarController = (
                 newValues.left = gridWidth - widthTotal
 
             newValues.items = newList
+            newValues.id = id
+
             if(onGenerateLegend) {
-                barLegends.current = [...barLegends.current, onGenerateLegend(newList)]
+                barLegends.current = [
+                ...barLegends.current, 
+                onGenerateLegend(newList)]
+            }
+            
+            if(onGenerateTooltip) {
+                const tooltipWidth = 225
+
+                let bottom = highest * 0.47
+                bottom = bottom + "px"
+
+                let left = newValues.left + widthTotal + 4
+                if(left + tooltipWidth > gridWidth) {
+                    left = newValues.left - tooltipWidth - 4
+                }
+                left = left + "px"
+                barTooltips.current = [
+                    ...barTooltips.current, 
+                    {"element": onGenerateTooltip(newList), bottom, left, id}
+                ]
             }
 
             return newValues
@@ -70,7 +98,13 @@ const useBarController = (
     }, [gridElement])
 
 
-    return { itemValues, barLegends: barLegends.current };
+    return { 
+        itemValues, 
+        activeTooltipId,
+        setActiveTooltipId,
+        barLegends: barLegends.current,
+        barTooltips: barTooltips.current
+    };
 }
 
 export default useBarController

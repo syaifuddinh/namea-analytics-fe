@@ -11,9 +11,11 @@ import Chart from "@/components/atoms/chart";
 import MutationLabel from "@/components/atoms/mutation-label";
 import SecondaryCard from "@/components/atoms/card/secondary";
 import { simplifyNumber } from "@/utils/number";
+import { toCurrency } from "@/utils/number";
 import CurrencyCard from "./currency-card"
 import FrequencyInput from "@/components/molecules/input/frequency"
 import CustomChart from "@/components/atoms/custom-chart"
+import CurrencyTooltip from "@/components/atoms/currency-tooltip"
 
 const labels = ["Dec Week 1", "Dec Week 2", "Dec Week 3", "Dec Week 4"]
 const datasets = [
@@ -88,6 +90,12 @@ const WalletCard = ({
 						]}
 						variant="bar"
 						xClassname="pl-[32px] pr-5"
+						onGenerateTooltip={newValue => {
+							return <CurrencyTooltip
+								ethereumPrice={toCurrency(newValue[0].value)}
+								bitcoinPrice={toCurrency(newValue[1].value)}
+							/>
+						}}
 					/>
 				) }
 
