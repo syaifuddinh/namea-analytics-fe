@@ -2,8 +2,8 @@
 	--dropdown-radius: 0.5rem;
 }
 
-.menubar .menubar_item, .menubar_logo {
-	color: var(--white-theme-color);
+.menubar_item.active {
+	@apply bg-[var(--base-bg3)]
 }
 
 .menubar_dropdown-item {
@@ -20,10 +20,6 @@
 	color: var(--gray-theme-color);
 }
 
-.menubar_user-profile_username {
-	color: var(--white-theme-color);
-}
-
 .menubar_dropdown-item:first-child {
 	border-top-left-radius: var(--dropdown-radius);
 	border-top-right-radius: var(--dropdown-radius);
@@ -36,15 +32,15 @@
 }
 
 .menubar_user-profile_photo img {
-	width: 3rem;
+	width: 32px;
 	height: auto;
 }
 
 .menubar_user-profile_photo {
-	width: 3rem;
-	height: 3rem;
-	min-width: 3rem;
-	min-height: 3rem;
+	width: 32px;
+	height: 32px;
+	min-width: 32px;
+	min-height: 32px;
 	overflow: hidden;
 	border-radius: 100rem;
 }

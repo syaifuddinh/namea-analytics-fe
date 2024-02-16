@@ -1,4 +1,5 @@
 import "./index.style.css";
+import Image from "next/image";
 import SubtitleText from "@/components/atoms/text/subtitle"
 import TitleText from "@/components/atoms/text/title"
 
@@ -8,16 +9,41 @@ export default function Panel({
     variant
 }) {
   return (
-    <div className="panel p-3">
-        <div className={`panel_label px-4 py-2 ${variant} font-medium text-sm`}>
-            { label }
+    <div className="panel relative min-h-[87px]">
+        <div className={`panel_label ${variant} relative z-10 h-[2.501rem]`}>
+            <div className="stripped pl-[14px] pr-4 py-[0.625rem] font-light text-sm">
+                { label }
+            </div>
         </div>
-        <div className="panel_body flex justify-end gap-1 pt-3 pb-2 px-3">
-            <div className="panel_value text-sm">
+        <div className={`panel_body w-full text-[13px] tracking-[0.4px] absolute top-[31px] right-[0px] flex justify-end gap-1 flex items-end pb-[0.25rem] h-[53.5px] max-w-[200px] px-[14px] ${variant} font-light`}>
+            <div className="panel_value font-light">
                 { value }%
             </div>
-            <div className="panel_value-suffix text-sm">
+            <div className="panel_value-suffix font-extralight">
                 of total allocation
+            </div>
+            <div className="absolute h-full right-[-5px] top-[6px]">
+                {variant === 'success' && <Image
+                    src="/icons/background/operation-cost.svg"
+                    alt="dashboard thumbnail"
+                    width={40}
+                    height={40}
+                    className="h-full w-full"
+                />}
+                {variant === 'primary' && <Image
+                    src="/icons/background/promotion-cost.svg"
+                    alt="dashboard thumbnail"
+                    width={40}
+                    height={40}
+                    className="h-full w-full"
+                />}
+                {variant === 'danger' && <Image
+                    src="/icons/background/other-cost.svg"
+                    alt="dashboard thumbnail"
+                    width={40}
+                    height={40}
+                    className="h-full w-full"
+                />}
             </div>
         </div>        
     </div>

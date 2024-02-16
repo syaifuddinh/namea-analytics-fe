@@ -10,10 +10,15 @@ type MutationLabelType = {
 export default function MutationLabel({ 
 	value,
     variant,
-	className = ""
+	className = "",
+    radius="1rem",
+    style={}
 }: MutationLabelType) {
   return (
-    <div className={`mutation-label inline-flex items-center gap-1 font-medium text-xs ${variant} ${className} px-2 py-1`}>
+    <div
+        className={`mutation-label inline-flex items-center gap-[3px] font-medium text-xs ${variant} ${className} pl-1 pr-1.5 py-0.5 max-h-[1.25rem]`}
+        style={{"borderRadius": radius, ...style}}
+     >
     	<div className="mutation-label_prefix">
             { variant === "primary" && (
                 <Icon
@@ -31,7 +36,7 @@ export default function MutationLabel({
                 />
             )}
     	</div>
-    	<div className="mutation-label_value">
+    	<div className="mutation-label_value font-light leading-4">
     		{ value }
     	</div>
     </div>

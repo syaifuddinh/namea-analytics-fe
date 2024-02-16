@@ -1,26 +1,50 @@
 .panel_label {
-	border-radius: var(--base-radius);
+	border-top-left-radius: 0.25rem;
+	border-top-right-radius: 0.25rem;
 	color: var(--white-theme-color);
+	border-radius: 8px;
 }
 
 .panel_label.primary {
-	background: linear-gradient(180deg, #0CBAC5 0%, #015B77 100%);
+	background: linear-gradient(180deg, #5B80DF 0%, #252F85 100%);
+	box-shadow: 0px 4px 8px 0px rgba(255, 255, 255, 0.25) inset, 0px 1px 2px 0px rgba(3, 2, 12, 0.50);
 }
 
 .panel_label.danger {
-	background: linear-gradient(180deg, #DE6C2C 0%, #A62F14 100%);
+	background: var(--Orange, linear-gradient(180deg, #DF735B 0%, #832D21 100%));
+	box-shadow: 0px 4px 8px 0px rgba(255, 255, 255, 0.25) inset;
 }
 
 .panel_label.success {
-	background: linear-gradient(180deg, #CB52F5 0%, #7A04C2 100%);
+	background: linear-gradient(180deg, #755BDF 0%, #3C2A83 100%);
+	box-shadow: 0px 4px 8px 0px rgba(255, 255, 255, 0.25) inset, 0px 1px 2px 0px rgba(3, 2, 12, 0.50);
 }
 
-.panel_body.primary {
-	
+.stripped {
+	width: 100%;
+	height: 100%;
+	background: repeating-linear-gradient(
+		120deg,
+		transparent,
+		transparent 10px,
+		rgba(3, 2, 12, 0.05) 10px,
+		rgba(3, 2, 12, 0.05) 20px
+	)
 }
 
 .panel_body {
-	
+	&.success {
+		background: linear-gradient(270deg, rgba(117, 91, 223, 0.30) -118.58%, rgba(117, 91, 223, 0.00) 100%);
+		border-image: linear-gradient(#755BDF, white) 30;
+	}
+
+	&.primary {
+		background: linear-gradient(270deg, rgba(91, 128, 223, 0.30) -118.58%, rgba(91, 128, 223, 0.00) 100%);
+	}
+
+	&.danger {
+		background: linear-gradient(270deg, rgba(223, 115, 91, 0.30) -118.58%, rgba(223, 115, 91, 0.00) 100%);
+	}
 }
 
 .panel_value {

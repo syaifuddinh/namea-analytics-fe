@@ -1,3 +1,201 @@
+@font-face{
+    font-family:Inter;
+    font-style:normal;
+    font-weight:100;
+    src:url(https://static.figma.com/webfont/1/Inter-Thin-BETA.woff2?v=3.10) format("woff2"),url(https://static.figma.com/webfont/1/Inter-Thin-BETA.woff?v=3.10) format("woff")
+}
+@font-face{
+    font-family:Inter;
+    font-style:italic;
+    font-weight:100;
+    src:url(https://static.figma.com/webfont/1/Inter-ThinItalic-BETA.woff2?v=3.10) format("woff2"),url(https://static.figma.com/webfont/1/Inter-ThinItalic-BETA.woff?v=3.10) format("woff")
+}
+@font-face{
+    font-family:Inter;
+    font-style:normal;
+    font-weight:200;
+    src:url(https://static.figma.com/webfont/1/Inter-ExtraLight-BETA.woff2?v=3.10) format("woff2"),url(https://static.figma.com/webfont/1/Inter-ExtraLight-BETA.woff?v=3.10) format("woff")
+}
+@font-face{
+    font-family:Inter;
+    font-style:italic;
+    font-weight:200;
+    src:url(https://static.figma.com/webfont/1/Inter-ExtraLightItalic-BETA.woff2?v=3.10) format("woff2"),url(https://static.figma.com/webfont/1/Inter-ExtraLightItalic-BETA.woff?v=3.10) format("woff")
+}
+@font-face{
+    font-family:Inter;
+    font-style:normal;
+    font-weight:300;
+    src:url(https://static.figma.com/webfont/1/Inter-Light-BETA.woff2?v=3.10) format("woff2"),url(https://static.figma.com/webfont/1/Inter-Light-BETA.woff?v=3.10) format("woff")
+}
+@font-face{
+    font-family:Inter;
+    font-style:italic;
+    font-weight:300;
+    src:url(https://static.figma.com/webfont/1/Inter-LightItalic-BETA.woff2?v=3.10) format("woff2"),url(https://static.figma.com/webfont/1/Inter-LightItalic-BETA.woff?v=3.10) format("woff")
+}
+@font-face{
+    font-family:Inter;
+    font-style:normal;
+    font-weight:400;
+    src:url(https://static.figma.com/webfont/1/Inter-Regular.woff2?v=3.10) format("woff2"),url(https://static.figma.com/webfont/1/Inter-Regular.woff?v=3.10) format("woff")
+}
+@font-face{
+    font-family:Inter;
+    font-style:italic;
+    font-weight:400;
+    src:url(https://static.figma.com/webfont/1/Inter-Italic.woff2?v=3.10) format("woff2"),url(https://static.figma.com/webfont/1/Inter-Italic.woff?v=3.10) format("woff")
+}
+@font-face{
+    font-family:Inter;
+    font-style:normal;
+    font-weight:500;
+    src:url(https://static.figma.com/webfont/1/Inter-Medium.woff2?v=3.10) format("woff2"),url(https://static.figma.com/webfont/1/Inter-Medium.woff?v=3.10) format("woff")
+}
+@font-face{
+    font-family:Inter;
+    font-style:italic;
+    font-weight:500;
+    src:url(https://static.figma.com/webfont/1/Inter-MediumItalic.woff2?v=3.10) format("woff2"),url(https://static.figma.com/webfont/1/Inter-MediumItalic.woff?v=3.10) format("woff")
+}
+@font-face{
+    font-family:Inter;
+    font-style:normal;
+    font-weight:600;
+    src:url(https://static.figma.com/webfont/1/Inter-SemiBold.woff2?v=3.10) format("woff2"),url(https://static.figma.com/webfont/1/Inter-SemiBold.woff?v=3.10) format("woff")
+}
+@font-face{
+    font-family:Inter;
+    font-style:italic;
+    font-weight:600;
+    src:url(https://static.figma.com/webfont/1/Inter-SemiBoldItalic.woff2?v=3.10) format("woff2"),url(https://static.figma.com/webfont/1/Inter-SemiBoldItalic.woff?v=3.10) format("woff")
+}
+@font-face{
+    font-family:Inter;
+    font-style:normal;
+    font-weight:700;
+    src:url(https://static.figma.com/webfont/1/Inter-Bold.woff2?v=3.10) format("woff2"),url(https://static.figma.com/webfont/1/Inter-Bold.woff?v=3.10) format("woff")
+}
+@font-face{
+    font-family:Inter;
+    font-style:italic;
+    font-weight:700;
+    src:url(https://static.figma.com/webfont/1/Inter-BoldItalic.woff2?v=3.10) format("woff2"),url(https://static.figma.com/webfont/1/Inter-BoldItalic.woff?v=3.10) format("woff")
+}
+
+@font-face {
+	font-family:'Neue Montreal';
+	src: url(/fonts/neue-montreal/NeueMontreal-Regular.otf);
+}
+
+@font-face {
+  font-family:'Neue Montreal 2';
+  src: url('/fonts/neue-montreal-by-pangram/PPNeueMontreal-Book.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family:'Neue Montreal 2';
+  src: url('/fonts/neue-montreal-by-pangram/PPNeueMontreal-Medium.otf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family:'Neue Montreal 3';
+  src: url('/fonts/neue-montreal-free-demo-pangram-pangram-030418/NeueMontreal-Regular.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family:'Neue Montreal 3';
+  src: url('/fonts/neue-montreal-free-demo-pangram-pangram-030418/NeueMontreal-Medium.otf');
+  font-weight: 500;
+}
+
+
+.card-wrapper {
+	@apply border border-gray-1 shadow-[0px_-28px_84px_-24px_rgba(223,244,246,0.06)_inset] px-0 pb-1 pt-1 rounded-2xl border-solid;
+	background: radial-gradient(
+      100% 120.05% at 50% 50%,
+      rgba(205, 251, 255, 0) 33.78%,
+      rgba(205, 251, 255, 0.04) 100%,
+    rgba(205, 251, 255, 0)
+  );
+
+	.header {
+		@apply p-5 bg-base-bg5 border-t-base-bg3 border-b-base-bg3 rounded-[12px_12px_0px_0px] border-t border-solid border-b;
+	}
+}
+
+.font-neue-montreal {
+	font-family: "Neue Montreal";
+}
+
+
+.font-neue-montreal2 {
+  font-family: "Neue Montreal 2";
+}
+
+.font-neue-montreal3 {
+  font-family: "Neue Montreal 3";
+}
+
+* {
+  font-family: "Inter";
+}
+
+.bg-base-bg2 {
+	background: radial-gradient(100% 120.05% at 50% 50%, rgba(205, 251, 255, 0.00) 33.78%, rgba(205, 251, 255, 0.04) 100%, rgba(205, 251, 255, 0.00));
+}
+
 .text-gray-theme {
 	color: var(--gray-theme-color);
+}
+
+.text-gray6 {
+	color: var(--Gray6);
+}
+
+.text-gray2 {
+	color: var(--Gray2);
+}
+
+.text-white-theme-color {
+	color: var(--white-theme-color);
+}
+
+.bg-base-bg5 {
+	background: var(--base-bg5);
+}
+
+.bg-base-bg4 {
+	background: var(--base-bg4);
+}
+
+.bg-base-bg3 {
+	background: var(--base-bg3);
+}
+
+.border-base-bg3 {
+	border-color: var(--base-bg3);
+}
+
+.border-t-1 {
+	border-top-width: 1px;
+}
+
+.border-r-1 {
+	border-right-width: 1px;
+}
+
+.border-r-2 {
+	border-right-width: 2px;
+}
+
+.border-gray1 {
+	border-color: var(--Gray1);
+}
+
+.border-gray6 {
+	border-color: var(--Gray6);
 }

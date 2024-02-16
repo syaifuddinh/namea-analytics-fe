@@ -1,0 +1,29 @@
+.percentage-label {
+	color: var(--white-theme-color1);
+}
+
+.percentage-label.primary {
+	background: var(--Success1);
+}
+
+.percentage-label.primary * {
+	color: var(--Success10);
+}
+
+.percentage-label.danger {
+	background: rgba(222, 108, 44, 0.1);
+}
+
+.percentage-label.danger * {
+	color: var(--Alert10);
+}
+
+.percentage-label.warning {
+	background: var(--Alert1);
+}
+
+.percentage-label.warning * {
+	color: var(--warning-theme-color);
+;
+
+}

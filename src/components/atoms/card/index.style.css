@@ -1,42 +1,31 @@
 .card {
-	border: 1px solid var(--base-border-theme-color);
-	border-radius: 1rem;	
 	overflow: hidden;
-	padding-top: 0.375rem;
-	padding-bottom: 0.375rem;
 	box-shadow: 0px -28px 84px -24px rgba(223, 244, 246, 0.06) inset;
 }
 
 .card .card_container {
-	border-width: 1px 0;
-	border-style: solid;
-	border-color: var(--base-border-theme-color);
 	border-radius: 12px 12px 0px 0px;
 }
 
 .card .card_content {
-	background: var(--base-bg5, rgba(205, 251, 255, 0.02));
 
 }
 
 .card .card_divider {
 	width: 100%;
 	min-width: 100%;
-	height: 0.5rem;
 	display: flex;
 	justify-content: center;
 }
 
 .card .card_divider__border {
-	height: 0.5rem;
-	width: 80%;
-	min-width: 80%;
+	width: 100%;
+	min-width: 100%;
 
 	border-width: 0 2px;
 	border-color: var(--base-border-theme-color);
 }
 
 .card .card_header {
-	padding: 1rem;
-	background: var(--base-bg5, rgba(205, 251, 255, 0.02));
+	@apply rounded-t-[12px] p-[20px] border-y border-[var(--Gray3)] bg-[var(--base-bg5)];
 }

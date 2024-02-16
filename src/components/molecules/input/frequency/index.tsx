@@ -1,9 +1,7 @@
 "use client"
 
-import DefaultText from "../../../components/atoms/default-text"
 import { useState } from "react"
 import { useEffect } from "react"
-import "./frequency-input.style.css";
 
 const frequencies = [
 	{
@@ -53,22 +51,21 @@ export default function FrequencyInput({
 	}, [value])
 
  	return (
-	    <div className="frequency-input flex border-1">
+	    <div className="frequency-input border border-[var(--Gray4)] rounded-[0.625rem] p-[0.21rem] flex gap-1 -tracking-[0.14px] min-h-[36px] max-h-[36px] min-w-[216px] max-w-[216px]">
 	    	{ 
 	    		datasets.map(item => (
 			    	<div
 			    		key={item.value}
-			    		className={`frequency-input_item py-2 px-3 cursor-pointer ${item.value === dataValue ? "active" : ""}`}
+			    		className={`frequency-input_item max-h-[1.75rem] py-[4px] px-[10px] cursor-pointer ${item.value === dataValue ? "text-[var(--Gray10)] bg-[var(--base-bg3)] rounded-[6px] border border-[var(--Gray1)]" : "text-[var(--Gray6)]"}`}
 			    		onClick={() => onChangeData(item.value)}
 			    	>
 
-			    		<DefaultText
-			    			weight="medium"
-			    			color={item.value === dataValue ? "white" : null}
+			    		<div
+			    			className="font-extralight tracking-[0.06px] text-sm leading-5"
 			    		>
 			    			
 				    		{ item.label }
-			    		</DefaultText>
+			    		</div>
 			    	</div>
 	    		))
 	    	}

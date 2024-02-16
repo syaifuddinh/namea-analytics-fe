@@ -1,0 +1,23 @@
+:root {
+	--pile-size: 8px;
+}
+
+.pile {
+	border-radius: 1rem;
+	outline-style: solid;
+}
+
+.pile.success {
+	background: linear-gradient(180deg, #339874 0%, #0A7063 100%);
+	box-shadow: 0px 0px 0px 3px rgba(10, 112, 99, 0.3);
+}
+
+.pile.primary {
+	background: var(--Success10);
+	outline-color: var(--Success2);
+}
+
+.pile.danger {
+	background: linear-gradient(180deg, #DE6C2C 0%, #A62F14 100%);
+	box-shadow: 0px 0px 0px 3px rgba(222, 108, 44, 0.3);
+}

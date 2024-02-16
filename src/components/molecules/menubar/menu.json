@@ -22,7 +22,7 @@
 		},
 		{
 			"id": "cashflow",
-			"name": "cashflow",
+			"name": "Cash Flow",
 			"childrens": [
 				{
 					"id": "cashflow-item",

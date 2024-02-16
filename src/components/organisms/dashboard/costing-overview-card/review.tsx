@@ -6,48 +6,56 @@ import MoneyText from "@/components/atoms/text/money";
 import TitleText from "@/components/atoms/text/title";
 import SubtitleText from "@/components/atoms/text/subtitle";
 import MutationLabel from "@/components/atoms/mutation-label"
+import PercentageLabel from "@/components/atoms/percentage-label"
 
 const Review = ({
 	title,
 	description,
-	iconSrc
+	iconSrc,
+	balance,
+	percentage,
 }) => {
 	return (
-		<SecondaryCard>
-			<div className="p-5">
+		<SecondaryCard
+			className="bg-[var(--base-bg5)] flex flex-col justify-between"
+		>
+			<div className="px-[20px] pt-[20px] pb-3">
 				<Icon
 					src={iconSrc}
 					alt="review icon"
 				/>
 
-				<div className="costing-overview_label mt-2 text-sm mb-1 text-gray-theme">
+				<div className="costing-overview_label mt-[12px] text-sm mb-1 text-[var(--Gray6)] font-extralight">
 					Total Cost
 				</div>
 
-				<MoneyText>
-					500.000.000
-				</MoneyText>
+				<div className="font-light text-[var(--Gray10)] tracking-[0.15px]">
+					<span>
+						Rp{ balance },
+					</span>
+					<span className="text-[var(--Gray6)]">00</span>
+				</div>
 
 				<div className="flex gap-2 mt-3 items-center">
-					<MutationLabel
-						value={"50%"}
+					<PercentageLabel
+						value={percentage}
 						variant="warning"
 					/>
 
-					<div className="costing-overview-card_hint text-gray-theme text-xs">
+					<div className="costing-overview-card_hint font-extralight text-gray-theme text-xs tracking-[0.06px]">
 						of total allocation
 					</div>
 				</div>
 			</div>
 
-			<div className="costing-overview-card_review flex flex-col items-center gap-1 p-4 m-1">
-				<TitleText>
+			<div className={`max-h-[82px] costing-overview-card_review flex flex-col items-center gap-1 px-1 py-[19px] m-1 -tracking-[0.14px] leading-5`}>
+				<div className="text-sm font-light tracking-[0.06px] text-white-theme-color leading-5">
 					{ title }
-				</TitleText>			
+				</div>			
 
-				<SubtitleText>
+				<div className="text-center text-[var(--Gray6)] font-extralight text-sm tracking-[0.06px]">
 					{ description }
-				</SubtitleText>
+				</div>
 			</div>
 		</SecondaryCard>
 	)
