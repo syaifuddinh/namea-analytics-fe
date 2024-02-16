@@ -30,9 +30,16 @@ const useLineController = (
 
     const getBulletTooltips = () => bulletTooltips
 
+    const onGridLeave = (element) => {
+        element.addEventListener("mouseleave", () => {
+            setActiveLineTooltipKey(null)
+        })
+    }
+
     const onGridHover = (element, region) => {
         element.addEventListener("mousemove", e => {
             const { offsetX } = e
+            console.log({ offsetX })
             const gridWidth = gridDimension.current.width
             const index = region.findIndex(item => {
                 const { start, end } = item 
@@ -221,6 +228,7 @@ const useLineController = (
         setDashLines(newDashLines)
 
         onGridHover(gridElement.current, newRegion)
+        onGridLeave(gridElement.current)
     }
 
     useEffect(() => {
