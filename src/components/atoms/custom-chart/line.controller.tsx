@@ -28,10 +28,20 @@ const useLineController = (
     const [dashLines, setDashLines] = useState([])
     const [activeLineTooltipKey, setActiveLineTooltipKey] = useState(null)
 
-    const onGridHover = element => {
+    const getBulletTooltips = () => bulletTooltips
+
+    const onGridHover = (element, region) => {
         element.addEventListener("mousemove", e => {
             const { offsetX } = e
-            console.log({ offsetX })
+            const gridWidth = gridDimension.current.width
+            const index = region.findIndex(item => {
+                const { start, end } = item 
+
+                return offsetX >= start && offsetX < end
+            })
+            if(index === -1) return;
+            // alert(bulletTooltips[index].key)
+            setActiveLineTooltipKey(region[index].key)
         })
     }
 
@@ -133,7 +143,7 @@ const useLineController = (
         const length = datasets.length
         const space = gridWidth - (16 * length)
         const offset = space / (length - 1)
-        onGridHover(gridElement.current)
+        const newRegion = []
         
         datasets.forEach((item, index) => {
             const id = generateId()
@@ -181,6 +191,14 @@ const useLineController = (
             }
             newDashLines.push(lineParams)
 
+            const startRegion = lineLeftValue - 8
+            const endRegion = lineLeftValue + 8
+            newRegion.push({
+                key,
+                "start": startRegion,
+                "end": endRegion
+            })
+
             if(onGenerateTooltip) {
                 const tooltipLeftValue = lineLeftValue + 4  
                 const tooltipLeft = tooltipLeftValue + "px"
@@ -191,7 +209,7 @@ const useLineController = (
                     {
                         "id": tooltipId,
                         key,
-                        "element": onGenerateTooltip(),
+                        "element": onGenerateTooltip(item, index),
                         "left": tooltipLeft,
                         "bottom": tooltipBottom
                     }
@@ -201,6 +219,8 @@ const useLineController = (
         lineTooltips.current = newLineTooltips
         setBulletTooltips(newBulletTooltips)
         setDashLines(newDashLines)
+
+        onGridHover(gridElement.current, newRegion)
     }
 
     useEffect(() => {

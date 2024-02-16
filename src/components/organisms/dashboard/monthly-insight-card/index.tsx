@@ -12,6 +12,7 @@ import CustomChart from "@/components/atoms/custom-chart"
 import ProfitTooltip from "@/components/atoms/profit-tooltip"
 import "./index.style.css"
 import { simplifyNumber } from "@/utils/number";
+import { toCurrency } from "@/utils/number";
 
 const Header = ({ 
 	title, 
@@ -89,7 +90,7 @@ const Header = ({
 	)
 }
 
-const labels = ["Jan", "Feb", "Mar", "Apr", "May", "June", "Jul", "Aug"]
+const labels = ["Jan", "", "Feb", "", "Mar", "", "Apr", "", "May", "", "Jun", "", "Jul", "", "Aug"]
 const datasets = [
 	{
 		lineTension: 0.6,
@@ -136,13 +137,15 @@ const MonthlyInsightCard = ({
 						]
 					]}
 					variant="line"
-					labels={["Jan", "", "Feb", "", "Mar", "", "Apr", "", "May", "", "Jun", "", "Jul", "", "Aug"]}	
+					labels={labels}	
 					maxValue={500000}
 					xClassname="pl-[10px] pr-[20px]"
-					onGenerateTooltip={newValue => {
+					onGenerateTooltip={(item, index) => {
+						let month = labels[index]
+						if(!month) month = labels[index - 1]
 						return <ProfitTooltip
-							title="May 2023"
-							price="2.000.000"
+							title={`${month} 2023`}
+							price={toCurrency(item)}
 						/>
 					}}
 				/>
