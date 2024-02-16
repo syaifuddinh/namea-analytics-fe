@@ -9,6 +9,9 @@ import { simplifyNumber } from "@/utils/number"
 import useLineController from "./line.controller"
 import useBarController from "./bar.controller"
 import useStackedBarController from "./stacked-bar.controller"
+import Pile from "@/components/atoms/pile"
+import DashedLine from "@/components/atoms/dashed-line"
+import "./index.style.css"
 
 const CustomChart = ({
     labels, 
@@ -56,9 +59,17 @@ const CustomChart = ({
     let stackedValues = []
     let activeTooltipId = null
     let setActiveTooltipId = () => {}
+    let bulletTooltips = []
+    let dashLines = []
+    let lineTooltips = []
+    let activeLineTooltipKey = null
 
     if(variant === "line") {
-        useLineController(canvasElement, values, maxValue, labels.length);
+        const line = useLineController(canvasElement, values, maxValue, labels.length, gridElement, onGenerateTooltip);
+        bulletTooltips = line.bulletTooltips
+        dashLines = line.dashLines
+        lineTooltips = line.lineTooltips
+        activeLineTooltipKey = line.activeLineTooltipKey
     }
     else if(variant === "bar") {
         const bar = useBarController(gridElement, values, maxValue, fixedBarWidth, onGenerateLegend, onGenerateTooltip)
@@ -100,8 +111,8 @@ const CustomChart = ({
                     </div>
                     <div
                         ref={gridElement}
-                        className={`custom-chart_grid relative flex gap-[12px] flex-wrap overflow-hidden`}
-                        style={{height: contentHeight + "px", maxHeight: contentHeight + "px"}}    
+                        className={`custom-chart_grid relative flex gap-[12px] flex-wrap `}
+                        style={{height: contentHeight + "px", maxHeight: contentHeight + "px", minHeight: contentHeight + "px"}}    
                      >
                         {  
                             dotList.map(item => (
@@ -109,7 +120,45 @@ const CustomChart = ({
                             ))
                         }
 
-                       <div className="absolute w-full" style={{bottom: offsetY}}>
+                       <div className="custom-chart_visual absolute w-full" style={{bottom: offsetY}}>
+                        { variant === "line" && (
+                            <>
+                                { bulletTooltips.map(item => (
+                                    <>
+                                        { activeLineTooltipKey === item.key && (
+                                            <div key={item.id} className="absolute z-10" style={{"left": item.left, "bottom": item.bottom}}>
+                                                <Pile
+                                                    variant="primary"
+                                                    outlineWidth={4}
+                                                    size="12px"
+                                                />
+                                            </div>
+                                        ) }
+                                    </>
+                                )) }
+
+                                { dashLines.map(item => (
+                                    <>
+                                        { activeLineTooltipKey === item.key && (
+                                            <div key={item.id} className="absolute" style={{"left": item.left, "bottom": item.bottom}}>
+                                                <DashedLine />
+                                            </div>
+                                        ) }
+                                    </>
+                                )) }
+
+                                { lineTooltips.map(item => (
+                                    <>
+                                        { activeLineTooltipKey === item.key && (
+                                            <div key={item.id} className="absolute" style={{"left": item.left, "bottom": item.bottom}}>
+                                                { item.element }
+                                            </div>
+                                        ) }
+                                    </>
+                                )) }
+                            </>
+                        ) }
+
                         { variant === "bar" && (
                             <>
                                 { barTooltips.map((item, index) => (

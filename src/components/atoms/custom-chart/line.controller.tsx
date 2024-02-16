@@ -1,65 +1,39 @@
 import ApexCharts from 'apexcharts'
 import { useEffect } from "react"
 import { useRef } from "react"
+import { useState } from "react"
+import { generateId } from "@/utils/number"
 
-const useLineController = (canvasElement, values, maxValue, labelLength) => {
+const useLineController = (
+    canvasElement, 
+    values, 
+    maxValue, 
+    labelLength, 
+    gridElement,
+    onGenerateTooltip
+) => {
     const isDone = useRef(false)
     const canvasDimension = useRef({
         width: null,
         height: null
     })
+    const lineTooltips = useRef([])
 
-    const setLine = (ctx, values) => {
-        if(typeof values !== "object") return;
-        ctx.lineWidth = 2
-        ctx.strokeStyle = "#07B7AC";
-        const canvasWidth = canvasDimension.current.width
-        const canvasHeight = canvasDimension.current.height
-        const offset = canvasWidth / labelLength 
-        values.forEach(items => {
-            ctx.beginPath()
-            items.forEach((item, index) => {
-                let nextX = offset * index;
-                let nextY = canvasHeight - (canvasHeight * (item / maxValue));
-                console.log({ canvasHeight, item, maxValue, nextX, nextY })
-                if(index < 1) {
-                    ctx.moveTo(nextX, nextY)
-                } else if(index >= 1) {
-                    let endX = nextX;
-                    let endY = nextY;
+    const gridDimension = useRef({
+        "width": 0,
+        "height": 0
+    })
 
-                    let controlX = nextX  * 0.3
-                    let controlY = nextY * 2
-                    let controlX2 = nextX  * 0.1
-                    let controlY2 = nextY * 0.8
+    const [bulletTooltips, setBulletTooltips] = useState([])
+    const [dashLines, setDashLines] = useState([])
+    const [activeLineTooltipKey, setActiveLineTooltipKey] = useState(null)
 
-                    ctx.bezierCurveTo(controlX, controlY, controlX2, controlY2, endX, endY);
-                }
-            })
-            ctx.stroke()
-            ctx.closePath()
+    const onGridHover = element => {
+        element.addEventListener("mousemove", e => {
+            const { offsetX } = e
+            console.log({ offsetX })
         })
     }
-
-    // const onInit = () => {
-    //     if(!canvasElement) return;
-    //     if(!canvasElement.current) return;
-    //     if(isDone.current === true) return;
-    //     const ctx = canvasElement.current.getContext("2d")
-    //     const nextEl = canvasElement.current.nextElementSibling
-    //     const canvasWidth = nextEl.clientWidth
-    //     const canvasHeight = nextEl.clientHeight
-    //     canvasDimension.current = {
-    //         width: canvasWidth,
-    //         height: canvasHeight
-    //     }
-    //     canvasElement.current.setAttribute("width", canvasWidth)
-    //     canvasElement.current.setAttribute("height", canvasHeight)
-
-    //     setLine(ctx, values)
-
-    //     isDone.current = true;
-    // }
 
     const onInit = () => {
         if(!canvasElement) return;
@@ -72,16 +46,19 @@ const useLineController = (canvasElement, values, maxValue, labelLength) => {
             y: values[0]
         };
         const chartOptions = {
+            tooltip: {
+                show: false
+            },
             stroke: {
                 colors: ["#07B7AC"],
                 width: 2,
             },
             chart: {
-                height: 400,
+                height: 200,
                 width: "90%",
                 type: 'line',
                 offsetX: 20,
-                offsetY: -130,
+                offsetY: 27,
                 toolbar: {
                     show: false
                 },
@@ -140,10 +117,109 @@ const useLineController = (canvasElement, values, maxValue, labelLength) => {
         isDone.current = true;
     }
 
+    const onInitBulletTooltips = () => {
+        if(gridElement.current === null) return;
+        const gridHeight = gridElement.current.clientHeight
+        const gridWidth = gridElement.current.clientWidth
+        gridDimension.current = {
+            "width": gridWidth,
+            "height": gridHeight
+        }
+
+        const datasets = values[0]
+        const newBulletTooltips = []
+        const newDashLines = []
+        let newLineTooltips = []
+        const length = datasets.length
+        const space = gridWidth - (16 * length)
+        const offset = space / (length - 1)
+        onGridHover(gridElement.current)
+        
+        datasets.forEach((item, index) => {
+            const id = generateId()
+            const key = generateId()
+            let leftValue = -3
+            let bottomValue = 4
+            let left = 0
+            let bottom = 0
+
+            if(index === datasets.length - 1) {
+                leftValue = gridWidth - 16
+                left = leftValue + "px"
+            } else if(index > 0 && index < datasets.length - 1) {
+                leftValue = index * (16 + offset)
+                left = leftValue + "px"
+            } 
+
+            const heightPercent = item / maxValue
+            bottomValue = gridHeight * (heightPercent)
+            bottomValue -= 4
+            bottom = bottomValue + "px"
+
+            const params = {
+                id,
+                key,
+                left,
+                bottom
+            }
+            newBulletTooltips.push(params)
+
+            const lineId = generateId()
+            let lineLeftValue = leftValue + 8
+            if(index > 0) lineLeftValue -= 3
+            const lineLeft = lineLeftValue + "px"
+            let lineBottomValue = bottomValue - 50
+            if(lineBottomValue < 0) lineBottomValue = 0
+            else if(lineBottomValue + 116 > gridHeight) lineBottomValue = gridHeight - 116
+            const lineBottom = lineBottomValue + "px"
+
+            const lineParams = {
+                id: lineId,
+                key,
+                left: lineLeft,
+                bottom: lineBottom
+            }
+            newDashLines.push(lineParams)
+
+            if(onGenerateTooltip) {
+                const tooltipLeftValue = lineLeftValue + 4  
+                const tooltipLeft = tooltipLeftValue + "px"
+                const tooltipBottom = lineBottomValue + "px"
+                const tooltipId = generateId()
+                newLineTooltips = [
+                    ...newLineTooltips, 
+                    {
+                        "id": tooltipId,
+                        key,
+                        "element": onGenerateTooltip(),
+                        "left": tooltipLeft,
+                        "bottom": tooltipBottom
+                    }
+                ]
+            }
+        })
+        lineTooltips.current = newLineTooltips
+        setBulletTooltips(newBulletTooltips)
+        setDashLines(newDashLines)
+    }
+
     useEffect(() => {
         onInit()
         return () => false
     }, [canvasElement])
+
+
+    useEffect(() => {
+        onInitBulletTooltips()
+        return () => false
+    }, [gridElement])
+
+    return {
+        lineTooltips: lineTooltips.current,
+        bulletTooltips,
+        activeLineTooltipKey,
+        dashLines
+    }
 }
 
 export default useLineController
