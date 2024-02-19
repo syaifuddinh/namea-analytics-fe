@@ -90,6 +90,7 @@ const WalletCard = ({
 						]}
 						variant="bar"
 						xClassname="pl-[32px] pr-5"
+						fixedBarWidth={40}
 						onGenerateTooltip={newValue => {
 							return <CurrencyTooltip
 								ethereumPrice={toCurrency(newValue[0].value)}
@@ -126,6 +127,7 @@ const WalletCard = ({
 						variant="stacked-bar"
 						labels={["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]}	
 						maxValue={500000}
+						fixedBarWidth={12}
 						xClassname="pl-2.5 pr-5"
 					/>
 				) }

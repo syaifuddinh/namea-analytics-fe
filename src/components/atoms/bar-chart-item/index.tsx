@@ -6,12 +6,13 @@ const BarChartItem = ({
 	height,
 	width,
 	bottom = "0%",
+	radius = "8px",
 	variant = "primary"
 }) => {
 	return (
 		<div
-			className={`bar-chart-item ${variant} rounded-[8px]`}
-			style={{ height, width, "minWidth": width  }}
+			className={`bar-chart-item ${variant}`}
+			style={{ height, width, "minWidth": width, "borderRadius": radius  }}
 		>
 		</div>
 	)
