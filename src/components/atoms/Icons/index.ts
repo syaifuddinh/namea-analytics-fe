@@ -8,3 +8,5 @@ export * from "./SmallChevronDown";
 export * from "./ArrowLeft";
 export * from "./ArrowRight";
 export * from "./types";
+export * from "./cashflow/header";
+export * from "./white/uploading";

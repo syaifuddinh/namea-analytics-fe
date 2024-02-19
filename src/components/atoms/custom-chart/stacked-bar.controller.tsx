@@ -5,7 +5,7 @@ import { useState } from "react"
 const itemGap = 16
 const subitemGap = 6
 
-const useStackedBarController = (gridElement, values, maxValue, labelLength) => {
+const useStackedBarController = (gridElement, values, maxValue, fixedBarWidth) => {
     const [itemValues, setItemValues] = useState([])
 
     const onInitiateBarItem = () => {
@@ -28,6 +28,7 @@ const useStackedBarController = (gridElement, values, maxValue, labelLength) => 
                 const proportional = maxValue / newValue
                 newData.height = gridHeight / proportional 
                 newData.width = (gridWidth / (itemAmount * 5))
+                if(fixedBarWidth) newData.width = fixedBarWidth
                 widthTotal = newData.width
 
 

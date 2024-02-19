@@ -3,6 +3,7 @@
 		{
 			"id": "home",
 			"name": "home",
+			"url": "/",
 			"childrens": []
 		},
 		{
@@ -23,6 +24,7 @@
 		{
 			"id": "cashflow",
 			"name": "Cash Flow",
+			"url": "/cashflow",
 			"childrens": [
 				{
 					"id": "cashflow-item",

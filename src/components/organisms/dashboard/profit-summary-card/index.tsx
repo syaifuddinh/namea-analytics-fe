@@ -58,7 +58,7 @@ const ProfitSummaryCard = () => {
 					contentHeight={266}
 					chartPaddingTop="1.125rem"
 					xClassname="px-[1.575rem]"
-					offsetY="0.8rem"
+					offsetY="1.425rem"
 					fixedBarWidth={40}
 					onGenerateLegend={newValue => {
 						const currentVal = newValue[0].value 
