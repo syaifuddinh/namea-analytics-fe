@@ -38,7 +38,7 @@ export default function RowOptionInput({
 	    		options.map(item => (
 			    	<div
 			    		key={item.value}
-			    		className={`row-option-input_item max-h-[1.75rem] py-[4px] px-[10px] cursor-pointer ${item.value === dataValue ? "text-[var(--Gray10)] bg-[var(--base-bg3)] rounded-[6px] border border-[var(--Gray1)]" : "text-[var(--Gray6)]"}`}
+			    		className={`row-option-input_item grow max-h-[1.75rem] py-[4px] px-[10px] cursor-pointer ${item.value === dataValue ? "text-[var(--Gray10)] bg-[var(--base-bg3)] rounded-[6px] border border-[var(--Gray1)]" : "text-[var(--Gray6)]"}`}
 			    		onClick={() => onChangeData(item.value)}
 			    	>
 

@@ -6,7 +6,7 @@ export default function Header({
 }) {
 	return (
 		<div
-			className={"flex lg:flex-row md:flex-col lg:items-center justify-between gap-5 " + className}
+			className={"flex lg:flex-row flex-col lg:items-center justify-between gap-5 " + className}
 		>
 			<div className="flex gap-3 items-center">
 				<CashflowHeader />
