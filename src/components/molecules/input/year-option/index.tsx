@@ -6,16 +6,16 @@ import RowOptionInput from "@/components/molecules/input/row-option"
 
 const frequencies = [
 	{
-		value: "weekly",
-		label: "Weekly",
+		value: "2023",
+		label: "2023",
 	},
 	{
-		value: "monthly",
-		label: "Monthly",
+		value: "2022",
+		label: "2022",
 	},
 	{
-		value: "yearly",
-		label: "Yearly",
+		value: "2021",
+		label: "2021",
 	}
 ]
 

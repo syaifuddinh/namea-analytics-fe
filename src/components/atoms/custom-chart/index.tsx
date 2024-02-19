@@ -80,7 +80,7 @@ const CustomChart = ({
         setActiveTooltipId = bar.setActiveTooltipId
     }
     else if(variant === "stacked-bar") {
-        const bar = useStackedBarController(gridElement, values, maxValue)
+        const bar = useStackedBarController(gridElement, values, maxValue, fixedBarWidth)
         stackedValues = bar.stackedValues
     }
 
@@ -219,6 +219,7 @@ const CustomChart = ({
                                                     height={item.height + "px"}
                                                     width={item.width + "px"}
                                                     variant={index2 > 0 ? "secondary" : "primary"}
+                                                    radius="5px"
                                                 />
                                             )) }
                                         </div>
