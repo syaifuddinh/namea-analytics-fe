@@ -2,8 +2,6 @@ import MonthInput from "@/components/molecules/input/month"
 import Debt from "./debt"
 import { FinancialStatementImage1 } from "@/components/atoms/Icons"
 import { FinancialStatementImage2 } from "@/components/atoms/Icons"
-import { FinancialStatementImage3 } from "@/components/atoms/Icons"
-import { FinancialStatementImage4 } from "@/components/atoms/Icons"
 import { FinancialStatementImage5 } from "@/components/atoms/Icons"
 import { FinancialStatementImage6 } from "@/components/atoms/Icons"
 
@@ -27,14 +25,14 @@ const ledger = [
 		"title": "Category Name",
 		"subcategory": "Pemasukan Uang",
 		"balance": "6.860.700",
-		"icon": <FinancialStatementImage3 />
+		"icon": <img src={"/images/financial-statement/mullet.svg"} />
 	},
 	{
 		"id": 4,
 		"title": "Category",
 		"subcategory": "Pinjaman Dana Doni",
 		"balance": "6.860.700",
-		"icon": <FinancialStatementImage4 />
+		"icon": <img src={"/images/financial-statement/formal.svg"} />
 	},
 	{
 		"id": 5,
@@ -62,7 +60,7 @@ const ledger = [
 		"title": "Category Name",
 		"subcategory": "Pinjaman Dana Doni",
 		"balance": "6.860.700",
-		"icon": <FinancialStatementImage3 />
+		"icon": <img src={"/images/financial-statement/formal.svg"} />
 	}
 ]
 

@@ -12,7 +12,5 @@ export * from "./cashflow/header";
 export * from "./white/uploading";
 export * from "./cashflow/financial-statement/image1";
 export * from "./cashflow/financial-statement/image2";
-export * from "./cashflow/financial-statement/image3";
-export * from "./cashflow/financial-statement/image4";
 export * from "./cashflow/financial-statement/image5";
 export * from "./cashflow/financial-statement/image6";
