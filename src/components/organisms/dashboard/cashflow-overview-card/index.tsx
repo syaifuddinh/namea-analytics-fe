@@ -4,11 +4,12 @@ import IconPlusSquare from "@/assets/icons/plus-square";
 import IconMinusSquare from "@/assets/icons/minus-square";
 import CustomChart from "@/components/atoms/custom-chart"
 
-const CashflowOverviewCard = () => {
+const CashflowOverviewCard = ({ className }) => {
   return (
     <CardCashflowOverview
       title="Cash Flow Overview"
       description="Record your ideas and to-do’s easily, so you never miss a thing."
+      className={className}
     >
       <div className="flex items-start gap-4 p-[20px]">
         <div className="w-2/4 bg-base-bg4 border border-gray-1 rounded-xl border-solid pl-5 pr-[22px] py-[1.125rem]">
