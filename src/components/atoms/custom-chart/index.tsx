@@ -46,7 +46,7 @@ const CustomChart = ({
     const [dotList, setDotList] = useState(() => {
         const response = []
 
-        for(let i = 0;i < 1200;i++) {
+        for(let i = 0;i < 800;i++) {
             response.push(i)
         }
 
@@ -111,7 +111,7 @@ const CustomChart = ({
                     </div>
                     <div
                         ref={gridElement}
-                        className={`custom-chart_grid relative flex gap-[12px] flex-wrap `}
+                        className={`custom-chart_grid relative flex gap-[12px] flex-wrap overflow-hidden `}
                         style={{height: contentHeight + "px", maxHeight: contentHeight + "px", minHeight: contentHeight + "px"}}    
                      >
                         {  
