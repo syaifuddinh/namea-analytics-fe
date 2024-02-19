@@ -17,22 +17,22 @@ export const Pagination: React.FC<IPagination> = ({ totalAgent }) => {
           </button>
         </div>
       </div>
-      <div className="flex flex-row items-center rounded-lg px-4 bg-base-bg5 border border-base-bg3">
+      <div className="flex flex-row items-center rounded-lg px-4 bg-base-bg5 border border-base-bg3 text-sm">
         <button className="flex flex-row items-center pr-5">
           <IconArrowLeft />
-          <div className="text-gray-6 text-sm pl-2">Previous</div>
+          <div className="text-gray-6 pl-2">Previous</div>
         </button>
-        <button className="text-gray-10 text-sm border-l border-l-base-bg3 bg-base-bg3 px-3 py-[10px]">
+        <button className="text-gray-10 border-l border-l-base-bg3 bg-base-bg3 px-3 py-[10px]">
           1
         </button>
-        <button className="text-gray-6 text-sm border-x border-x-base-bg3 px-3 py-[10px]">
+        <button className="text-gray-6 border-x border-x-base-bg3 px-3 py-[10px]">
           2
         </button>
-        <button className="text-gray-6 text-sm border-r border-r-base-bg3 px-3 py-[10px]">
+        <button className="text-gray-6 border-r border-r-base-bg3 px-3 py-[10px]">
           3
         </button>
         <button className="flex flex-row items-center pl-5">
-          <div className="text-gray-6 text-sm pr-2">Next</div>
+          <div className="text-gray-6 pr-2">Next</div>
           <IconArrowRight />
         </button>
       </div>
