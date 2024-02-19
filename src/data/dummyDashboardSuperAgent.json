@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "icon": "/images/total-super-agent.png",
+    "label": "Total Super Agent",
+    "nominal": "500.950.450,00",
+    "revenue": {
+      "revenue_profit": true,
+      "revenue_percentage": "23.8% (+24)"
+    }
+  },
+  {
+    "id": 2,
+    "icon": "/images/total-active-super-agent.png",
+    "label": "Total Active Super Agent",
+    "nominal": "500.950.450,00",
+    "revenue": {
+      "revenue_profit": false,
+      "revenue_percentage": "-16.5% (-8)"
+    }
+  },
+  {
+    "id": 3,
+    "icon": "/images/total-revenue.png",
+    "label": "Total Revenue",
+    "nominal": "500.950.450,00",
+    "revenue": {
+      "revenue_profit": true,
+      "revenue_percentage": "23.8% (+24)"
+    }
+  }
+]
