@@ -10,10 +10,10 @@ export const FinancialStatementImage6 = (props) => (
       viewBox="0 0 40 40"
     >
       <rect width="40" height="40" fill="#fff" rx="20"></rect>
-      <rect width="40" height="40" fill="url(#pattern0)" rx="20"></rect>
+      <rect width="40" height="40" fill="url(#pattern5)" rx="20"></rect>
       <defs>
         <pattern
-          id="pattern0"
+          id="pattern5"
           width="1"
           height="1"
           patternContentUnits="objectBoundingBox"
