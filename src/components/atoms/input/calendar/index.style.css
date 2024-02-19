@@ -1,0 +1,7 @@
+.calendar {
+	background: linear-gradient(0deg, rgba(205, 251, 255, 0.06), rgba(205, 251, 255, 0.06));
+}
+
+.calendar_control {
+	background: linear-gradient(0deg, rgba(205, 251, 255, 0.04), rgba(205, 251, 255, 0.04));
+} 

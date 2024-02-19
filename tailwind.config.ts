@@ -18,6 +18,7 @@ const config: Config = {
         'alert-6': 'rgba(255, 140, 103, 0.60)',
         'alert-10': '#FF8C67',
         'gray-1': 'rgba(205,251,255,0.10)',
+        'gray-4': '#CDFBFF66',
         'gray-6': "rgba(205, 251, 255, 0.60)",
         'gray-10': '#CDFBFF',
         'base-bg2': 'radial-gradient(100% 120.05% at 50% 50%,rgba(205, 251, 255, 0) 33.78%,rgba(205, 251, 255, 0.04) 100%),rgba(205, 251, 255, 0)',

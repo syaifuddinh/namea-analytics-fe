@@ -7,6 +7,7 @@ import { useEffect } from "react"
 export default function RowOptionInput({ 
 	value,
 	options,
+	width="216px",
 	onChange
 }: FrequencyInputType) {
 	const [datasets, setDatasets] = useState(options)
@@ -33,7 +34,10 @@ export default function RowOptionInput({
 	}, [value])
 
  	return (
-	    <div className="row-option-input border border-[var(--Gray4)] rounded-[0.625rem] p-[0.21rem] flex gap-1 -tracking-[0.14px] min-h-[36px] max-h-[36px] min-w-[216px] max-w-[216px]">
+	    <div
+	    	className="row-option-input border border-[var(--Gray4)] rounded-[0.625rem] p-[0.21rem] flex gap-1 -tracking-[0.14px] min-h-[36px] max-h-[36px]"
+	    	style={{"minWidth": width, "width": width, "maxWidth": width}}
+	    >
 	    	{ 
 	    		options.map(item => (
 			    	<div
@@ -43,7 +47,7 @@ export default function RowOptionInput({
 			    	>
 
 			    		<div
-			    			className="font-extralight tracking-[0.06px] text-sm leading-5"
+			    			className="font-extralight text-center tracking-[0.06px] text-sm leading-5"
 			    		>
 			    			
 				    		{ item.label }
