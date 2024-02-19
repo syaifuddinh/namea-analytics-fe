@@ -7,7 +7,6 @@ import Icon from "@/components/atoms/icon";
 import UserProfile from "./user-profile";
 import DropdownMenu from "./dropdown-menu";
 import FloatingItem from "@/components/atoms/floating-item";
-import Link from "next/link"
 
 const Menubar = () => {
 
@@ -22,7 +21,7 @@ const Menubar = () => {
         </div>
         <div className="menubar_items flex gap-2">
           {Menu.items.map((item) => (
-            <Link
+            <a
               key={item.id}
               id={item.id}
               href={item.url ? item.url : "/"}
@@ -40,7 +39,7 @@ const Menubar = () => {
                   />
                 </div>
               )}
-            </Link>
+            </a>
           ))}
         </div>
       </div>
