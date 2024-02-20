@@ -11,11 +11,11 @@ export default function CashflowPage() {
   return (
     <>
       <Header className="mt-[2rem]" />
-      <UploadCSV className="mt-[2rem]" />
+      <UploadCSV className="mt-[1.5rem]" />
       <Divider className="mt-6" />
-      <CashflowOverviewCard className="mt-[2rem]" />
-      <Comparison className="mt-[2rem]" />
-      <FinancialStatement className="mt-[2rem]" />
+      <CashflowOverviewCard className="mt-[1.5rem]" />
+      <Comparison className="mt-[1.5rem]" />
+      <FinancialStatement className="mt-[1.5rem]" />
     </>
   );
 }
