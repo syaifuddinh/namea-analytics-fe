@@ -6,9 +6,9 @@ import Divider from "@/components/atoms/divider"
 
 const Header = () => {
 	return (
-		<div className="card_header pt-5 relative max-h-[76px] min-h-[76px]">
+		<div className="card_header pt-5 relative max-h-[88px] min-h-[88px]">
 			<div className="text-[var(--Gray10)] text-base font-light leading-6 ">
-				Cash Flow Comparison
+				Cash Flow Comparation
 			</div>
 			
 			<div

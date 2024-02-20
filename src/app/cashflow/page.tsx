@@ -14,7 +14,7 @@ export default function CashflowPage() {
       <UploadCSV className="mt-[1.5rem]" />
       <Divider className="mt-4" />
       <CashflowOverviewCard className="mt-10" />
-      <Comparison className="mt-[1.5rem]" />
+      <Comparison className="mt-14" />
       <FinancialStatement className="mt-[1.5rem]" />
     </>
   );
