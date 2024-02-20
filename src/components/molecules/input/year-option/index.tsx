@@ -33,6 +33,7 @@ export default function FrequencyInput({
 	    <div>
 	    	<RowOptionInput
 	    		value={value}
+	    		width="177px"
 	    		onChange={onChange}
 	    		options={frequencies}
 	    	/>
