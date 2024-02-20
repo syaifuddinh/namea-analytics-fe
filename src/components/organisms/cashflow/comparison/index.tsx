@@ -29,7 +29,7 @@ export default function Comparison({
 			className={className}
 			isDividerVisible={false}
 		>
-			<div className="py-4">
+			<div className="pb-4 pt-[1.125rem]">
 				<Wrapper className="mx-4">
 					<CalendarInput />
 					
@@ -48,7 +48,7 @@ export default function Comparison({
 
 				<div className="comparison-divider flex justify-center items-center my-6">
 					<Divider style="dashed" />
-					<span className="comparison-divider_label font-extralight text-sm leading-5 text-gray-4 mx-2">
+					<span className="comparison-divider_label font-light text-sm leading-5 text-gray-4 mx-2">
 						and
 					</span>
 					<Divider style="dashed" />
