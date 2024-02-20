@@ -8,7 +8,7 @@ export default function Header({
 		<div
 			className={"flex lg:flex-row flex-col lg:items-center justify-between gap-5 " + className}
 		>
-			<div className="flex gap-3 items-center">
+			<div className="flex gap-4 items-center">
 				<CashflowHeader />
 
 				<div className="cashflow-header_sign">
