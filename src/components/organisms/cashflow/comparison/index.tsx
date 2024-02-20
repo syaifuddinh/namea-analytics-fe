@@ -46,7 +46,7 @@ export default function Comparison({
 					/>
 				</Wrapper>
 
-				<div className="comparison-divider flex justify-center items-center my-6">
+				<div className="comparison-divider flex justify-center items-center my-8">
 					<Divider style="dashed" />
 					<span className="comparison-divider_label font-light text-sm leading-5 text-gray-4 mx-2">
 						and
