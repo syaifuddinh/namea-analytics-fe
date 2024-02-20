@@ -10,7 +10,7 @@ import Divider from "@/components/atoms/divider"
 export default function CashflowPage() {
   return (
     <>
-      <Header className="mt-[1.5rem]" />
+      <Header className="mt-[2.5rem]" />
       <UploadCSV className="mt-[1.5rem]" />
       <Divider className="mt-6" />
       <CashflowOverviewCard className="mt-[1.5rem]" />
