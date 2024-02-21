@@ -5,10 +5,10 @@ const Item = ({ title, className, icon, variant }) => {
 
         <div className="flex items-center gap-[10px]">
           <div>{ icon }</div>
-          <div className="font-extralight text-gray-6 text-sm tracking-[0.2px]">{ title }</div>
+          <div className="font-extralight text-gray-6 text-sm tracking-[0.02px]">{ title }</div>
         </div>
 
-        <div className={`${variant === "default" ? "text-gray-10" : ""} ${variant === "danger" ? "text-alert-10" : ""} font-light -tracking-[0.16px]`}>
+        <div className={`${variant === "default" ? "text-gray-10" : ""} ${variant === "danger" ? "text-alert-10" : ""} font-light tracking-[0.2px]`}>
             <span>
                 Rp694.354.766,
             </span>

@@ -6,9 +6,9 @@ import Divider from "@/components/atoms/divider"
 
 const Header = () => {
 	return (
-		<div className="card_header pt-5 relative max-h-[76px] min-h-[76px]">
+		<div className="card_header pt-5 relative max-h-[88px] min-h-[88px]">
 			<div className="text-[var(--Gray10)] text-base font-light leading-6 ">
-				Cash Flow Comparison
+				Cash Flow Comparation
 			</div>
 			
 			<div
@@ -29,7 +29,7 @@ export default function Comparison({
 			className={className}
 			isDividerVisible={false}
 		>
-			<div className="py-4">
+			<div className="pb-4 pt-[1.125rem]">
 				<Wrapper className="mx-4">
 					<CalendarInput />
 					
@@ -46,9 +46,9 @@ export default function Comparison({
 					/>
 				</Wrapper>
 
-				<div className="comparison-divider flex justify-center items-center my-6">
+				<div className="comparison-divider flex justify-center items-center my-8">
 					<Divider style="dashed" />
-					<span className="comparison-divider_label font-extralight text-sm leading-5 text-gray-4 mx-2">
+					<span className="comparison-divider_label font-light text-sm leading-5 text-gray-4 mx-2">
 						and
 					</span>
 					<Divider style="dashed" />

@@ -27,7 +27,7 @@ const Menubar = () => {
               href={item.url ? item.url : "/"}
               className={`menubar_item font-light capitalize cursor-pointer flex gap-2.5 items-center text-sm leading-5 py-1.5 pl-2.5 ${
                 item.childrens.length > 0 ? "pr-1.5" : "pr-2.5"
-              } text-[var(--Gray10)] hover:bg-[var(--base-bg3)] visited:bg-[var(--base-bg3)] rounded-[6px]`}
+              } text-[var(--Gray10)] hover:bg-[var(--base-bg3)] rounded-[6px]`}
             >
               <div className="tracking-[0.08px]">{item.name}</div>
               {item.childrens.length > 0 && (

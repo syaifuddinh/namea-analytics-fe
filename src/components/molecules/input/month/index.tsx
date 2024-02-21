@@ -70,6 +70,8 @@ export default function FrequencyInput({
 	    	<RowOptionInput
 	    		value={value}
 	    		width="965px"
+	    		containerHeight="44px"
+	    		childrenHeight="36px"
 	    		onChange={onChange}
 	    		options={frequencies}
 	    	/>

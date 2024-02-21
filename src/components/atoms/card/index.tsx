@@ -6,6 +6,8 @@ const Card = ({
   headerElement,
   className = "",
   paddingBottom = "6px",
+  topRadius="16px",
+  bottomRadius="16px",
   isUsePaddingBottom = true,
   isDividerVisible = true,
 }) => {
@@ -13,7 +15,8 @@ const Card = ({
     <div
       className={`card pt-1 ${
         isUsePaddingBottom === true ? "pb-1" : ""
-      } border border-gray1 rounded-[16px] ${className}`}
+      } border border-gray1 ${className}`}
+      style={{"borderTopLeftRadius": topRadius, "borderTopRightRadius": topRadius, "borderBottomLeftRadius": bottomRadius, "borderBottomRightRadius": bottomRadius}}
     >
       <div className="card_container">
         {headerElement}
