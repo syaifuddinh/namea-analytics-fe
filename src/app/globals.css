@@ -53,7 +53,7 @@
   --c-success2: rgba(43, 205, 185, 0.2);
   --c-success10: #2bcdb9;
   --c-alert1: rgba(255, 140, 103, 0.1);
-  --c-alert6: #FF8C6799;
+  --c-alert6: #ff8c6799;
   --c-alert10: #ff8c67;
   --c-bar-color: linear-gradient(270deg, #07b7ac 0%, #087981 100%);
   --c-rank-color: #ffd179;
@@ -61,6 +61,16 @@
   --c-gray0: rgba(223, 244, 246, 1);
   --c-dot-blue: rgba(7, 183, 172, 1);
   --c-danger-medium: rgba(255, 140, 103, 1);
+  --c-bg-button-color: linear-gradient(
+    30deg,
+    rgba(7, 183, 172, 0.1),
+    rgba(8, 121, 129, 0.1)
+  );
+  --c-border-button-color: linear-gradient(
+    30deg,
+    rgba(7, 183, 172, 1),
+    rgba(8, 121, 129, 1)
+  );
 }
 
 body {

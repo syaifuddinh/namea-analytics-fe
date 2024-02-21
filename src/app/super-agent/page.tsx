@@ -17,7 +17,7 @@ import dummyDashboardSuperAgent from "@/data/dummyDashboardSuperAgent.json";
 import dummyListSuperAgent from "@/data/dummyListSuperAgent.json";
 import {
   CardDashboard,
-  CardListAgent,
+  CardListSuperAgent,
 } from "@/components/molecules/Card/SuperAgent";
 import { Pagination } from "@/components/molecules/Footer/Pagination";
 
@@ -64,26 +64,38 @@ export default function PageSuperAgent() {
             <div className="text-gray-6 lg:text-sm">
               2 December - 20 December
             </div>
-            <IconDropdown />
+            <div className="flex flex-1 justify-end">
+              <IconDropdown />
+            </div>
           </div>
         </div>
       </div>
       <div className="my-6 flex flex-row gap-3">
-        {dummyDashboardSuperAgent.map((item) => {
-          return (
-            <CardDashboard
-              key={`dashboard-agent-${item.id}`}
-              icon={item.icon}
-              label={item.label}
-              nominal={item.label}
-              revenue={item.revenue}
-            />
-          );
-        })}
+        <CardDashboard
+          icon={"/images/total-super-agent.png"}
+          placeholder={"Total Super Agent"}
+          label={"Rp500.950.450,00"}
+          revenueProfit={true}
+          revenuePercentage={"23.8% (+24)"}
+        />
+        <CardDashboard
+          icon={"/images/total-super-agent.png"}
+          placeholder={"Total Active Super Agent"}
+          label={"Rp500.950.450,00"}
+          revenueProfit={false}
+          revenuePercentage={"16.5% (-8)"}
+        />
+        <CardDashboard
+          icon={"/images/total-super-agent.png"}
+          placeholder={"Total Revenue"}
+          label={"Rp500.950.450,00"}
+          revenueProfit={true}
+          revenuePercentage={"23.8% (+24)"}
+        />
       </div>
       {dummyListSuperAgent.map((item) => {
         return (
-          <CardListAgent
+          <CardListSuperAgent
             key={`super-agent-${item.id}`}
             rank={item.rank}
             image={item.image}
@@ -95,7 +107,7 @@ export default function PageSuperAgent() {
           />
         );
       })}
-      <Pagination totalAgent={dummyListSuperAgent.length} />
+      <Pagination className="mt-5" totalAgent={dummyListSuperAgent.length} />
     </>
   );
 }
