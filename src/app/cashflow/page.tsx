@@ -15,7 +15,7 @@ export default function CashflowPage() {
       <Divider className="mt-4" />
       <CashflowOverviewCard className="mt-10" />
       <Comparison className="mt-14" />
-      <FinancialStatement className="mt-[1.5rem]" />
+      <FinancialStatement className="mt-[4rem]" />
     </>
   );
 }
