@@ -60,7 +60,7 @@ const ledger = [
 		"title": "Category Name",
 		"subcategory": "Pinjaman Dana Joni",
 		"balance": "6.860.700",
-		"icon": <img src={"/images/financial-statement/formal.svg"} />
+		"icon": <img src={"/images/financial-statement/mullet.svg"} />
 	}
 ]
 
