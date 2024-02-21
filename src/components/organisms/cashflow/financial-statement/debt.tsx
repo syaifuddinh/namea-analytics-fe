@@ -43,6 +43,7 @@ export default function Debt({ title, subcategory, balance, icon }) {
 								positivity="minus"
 								fontSize="0.875rem"
 								fontWeight={400}
+								className="mt-1"
 							>
 								{ balance }
 							</MoneyText>
