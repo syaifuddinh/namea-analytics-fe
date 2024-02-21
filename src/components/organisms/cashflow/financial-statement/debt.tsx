@@ -9,7 +9,7 @@ export default function Debt({ title, subcategory, balance, icon }) {
 				topRadius="12px"
 				bottomRadius="16px"
 			>
-				<div className="flex items-center py-4 px-5">
+				<div className="flex items-center py-[0.875rem] px-5">
 					<div className="flex items-center gap-3 w-[218px]">
 						<div className="debt_icon">
 							{ icon }

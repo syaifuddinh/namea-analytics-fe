@@ -73,7 +73,7 @@ export default function FinancialStatement({ className }) {
 
 			<MonthInput />
 
-			<div className="flex flex-col lg:flex-row flex-wrap lg:*:w-[49.2%] mt-7 gap-4">
+			<div className="flex flex-col lg:flex-row flex-wrap lg:*:w-[49%] mt-8 gap-5">
 				{
 					ledger.map((item, index) => (
 						<Debt
