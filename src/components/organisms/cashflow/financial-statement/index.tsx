@@ -9,7 +9,7 @@ const ledger = [
 	{
 		"id": 1,
 		"title": "Kas Besar",
-		"subcategory": "Pinjaman Dana Doni",
+		"subcategory": "Pinjaman Dana Joni",
 		"balance": "6.860.700",
 		"icon": <FinancialStatementImage1 />
 	},
@@ -30,14 +30,14 @@ const ledger = [
 	{
 		"id": 4,
 		"title": "Category",
-		"subcategory": "Pinjaman Dana Doni",
+		"subcategory": "Pinjaman Dana Joni",
 		"balance": "6.860.700",
 		"icon": <img src={"/images/financial-statement/formal.svg"} />
 	},
 	{
 		"id": 5,
 		"title": "Category Name",
-		"subcategory": "Pinjaman Dana Doni",
+		"subcategory": "Pinjaman Dana Joni",
 		"balance": "6.860.700",
 		"icon": <FinancialStatementImage5 />
 	},
@@ -58,7 +58,7 @@ const ledger = [
 	{
 		"id": 8,
 		"title": "Category Name",
-		"subcategory": "Pinjaman Dana Doni",
+		"subcategory": "Pinjaman Dana Joni",
 		"balance": "6.860.700",
 		"icon": <img src={"/images/financial-statement/formal.svg"} />
 	}

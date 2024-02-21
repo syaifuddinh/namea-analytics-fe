@@ -10,7 +10,7 @@ export default function Debt({ title, subcategory, balance, icon }) {
 				bottomRadius="16px"
 			>
 				<div className="flex items-center py-[1.125rem] px-5">
-					<div className="flex items-center gap-2 w-[218px]">
+					<div className="flex items-center gap-7 w-[218px]">
 						<div className="debt_icon">
 							{ icon }
 						</div>
@@ -27,7 +27,7 @@ export default function Debt({ title, subcategory, balance, icon }) {
 						<div className="font-extralight text-sm leading-5 text-gray-6">
 							Sub Category
 						</div>
-						<div className="font-light text-sm leading-5 text-gray-10">
+						<div className="font-light text-sm leading-5 text-gray-10 mt-1">
 							{ subcategory }
 						</div>
 					</div>
@@ -42,6 +42,7 @@ export default function Debt({ title, subcategory, balance, icon }) {
 								variant="danger"
 								positivity="minus"
 								fontSize="0.875rem"
+								fontWeight={400}
 							>
 								{ balance }
 							</MoneyText>
