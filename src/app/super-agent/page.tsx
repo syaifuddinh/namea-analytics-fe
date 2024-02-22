@@ -89,6 +89,7 @@ export default function PageSuperAgent() {
         return (
           <CardListSuperAgent
             key={`super-agent-${item.id}`}
+            id={item.id}
             rank={item.rank}
             image={item.image}
             codeAgent={item.codeAgent}
