@@ -7,6 +7,8 @@ export * from "./ChevronRight";
 export * from "./SmallChevronDown";
 export * from "./ArrowLeft";
 export * from "./ArrowRight";
+export * from "./DottedLeftArrowIcon";
+export * from "./DottedRightArrowIcon";
 export * from "./Add";
 export * from "./types";
 export * from "./cashflow/header";
