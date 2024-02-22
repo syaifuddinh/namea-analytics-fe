@@ -6,8 +6,11 @@ import {
   IconDropdown,
   IconSize,
 } from "@/components/atoms/Icons";
+import { getLinkDetailSuperAgent } from "@/utils/linkFactory";
+import Link from "next/link";
 
 export const CardListSuperAgent: React.FC<ICardListSuperAgent> = ({
+  id,
   rank,
   image,
   codeAgent,
@@ -73,14 +76,14 @@ export const CardListSuperAgent: React.FC<ICardListSuperAgent> = ({
                 {status}
               </div>
               <div className="flex flex-1 justify-end">
-                <IconDropdown size={IconSize.xl} />
+                <IconDropdown className={"w-[1.25rem h-[1.25rem]"} />
               </div>
             </button>
 
             <div className="flex flex-1 justify-end items-center">
-              <button className="max-w-max">
-                <IconChevronRight size={IconSize.xl} />
-              </button>
+              <Link href={getLinkDetailSuperAgent(id)}>
+                <IconChevronRight className={"w-[1.25rem h-[1.25rem]"} />
+              </Link>
             </div>
           </div>
         </div>

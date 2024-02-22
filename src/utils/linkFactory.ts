@@ -5,3 +5,7 @@ export const getLinkHome = () => {
 export const getLinkSuperAgent = () => {
   return `/super-agent`;
 };
+
+export const getLinkDetailSuperAgent = (id: string) => {
+  return `/super-agent/${id}`;
+};
