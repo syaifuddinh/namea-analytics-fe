@@ -1,7 +1,11 @@
 import Image from "next/image";
 import clsx from "clsx";
 import { ICardListSuperAgent } from "./types";
-import { IconChevronRight, IconDropdown } from "@/components/atoms/Icons";
+import {
+  IconChevronRight,
+  IconDropdown,
+  IconSize,
+} from "@/components/atoms/Icons";
 
 export const CardListSuperAgent: React.FC<ICardListSuperAgent> = ({
   rank,
@@ -30,23 +34,31 @@ export const CardListSuperAgent: React.FC<ICardListSuperAgent> = ({
         >
           <div className="flex flex-row items-center">
             <Image src={image} alt="super agent icon" width={40} height={40} />
-            <div className="text-gray-10 text-xs py-1 px-2 mx-3 bg-base-bg3 rounded-3xl">
+            <div className="text-gray-10 text-xs py-1 px-2 mx-3 bg-base-bg3 rounded-3xl font-light">
               {codeAgent}
             </div>
-            <div className="w-[160px] text-gray-10 text-sm mr-6">
+            <div className="w-[160px] text-gray-10 text-sm mr-6 font-light">
               {nameAgent}
             </div>
           </div>
           <div className="flex flex-1 flex-row items-center pl-12 gap-16">
             <div className="flex flex-col">
-              <div className="text-gray-6 text-sm">Total Agent</div>
-              <div className="text-gray-10 text-sm">{totalAgent}</div>
+              <div className="text-gray-6 text-sm font-extralight mb-1">
+                Total Agent
+              </div>
+              <div className="text-gray-10 text-sm font-light">
+                {totalAgent}
+              </div>
             </div>
             <div className="flex flex-col">
-              <div className="text-gray-6 text-sm">Total Profit</div>
-              <div className="text-gray-10 text-sm">Rp{totalProfit}</div>
+              <div className="text-gray-6 text-sm font-extralight mb-1">
+                Total Profit
+              </div>
+              <div className="text-gray-10 text-sm font-light">
+                Rp{totalProfit}
+              </div>
             </div>
-            <button className="flex flex-row rounded-md border border-gray-4 bg-checkbox items-center px-[10px]">
+            <button className="flex flex-row rounded-md border border-gray-4 bg-checkbox items-center px-[10px] py-1">
               <div
                 className={clsx(
                   "bg-dot-blue h-2 w-2 rounded-full",
@@ -57,17 +69,17 @@ export const CardListSuperAgent: React.FC<ICardListSuperAgent> = ({
                     : "bg-danger-medium"
                 )}
               />
-              <div className="text-left w-[97px] text-gray-0 text-sm py-[6px] pl-2 mr-5">
+              <div className="text-left w-[97px] text-gray-0 text-sm py-[6px] pl-2 mr-5 font-extralight">
                 {status}
               </div>
               <div className="flex flex-1 justify-end">
-                <IconDropdown />
+                <IconDropdown size={IconSize.xl} />
               </div>
             </button>
 
             <div className="flex flex-1 justify-end items-center">
               <button className="max-w-max">
-                <IconChevronRight />
+                <IconChevronRight size={IconSize.xl} />
               </button>
             </div>
           </div>
