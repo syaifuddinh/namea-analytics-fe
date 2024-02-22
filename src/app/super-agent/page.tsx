@@ -1,25 +1,17 @@
 "use client";
 import {
-  IconArrowDown,
-  IconArrowLeft,
-  IconArrowRight,
-  IconArrowUp,
   IconCalender,
-  IconChevronRight,
   IconDropdown,
   IconSearch,
-  IconSmallChevronDown,
 } from "@/components/atoms/Icons";
-import clsx from "clsx";
-import Image from "next/image";
-import { useState } from "react";
-import dummyDashboardSuperAgent from "@/data/dummyDashboardSuperAgent.json";
-import dummyListSuperAgent from "@/data/dummyListSuperAgent.json";
 import {
   CardDashboard,
   CardListSuperAgent,
 } from "@/components/molecules/Card/SuperAgent";
 import { Pagination } from "@/components/molecules/Footer/Pagination";
+import dummyListSuperAgent from "@/data/dummyListSuperAgent.json";
+import Image from "next/image";
+import { useState } from "react";
 
 export default function PageSuperAgent() {
   //   const lang = await getDictionary();
@@ -47,7 +39,7 @@ export default function PageSuperAgent() {
           </div>
         </div>
         <div className="flex flex-row flex-1 items-center">
-          <div className="flex flex-row flex-1 items-center border border-gray-1 bg-base-bg3 rounded-md p-[6px] mr-2">
+          <div className="flex flex-row flex-1 items-center border border-gray-1 bg-base-bg3 rounded-md px-[6px] py-[2px] mr-2">
             <IconSearch />
             <input
               type="text"
@@ -59,9 +51,9 @@ export default function PageSuperAgent() {
               onChange={(evt: any) => setSearch(evt)}
             />
           </div>
-          <div className="flex flex-row gap-1 items-center border border-gray-1 bg-base-bg3 rounded-md p-[6px]">
-            <IconCalender />
-            <div className="text-gray-6 lg:text-sm">
+          <div className="flex flex-row items-center border border-gray-1 bg-base-bg3 rounded-md pl-2 pr-[6px] py-[2px]">
+            <IconCalender className="pr-1" />
+            <div className="text-gray-6 lg:text-sm font-extralight pr-6">
               2 December - 20 December
             </div>
             <div className="flex flex-1 justify-end">
@@ -70,7 +62,7 @@ export default function PageSuperAgent() {
           </div>
         </div>
       </div>
-      <div className="my-6 flex flex-row gap-3">
+      <div className="mt-6 mb-10 flex flex-row gap-3">
         <CardDashboard
           icon={"/images/total-super-agent.png"}
           placeholder={"Total Super Agent"}
