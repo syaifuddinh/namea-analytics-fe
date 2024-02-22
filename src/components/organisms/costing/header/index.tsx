@@ -7,7 +7,7 @@ export default function Header({
 }) {
 	return (
 		<Headline
-			title="Cash Flow"
+			title="Costing"
 			description="Show a comprehensive overview of data from different sources."
 			icon={<CashflowHeader />}
 			className={className}
