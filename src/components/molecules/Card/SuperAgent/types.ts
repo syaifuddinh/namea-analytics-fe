@@ -13,7 +13,7 @@ export interface ICardDashboardAgent {
 }
 
 export interface ICardListSuperAgent {
-  id?: number;
+  id: string;
   rank: number;
   image: string;
   codeAgent: string;
