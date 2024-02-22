@@ -4,10 +4,19 @@ import {
   IconSmallChevronDown,
 } from "@/components/atoms/Icons";
 import { IPagination } from "./types";
+import clsx from "clsx";
 
-export const Pagination: React.FC<IPagination> = ({ totalAgent }) => {
+export const Pagination: React.FC<IPagination> = ({
+  totalAgent,
+  className,
+}) => {
   return (
-    <div className="flex flex-1 flex-row items-center justify-between py-5 mt-5">
+    <div
+      className={clsx(
+        "flex flex-1 flex-row items-center justify-between py-5",
+        className
+      )}
+    >
       <div className="flex flex-row items-center gap-2">
         <div className="text-gray-6 text-sm">Items per page</div>
         <div className="flex flex-row items-center bg-base-bg3 rounded-[4px] pl-2 py-1">

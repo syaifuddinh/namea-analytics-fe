@@ -1,25 +1,17 @@
 "use client";
 import {
-  IconArrowDown,
-  IconArrowLeft,
-  IconArrowRight,
-  IconArrowUp,
   IconCalender,
-  IconChevronRight,
   IconDropdown,
   IconSearch,
-  IconSmallChevronDown,
 } from "@/components/atoms/Icons";
-import clsx from "clsx";
-import Image from "next/image";
-import { useState } from "react";
-import dummyDashboardSuperAgent from "@/data/dummyDashboardSuperAgent.json";
-import dummyListSuperAgent from "@/data/dummyListSuperAgent.json";
 import {
   CardDashboard,
-  CardListAgent,
+  CardListSuperAgent,
 } from "@/components/molecules/Card/SuperAgent";
 import { Pagination } from "@/components/molecules/Footer/Pagination";
+import dummyListSuperAgent from "@/data/dummyListSuperAgent.json";
+import Image from "next/image";
+import { useState } from "react";
 
 export default function PageSuperAgent() {
   //   const lang = await getDictionary();
@@ -47,7 +39,7 @@ export default function PageSuperAgent() {
           </div>
         </div>
         <div className="flex flex-row flex-1 items-center">
-          <div className="flex flex-row flex-1 items-center border border-gray-1 bg-base-bg3 rounded-md p-[6px] mr-2">
+          <div className="flex flex-row flex-1 items-center border border-gray-1 bg-base-bg3 rounded-md px-[6px] py-[2px] mr-2">
             <IconSearch />
             <input
               type="text"
@@ -59,31 +51,43 @@ export default function PageSuperAgent() {
               onChange={(evt: any) => setSearch(evt)}
             />
           </div>
-          <div className="flex flex-row gap-1 items-center border border-gray-1 bg-base-bg3 rounded-md p-[6px]">
-            <IconCalender />
-            <div className="text-gray-6 lg:text-sm">
+          <div className="flex flex-row items-center border border-gray-1 bg-base-bg3 rounded-md pl-2 pr-[6px] py-[2px]">
+            <IconCalender className="pr-1" />
+            <div className="text-gray-6 lg:text-sm font-extralight pr-6">
               2 December - 20 December
             </div>
-            <IconDropdown />
+            <div className="flex flex-1 justify-end">
+              <IconDropdown />
+            </div>
           </div>
         </div>
       </div>
-      <div className="my-6 flex flex-row gap-3">
-        {dummyDashboardSuperAgent.map((item) => {
-          return (
-            <CardDashboard
-              key={`dashboard-agent-${item.id}`}
-              icon={item.icon}
-              label={item.label}
-              nominal={item.label}
-              revenue={item.revenue}
-            />
-          );
-        })}
+      <div className="mt-6 mb-10 flex flex-row gap-3">
+        <CardDashboard
+          icon={"/images/total-super-agent.png"}
+          placeholder={"Total Super Agent"}
+          label={"Rp500.950.450,00"}
+          revenueProfit={true}
+          revenuePercentage={"23.8% (+24)"}
+        />
+        <CardDashboard
+          icon={"/images/total-super-agent.png"}
+          placeholder={"Total Active Super Agent"}
+          label={"Rp500.950.450,00"}
+          revenueProfit={false}
+          revenuePercentage={"16.5% (-8)"}
+        />
+        <CardDashboard
+          icon={"/images/total-super-agent.png"}
+          placeholder={"Total Revenue"}
+          label={"Rp500.950.450,00"}
+          revenueProfit={true}
+          revenuePercentage={"23.8% (+24)"}
+        />
       </div>
       {dummyListSuperAgent.map((item) => {
         return (
-          <CardListAgent
+          <CardListSuperAgent
             key={`super-agent-${item.id}`}
             rank={item.rank}
             image={item.image}
@@ -95,7 +99,7 @@ export default function PageSuperAgent() {
           />
         );
       })}
-      <Pagination totalAgent={dummyListSuperAgent.length} />
+      <Pagination className="mt-5" totalAgent={dummyListSuperAgent.length} />
     </>
   );
 }

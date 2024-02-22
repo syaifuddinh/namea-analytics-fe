@@ -35,7 +35,10 @@ const config: Config = {
         "bg-rank": "var(--c-rank-bg-color)",
         warning: "var(--c-warning-theme-color)",
         "dot-blue": "var(--c-dot-blue)",
-        "danger-medium": "var(--c-danger-medium)"
+        "danger-medium": "var(--c-danger-medium)",
+        "bg-button": "var(--c-bg-button-color)",
+        "border-gradient": "var(--c-border-button-color)",
+        "bar-color": "var(--c-bar-color)",
       },
     },
   },
