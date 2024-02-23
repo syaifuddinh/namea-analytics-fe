@@ -53,7 +53,7 @@ export const CardListSuperAgent: React.FC<ICardListSuperAgent> = ({
                 {totalAgent}
               </div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col mr-[4.5rem]">
               <div className="text-gray-6 text-sm font-extralight mb-1">
                 Total Profit
               </div>
@@ -61,7 +61,7 @@ export const CardListSuperAgent: React.FC<ICardListSuperAgent> = ({
                 Rp{totalProfit}
               </div>
             </div>
-            <button className="flex flex-row rounded-md border border-gray-4 bg-checkbox items-center px-[10px] py-1">
+            <button className="flex flex-row rounded-md border border-gray-4 bg-checkbox items-center px-[10px] py-[2px]">
               <div
                 className={clsx(
                   "bg-dot-blue h-2 w-2 rounded-full",
