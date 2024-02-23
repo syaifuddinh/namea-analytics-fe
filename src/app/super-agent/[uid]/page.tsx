@@ -101,7 +101,7 @@ export default function SuperAgentDetail() {
           <div className="flex flex-1 text-gray-10 text-base">
             Agents ({dataAgent.totalAgent})
           </div>
-          <div className="flex flex-row flex-1 items-center border border-gray-1 bg-base-bg3 rounded-md p-2 mr-2">
+          <div className="flex flex-row flex-1 items-center border border-gray-1 bg-base-bg3 rounded-md p-2 mr-2 max-h-[2.25rem]">
             <IconSearch />
             <input
               type="text"
@@ -118,7 +118,7 @@ export default function SuperAgentDetail() {
               placeholder="All Status"
           />
 
-          <button className="flex flex-row rounded-md border border-dot-blue bg-checkbox items-center pr-4 pl-3 py-2">
+          <button className="flex flex-row rounded-md border border-dot-blue bg-checkbox items-center pr-4 pl-3 py-2 max-h-[2.25rem]">
             <IconAdd />
             <div className="text-gray-10 text-sm">Create Agent</div>
           </button>
