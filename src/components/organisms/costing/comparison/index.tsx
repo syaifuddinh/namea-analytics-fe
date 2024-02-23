@@ -33,8 +33,8 @@ export default function Comparison({ className }) {
 			headerElement={<Header />}
 			className={className}
 		>
-			<div className="p-4">
-				<div className="no-data flex flex-col items-center">
+			<div className="p-4 bg-base-bg5">
+				<div className="no-data flex flex-col items-center justify-center h-[275px]">
 					<img src="/images/crocodile.svg" alt="no-data-image" />
 					<div className="no-data_description text-gray-6 text-sm font-extralight">
 						Oops! There is no data yet!
