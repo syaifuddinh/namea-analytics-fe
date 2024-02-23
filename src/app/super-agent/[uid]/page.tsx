@@ -116,6 +116,8 @@ export default function SuperAgentDetail() {
 
           <SelectInput
               placeholder="All Status"
+              className="mr-2"
+              placeholderClassName="w-[86px]"
           />
 
           <button className="flex flex-row rounded-md border border-dot-blue bg-checkbox items-center pr-4 pl-3 py-2 max-h-[2.25rem]">

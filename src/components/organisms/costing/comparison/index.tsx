@@ -1,9 +1,22 @@
 import Card from "@/components/atoms/card";
+import SelectInput from "@/components/atoms/input/select"
 
 const Header = () => (
 	<div className="card_header">
 		<div className="font-light text-gray-10">
 			Costing Comparation
+		</div>
+
+		<div className="flex gap-2 mt-2">
+			<SelectInput
+				placeholder="Select Category"
+			/>
+			<SelectInput
+				placeholder="Select Month"
+			/>
+			<SelectInput
+				placeholder="Select Year"
+			/>
 		</div>
 	</div>
 )
