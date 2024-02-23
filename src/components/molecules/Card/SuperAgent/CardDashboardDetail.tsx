@@ -10,7 +10,7 @@ export const CardDashboardDetail: React.FC<ICardDashboardAgent> = ({
 }) => {
   return (
     <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden">
-      <div className="flex flex-1 border-t border-gray-1 mt-[6px] bg-base-bg5 rounded-t-xl">
+      <div className="flex flex-1 border-t border-gray-1 mt-[4px] bg-base-bg5 rounded-t-xl">
         <div className="flex flex-1 border-t border-x border-gray-1 mt-5 mx-5 bg-base-bg4 rounded-t-xl">
           <div className="flex items-center">
             <div className="flex flex-row gap-4 m-5">

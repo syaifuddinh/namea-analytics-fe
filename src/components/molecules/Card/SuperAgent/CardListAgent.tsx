@@ -23,7 +23,9 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
             <div className="text-gray-10 text-xs py-1 px-2 mx-3 bg-base-bg3 rounded-3xl">
               {codeAgent}
             </div>
-            <div className="w-[160px] text-gray-10 text-sm">{nameAgent}</div>
+            <div className="w-[160px] text-gray-10 text-sm mr-[0.125rem]">
+              {nameAgent}
+            </div>
           </div>
           <div className="flex flex-1 flex-row items-center pl-12">
             <div className="flex flex-1 flex-col">

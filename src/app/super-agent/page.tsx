@@ -47,6 +47,7 @@ export default function PageSuperAgent() {
               className={
                 "ml-3 bg-transparent border-0 text-gray-6 lg:text-sm w-full outline-none"
               }
+              style={{ fontWeight: 200 }}
               placeholder={"Search super agent by name or code..."}
               onChange={(evt: any) => setSearch(evt)}
             />
@@ -62,7 +63,7 @@ export default function PageSuperAgent() {
           </div>
         </div>
       </div>
-      <div className="mt-6 mb-10 flex flex-row gap-3">
+      <div className="mt-8 mb-10 flex flex-row gap-6">
         <CardDashboard
           icon={"/images/total-super-agent.png"}
           placeholder={"Total Super Agent"}

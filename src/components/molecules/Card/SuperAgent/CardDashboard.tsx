@@ -12,8 +12,8 @@ export const CardDashboard: React.FC<ICardDashboard> = ({
 }) => {
   return (
     <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden">
-      <div className="flex flex-1 border-t border-gray-1 mt-[6px] bg-base-bg5 rounded-t-xl">
-        <div className="flex flex-1 border-t border-x border-gray-1 mt-5 mx-5 bg-base-bg4 rounded-t-xl">
+      <div className="flex flex-1 border-t border-gray-1 mt-[4px] bg-base-bg5 rounded-t-xl">
+        <div className="flex flex-1 border-t border-x border-gray-1 mt-[1.125rem] mx-[1.125rem] bg-base-bg4 rounded-t-xl">
           <div className="flex items-center">
             <div className="flex flex-col gap-[0.125rem] m-5">
               <Image
@@ -21,9 +21,9 @@ export const CardDashboard: React.FC<ICardDashboard> = ({
                 alt=""
                 width={40}
                 height={40}
-                className="mb-2"
+                className="mb-[0.625rem]"
               />
-              <div className="text-sm text-gray-6 font-light">
+              <div className="text-sm text-gray-6 font-extralight mb-[0.125rem]">
                 {placeholder}
               </div>
               <div className="flex flex-row divide-x divide-gray-1 items-center">
@@ -31,19 +31,13 @@ export const CardDashboard: React.FC<ICardDashboard> = ({
                 <div className="pl-2">
                   <div className="flex flex-row gap-1 items-center bg-success-1 py-[2px] pl-1 pr-[6px] rounded-3xl">
                     {revenueProfit ? (
-                      <IconArrowUp
-                        size={IconSize.sm}
-                        className="text-success-10"
-                      />
+                      <IconArrowUp className="text-success-10 w-[0.825rem] h-[0.825rem]" />
                     ) : (
-                      <IconArrowDown
-                        size={IconSize.sm}
-                        className="text-alert-10"
-                      />
+                      <IconArrowDown className="text-alert-10 w-[0.825rem] h-[0.825rem]" />
                     )}
                     <div
                       className={clsx(
-                        "text-sm",
+                        "text-[0.825rem] font-light",
                         revenueProfit ? "text-success-10" : "text-alert-10"
                       )}
                     >

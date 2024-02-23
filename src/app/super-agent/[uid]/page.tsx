@@ -26,10 +26,14 @@ export default function SuperAgentDetail() {
     <>
       <div className="dashboard_header pb-[20px] flex flex-col md:flex-row gap-3 md:items-center mt-[44px] justify-between">
         <div className="dashboard_header_title flex items-center">
-          <div className="flex flex-row items-center justify-center self-center border border-gray-1 bg-base-bg3 rounded-md px-[8px] py-1">
-            <div className="text-gray-6 lg:text-xs">Super Agent</div>
-            <IconChevronRight size={IconSize.sm} className="mx-[6px]" />
-            <div className="text-gray-0 lg:text-xs">Details</div>
+          <div className="flex flex-row items-center justify-center self-center border border-gray-1 bg-base-bg3 rounded-md px-[8px] py-[0.125rem]">
+            <div className="text-gray-6 lg:text-xs font-extralight">
+              Super Agent
+            </div>
+            <IconChevronRight size={IconSize.sm} className="mx-[2px]" />
+            <div className="text-gray-0 lg:text-xs font-extralight">
+              Details
+            </div>
           </div>
         </div>
       </div>
@@ -55,10 +59,10 @@ export default function SuperAgentDetail() {
                 width={40}
                 height={40}
               />
-              <div className="text-gray-10 text-xs py-1 px-2 mx-3 bg-base-bg3 rounded-3xl">
+              <div className="text-gray-10 text-xs py-1 px-2 mx-3  bg-base-bg3 rounded-3xl">
                 {dataAgent.codeAgent}
               </div>
-              <div className="w-[160px] text-gray-10 text-sm mr-6">
+              <div className="w-[160px] text-gray-10 text-sm mr-[0.125rem]">
                 {dataAgent.nameAgent}
               </div>
             </div>
@@ -108,6 +112,7 @@ export default function SuperAgentDetail() {
               className={
                 "ml-3 bg-transparent border-0 text-gray-6 lg:text-sm w-full outline-none"
               }
+              style={{ fontWeight: 200 }}
               placeholder={"Search super agent by name or code..."}
               onChange={(evt: any) => setSearch(evt)}
             />
