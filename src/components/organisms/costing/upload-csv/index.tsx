@@ -1,6 +1,6 @@
 import UploadCSV from "@/components/molecules/upload-csv"
 
-export default function CashflowUploadCSV({
+export default function CostingUploadCSV({
 	className
 }) {
 	return (

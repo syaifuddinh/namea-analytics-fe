@@ -16,6 +16,8 @@ import dummyListSuperAgent from "@/data/dummyListSuperAgent.json";
 import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
+import SelectInput from "@/components/atoms/input/select"
+import Button from "@/components/atoms/button" 
 
 export default function SuperAgentDetail() {
   //   const lang = await getDictionary();
@@ -104,7 +106,7 @@ export default function SuperAgentDetail() {
           <div className="flex flex-1 text-gray-10 text-base">
             Agents ({dataAgent.totalAgent})
           </div>
-          <div className="flex flex-row flex-1 items-center border border-gray-1 bg-base-bg3 rounded-md p-2 mr-2">
+          <div className="flex flex-row flex-1 items-center border border-gray-1 bg-base-bg3 rounded-md p-2 mr-2 max-h-[2.25rem]">
             <IconSearch />
             <input
               type="text"
@@ -117,18 +119,18 @@ export default function SuperAgentDetail() {
               onChange={(evt: any) => setSearch(evt)}
             />
           </div>
-          <button className="flex flex-row rounded-md border border-gray-4 bg-checkbox items-center pr-2 pl-3 py-2 mr-2">
-            <div className="w-[86px] text-gray-6 text-sm mr-[6px]">
-              All Status
-            </div>
-            <div className="flex flex-1 justify-end">
-              <IconDropdown />
-            </div>
-          </button>
-          <button className="flex flex-row rounded-md border border-dot-blue bg-checkbox items-center pr-4 pl-3 py-2">
+
+          <SelectInput
+              placeholder="All Status"
+              className="mr-2"
+              placeholderClassName="w-[86px]"
+          />
+
+          <Button variant="default">
             <IconAdd />
-            <div className="text-gray-10 text-sm">Create Agent</div>
-          </button>
+            <span>Create Agent</span>
+          </Button>
+
         </div>
         <div className="p-5 flex flex-row gap-3 border-b border-base-bg3">
           <CardDashboardDetail
