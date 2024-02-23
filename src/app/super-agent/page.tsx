@@ -71,14 +71,14 @@ export default function PageSuperAgent() {
           revenuePercentage={"23.8% (+24)"}
         />
         <CardDashboard
-          icon={"/images/total-super-agent.png"}
+          icon={"/images/total-active-super-agent.png"}
           placeholder={"Total Active Super Agent"}
           label={"Rp500.950.450,00"}
           revenueProfit={false}
           revenuePercentage={"16.5% (-8)"}
         />
         <CardDashboard
-          icon={"/images/total-super-agent.png"}
+          icon={"/images/total-revenue.png"}
           placeholder={"Total Revenue"}
           label={"Rp500.950.450,00"}
           revenueProfit={true}
