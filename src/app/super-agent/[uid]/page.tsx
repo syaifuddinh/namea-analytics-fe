@@ -17,6 +17,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
 import SelectInput from "@/components/atoms/input/select"
+import Button from "@/components/atoms/button" 
 
 export default function SuperAgentDetail() {
   //   const lang = await getDictionary();
@@ -120,10 +121,11 @@ export default function SuperAgentDetail() {
               placeholderClassName="w-[86px]"
           />
 
-          <button className="flex flex-row rounded-md border border-dot-blue bg-checkbox items-center pr-4 pl-3 py-2 max-h-[2.25rem]">
+          <Button variant="default">
             <IconAdd />
-            <div className="text-gray-10 text-sm">Create Agent</div>
-          </button>
+            <span>Create Agent</span>
+          </Button>
+
         </div>
         <div className="p-5 flex flex-row gap-3 border-b border-base-bg3">
           <CardDashboardDetail

@@ -7,7 +7,7 @@ const Header = () => (
 			Costing Comparation
 		</div>
 
-		<div className="flex gap-2 mt-2">
+		<div className="flex gap-2 mt-2 *:grow">
 			<SelectInput
 				placeholder="Select Category"
 			/>
