@@ -17,3 +17,5 @@ export * from "./cashflow/financial-statement/image1";
 export * from "./cashflow/financial-statement/image2";
 export * from "./cashflow/financial-statement/image5";
 export * from "./cashflow/financial-statement/image6";
+export * from "./costing/CostingDottedRightArrowIcon";
+export * from "./costing/CostingDottedLeftArrowIcon";

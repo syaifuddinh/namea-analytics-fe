@@ -1,10 +1,14 @@
 import * as React from "react"
-export const DottedRightArrowIcon: React.FC<IIconProps> = (props) => {
+export const DottedRightArrowIcon: React.FC<IIconProps> = ({
+  width = 60,
+  height = 19,
+  ...props
+}) => {
     return (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width={60}
-            height={19}
+            width={width}
+            height={height}
             fill="none"
             {...props}
           >
