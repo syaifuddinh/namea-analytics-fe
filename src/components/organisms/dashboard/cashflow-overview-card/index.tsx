@@ -1,9 +1,7 @@
 import CardCashflowOverview from "@/components/atoms/card/cashflow-overview";
 import Checkbox from "@/components/atoms/input/select/checkbox";
-import IconPlusSquare from "@/assets/icons/plus-square";
-import IconMinusSquare from "@/assets/icons/minus-square";
 import CustomChart from "@/components/atoms/custom-chart"
-import Item from "./item"
+import BalanceLabel from "@/components/atoms/balance-label"
 
 const CashflowOverviewCard = ({ className }) => {
   return (
@@ -13,16 +11,23 @@ const CashflowOverviewCard = ({ className }) => {
       className={className}
     >
       <div className="flex flex-col md:flex-row items-start gap-4 p-[20px]">        
-        <Item
-            title="Total Cash Balance"
-            icon={<IconPlusSquare />}
-            variant="default"
-        />
-        <Item
-            title="Total Outstanding Debt"
-            icon={<IconMinusSquare />}
-            variant="danger"
-        />
+        <div className="w-full grow bg-base-bg4 border border-gray-1 rounded-xl border-solid pl-5 pr-[22px] py-[1.125rem]">
+          <BalanceLabel
+              title="Total Cash Balance"
+              variant="default"
+              balance="694.354.766"
+              positivity="plus"
+          />
+        </div>
+
+        <div className="w-full grow bg-base-bg4 border border-gray-1 rounded-xl border-solid pl-5 pr-[22px] py-[1.125rem]">
+          <BalanceLabel
+              title="Total Outstanding Debt"
+              variant="danger"
+              positivity="minus"
+              balance="694.354.766"
+          />
+        </div>
       </div>
 
 			<div className="bg-base-bg5 border-y-base-bg3 border-y border-solid flex gap-2 flex-col md:flex-row md:items-center justify-between px-5 py-[11px]">

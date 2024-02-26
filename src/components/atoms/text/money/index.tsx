@@ -8,7 +8,7 @@ const MoneyText = ({
 }) => {
 	return (
 		<div
-			className={`money-text flex ${className} leading-6 ${variant === "default" ? "text-[var(--white-theme-color)]" : ""} ${variant === "danger" ? "text-alert-10" : ""} `}
+			className={`money-text flex ${className} leading-6 ${variant === "default" ? "text-[var(--white-theme-color)]" : ""} ${variant === "danger" ? "text-alert-10" : ""} ${variant === "warning" ? "text-warning" : ""} `}
 			style={{ fontSize, fontWeight }}
 		>	
 			{ positivity === "minus" && "-" }

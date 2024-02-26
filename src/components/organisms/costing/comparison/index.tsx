@@ -1,8 +1,11 @@
 import Card from "@/components/atoms/card";
 import SelectInput from "@/components/atoms/input/select"
 import Button from "@/components/atoms/button"
+import BalanceCard from "./balance-card"
+import CustomChart from "@/components/atoms/custom-chart"
+import ComparisonTooltip from "@/components/atoms/comparison-tooltip"
 
-const Header = () => (
+const Header = ({ onApplyButtonClick }) => (
 	<div className="card_header">
 		<div className="font-light text-gray-10">
 			Costing Comparation
@@ -19,20 +22,120 @@ const Header = () => (
 				placeholder="Select Year"
 			/>
 
-			<Button variant="default" className="max-w-[120px]">
+			<Button
+				variant="default"
+				className="max-w-[120px]"
+				onClick={onApplyButtonClick}
+			>
 				Apply Filters
 			</Button>
 		</div>
 	</div>
 )
 
+const expenses = [
+	{
+		"id": 1,
+		"year": "2023",
+		"balance": "694.354.766"
+	},
+	{
+		"id": 2,
+		"year": "2022",
+		"balance": "694.354.766"
+	},
+	{
+		"id": 3,
+		"year": "2021",
+		"balance": "694.354.766"
+	}
+]
+
+const labels = ["January", "February", "May", "June", "July", "August", "October", "December"]
 
 export default function Comparison({ className }) {
+	const onApplyButtonClick = () => {
+		alert("abc")
+	}
+
 	return (
 		<Card
-			headerElement={<Header />}
+			headerElement={<Header onApplyButtonClick={onApplyButtonClick} />}
 			className={className}
 		>
+			<div id="costing-comparison_content">
+				<div
+					id="costing-comparison_expenses"
+					className="h-[157px] flex items-center *:h-[114px] *:grow gap-5 px-5"
+				>
+					{ expenses.map(item => (
+						<BalanceCard
+							key={item.id}
+							year={item.year}
+							balance={item.balance}
+						/>
+					)) }
+				</div>
+				
+				<div className="costing-comparison_chart">
+					<ComparisonTooltip 
+						total={"54.643.864"}
+						options={[
+							{
+								"label": "Jan 2021",
+								"value": "25.333.333"
+							},
+							{
+								"label": "Jan 2022",
+								"value": "25.333.333"
+							},
+							{
+								"label": "Jan 2023",
+								"value": "25.333.333"
+							}
+						]}
+					/>
+					<CustomChart
+						variant="bar"
+						maxValue={500000}
+						labels={labels}
+						xClassname="pl-[3rem] pr-[2.3rem]"
+						values={[
+							[
+								480000,
+								480000,
+								480000,
+								480000,
+								480000,
+								480000,
+								480000,
+								480000
+							],
+							[
+								200000,
+								200000,
+								200000,
+								200000,
+								200000,
+								200000,
+								200000,
+								200000
+							],
+							[
+								300000,
+								300000,
+								300000,
+								300000,
+								300000,
+								300000,
+								300000,
+								300000
+							]
+						]}
+					/>
+				</div>
+			</div>
+
 			<div className="p-4 bg-base-bg5">
 				<div className="no-data flex flex-col items-center justify-center h-[275px]">
 					<img src="/images/crocodile.svg" alt="no-data-image" />

@@ -198,7 +198,7 @@ const CustomChart = ({
                                                         key={index2}
                                                         height={item.height + "px"}
                                                         width={item.width + "px"}
-                                                        variant={index2 > 0 ? "secondary" : "primary"}
+                                                        variant={index2 > 0 ? (index2 > 1 ? "tertiary" : "secondary") : "primary"}
                                                     />
                                                 )) }
                                             </div>

@@ -6,3 +6,7 @@
 .bar-chart-item.secondary {
 	opacity: 0.5;
 }
+
+.bar-chart-item.tertiary {
+	opacity: 0.3;
+}
