@@ -28,7 +28,7 @@ export default function Home() {
             />
           </div>
           <div className="dashboard_header_content">
-            <div className="text-[1.063rem] font-light leading-[26px] tracking-[0.7px] text-[var(--white-theme-color)]">
+            <div className="text-[1.063rem] font-light leading-[26px] tracking-[0.7px] text-white-theme">
               Overview
             </div>
             <div className="text-gray6 text-sm leading-5 font-extralight mt-[2px] tracking-[0.06px]">
