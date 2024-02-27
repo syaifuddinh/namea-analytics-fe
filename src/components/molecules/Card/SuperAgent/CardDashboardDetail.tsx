@@ -1,7 +1,5 @@
 import Image from "next/image";
-import clsx from "clsx";
 import { ICardDashboardAgent } from "./types";
-import { IconArrowDown, IconArrowUp } from "@/components/atoms/Icons";
 
 export const CardDashboardDetail: React.FC<ICardDashboardAgent> = ({
   icon,
