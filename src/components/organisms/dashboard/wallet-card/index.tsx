@@ -69,69 +69,67 @@ const WalletCard = ({
 			isUsePaddingBottom={false}
 			className="bg-base-bg2"
 		>
-			<div className="bg-[var(--base-bg5)]">	
-				{ variant === "turnover" && (
-					<CustomChart
-						labels={["Dec Week 1", "Dec Week 2", "Dec Week 3", "Dec Week 4"]}	
-						maxValue={500000}
-						values={[
-							[
-								450000,
-								300000,
-								400000,
-								500000
-							],
-							[
-								300000,
-								350000,
-								250000,
-								350000
-							]
-						]}
-						variant="bar"
-						xClassname="pl-[32px] pr-5"
-						fixedBarWidth={40}
-						onGenerateTooltip={newValue => {
-							return <CurrencyTooltip
-								ethereumPrice={toCurrency(newValue[0].value)}
-								bitcoinPrice={toCurrency(newValue[1].value)}
-							/>
-						}}
-					/>
-				) }
+			{ variant === "turnover" && (
+				<CustomChart
+					labels={["Dec Week 1", "Dec Week 2", "Dec Week 3", "Dec Week 4"]}	
+					maxValue={500000}
+					values={[
+						[
+							450000,
+							300000,
+							400000,
+							500000
+						],
+						[
+							300000,
+							350000,
+							250000,
+							350000
+						]
+					]}
+					variant="bar"
+					xClassname="pl-[32px] pr-5"
+					fixedBarWidth={40}
+					onGenerateTooltip={newValue => {
+						return <CurrencyTooltip
+							ethereumPrice={toCurrency(newValue[0].value)}
+							bitcoinPrice={toCurrency(newValue[1].value)}
+						/>
+					}}
+				/>
+			) }
 
-				{ variant === "revenue" && (
-					<CustomChart
-						values={[
-							[
-								200000,
-								300000,
-								200000,
-								150000,
-								200000,
-								180000,
-								275000,
-								100000
-							],
-							[
-								200000,
-								100000,
-								100000,
-								100000,
-								100000,
-								100000,
-								100000,
-								100000
-							]
-						]}
-						variant="stacked-bar"
-						labels={["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]}	
-						maxValue={500000}
-						fixedBarWidth={12}
-						xClassname="pl-2.5 pr-5"
-					/>
-				) }
-			</div>
+			{ variant === "revenue" && (
+				<CustomChart
+					values={[
+						[
+							200000,
+							300000,
+							200000,
+							150000,
+							200000,
+							180000,
+							275000,
+							100000
+						],
+						[
+							200000,
+							100000,
+							100000,
+							100000,
+							100000,
+							100000,
+							100000,
+							100000
+						]
+					]}
+					variant="stacked-bar"
+					labels={["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]}	
+					maxValue={500000}
+					fixedBarWidth={12}
+					xClassname="pl-2.5 pr-5"
+				/>
+			) }
 
 			<div className="p-[20px] flex gap-[1rem] border-t-1 border-base-bg3">	
 				<CurrencyCard

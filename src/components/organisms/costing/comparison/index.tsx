@@ -1,3 +1,6 @@
+"use client"
+
+import { useState } from "react";
 import Card from "@/components/atoms/card";
 import SelectInput from "@/components/atoms/input/select"
 import Button from "@/components/atoms/button"
@@ -11,7 +14,7 @@ const Header = ({ onApplyButtonClick }) => (
 			Costing Comparation
 		</div>
 
-		<div className="flex flex-col md:flex-row gap-2 mt-2 *:grow">
+		<div className="flex flex-col md:flex-row gap-[0.625rem] mt-3 *:grow">
 			<SelectInput
 				placeholder="Select Category"
 			/>
@@ -54,8 +57,10 @@ const expenses = [
 const labels = ["January", "February", "May", "June", "July", "August", "October", "December"]
 
 export default function Comparison({ className }) {
+	const [contentVisible, setContentVisible] = useState(false)
+
 	const onApplyButtonClick = () => {
-		alert("abc")
+		setContentVisible(true)
 	}
 
 	return (
@@ -63,87 +68,95 @@ export default function Comparison({ className }) {
 			headerElement={<Header onApplyButtonClick={onApplyButtonClick} />}
 			className={className}
 		>
-			<div id="costing-comparison_content">
-				<div
-					id="costing-comparison_expenses"
-					className="h-[157px] flex items-center *:h-[114px] *:grow gap-5 px-5"
-				>
-					{ expenses.map(item => (
-						<BalanceCard
-							key={item.id}
-							year={item.year}
-							balance={item.balance}
+			{ contentVisible === true && (
+				<div id="costing-comparison_content">
+					<div
+						id="costing-comparison_expenses"
+						className="sm:h-[154px] flex items-center flex-col sm:flex-row sm:*:h-[114px] *:grow *:w-full gap-4 px-5"
+					>
+						{ expenses.map(item => (
+							<BalanceCard
+								key={item.id}
+								year={item.year}
+								balance={item.balance}
+							/>
+						)) }
+					</div>
+					
+					<div className="costing-comparison_chart bg-base-bg5">
+						<CustomChart
+							variant="bar"
+							maxValue={500000}
+							labels={labels}
+							xClassname="pl-[3rem] pr-[2.3rem]"
+							values={[
+								[
+									480000,
+									480000,
+									480000,
+									480000,
+									480000,
+									480000,
+									480000,
+									480000
+								],
+								[
+									200000,
+									200000,
+									200000,
+									200000,
+									200000,
+									200000,
+									200000,
+									200000
+								],
+								[
+									300000,
+									300000,
+									300000,
+									300000,
+									300000,
+									300000,
+									300000,
+									300000
+								]
+							]}
+							onGenerateTooltip={() => {
+								return (
+									<ComparisonTooltip 
+										total={"54.643.864"}
+										options={[
+											{
+												"label": "Jan 2021",
+												"value": "25.333.333"
+											},
+											{
+												"label": "Jan 2022",
+												"value": "25.333.333"
+											},
+											{
+												"label": "Jan 2023",
+												"value": "25.333.333"
+											}
+										]}
+									/>
+								)
+							}}
 						/>
-					)) }
-				</div>
-				
-				<div className="costing-comparison_chart">
-					<ComparisonTooltip 
-						total={"54.643.864"}
-						options={[
-							{
-								"label": "Jan 2021",
-								"value": "25.333.333"
-							},
-							{
-								"label": "Jan 2022",
-								"value": "25.333.333"
-							},
-							{
-								"label": "Jan 2023",
-								"value": "25.333.333"
-							}
-						]}
-					/>
-					<CustomChart
-						variant="bar"
-						maxValue={500000}
-						labels={labels}
-						xClassname="pl-[3rem] pr-[2.3rem]"
-						values={[
-							[
-								480000,
-								480000,
-								480000,
-								480000,
-								480000,
-								480000,
-								480000,
-								480000
-							],
-							[
-								200000,
-								200000,
-								200000,
-								200000,
-								200000,
-								200000,
-								200000,
-								200000
-							],
-							[
-								300000,
-								300000,
-								300000,
-								300000,
-								300000,
-								300000,
-								300000,
-								300000
-							]
-						]}
-					/>
-				</div>
-			</div>
-
-			<div className="p-4 bg-base-bg5">
-				<div className="no-data flex flex-col items-center justify-center h-[275px]">
-					<img src="/images/crocodile.svg" alt="no-data-image" />
-					<div className="no-data_description text-gray-6 text-sm font-extralight">
-						Oops! There is no data yet!
 					</div>
 				</div>
-			</div>
+			) }
+
+			{ contentVisible === false && (
+				<div className="p-4 bg-base-bg5">
+					<div className="no-data flex flex-col items-center justify-center h-[275px]">
+						<img src="/images/crocodile.svg" alt="no-data-image" />
+						<div className="no-data_description text-gray-6 text-sm font-extralight">
+							Oops! There is no data yet!
+						</div>
+					</div>
+				</div>
+			) }
 		</Card>
 	)
 }

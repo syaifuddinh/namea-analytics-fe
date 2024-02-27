@@ -53,8 +53,8 @@ const ledger = [
 export default function GeneralCosting({ className }) {
 	return (
 		<div className={`${className}`}>
-			<div className="font-light mb-2 text-lg leading-[26px] text-gray-10">
-				General Costing
+			<div className="font-light mb-3 text-lg leading-[26px] text-gray-10">
+				Monthly General Costing
 			</div>
 
 			<MonthInput />

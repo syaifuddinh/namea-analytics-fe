@@ -19,6 +19,7 @@ const CustomChart = ({
   values,
   variant,
   xClassname,
+  className = "",
   isShowYAxes = true,
   maxValue = 0,
   chartPaddingTop = "1.75rem",
@@ -27,7 +28,6 @@ const CustomChart = ({
   fixedBarWidth = null,
   onGenerateTooltip,
   onGenerateLegend,
-  className,
 }) => {
   const gridElement = useRef(null);
   const canvasElement = useRef(null);
@@ -104,7 +104,9 @@ const CustomChart = ({
   }
 
   return (
-    <div className={clsx("custom-chart", className)}>
+    <div
+      className={`custom-chart border-t border-base-bg3 bg-[var(--base-bg5)] ${className}`}
+    >
       <div className="flex">
         {isShowYAxes === true && (
           <div className="custom-chart_y flex flex-col gap-[24px] py-[20px] px-[12px] border-r border-base-bg3 max-w-[3.4378rem] min-w-[3.4378rem] min-h-[16rem]">
@@ -276,7 +278,7 @@ const CustomChart = ({
         </div>
       </div>
 
-      <div className="x-container min-h-[1.751rem] max-h-[1.751rem] border-t border-[var(--base-bg3)] flex items-center">
+      <div className="x-container min-h-[1.751rem] max-h-[1.751rem] border-t border-b border-[var(--base-bg3)] flex items-center">
         {isShowYAxes === true && <div className="w-[55px]"></div>}
 
         <div
