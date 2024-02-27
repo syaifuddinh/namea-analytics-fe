@@ -3,11 +3,13 @@ import UploadButton from "@/components/molecules/button/upload"
 import "./index.style.css"
 
 export default function UploadCSV({
-	className
+	paddingTop = "1rem",
+	className = ""
 }) {
 	return (
 		<div
-			className={"upload-csv lg:flex-row flex-col flex lg:items-center justify-between gap-4 rounded-[16px] p-5 pt-4 " + className}
+			className={"upload-csv lg:flex-row flex-col flex lg:items-center justify-between gap-4 rounded-[16px] p-5 " + className}
+			style={{ paddingTop }}
 		>
 			<div className="upload-csv_entry">
 				<div className="upload-csv_title font-light text-normal text-[var(--Gray10)] leading-[26px]">

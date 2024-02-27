@@ -11,8 +11,13 @@ export default function CashflowPage() {
   return (
     <CostingLayout activeMenu="operational-costing" >
       <Header />
-      <UploadCSV className="mt-5" />
-      <CostingBreakdown  className="mt-[3.25rem]" />
+      <UploadCSV
+      	className="mt-5"
+      />
+      <CostingBreakdown
+      	title="2023 Yearly Costing Breakdown"
+      	className="mt-[3.25rem]"
+      />
       <Comparison  className="mt-[3.75rem]" />
       <GeneralCosting  className="mt-[3.75rem]" />
     </CostingLayout>
