@@ -5,11 +5,11 @@ import {
 } from "@/components/atoms/Icons";
 import CustomChart from "@/components/atoms/custom-chart"
 
-const Header = () => (
+const Header = ({ title }) => (
 	<div className="card_header flex items-center justify-center gap-5 h-[64px]">
 		<CostingDottedRightArrowIcon />
 		<div className="font-light text-gray-10 tracking-[0.04px]">
-			2023 Yearly Costing Breakdown
+			{ title }
 		</div>
 		<CostingDottedLeftArrowIcon />
 	</div>
@@ -33,10 +33,10 @@ const values = [
 	]
 ]
 
-export default function Breakdown({ className }) {
+export default function Breakdown({ title, className }) {
 	return (
 		<Card
-			headerElement={<Header />}
+			headerElement={<Header title={title} />}
 			className={className}
 		>
 			<CustomChart

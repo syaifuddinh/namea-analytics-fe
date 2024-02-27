@@ -4,6 +4,6 @@ export default function CostingUploadCSV({
 	className
 }) {
 	return (
-		<UploadCSV className={className} />
+		<UploadCSV className={className} paddingTop="1.25rem" />
 	)
 }
