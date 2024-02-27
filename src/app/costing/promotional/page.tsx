@@ -14,6 +14,10 @@ export default function PromotionalCostingPage() {
     	<PromotionalCostingTab />
     	<Header className="mt-8" />
     	<UploadCSV className="mt-5" />
+    	<CostingBreakdown
+    		title="Total Pengeluaran Lomba"
+    		className="mt-[3.25rem]"
+    	/>
     </CostingLayout>
   );
 }
