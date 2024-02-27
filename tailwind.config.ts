@@ -41,6 +41,7 @@ const config: Config = {
         "dot-blue": "var(--c-dot-blue)",
         "dot-blue1": "var(--c-dot-blue1)",
         "dot-blue2": "var(--c-dot-blue2)",
+        "primary-button": "linear-gradient(180deg, #07B7AC -75%, #087981 100%)",
         "danger-medium": "var(--c-danger-medium)",
         "bg-button": "var(--c-bg-button-color)",
         "border-gradient": "var(--c-border-button-color)",
