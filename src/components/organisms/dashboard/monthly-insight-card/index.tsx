@@ -122,34 +122,32 @@ const MonthlyInsightCard = ({
 				profitMargin={profitMargin}
 			/>}
 		>
-			<div className="border-y border-[var(--base-bg3)] bg-[var(--base-bg5)]">
-				<CustomChart
-					values={[
-						[
-							100000, 150000,
-							150000, 200000,
-							200000, 125000,
-							250000, 250000,
-							350000, 375000,
-							450000, 450000,
-							375000, 400000,
-							450000	
-						]
-					]}
-					variant="line"
-					labels={labels}	
-					maxValue={500000}
-					xClassname="pl-[10px] pr-[20px]"
-					onGenerateTooltip={(item, index) => {
-						let month = labels[index]
-						if(!month) month = labels[index - 1]
-						return <ProfitTooltip
-							title={`${month} 2023`}
-							price={toCurrency(item)}
-						/>
-					}}
-				/>
-			</div>
+			<CustomChart
+				values={[
+					[
+						100000, 150000,
+						150000, 200000,
+						200000, 125000,
+						250000, 250000,
+						350000, 375000,
+						450000, 450000,
+						375000, 400000,
+						450000	
+					]
+				]}
+				variant="line"
+				labels={labels}	
+				maxValue={500000}
+				xClassname="pl-[10px] pr-[20px]"
+				onGenerateTooltip={(item, index) => {
+					let month = labels[index]
+					if(!month) month = labels[index - 1]
+					return <ProfitTooltip
+						title={`${month} 2023`}
+						price={toCurrency(item)}
+					/>
+				}}
+			/>
 		</Card>
 	)
 }
