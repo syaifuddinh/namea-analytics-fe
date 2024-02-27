@@ -10,12 +10,14 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "tooltip-background": "linear-gradient(0deg, #092B2D, #092B2D)"
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "tooltip-background": "linear-gradient(0deg, #092B2D, #092B2D)",
       },
       colors: {
         checkbox: "var(--c-checkbox)",
         "alert-1": "var(--c-alert1)",
+        "alert-2": "var(--c-alert2)",
         "alert-6": "var(--c-alert6)",
         "alert-10": "var(--c-alert10)",
         "gray-0": "var(--c-gray0)",
@@ -33,9 +35,9 @@ const config: Config = {
         "base-bg4": "var(--c-base-bg4)",
         "base-bg5": "var(--c-base-bg5)",
         "base-border-color": "var(--c-base-border-color)",
-        "rank": "var(--c-rank-color)",
+        rank: "var(--c-rank-color)",
         "bg-rank": "var(--c-rank-bg-color)",
-        "warning": "var(--c-warning-theme-color)",
+        warning: "var(--c-warning-theme-color)",
         "dot-blue": "var(--c-dot-blue)",
         "dot-blue1": "var(--c-dot-blue1)",
         "dot-blue2": "var(--c-dot-blue2)",

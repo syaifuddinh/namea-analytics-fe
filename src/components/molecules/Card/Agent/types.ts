@@ -7,44 +7,21 @@ export interface ICardDashboard {
   desc?: string;
 }
 
-export interface ICardDashboardAgent {
-  icon: string;
-  label: string;
+export interface ICardTop {
+  logo?: string;
+  icon?: JSX.Element;
   placeholder: string;
+  value: string;
+  barValue: number;
+  className?: string;
 }
 
-export interface ICardListSuperAgent {
-  id: string;
-  rank: number;
-  image: string;
-  codeAgent: string;
-  nameAgent: string;
-  totalAgent: number;
-  totalProfit: string;
-  status: string;
-}
-
-export interface ICardListAgent {
-  id?: number;
-  rank: number;
-  image: string;
-  codeAgent: string;
-  nameAgent: string;
-  bitcoin: {
-    profit: boolean;
-    nominal: string;
-  };
-  ethereum: {
-    profit: boolean;
-    nominal: string;
-  };
-  totalTurnOver: {
-    profit: boolean;
-    nominal: string;
-  };
-  totalProfit: {
-    profit: boolean;
-    nominal: string;
-  };
-  status: string;
+export interface ICardProfit {
+  iconDot?: JSX.Element;
+  placeholder: string;
+  label: string;
+  profit: boolean;
+  percentage: string;
+  desc?: string;
+  className?: string;
 }
