@@ -19,6 +19,17 @@ const frequencies = [
 	}
 ]
 
+const dailyMonthlyFrequencies = [
+	{
+		value: "monthly",
+		label: "Monthly",
+	},
+	{
+		value: "daily",
+		label: "Daily",
+	}
+]
+
 type FrequencyInputType = {
 	value?: "weekly"|"monthly"|"yearly",
 	onChange: (newValue: string) => void 
@@ -26,15 +37,19 @@ type FrequencyInputType = {
 
 export default function FrequencyInput({ 
 	value,
-	onChange
+	onChange,
+	variant = "default",
+	width="216px",
+	className = ""
 }: FrequencyInputType) {
 
  	return (
-	    <div>
+	    <div className={className}>
 	    	<RowOptionInput
 	    		value={value}
 	    		onChange={onChange}
-	    		options={frequencies}
+	    		width={width}
+	    		options={variant === "default" ? frequencies : dailyMonthlyFrequencies}
 	    	/>
 	    </div>
  	)

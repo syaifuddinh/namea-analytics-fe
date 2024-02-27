@@ -52,9 +52,10 @@ const Header = ({ title }) => {
 				{ title }
 			</div>
 			
-			<div className="absolute right-[1.15rem] top-[1.3rem]">
-				<FrequencyInput />
-			</div>
+			<FrequencyInput
+				className="absolute right-[1.15rem] top-[1.3rem]"
+				variant="default"
+			/>
 		</div>	
 	)
 }

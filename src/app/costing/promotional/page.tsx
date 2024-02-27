@@ -7,6 +7,7 @@ import Comparison from "@/components/organisms/costing/comparison"
 import Header from "@/components/organisms/costing/header"
 import PromotionalCostingTab from "@/components/organisms/costing/promotional-costing-tab"
 import CostingLayout from "@/components/templates/costing-layout"
+import FrequencyInput from "@/components/molecules/input/frequency"
 
 export default function PromotionalCostingPage() {
   return (
@@ -17,6 +18,12 @@ export default function PromotionalCostingPage() {
     	<CostingBreakdown
     		title="Total Pengeluaran Lomba"
     		className="mt-[3.25rem]"
+            sideElement={
+                <FrequencyInput
+                    variant="monthly-daily"
+                    width="137px"
+                />
+            }
     	/>
     </CostingLayout>
   );
