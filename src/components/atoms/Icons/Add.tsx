@@ -16,7 +16,7 @@ export const IconAdd: React.FC<IIconProps> = ({
     >
       <path
         d="M9 4.5V9m0 0v4.5M9 9h4.5M9 9H4.5"
-        stroke="#CDFBFF"
+        stroke="currentColor" //"#CDFBFF"
         strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"

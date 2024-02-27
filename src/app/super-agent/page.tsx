@@ -9,6 +9,7 @@ import {
   CardListSuperAgent,
 } from "@/components/molecules/Card/SuperAgent";
 import { Pagination } from "@/components/molecules/Footer/Pagination";
+import { Header } from "@/components/molecules/Header";
 import dummyListSuperAgent from "@/data/dummyListSuperAgent.json";
 import Image from "next/image";
 import { useState } from "react";
@@ -19,25 +20,11 @@ export default function PageSuperAgent() {
 
   return (
     <>
-      <div className="dashboard_header pb-[20px] flex flex-col md:flex-row gap-3 md:items-center mt-[44px] justify-between border-b border-b-base-border-color">
-        <div className="dashboard_header_title flex w-1/2 items-center">
-          <div className="dashboard_header_thumbnail mr-[16px] ">
-            <Image
-              src="/images/super-agent.png"
-              alt="super agent icon"
-              width={40}
-              height={40}
-            />
-          </div>
-          <div className="dashboard_header_content">
-            <div className="text-[1.063rem] font-light leading-[26px] tracking-[0.7px] text-[var(--white-theme-color)]">
-              Super Agent
-            </div>
-            <div className="text-gray-6 text-sm leading-5 font-extralight mt-[2px] tracking-[0.06px]">
-              Show a comprehensive overview of data from different sources.
-            </div>
-          </div>
-        </div>
+      <Header
+        placeholder="Super Agent"
+        subPlaceholder="Show a comprehensive overview of data from different sources."
+        className="mr-32"
+      >
         <div className="flex flex-row flex-1 items-center">
           <div className="flex flex-row flex-1 items-center border border-gray-1 bg-base-bg3 rounded-md px-[6px] py-[2px] mr-2">
             <IconSearch />
@@ -62,7 +49,8 @@ export default function PageSuperAgent() {
             </div>
           </div>
         </div>
-      </div>
+      </Header>
+
       <div className="mt-8 mb-10 flex flex-row gap-6">
         <CardDashboard
           icon={"/images/total-super-agent.png"}

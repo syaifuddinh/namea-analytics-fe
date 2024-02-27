@@ -1,7 +1,7 @@
-import Image from "next/image";
+import { IconArrowDown, IconArrowUp } from "@/components/atoms/Icons";
 import clsx from "clsx";
+import Image from "next/image";
 import { ICardDashboard } from "./types";
-import { IconArrowDown, IconArrowUp, IconSize } from "@/components/atoms/Icons";
 
 export const CardDashboard: React.FC<ICardDashboard> = ({
   icon,
@@ -31,9 +31,9 @@ export const CardDashboard: React.FC<ICardDashboard> = ({
                 <div className="pl-2">
                   <div className="flex flex-row gap-1 items-center bg-success-1 py-[2px] pl-1 pr-[6px] rounded-3xl">
                     {revenueProfit ? (
-                      <IconArrowUp className="text-success-10 w-[0.825rem] h-[0.825rem]" />
+                      <IconArrowUp className="text-success-10 w-[13.2px] h-[13.2px]" />
                     ) : (
-                      <IconArrowDown className="text-alert-10 w-[0.825rem] h-[0.825rem]" />
+                      <IconArrowDown className="text-alert-10 w-[13.2px] h-[13.2px]" />
                     )}
                     <div
                       className={clsx(
