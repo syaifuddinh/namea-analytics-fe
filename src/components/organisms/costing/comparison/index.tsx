@@ -14,7 +14,7 @@ const Header = ({ onApplyButtonClick }) => (
 			Costing Comparation
 		</div>
 
-		<div className="flex flex-col md:flex-row gap-2 mt-2 *:grow">
+		<div className="flex flex-col md:flex-row gap-[0.625rem] mt-3 *:grow">
 			<SelectInput
 				placeholder="Select Category"
 			/>

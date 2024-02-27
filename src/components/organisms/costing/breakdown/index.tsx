@@ -6,7 +6,7 @@ import {
 import CustomChart from "@/components/atoms/custom-chart"
 
 const Header = () => (
-	<div className="card_header flex items-center justify-center gap-3">
+	<div className="card_header flex items-center justify-center gap-5 h-[64px]">
 		<CostingDottedRightArrowIcon />
 		<div className="font-light text-gray-10">
 			2023 Yearly Costing Breakdown

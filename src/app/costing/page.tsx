@@ -13,11 +13,11 @@ export default function CashflowPage() {
     <>
       <Submenu />
       <Divider className="absolute left-0" />
-      <Header className="mt-8" />
-      <UploadCSV className="mt-[1.5rem]" />
-      <CostingBreakdown  className="mt-[1.5rem]" />
-      <Comparison  className="mt-[1.5rem]" />
-      <GeneralCosting  className="mt-[1.5rem]" />
+      <Header className="mt-[2.75rem]" />
+      <UploadCSV className="mt-5" />
+      <CostingBreakdown  className="mt-[3.25rem]" />
+      <Comparison  className="mt-[3.75rem]" />
+      <GeneralCosting  className="mt-[3.75rem]" />
     </>
   );
 }
