@@ -27,7 +27,7 @@ const Header = ({ onApplyButtonClick }) => (
 
 			<Button
 				variant="default"
-				className="max-w-[120px]"
+				className="max-w-[116px]"
 				onClick={onApplyButtonClick}
 			>
 				Apply Filters
