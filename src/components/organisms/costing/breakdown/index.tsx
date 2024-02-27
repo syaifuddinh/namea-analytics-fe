@@ -8,7 +8,7 @@ import CustomChart from "@/components/atoms/custom-chart"
 const Header = () => (
 	<div className="card_header flex items-center justify-center gap-5 h-[64px]">
 		<CostingDottedRightArrowIcon />
-		<div className="font-light text-gray-10">
+		<div className="font-light text-gray-10 tracking-[0.04px]">
 			2023 Yearly Costing Breakdown
 		</div>
 		<CostingDottedLeftArrowIcon />
@@ -46,6 +46,7 @@ export default function Breakdown({ className }) {
 				fixedBarWidth={70}
 				maxValue={500000}
 				xClassname={"pl-8 pr-6"}
+				className="bg-base-bg5"
 			/>
 		</Card>
 	)
