@@ -9,6 +9,7 @@ export default function RowOptionInput({
 	options,
 	containerHeight="36px",
 	childrenHeight="1.75rem",
+	itemPaddingLeft="0.625rem",
 	width="216px",
 	onChange
 }: FrequencyInputType) {
@@ -44,8 +45,8 @@ export default function RowOptionInput({
 	    		options.map(item => (
 			    	<div
 			    		key={item.value}
-			    		className={`row-option-input_item grow flex items-center justify-center py-[4px] px-[10px] cursor-pointer ${item.value === dataValue ? "text-[var(--Gray10)] bg-[var(--base-bg3)] rounded-[6px] border border-[var(--Gray1)]" : "text-[var(--Gray6)]"}`}
-			    		style={{"maxHeight": childrenHeight, "minHeight": childrenHeight}}
+			    		className={`row-option-input_item grow flex items-center justify-center py-[4px] pr-[10px] cursor-pointer ${item.value === dataValue ? "text-[var(--Gray10)] bg-[var(--base-bg3)] rounded-[6px] border border-[var(--Gray1)]" : "text-[var(--Gray6)]"}`}
+			    		style={{"maxHeight": childrenHeight, "minHeight": childrenHeight, "paddingLeft": itemPaddingLeft}}
 			    		onClick={() => onChangeData(item.value)}
 			    	>
 
