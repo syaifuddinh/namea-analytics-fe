@@ -4,4 +4,5 @@ export interface IHeader {
   subPlaceholder: string;
   className?: string;
   children?: React.ReactNode;
+  divider?: boolean;
 }

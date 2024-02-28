@@ -3,4 +3,5 @@ export interface ISearchProps {
   placeholder?: string;
   className?: string;
   onChange(value: string): void;
+  iconClassName?: string;
 }

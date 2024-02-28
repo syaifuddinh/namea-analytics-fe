@@ -5,7 +5,7 @@ import { ICardDashboard } from "./types";
 export const CardDashboard: React.FC<ICardDashboard> = ({
   icon,
   placeholder,
-  label,
+  value,
   profit,
   percentage,
   desc,
@@ -16,7 +16,17 @@ export const CardDashboard: React.FC<ICardDashboard> = ({
         <div className="text-sm text-gray-6 font-extralight mb-1">
           {placeholder}
         </div>
-        <div className="text-gray-10 text-[1rem] mb-4">{label}</div>
+        <div
+          className={clsx(
+            "text-gray-10 text-[1rem] mb-4",
+            value.includes("Rp") && "flex flex-row items-center"
+          )}
+        >
+          {value}
+          {value.includes("Rp") && (
+            <div className="text-gray-6 text-[1rem] font-light">,00</div>
+          )}
+        </div>
         <div className="flex flex-row items-center gap-2">
           <div className="flex flex-row gap-1 items-center bg-success-1 py-[2px] pl-1 pr-[6px] rounded-3xl max-w-max">
             {profit ? (
@@ -26,7 +36,7 @@ export const CardDashboard: React.FC<ICardDashboard> = ({
             )}
             <div
               className={clsx(
-                "text-[0.825rem] font-light",
+                "text-xs font-light",
                 profit ? "text-success-10" : "text-alert-10"
               )}
             >

@@ -1,7 +1,7 @@
 export interface ICardDashboard {
   icon?: string;
   placeholder: string;
-  label: string;
+  value: string;
   profit: boolean;
   percentage: string;
   desc?: string;
