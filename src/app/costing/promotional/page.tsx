@@ -5,6 +5,7 @@ import CostingBreakdown from "@/components/organisms/costing/breakdown"
 import GeneralCosting from "@/components/organisms/costing/general-costing"
 import Comparison from "@/components/organisms/costing/comparison"
 import Header from "@/components/organisms/costing/header"
+import TrendAnalysis from "@/components/organisms/costing/trend-analysis"
 import PromotionalCostingTab from "@/components/organisms/costing/promotional-costing-tab"
 import CostingLayout from "@/components/templates/costing-layout"
 import FrequencyInput from "@/components/molecules/input/frequency"
@@ -25,6 +26,7 @@ export default function PromotionalCostingPage() {
                 />
             }
     	/>
+        <TrendAnalysis className="mt-[3.25rem]" />
     </CostingLayout>
   );
 }
