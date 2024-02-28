@@ -23,9 +23,11 @@ export default function PageSuperAgent() {
   return (
     <>
       <Header
+        icon="/images/super-agent.png"
         placeholder="Super Agent"
         subPlaceholder="Show a comprehensive overview of data from different sources."
         className="w-[47%]"
+        divider
       >
         <div className="flex flex-row flex-1 items-center">
           <InputSearch

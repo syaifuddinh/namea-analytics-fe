@@ -28,12 +28,14 @@ export const CardOverview: React.FC<ICardOverview> = ({
               className
             )}
           >
-            <div className="flex flex-col gap-[2px]">
-              <div className="text-base text-gray-10 font-medium">
+            <div className="flex flex-col gap-[4px]">
+              <div className="text-base text-gray-10 font-light">
                 {placeholder}
               </div>
               {subPlaceholder ? (
-                <div className="text-gray-6 text-sm pr-2">{subPlaceholder}</div>
+                <div className="text-gray-6 text-sm pr-2 font-extralight">
+                  {subPlaceholder}
+                </div>
               ) : null}
             </div>
             {renderHeader}
