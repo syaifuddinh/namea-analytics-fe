@@ -1,9 +1,9 @@
 export interface ICardDashboard {
   icon: string;
   placeholder: string;
-  label: string;
-  revenueProfit: boolean;
-  revenuePercentage: string;
+  value: string;
+  profit: boolean;
+  percentage: string;
 }
 
 export interface ICardDashboardAgent {
