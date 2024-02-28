@@ -3,15 +3,31 @@ for(let i = 0;i < 200;i++) {
 	dashes.push(i)
 }
 
-const Divider = ({ style = "solid", className = "" }) => {
+const Divider = ({
+	style = "solid", 
+	className = "",
+	direction = "horizontal"
+}) => {
 	return (
 		<>
 			{ style === "solid" && (
-				<div
-					className={`w-full h-[1px] bg-[var(--base-bg3)] ${className}`}
-				>
-					
-				</div>
+				<>
+					{ direction === "horizontal" && (
+						<div
+							className={`w-full h-[1px] bg-[var(--base-bg3)] ${className}`}
+						>
+							
+						</div>
+					) }
+
+					{ direction === "vertical" && (
+						<div
+							className={`w-[1px] h-[24px] bg-gray-1 ${className}`}
+						>
+							
+						</div>
+					) }
+				</>
 			) }
 
 			{ style === "dashed" && (

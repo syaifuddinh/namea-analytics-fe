@@ -1,5 +1,6 @@
 import Card from "@/components/atoms/card";
 import MoneyText from "@/components/atoms/text/money";
+import Divider from "@/components/atoms/divider"
 
 export default function Withdraw({ 
 	title, 
@@ -15,7 +16,7 @@ export default function Withdraw({
 				bottomRadius="16px"
 			>
 				<div className="flex flex-col sm:flex-row justify-between gap-2 sm:items-center py-[0.875rem] px-5">
-					<div className="flex items-center gap-3">
+					<div className="flex items-center gap-4">
 						<div className="withdraw_icon">
 							{ icon }
 						</div>
@@ -24,25 +25,28 @@ export default function Withdraw({
 							<div className="withdraw_title font-light text-sm leading-5 text-gray-10">
 								{ title }
 							</div>
-							<div className="withdraw_description text-sm font-extralight leading-5 text-gray-6">
+							<div className="withdraw_description text-sm font-extralight leading-5 text-gray-6 mt-1">
 								{ description }
 							</div>
 						</div>
-
 					</div>
 
-					<div className="withdraw_balance">
-						<div className="font-extralight text-sm leading-5 text-gray-6">
-							Amount Spent
-						</div>
 
-						<MoneyText
-							fontSize="0.875rem"
-							fontWeight={400}
-							className="mt-1"
-						>
-							{ balance }
-						</MoneyText>
+					<div className="withdraw_balance flex items-center">
+						<Divider direction="vertical" />
+						<div className="ml-[57px]">
+							<div className="font-extralight text-sm leading-5 text-gray-6">
+								Amount Spent
+							</div>
+
+							<MoneyText
+								fontSize="0.875rem"
+								fontWeight={400}
+								className="mt-1"
+							>
+								{ balance }
+							</MoneyText>
+						</div>
 					</div>
 				</div>
 			</Card>
