@@ -3,4 +3,5 @@ export interface PanelProps {
   value?: string;
   variant?: string;
   className?: string;
+  className1?: string;
 }

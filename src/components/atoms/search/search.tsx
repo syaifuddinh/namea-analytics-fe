@@ -7,6 +7,7 @@ export const InputSearch: React.FC<ISearchProps> = ({
   placeholder,
   className,
   onChange,
+  iconClassName,
 }) => {
   return (
     <div
@@ -15,7 +16,7 @@ export const InputSearch: React.FC<ISearchProps> = ({
         className
       )}
     >
-      <IconSearch />
+      <IconSearch className={clsx("mr-2", iconClassName)} />
       <input
         type="text"
         name={`${name}_keyword`}
