@@ -3,12 +3,15 @@ import clsx from "clsx";
 import Image from "next/image";
 import { ICardDashboard } from "./types";
 
-export const CardDashboard: React.FC<ICardDashboard> = ({
+export const CardDashboardSA: React.FC<ICardDashboard> = ({
   icon,
   placeholder,
   value,
   profit,
   percentage,
+  className,
+  imgStyle = "mb-[0.375rem]",
+  valueStyle,
 }) => {
   return (
     <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden">
@@ -21,7 +24,7 @@ export const CardDashboard: React.FC<ICardDashboard> = ({
                 alt=""
                 width={40}
                 height={40}
-                className="mb-[0.375rem]"
+                className={"mb-[1rem]"}
               />
               <div className="text-sm text-gray-6 font-extralight mb-[0.125rem]">
                 {placeholder}
@@ -29,7 +32,7 @@ export const CardDashboard: React.FC<ICardDashboard> = ({
               <div className="flex flex-row divide-x divide-gray-1 items-center">
                 <div
                   className={clsx(
-                    "text-gray-10 text-[1rem] pr-3 font-light",
+                    `text-gray-10 text-[1rem] pr-3 font-light tracking-[0.2px]`,
                     value.includes("Rp") && "flex flex-row items-center"
                   )}
                 >

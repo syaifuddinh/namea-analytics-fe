@@ -8,6 +8,7 @@ export const InputSearch: React.FC<ISearchProps> = ({
   className,
   onChange,
   iconClassName,
+  className1,
 }) => {
   return (
     <div
@@ -16,13 +17,14 @@ export const InputSearch: React.FC<ISearchProps> = ({
         className
       )}
     >
-      <IconSearch className={clsx("mr-2", iconClassName)} />
+      <IconSearch className={clsx("", iconClassName)} />
       <input
         type="text"
         name={`${name}_keyword`}
-        className={
-          "ml-3 bg-transparent border-0 text-gray-6 lg:text-sm w-full outline-none"
-        }
+        className={clsx(
+          "ml-3 bg-transparent border-0 text-gray-6 lg:text-sm w-full outline-none",
+          className1
+        )}
         style={{ fontWeight: 200 }}
         placeholder={placeholder}
         onChange={(evt) => onChange(evt.target.value)}

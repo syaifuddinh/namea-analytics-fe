@@ -16,8 +16,8 @@ import dummyListSuperAgent from "@/data/dummyListSuperAgent.json";
 import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
-import SelectInput from "@/components/atoms/input/select"
-import Button from "@/components/atoms/button" 
+import SelectInput from "@/components/atoms/input/select";
+import Button from "@/components/atoms/button";
 
 export default function SuperAgentDetail() {
   //   const lang = await getDictionary();
@@ -121,31 +121,30 @@ export default function SuperAgentDetail() {
           </div>
 
           <SelectInput
-              placeholder="All Status"
-              className="mr-2"
-              placeholderClassName="w-[86px]"
+            placeholder="All Status"
+            className="mr-2"
+            placeholderClassName="w-[86px]"
           />
 
-          <Button variant="default">
-            <IconAdd />
-            <span>Create Agent</span>
+          <Button variant="default" paddingR="pr-[1.25rem]">
+            <IconAdd className="!w-[1.25rem] !h-[1.25rem] mr-1" />
+            <div>Create Agent</div>
           </Button>
-
         </div>
         <div className="p-5 flex flex-row gap-3 border-b border-base-bg3">
           <CardDashboardDetail
             icon={"/images/total-agent.png"}
-            label={"875"}
+            value={"875"}
             placeholder={"Total Agent"}
           />
           <CardDashboardDetail
             icon={"/images/total-profit.png"}
-            label={"Rp500.950.450,00"}
+            value={"Rp500.950.450,00"}
             placeholder={"Total Profit"}
           />
           <CardDashboardDetail
             icon={"/images/total-active-agent.png"}
-            label={"640"}
+            value={"640"}
             placeholder={"Total Active Agent"}
           />
         </div>
