@@ -18,7 +18,7 @@ export const CardTop: React.FC<ICardTop> = ({
         className
       )}
     >
-      <div className="flex flex-col flex-1 border border-base-bg3 bg-base-bg4 rounded-xl p-5">
+      <div className="flex flex-col flex-1 border border-base-bg3 bg-base-bg4 rounded-xl pl-2 py-2 pr-5">
         <div className="flex flex-row items-center gap-[10px]">
           {logo ? (
             <Image src={logo} alt="logo" width={32} height={32} />

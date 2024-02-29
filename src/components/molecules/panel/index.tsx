@@ -1,5 +1,7 @@
-import Image from "next/image";
 import "./index.style.css";
+import Image from "next/image";
+import SubtitleText from "@/components/atoms/text/subtitle";
+import TitleText from "@/components/atoms/text/title";
 import { PanelProps } from "./types";
 import clsx from "clsx";
 
@@ -8,11 +10,21 @@ export default function Panel({
   value,
   variant,
   className,
+  className1,
 }: PanelProps) {
   return (
-    <div className={clsx(className ? "" : "panel relative min-h-[87px]")}>
-      <div className={`panel_label ${variant} relative z-10 h-[2.501rem]`}>
-        <div className="stripped pl-[14px] pr-4 py-[0.625rem] font-light text-sm">
+    <div className={clsx("panel relative min-h-[87px]", className)}>
+      <div
+        className={clsx(
+          `panel_label ${variant} relative z-10 h-[2.501rem]`,
+          className1
+        )}
+      >
+        <div
+          className={clsx(
+            `stripped pl-[14px] pr-4 py-[0.625rem] font-light text-[0.875rem]`
+          )}
+        >
           {label}
         </div>
       </div>
