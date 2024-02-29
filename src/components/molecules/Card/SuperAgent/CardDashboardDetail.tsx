@@ -3,7 +3,7 @@ import { ICardDashboardAgent } from "./types";
 
 export const CardDashboardDetail: React.FC<ICardDashboardAgent> = ({
   icon,
-  label,
+  value,
   placeholder,
 }) => {
   return (
@@ -20,8 +20,12 @@ export const CardDashboardDetail: React.FC<ICardDashboardAgent> = ({
                 className="mb-2"
               />
               <div className="flex flex-col">
-                <div className="text-base text-gray-10">{label}</div>
-                <div className="text-gray-6 text-sm">{placeholder}</div>
+                <div className="text-base text-gray-10 pb-[2px] font-light">
+                  {value}
+                </div>
+                <div className="text-gray-6 text-sm font-extralight">
+                  {placeholder}
+                </div>
               </div>
             </div>
           </div>

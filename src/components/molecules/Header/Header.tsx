@@ -14,7 +14,7 @@ export const Header: React.FC<IHeader> = ({
     <div
       className={clsx(
         "dashboard_header flex flex-col md:flex-row gap-3 md:items-center mt-8 justify-between",
-        divider && "border-b border-b-base-bg3 p-5"
+        divider && "border-b border-b-base-bg3 py-5"
       )}
     >
       <div

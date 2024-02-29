@@ -4,11 +4,14 @@ export interface ICardDashboard {
   value: string;
   profit: boolean;
   percentage: string;
+  className?: string;
+  imgStyle?: string;
+  valueStyle?: string;
 }
 
 export interface ICardDashboardAgent {
   icon: string;
-  label: string;
+  value: string;
   placeholder: string;
 }
 
