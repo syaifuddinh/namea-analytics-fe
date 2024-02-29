@@ -19,7 +19,7 @@ export interface ICardTop {
 export interface ICardProfit {
   iconDot?: JSX.Element;
   placeholder: string;
-  label: string;
+  value: string;
   profit: boolean;
   percentage: string;
   desc?: string;

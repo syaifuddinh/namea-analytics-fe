@@ -43,7 +43,7 @@ export const CardDashboard: React.FC<ICardDashboard> = ({
               {percentage}
             </div>
           </div>
-          <div className="text-xs text-gray-6">{desc}</div>
+          <div className="text-xs text-gray-6 font-extralight">{desc}</div>
         </div>
       </div>
     </div>
