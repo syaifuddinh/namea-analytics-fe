@@ -1,32 +1,22 @@
-import DatePeriodInput from "@/components/atoms/input/date-period"
-import AgentCard from "./agent-card"
+import Card from "@/components/atoms/card"
 
-export default function TrendAnalysis({
-	className
-}) {
+const Header = ({ title }) => (
+	<div className="font-light text-gray-10 h-[64px] flex items-center px-5 bg-base-bg5 border-y border-base-bg3 rounded-t-[12px]">
+		{ title }
+	</div>
+) 
+
+export default function AgentCard({ children, title, className = "" }) {
+
 	return (
-		<div className={`${className}`}>
-			<div className="flex justify-between items-center">
-				<div className="trend-analysis_title font-light text-[18px] leading-[26px] text-gray-10">
-					Trend Analysis
-				</div>
-
-				<DatePeriodInput />
+		<Card
+			headerElement={<Header title={title} />}
+			isDividerVisible={false}
+			isUsePaddingBottom={false}
+		>
+			<div className={className}>
+				{ children }
 			</div>
-
-			<div className="flex">
-				<AgentCard
-					title="Most Spent Agents"
-				>
-					
-				</AgentCard>
-
-				<AgentCard
-					title="Least Spent Agents"
-				>
-					
-				</AgentCard>
-			</div>
-		</div>
+		</Card>
 	)
 }
