@@ -11,7 +11,7 @@ export const HeaderProfit: React.FC<IHeaderProfit> = ({
   return (
     <div className="flex flex-1 flex-row items-center p-5">
       <div className="w-8 h-8 bg-gray-1 rounded-full mr-3" />
-      <div className="text-sm text-gray-10 font-medium flex flex-1">
+      <div className="text-base text-gray-10 font-light flex flex-1">
         {title}
       </div>
       <div

@@ -40,6 +40,12 @@ export default function PageAgent() {
     "December",
   ];
 
+  const labelStatus = [
+    { id: 1, label: "Deposit", bgColor: "bg-dot-blue" },
+    { id: 2, label: "Withdraw", bgColor: "bg-dot-blue1" },
+    { id: 3, label: "Login", bgColor: "bg-dot-blue2" },
+  ];
+
   return (
     <>
       <div className="flex flex-row flex-1 items-center mt-[44px]">
@@ -180,8 +186,10 @@ export default function PageAgent() {
         containerStyle="mb-[4rem]"
         renderHeader={
           <div className="flex flex-row items-center pr-2 pl-3 py-2 rounded-lg border border-gray-1 bg-base-bg3 max-h-max">
-            <div className="text-sm text-gray-6">View Member Analysis</div>
-            <IconChevronRight />
+            <div className="text-sm text-gray-6 font-extralight mr-1">
+              View Member Analysis
+            </div>
+            <IconChevronRight className="!w-5 !h-5" />
           </div>
         }
         renderContent={
@@ -238,9 +246,13 @@ export default function PageAgent() {
         renderContent={
           <>
             <div className="flex border-y border-y-gray-1 bg-base-bg5 p-[10px] gap-2 justify-end">
-              <CardStatus placeholder="Active" className="bg-dot-blue" />
-              <CardStatus placeholder="Withdraw" className="bg-dot-blue1" />
-              <CardStatus placeholder="Login" className="bg-dot-blue2" />
+              {labelStatus.map((item) => (
+                <CardStatus
+                  key={`label-status-${item.id}`}
+                  placeholder={item.label}
+                  className={item.bgColor}
+                />
+              ))}
             </div>
 
             <div className="mb-[6px] border-b border-b-gray-1 rounded-b-xl">
@@ -249,6 +261,7 @@ export default function PageAgent() {
                 maxValue={60000}
                 labels={labels}
                 xClassname="pl-[3rem] pr-[2.3rem]"
+                fixedBarWidth={28.08}
                 values={[
                   [48000, 48000, 48000, 48000, 48000, 48000, 48000, 48000],
                   [20000, 20000, 20000, 20000, 20000, 20000, 20000, 20000],
@@ -267,28 +280,28 @@ export default function PageAgent() {
             <>
               <div className="flex flex-col border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5">
                 <CardTop
-                  icon={<IconAdd className="w-3.5 text-gray-6" />}
+                  icon={<IconAdd className="!w-3.5 text-gray-6" />}
                   placeholder={"Home"}
                   value={"4.242 Visitors"}
                   barValue={85}
                   className="mb-5"
                 />
                 <CardTop
-                  icon={<IconAdd className="w-3.5 text-gray-6" />}
+                  icon={<IconAdd className="!w-3.5 text-gray-6" />}
                   placeholder={"Promo"}
                   value={"3.864 Visitors"}
                   barValue={70}
                   className="mb-5"
                 />
                 <CardTop
-                  icon={<IconAdd className="w-3.5 text-gray-6" />}
+                  icon={<IconAdd className="!w-3.5 text-gray-6" />}
                   placeholder={"Refferal"}
                   value={"3.468 Visitors"}
                   barValue={60}
                   className="mb-5"
                 />
                 <CardTop
-                  icon={<IconAdd className="w-3.5 text-gray-6" />}
+                  icon={<IconAdd className="!w-3.5 text-gray-6" />}
                   placeholder={"Account"}
                   value={"2.869 Visitors"}
                   barValue={50}
@@ -305,28 +318,28 @@ export default function PageAgent() {
               <div className="flex flex-col border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5">
                 <CardTop
                   logo="/images/logo/logo_btc.png"
-                  placeholder={"Home"}
+                  placeholder={"BTC"}
                   value={"4.242 Visitors"}
                   barValue={85}
                   className="mb-5"
                 />
                 <CardTop
                   logo="/images/logo/logo_eth.png"
-                  placeholder={"Promo"}
+                  placeholder={"ETH"}
                   value={"3.864 Visitors"}
                   barValue={70}
                   className="mb-5"
                 />
                 <CardTop
                   logo="/images/logo/logo_usdt.png"
-                  placeholder={"Refferal"}
+                  placeholder={"USDT"}
                   value={"3.468 Visitors"}
                   barValue={60}
                   className="mb-5"
                 />
                 <CardTop
                   logo="/images/logo/logo_bnb.png"
-                  placeholder={"Account"}
+                  placeholder={"BNB"}
                   value={"2.869 Visitors"}
                   barValue={50}
                 />
@@ -336,14 +349,14 @@ export default function PageAgent() {
         />
       </div>
 
-      <div className="w-full text-lg text-gray-10 font-medium mt-10">
+      <div className="w-full text-lg text-gray-10 font-light mt-10">
         Profit by Market Category
       </div>
 
       <div className="grid grid-cols-3 gap-5">
         <CardOverview
           customHeader={
-            <HeaderProfit title={"Token"} category={"Healthy"} value={"18"} />
+            <HeaderProfit title={"Token"} category={"Healthy"} value={"+18"} />
           }
           containerStyle="mb-0"
           divider={false}
@@ -351,36 +364,46 @@ export default function PageAgent() {
             <>
               <div className="flex flex-row p-5 gap-2">
                 <div className="w-[72%]">
-                  <Panel label="72%" variant="success" className="flex" />
+                  <Panel
+                    className="min-h-0"
+                    className1="h-8"
+                    label="72%"
+                    variant="success"
+                  />
                 </div>
                 <div className="w-[28%]">
-                  <Panel label="28%" variant="primary" className="flex" />
+                  <Panel
+                    className="min-h-0"
+                    className1="h-8"
+                    label="28%"
+                    variant="primary"
+                  />
                 </div>
               </div>
               <div className="flex flex-1 flex-col border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5 gap-4">
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
                 <CardProfit
                   placeholder={"Total Member"}
-                  label={"65.540"}
+                  value={"65.540"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
@@ -398,36 +421,46 @@ export default function PageAgent() {
             <>
               <div className="flex flex-row p-5 gap-2">
                 <div className="w-[72%]">
-                  <Panel label="72%" variant="success" className="flex" />
+                  <Panel
+                    className="min-h-0"
+                    className1="h-8"
+                    label="72%"
+                    variant="success"
+                  />
                 </div>
                 <div className="w-[28%]">
-                  <Panel label="28%" variant="primary" className="flex" />
+                  <Panel
+                    className="min-h-0"
+                    className1="h-8"
+                    label="28%"
+                    variant="primary"
+                  />
                 </div>
               </div>
               <div className="flex flex-1 flex-col border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5 gap-4">
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
                 <CardProfit
                   placeholder={"Total Member"}
-                  label={"65.540"}
+                  value={"65.540"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
@@ -437,7 +470,7 @@ export default function PageAgent() {
         />
         <CardOverview
           customHeader={
-            <HeaderProfit title={"Token"} category={"Healthy"} value={"18"} />
+            <HeaderProfit title={"Token"} category={"Healthy"} value={"+18"} />
           }
           containerStyle="mb-0"
           divider={false}
@@ -445,36 +478,46 @@ export default function PageAgent() {
             <>
               <div className="flex flex-row p-5 gap-2">
                 <div className="w-[72%]">
-                  <Panel label="72%" variant="success" className="flex" />
+                  <Panel
+                    className="min-h-0"
+                    className1="h-8"
+                    label="72%"
+                    variant="success"
+                  />
                 </div>
                 <div className="w-[28%]">
-                  <Panel label="28%" variant="primary" className="flex" />
+                  <Panel
+                    className="min-h-0"
+                    className1="h-8"
+                    label="28%"
+                    variant="primary"
+                  />
                 </div>
               </div>
               <div className="flex flex-1 flex-col border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5 gap-4">
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
                 <CardProfit
                   placeholder={"Total Member"}
-                  label={"65.540"}
+                  value={"65.540"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
@@ -485,43 +528,53 @@ export default function PageAgent() {
         <CardOverview
           containerStyle="mt-0"
           customHeader={
-            <HeaderProfit title={"Token"} category={"Healthy"} value={"18"} />
+            <HeaderProfit title={"Token"} category={"Healthy"} value={"+18"} />
           }
           divider={false}
           renderContent={
             <>
               <div className="flex flex-row p-5 gap-2">
                 <div className="w-[72%]">
-                  <Panel label="72%" variant="success" className="flex" />
+                  <Panel
+                    className="min-h-0"
+                    className1="h-8"
+                    label="72%"
+                    variant="success"
+                  />
                 </div>
                 <div className="w-[28%]">
-                  <Panel label="28%" variant="primary" className="flex" />
+                  <Panel
+                    className="min-h-0"
+                    className1="h-8"
+                    label="28%"
+                    variant="primary"
+                  />
                 </div>
               </div>
               <div className="flex flex-1 flex-col border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5 gap-4">
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
                 <CardProfit
                   placeholder={"Total Member"}
-                  label={"65.540"}
+                  value={"65.540"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
@@ -539,36 +592,46 @@ export default function PageAgent() {
             <>
               <div className="flex flex-row p-5 gap-2">
                 <div className="w-[72%]">
-                  <Panel label="72%" variant="success" className="flex" />
+                  <Panel
+                    className="min-h-0"
+                    className1="h-8"
+                    label="72%"
+                    variant="success"
+                  />
                 </div>
                 <div className="w-[28%]">
-                  <Panel label="28%" variant="primary" className="flex" />
+                  <Panel
+                    className="min-h-0"
+                    className1="h-8"
+                    label="28%"
+                    variant="primary"
+                  />
                 </div>
               </div>
               <div className="flex flex-1 flex-col border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5 gap-4">
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
                 <CardProfit
                   placeholder={"Total Member"}
-                  label={"65.540"}
+                  value={"65.540"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
@@ -579,43 +642,53 @@ export default function PageAgent() {
         <CardOverview
           containerStyle="mt-0"
           customHeader={
-            <HeaderProfit title={"Token"} category={"Healthy"} value={"18"} />
+            <HeaderProfit title={"Token"} category={"Healthy"} value={"+18"} />
           }
           divider={false}
           renderContent={
             <>
               <div className="flex flex-row p-5 gap-2">
                 <div className="w-[72%]">
-                  <Panel label="72%" variant="success" className="flex" />
+                  <Panel
+                    className="min-h-0"
+                    className1="h-8"
+                    label="72%"
+                    variant="success"
+                  />
                 </div>
                 <div className="w-[28%]">
-                  <Panel label="28%" variant="primary" className="flex" />
+                  <Panel
+                    className="min-h-0"
+                    className1="h-8"
+                    label="28%"
+                    variant="primary"
+                  />
                 </div>
               </div>
               <div className="flex flex-1 flex-col border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5 gap-4">
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
                 <CardProfit
                   placeholder={"Total Member"}
-                  label={"65.540"}
+                  value={"65.540"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  label={"Rp500.950.450,00"}
+                  value={"Rp500.950.450,00"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />

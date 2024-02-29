@@ -13,7 +13,9 @@ export const CardStatus: React.FC<ICardStatus> = ({
           className
         )}
       />
-      <div className="text-left text-gray-10 text-xs">{placeholder}</div>
+      <div className="text-left text-gray-10 text-sm font-light">
+        {placeholder}
+      </div>
     </div>
   );
 };
