@@ -20,3 +20,4 @@ export * from "./cashflow/financial-statement/image6";
 export * from "./costing/CostingDottedRightArrowIcon";
 export * from "./costing/CostingDottedLeftArrowIcon";
 export * from "./costing/StrongboxIcon";
+export * from "./costing/GlobalIcon";

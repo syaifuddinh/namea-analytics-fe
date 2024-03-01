@@ -62,11 +62,12 @@ type FrequencyInputType = {
 
 export default function FrequencyInput({ 
 	value,
-	onChange
+	onChange,
+	className = ""
 }: FrequencyInputType) {
 
  	return (
-	    <div>
+	    <div className={className}>
 	    	<RowOptionInput
 	    		value={value}
 	    		width="965px"
