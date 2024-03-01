@@ -58,7 +58,7 @@ export default function PageAgent() {
   return (
     <>
       <div className="flex flex-row flex-1 items-center mt-[44px]">
-        <button className="flex flex-row rounded-md border border-gray-1 bg-checkbox items-center pl-[10px] py-[6px] mr-[10px]">
+        <button className="flex flex-row rounded-md border border-gray-1 bg-checkbox items-center pl-[10px] pr-1 py-[6px] mr-[10px]">
           <Image
             src="/images/avatar_dummy.png"
             alt="super agent icon"
@@ -69,7 +69,7 @@ export default function PageAgent() {
             Website Name
           </div>
           <div className="flex flex-1 justify-end">
-            <IconDropdown className={"!w-[1.25rem !h-[1.25rem] pr-1"} />
+            <IconDropdown className={"!w-[1.25rem !h-[1.25rem]"} />
           </div>
         </button>
         <InputSearch
