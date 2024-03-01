@@ -1,9 +1,9 @@
 import * as React from "react"
-export const CostingDottedLeftArrowIcon = (props) => (
+export const CostingDottedLeftArrowIcon = ({ width = 88, height = 28, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={88}
-    height={28}
+    width={width}
+    height={height}
     fill="none"
     {...props}
   >

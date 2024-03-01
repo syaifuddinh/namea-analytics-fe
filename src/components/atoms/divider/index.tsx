@@ -6,6 +6,7 @@ for(let i = 0;i < 200;i++) {
 const Divider = ({
 	style = "solid", 
 	className = "",
+	height = "24px",
 	direction = "horizontal"
 }) => {
 	return (
@@ -22,7 +23,8 @@ const Divider = ({
 
 					{ direction === "vertical" && (
 						<div
-							className={`w-[1px] h-[24px] bg-gray-1 ${className}`}
+							className={`w-[1px] bg-gray-1 ${className}`}
+							style={{ height }}
 						>
 							
 						</div>
