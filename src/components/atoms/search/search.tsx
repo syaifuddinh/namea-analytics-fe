@@ -13,11 +13,11 @@ export const InputSearch: React.FC<ISearchProps> = ({
   return (
     <div
       className={clsx(
-        "flex flex-row flex-1 items-center border border-gray-1 bg-base-bg3 rounded-md px-[6px] py-[2px] mr-2",
+        "flex flex-row flex-1 items-center border border-gray-1 bg-base-bg3 rounded-md px-[6px] py-[2px]",
         className
       )}
     >
-      <IconSearch className={clsx("", iconClassName)} />
+      <IconSearch className={iconClassName} />
       <input
         type="text"
         name={`${name}_keyword`}
