@@ -58,7 +58,7 @@ export default function PageAgent() {
   return (
     <>
       <div className="flex flex-row flex-1 items-center mt-[44px]">
-        <button className="flex flex-row rounded-md border border-gray-1 bg-checkbox items-center pl-[10px] pr-1 py-[6px] mr-[10px]">
+        <button className="flex flex-row rounded-md border border-gray-1 bg-checkbox items-center pl-[10px] py-[6px] mr-[10px]">
           <Image
             src="/images/avatar_dummy.png"
             alt="super agent icon"
@@ -77,7 +77,7 @@ export default function PageAgent() {
           placeholder="Search website or brands"
           onChange={(value) => setSearch(value)}
           className="!py-[6px] !pl-2 !pr-[6px]"
-          iconClassName="!w-[1.5rem] !h-[1.5rem]"
+          iconClassName="!w-[1.5rem] !h-[1.25rem]"
           className1="!ml-1"
         />
       </div>
