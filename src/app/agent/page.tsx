@@ -46,6 +46,15 @@ export default function PageAgent() {
     { id: 3, label: "Login", bgColor: "bg-dot-blue2" },
   ];
 
+  const [page, setPage] = useState(0);
+
+  const labelPage = [
+    { id: 0, label: "Overview" },
+    { id: 1, label: "Member List" },
+    { id: 2, label: "Event" },
+    { id: 3, label: "Data Analyst" },
+  ];
+
   return (
     <>
       <div className="flex flex-row flex-1 items-center mt-[44px]">
@@ -69,33 +78,33 @@ export default function PageAgent() {
           onChange={(value) => setSearch(value)}
           className="!py-2"
           iconClassName="!w-[1.25rem] !h-[1.25rem]"
+          className1="ml-1"
         />
       </div>
 
       <div className="flex flex-1 flex-col border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden my-5">
-        <div className="flex flex-1 flex-col border-t border-gray-1 mt-[6px] bg-base-bg5 rounded-t-xl">
-          <div className="flex flex-1 p-5 items-center bg-gray-7 ">
+        <div className="flex flex-1 flex-col border-t border-gray-1 mt-1 bg-base-bg5 rounded-t-xl">
+          <div className="flex flex-1 p-[18px] items-center bg-gray-7 ">
             <div className="flex flex-row items-center bg-base-bg5 p-1 gap-1 rounded-[10px] border border-gray-9 text-sm text-gray-10 font-extralight">
-              <button
-                type="button"
-                className="border border-gray-1 bg-base-bg3 py-[6px] px-3 rounded-md"
-              >
-                Overview
-              </button>
-              <button type="button" className="py-[6px] px-3 text-gray-6">
-                Member List
-              </button>
-              <button type="button" className="py-[6px] px-3 text-gray-6">
-                Event
-              </button>
-              <button type="button" className="py-[6px] px-3 text-gray-6">
-                Data Analyst
-              </button>
+              {labelPage.map((item) => (
+                <button
+                  key={`label-page-${item.id}`}
+                  type="button"
+                  onClick={() => setPage(item.id)}
+                  className={clsx(
+                    "py-[4px] px-3",
+                    page === item.id &&
+                      "border border-gray-1 rounded-md bg-base-bg3 "
+                  )}
+                >
+                  {item.label}
+                </button>
+              ))}
             </div>
           </div>
         </div>
         <div className="h-[10px] border-x border-x-gray-1 mx-5" />
-        <div className="flex flex-row border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl justify-between p-5">
+        <div className="flex flex-row border-y border-y-gray-1 bg-base-bg5 mb-1 rounded-b-xl justify-between p-5">
           <div className="flex flex-row items-center">
             <div className="flex items-center mr-4">
               <Image
@@ -108,19 +117,19 @@ export default function PageAgent() {
             <div className="text-gray-10 text-base mr-3 font-light">
               Website Name
             </div>
-            <div className="flex rounded-full flex-row bg-success-1 items-center pr-[10px] pl-2 py-[4px]">
+            <div className="flex rounded-full flex-row bg-success-1 items-center pr-[10px] pl-2 py-[4px] h-[28px]">
               <div
                 className={clsx(
                   "bg-dot-blue h-2 w-2 rounded-full border-[3px] border-dot-blue-border mr-2"
                 )}
               />
-              <div className="text-left text-success-10 text-xs font-extralight">
+              <div className="text-left text-success-10 text-xs font-light">
                 Active
               </div>
             </div>
           </div>
-          <div className="flex flex-row items-center pr-[11px] pl-1 rounded-full border border-base-bg3 gap-2 max-h-max bg-base-bg3">
-            <IconURL className="" />
+          <div className="flex flex-row items-center pr-[11px] pl-1 rounded-full border border-base-bg3 gap-2 bg-base-bg3 h-[28px]">
+            <IconURL className="!w-5 !h-5" />
             <div className="text-sm text-gray-6 font-extralight">
               https://binance.co
             </div>
