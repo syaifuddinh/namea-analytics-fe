@@ -65,20 +65,20 @@ export default function PageAgent() {
             width={20}
             height={20}
           />
-          <div className="text-left text-gray-0 text-sm py-[2px] pl-2 mr-10 font-light">
+          <div className="text-left text-gray-0 text-sm py-[2px] pl-2 mr-[38px] font-light">
             Website Name
           </div>
           <div className="flex flex-1 justify-end">
-            <IconDropdown className={"!w-[1.25rem !h-[1.25rem]"} />
+            <IconDropdown className={"!w-[1.25rem !h-[1.25rem] pr-1"} />
           </div>
         </button>
         <InputSearch
           name={"WebOrBrands"}
           placeholder="Search website or brands"
           onChange={(value) => setSearch(value)}
-          className="!py-2"
+          className="!py-2 !pl-2 !pr-[6px]"
           iconClassName="!w-[1.25rem] !h-[1.25rem]"
-          className1="ml-1"
+          className1="!ml-1"
         />
       </div>
 
@@ -92,9 +92,9 @@ export default function PageAgent() {
                   type="button"
                   onClick={() => setPage(item.id)}
                   className={clsx(
-                    "py-[4px] px-3",
+                    "py-[4px] px-3 font-thin",
                     page === item.id &&
-                      "border border-gray-1 rounded-md bg-base-bg3 "
+                      "border border-gray-1 rounded-md bg-base-bg3 !font-extralight"
                   )}
                 >
                   {item.label}
@@ -104,7 +104,7 @@ export default function PageAgent() {
           </div>
         </div>
         <div className="h-[10px] border-x border-x-gray-1 mx-5" />
-        <div className="flex flex-row border-y border-y-gray-1 bg-base-bg5 mb-1 rounded-b-xl justify-between p-5">
+        <div className="flex flex-row border-y border-y-gray-1 bg-base-bg5 mb-1 rounded-b-xl justify-between p-5 items-center">
           <div className="flex flex-row items-center">
             <div className="flex items-center mr-4">
               <Image
@@ -128,7 +128,7 @@ export default function PageAgent() {
               </div>
             </div>
           </div>
-          <div className="flex flex-row items-center pr-[11px] pl-1 rounded-full border border-base-bg3 gap-2 bg-base-bg3 h-[28px]">
+          <div className="flex flex-row items-center pr-[11px] pl-1 rounded-full border border-base-bg3 gap-2 bg-base-bg3 h-[26px]">
             <IconURL className="!w-5 !h-5" />
             <div className="text-sm text-gray-6 font-extralight">
               https://binance.co
