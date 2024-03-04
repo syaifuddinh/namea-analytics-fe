@@ -17,10 +17,24 @@ export const CardProfit: React.FC<ICardProfit> = ({
           <div className="text-sm text-gray-6 font-extralight mb-1">
             {placeholder}
           </div>
-          <div className="text-gray-10 text-[1rem] mb-4">{value}</div>
+          <div
+            className={clsx(
+              "text-gray-10 text-[1rem] mb-4",
+              value.includes("Rp") && "flex flex-row items-center"
+            )}
+          >
+            {value}
+            {value.includes("Rp") && (
+              <div className="text-gray-6 text-[1rem] font-light">,00</div>
+            )}
+          </div>
         </div>
         <div className="flex flex-row items-start gap-2">
-          <div className="flex flex-row gap-[0.125rem] items-center bg-success-1 py-[2px] pl-1 pr-[6px] rounded-3xl max-w-max">
+          <div
+            className={`flex flex-row gap-[0.125rem] items-center ${
+              profit ? "bg-success-1" : "bg-alert-1"
+            } py-[2px] pl-1 pr-[6px] rounded-3xl max-w-max`}
+          >
             {profit ? (
               <IconArrowUp className="text-success-10 !w-[1.25rem] !h-[1.25rem]" />
             ) : (
