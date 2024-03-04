@@ -6,6 +6,8 @@ export const Calendar: React.FC<ICalenderProps> = ({
   name,
   placeholder,
   className,
+  titleStyle,
+  iconStyle,
   onChange,
 }) => {
   return (
@@ -16,11 +18,16 @@ export const Calendar: React.FC<ICalenderProps> = ({
       )}
     >
       <IconCalender className="pr-1" />
-      <div className="text-gray-6 lg:text-sm font-extralight pr-6">
+      <div
+        className={clsx(
+          "text-gray-6 lg:text-sm font-extralight pr-6",
+          titleStyle
+        )}
+      >
         2 December - 20 December
       </div>
       <div className="flex flex-1 justify-end">
-        <IconDropdown />
+        <IconDropdown className={iconStyle} />
       </div>
     </button>
   );

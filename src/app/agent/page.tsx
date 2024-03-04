@@ -46,17 +46,26 @@ export default function PageAgent() {
     { id: 3, label: "Login", bgColor: "bg-dot-blue2" },
   ];
 
+  const [page, setPage] = useState(0);
+
+  const labelPage = [
+    { id: 0, label: "Overview" },
+    { id: 1, label: "Member List" },
+    { id: 2, label: "Event" },
+    { id: 3, label: "Data Analyst" },
+  ];
+
   return (
     <>
       <div className="flex flex-row flex-1 items-center mt-[44px]">
-        <button className="flex flex-row rounded-md border border-gray-1 bg-checkbox items-center pl-[10px] pr-2 py-1 mr-[10px]">
+        <button className="flex flex-row rounded-md border border-gray-1 bg-checkbox items-center pl-[10px] pr-1 py-[6px] mr-[10px]">
           <Image
             src="/images/avatar_dummy.png"
             alt="super agent icon"
             width={20}
             height={20}
           />
-          <div className="text-left text-gray-0 text-sm py-[2px] pl-2 mr-10 font-light">
+          <div className="text-left text-gray-0 text-sm py-[2px] pl-2 mr-[38px] font-light">
             Website Name
           </div>
           <div className="flex flex-1 justify-end">
@@ -67,35 +76,35 @@ export default function PageAgent() {
           name={"WebOrBrands"}
           placeholder="Search website or brands"
           onChange={(value) => setSearch(value)}
-          className="!py-2"
-          iconClassName="!w-[1.25rem] !h-[1.25rem]"
+          className="!py-[6px] !pl-2 !pr-[6px]"
+          iconClassName="!w-[1.5rem] !h-[1.25rem]"
+          className1="!ml-1"
         />
       </div>
 
       <div className="flex flex-1 flex-col border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden my-5">
-        <div className="flex flex-1 flex-col border-t border-gray-1 mt-[6px] bg-base-bg5 rounded-t-xl">
-          <div className="flex flex-1 p-5 items-center bg-gray-7 ">
+        <div className="flex flex-1 flex-col border-t border-gray-1 mt-1 bg-base-bg5 rounded-t-xl">
+          <div className="flex flex-1 p-[18px] items-center bg-gray-7 ">
             <div className="flex flex-row items-center bg-base-bg5 p-1 gap-1 rounded-[10px] border border-gray-9 text-sm text-gray-10 font-extralight">
-              <button
-                type="button"
-                className="border border-gray-1 bg-base-bg3 py-[6px] px-3 rounded-md"
-              >
-                Overview
-              </button>
-              <button type="button" className="py-[6px] px-3 text-gray-6">
-                Member List
-              </button>
-              <button type="button" className="py-[6px] px-3 text-gray-6">
-                Event
-              </button>
-              <button type="button" className="py-[6px] px-3 text-gray-6">
-                Data Analyst
-              </button>
+              {labelPage.map((item) => (
+                <button
+                  key={`label-page-${item.id}`}
+                  type="button"
+                  onClick={() => setPage(item.id)}
+                  className={clsx(
+                    "py-[4px] px-3 font-thin",
+                    page === item.id &&
+                      "border border-gray-1 rounded-md bg-base-bg3 !font-extralight"
+                  )}
+                >
+                  {item.label}
+                </button>
+              ))}
             </div>
           </div>
         </div>
         <div className="h-[10px] border-x border-x-gray-1 mx-5" />
-        <div className="flex flex-row border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl justify-between p-5">
+        <div className="flex flex-row border-y border-y-gray-1 bg-base-bg5 mb-1 rounded-b-xl justify-between p-5 items-center">
           <div className="flex flex-row items-center">
             <div className="flex items-center mr-4">
               <Image
@@ -108,19 +117,19 @@ export default function PageAgent() {
             <div className="text-gray-10 text-base mr-3 font-light">
               Website Name
             </div>
-            <div className="flex rounded-full flex-row bg-success-1 items-center pr-[10px] pl-2 py-[4px]">
+            <div className="flex rounded-full flex-row bg-success-1 items-center pr-[10px] pl-2 py-[4px] h-[28px]">
               <div
                 className={clsx(
                   "bg-dot-blue h-2 w-2 rounded-full border-[3px] border-dot-blue-border mr-2"
                 )}
               />
-              <div className="text-left text-success-10 text-xs font-extralight">
+              <div className="text-left text-success-10 text-xs font-light">
                 Active
               </div>
             </div>
           </div>
-          <div className="flex flex-row items-center pr-[11px] pl-1 rounded-full border border-base-bg3 gap-2 max-h-max bg-base-bg3">
-            <IconURL className="" />
+          <div className="flex flex-row items-center pr-[11px] pl-1 rounded-full border border-base-bg3 gap-2 bg-base-bg3 h-[26px]">
+            <IconURL className="!w-5 !h-5" />
             <div className="text-sm text-gray-6 font-extralight">
               https://binance.co
             </div>
@@ -136,7 +145,11 @@ export default function PageAgent() {
         subPlaceholder="Show a comprehensive overview of data from different sources."
       >
         <div className="flex items-center">
-          <Calendar className="w-[272px] h-8" />
+          <Calendar
+            className="!w-[272px] !h-8"
+            titleStyle="!pr-0 mr-[22px] !tracking-[0.25px] w-[190px]"
+            iconStyle="!w-[1.25rem] !h-[1.25rem]"
+          />
         </div>
       </Header>
 
@@ -155,22 +168,22 @@ export default function PageAgent() {
                 <Panel label="Ethereum" value="25" variant="primary" />
               </div>
             </div>
-            <div className="flex flex-1 flex-row border-y border-y-gray-1 mb-[6px] rounded-b-xl p-5 gap-4">
+            <div className="flex flex-1 flex-row border-y border-y-gray-1 mb-[4px] rounded-b-xl p-[1.125rem] gap-4 bg-base-bg5">
               <CardDashboard
                 placeholder={"Total Revenue"}
-                value={"Rp500.950.450,00"}
+                value={"Rp500.950.450"}
                 profit={true}
                 percentage={"23.8% (+24)"}
               />
               <CardDashboard
                 placeholder={"Ethereum Revenue"}
-                value={"Rp245.300.685,00"}
+                value={"Rp245.300.685"}
                 profit={false}
                 percentage={"-16.5% (-8)"}
               />
               <CardDashboard
-                placeholder={"Total Turn Over"}
-                value={"Rp500.950.450,00"}
+                placeholder={"Total Turnover"}
+                value={"Rp500.950.450"}
                 profit={true}
                 percentage={"23.8% (+24)"}
               />
@@ -193,7 +206,7 @@ export default function PageAgent() {
           </div>
         }
         renderContent={
-          <div className="grid grid-cols-3 border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5 gap-4">
+          <div className="grid grid-cols-3 border-y border-y-gray-1 bg-base-bg5 mb-[4px] rounded-b-xl p-[1.125rem] gap-4">
             <CardDashboard
               placeholder={"Total Member"}
               value={"54,695"}
@@ -216,7 +229,7 @@ export default function PageAgent() {
               desc={"compared to last year"}
             />
             <CardDashboard
-              placeholder={"Avg. Engangement Time"}
+              placeholder={"Avg. Engagement Time"}
               value={"1hr 24min"}
               profit={false}
               percentage={"-16.5% (-8)"}
@@ -224,14 +237,14 @@ export default function PageAgent() {
             />
             <CardDashboard
               placeholder={"Total Deposit"}
-              value={"Rp500.950.450,00"}
+              value={"Rp500.950.450"}
               profit={true}
               percentage={"23.8% (+24)"}
               desc={"compared to last year"}
             />
             <CardDashboard
               placeholder={"Total Withdraw"}
-              value={"Rp492.201.500,00"}
+              value={"Rp492.201.500"}
               profit={false}
               percentage={"-16.5% (-8)"}
               desc={"compared to last year"}
@@ -384,14 +397,14 @@ export default function PageAgent() {
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
@@ -403,7 +416,7 @@ export default function PageAgent() {
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
@@ -441,14 +454,14 @@ export default function PageAgent() {
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
@@ -460,7 +473,7 @@ export default function PageAgent() {
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
@@ -498,14 +511,14 @@ export default function PageAgent() {
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
@@ -517,7 +530,7 @@ export default function PageAgent() {
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
@@ -555,14 +568,14 @@ export default function PageAgent() {
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
@@ -574,7 +587,7 @@ export default function PageAgent() {
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
@@ -612,14 +625,14 @@ export default function PageAgent() {
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
@@ -631,7 +644,7 @@ export default function PageAgent() {
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
@@ -669,14 +682,14 @@ export default function PageAgent() {
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
@@ -688,7 +701,7 @@ export default function PageAgent() {
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />

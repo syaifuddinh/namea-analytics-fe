@@ -18,7 +18,7 @@ export const CardOverview: React.FC<ICardOverview> = ({
         containerStyle
       )}
     >
-      <div className="flex flex-1 flex-col border-t border-gray-1 mt-[6px] bg-base-bg5 rounded-t-xl">
+      <div className="flex flex-1 flex-col border-t border-gray-1 mt-1 bg-base-bg5 rounded-t-xl">
         {customHeader ? (
           customHeader
         ) : (

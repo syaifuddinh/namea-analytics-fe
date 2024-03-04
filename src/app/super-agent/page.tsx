@@ -28,7 +28,7 @@ export default function PageSuperAgent() {
             name={"SuperAgent"}
             placeholder="Search super agent by name or code..."
             onChange={(value) => setSearch(value)}
-            className="w-[375px] h-8"
+            className="w-[375px] h-8 mr-2"
             className1="ml-1"
           />
           <Calendar className="w-[272px] h-8" />
