@@ -259,7 +259,7 @@ export default function PageAgent() {
         containerStyle="mb-[4rem]"
         renderContent={
           <>
-            <div className="flex border-y border-y-gray-1 bg-base-bg5 px-5 py-[10px] gap-2 justify-end">
+            <div className="flex border-y border-y-gray-1 bg-base-bg5 px-5 py-[8px] gap-2 justify-end">
               {labelStatus.map((item) => (
                 <CardStatus
                   key={`label-status-${item.id}`}
@@ -269,7 +269,7 @@ export default function PageAgent() {
               ))}
             </div>
 
-            <div className="mb-[6px] border-b border-b-gray-1 rounded-b-xl">
+            <div className="mb-[4px] border-b border-b-gray-1 rounded-b-xl">
               <CustomChart
                 variant="bar"
                 maxValue={60000}
