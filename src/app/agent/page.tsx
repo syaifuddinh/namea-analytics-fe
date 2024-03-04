@@ -206,7 +206,7 @@ export default function PageAgent() {
           </div>
         }
         renderContent={
-          <div className="grid grid-cols-3 border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5 gap-4">
+          <div className="grid grid-cols-3 border-y border-y-gray-1 bg-base-bg5 mb-[4px] rounded-b-xl p-5 gap-4">
             <CardDashboard
               placeholder={"Total Member"}
               value={"54,695"}
@@ -229,7 +229,7 @@ export default function PageAgent() {
               desc={"compared to last year"}
             />
             <CardDashboard
-              placeholder={"Avg. Engangement Time"}
+              placeholder={"Avg. Engagement Time"}
               value={"1hr 24min"}
               profit={false}
               percentage={"-16.5% (-8)"}
@@ -237,14 +237,14 @@ export default function PageAgent() {
             />
             <CardDashboard
               placeholder={"Total Deposit"}
-              value={"Rp500.950.450,00"}
+              value={"Rp500.950.450"}
               profit={true}
               percentage={"23.8% (+24)"}
               desc={"compared to last year"}
             />
             <CardDashboard
               placeholder={"Total Withdraw"}
-              value={"Rp492.201.500,00"}
+              value={"Rp492.201.500"}
               profit={false}
               percentage={"-16.5% (-8)"}
               desc={"compared to last year"}
@@ -397,14 +397,14 @@ export default function PageAgent() {
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
@@ -416,7 +416,7 @@ export default function PageAgent() {
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
@@ -454,14 +454,14 @@ export default function PageAgent() {
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
@@ -473,7 +473,7 @@ export default function PageAgent() {
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
@@ -511,14 +511,14 @@ export default function PageAgent() {
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
@@ -530,7 +530,7 @@ export default function PageAgent() {
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
@@ -568,14 +568,14 @@ export default function PageAgent() {
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
@@ -587,7 +587,7 @@ export default function PageAgent() {
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
@@ -625,14 +625,14 @@ export default function PageAgent() {
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
@@ -644,7 +644,7 @@ export default function PageAgent() {
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
@@ -682,14 +682,14 @@ export default function PageAgent() {
                 <CardProfit
                   iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
                   placeholder={"Total Transaction"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
                 <CardProfit
                   iconDot={<Dot className="bg-alert-10 border-alert-2" />}
                   placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={false}
                   percentage={"16.5% (-8)"}
                 />
@@ -701,7 +701,7 @@ export default function PageAgent() {
                 />
                 <CardProfit
                   placeholder={"Total Costing"}
-                  value={"Rp500.950.450,00"}
+                  value={"Rp500.950.450"}
                   profit={true}
                   percentage={"23.8% (+24)"}
                 />
