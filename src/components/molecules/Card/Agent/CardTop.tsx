@@ -1,4 +1,4 @@
-import { IconArrowDown, IconArrowUp } from "@/components/atoms/Icons";
+import { IconAdd, IconArrowDown, IconArrowUp } from "@/components/atoms/Icons";
 import clsx from "clsx";
 import { ICardTop } from "./types";
 import Image from "next/image";
@@ -24,7 +24,7 @@ export const CardTop: React.FC<ICardTop> = ({
             <Image src={logo} alt="logo" width={32} height={32} />
           ) : (
             <div className="flex border border-gray-1 bg-base-bg3 w-8 h-8 items-center justify-center rounded-[4px]">
-              {icon}
+              <IconAdd className="!w-3.5 text-gray-6" />
             </div>
           )}
           <div className="flex flex-1 flex-col">

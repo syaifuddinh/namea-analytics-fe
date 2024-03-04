@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "placeholder": "Top Pages",
+    "dataTopPages": [
+      {
+        "id": 1,
+        "logo": "",
+        "placeholder": "Home",
+        "value": "4.242 Visitors",
+        "barValue": 85
+      },
+      {
+        "id": 2,
+        "logo": "",
+        "placeholder": "Promo",
+        "value": "3.864 Visitors",
+        "barValue": 70
+      },
+      {
+        "id": 3,
+        "logo": "",
+        "placeholder": "Refferal",
+        "value": "3.468 Visitors",
+        "barValue": 65
+      },
+      {
+        "id": 4,
+        "logo": "",
+        "placeholder": "Account",
+        "value": "2.869 Visitors",
+        "barValue": 50
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "placeholder": "Top Markets",
+    "dataTopPages": [
+      {
+        "id": 1,
+        "logo": "/images/logo/logo_btc.png",
+        "placeholder": "BTC",
+        "value": "4.242 Visitors",
+        "barValue": 85
+      },
+      {
+        "id": 2,
+        "logo": "/images/logo/logo_eth.png",
+        "placeholder": "ETH",
+        "value": "3.864 Visitors",
+        "barValue": 70
+      },
+      {
+        "id": 3,
+        "logo": "/images/logo/logo_usdt.png",
+        "placeholder": "USDT",
+        "value": "3.468 Visitors",
+        "barValue": 65
+      },
+      {
+        "id": 4,
+        "logo": "/images/logo/logo_bnb.png",
+        "placeholder": "BNB",
+        "value": "2.869 Visitors",
+        "barValue": 50
+      }
+    ]
+  }
+]

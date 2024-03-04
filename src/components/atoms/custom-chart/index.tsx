@@ -24,17 +24,20 @@ const CustomChart = ({
   maxValue = 0,
   chartPaddingTop = "1.75rem",
   contentHeight = 200,
+  minHeight = 200,
+  maxHeight = 200,
   offsetY = "0px",
   fixedBarWidth = null,
   onGenerateTooltip,
   onGenerateLegend,
+  maxAmount = 5,
+  yChartStyle = "",
 }) => {
   const gridElement = useRef(null);
   const canvasElement = useRef(null);
   const [yAxeLabels, setYAxeLabels] = useState(() => {
     const response = [];
     if (maxValue < 1) return [];
-    const maxAmount = 5;
     const plafond = maxValue / maxAmount;
     let i = 0;
     for (i = maxAmount; i > 0; i--) {
@@ -109,7 +112,9 @@ const CustomChart = ({
     >
       <div className="flex">
         {isShowYAxes === true && (
-          <div className="custom-chart_y flex flex-col gap-[24px] py-[20px] px-[12px] border-r border-base-bg3 max-w-[3.4378rem] min-w-[3.4378rem] min-h-[16rem]">
+          <div
+            className={`custom-chart_y flex flex-col gap-[24px] py-[20px] px-[12px] border-r border-base-bg3 max-w-[3.4378rem] min-w-[3.4378rem] min-h-[16rem] ${yChartStyle}`}
+          >
             {yAxeLabels.map((item) => (
               <div
                 key={item}
@@ -130,8 +135,8 @@ const CustomChart = ({
             className={`custom-chart_grid relative flex gap-[12px] flex-wrap overflow-hidden `}
             style={{
               height: contentHeight + "px",
-              maxHeight: contentHeight + "px",
-              minHeight: contentHeight + "px",
+              maxHeight: maxHeight + "px",
+              minHeight: minHeight + "px",
             }}
           >
             {dotList.map((item) => (
