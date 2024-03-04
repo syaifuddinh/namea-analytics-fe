@@ -168,7 +168,7 @@ export default function PageAgent() {
                 <Panel label="Ethereum" value="25" variant="primary" />
               </div>
             </div>
-            <div className="flex flex-1 flex-row border-y border-y-gray-1 mb-[4px] rounded-b-xl p-5 gap-4 bg-base-bg5">
+            <div className="flex flex-1 flex-row border-y border-y-gray-1 mb-[4px] rounded-b-xl p-[1.125rem] gap-4 bg-base-bg5">
               <CardDashboard
                 placeholder={"Total Revenue"}
                 value={"Rp500.950.450"}
