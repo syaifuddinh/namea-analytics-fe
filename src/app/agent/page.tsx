@@ -25,6 +25,7 @@ import Panel from "@/components/molecules/panel";
 import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
+import dummyTopPagesMarket from "@/data/dummyTopPagesMarkets.json";
 
 export default function PageAgent() {
   //   const lang = await getDictionary();
@@ -258,7 +259,7 @@ export default function PageAgent() {
         containerStyle="mb-[4rem]"
         renderContent={
           <>
-            <div className="flex border-y border-y-gray-1 bg-base-bg5 p-[10px] gap-2 justify-end">
+            <div className="flex border-y border-y-gray-1 bg-base-bg5 px-5 py-[10px] gap-2 justify-end">
               {labelStatus.map((item) => (
                 <CardStatus
                   key={`label-status-${item.id}`}
@@ -272,9 +273,12 @@ export default function PageAgent() {
               <CustomChart
                 variant="bar"
                 maxValue={60000}
+                maxAmount={6}
                 labels={labels}
                 xClassname="pl-[3rem] pr-[2.3rem]"
+                yChartStyle="!min-w-[47px] !pl-[10px]"
                 fixedBarWidth={28.08}
+                minHeight={250}
                 values={[
                   [48000, 48000, 48000, 48000, 48000, 48000, 48000, 48000],
                   [20000, 20000, 20000, 20000, 20000, 20000, 20000, 20000],
@@ -287,79 +291,26 @@ export default function PageAgent() {
       />
 
       <div className="flex flex-row items-center gap-5">
-        <CardOverview
-          placeholder="Top Pages"
-          renderContent={
-            <>
-              <div className="flex flex-col border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5">
-                <CardTop
-                  icon={<IconAdd className="!w-3.5 text-gray-6" />}
-                  placeholder={"Home"}
-                  value={"4.242 Visitors"}
-                  barValue={85}
-                  className="mb-5"
-                />
-                <CardTop
-                  icon={<IconAdd className="!w-3.5 text-gray-6" />}
-                  placeholder={"Promo"}
-                  value={"3.864 Visitors"}
-                  barValue={70}
-                  className="mb-5"
-                />
-                <CardTop
-                  icon={<IconAdd className="!w-3.5 text-gray-6" />}
-                  placeholder={"Refferal"}
-                  value={"3.468 Visitors"}
-                  barValue={60}
-                  className="mb-5"
-                />
-                <CardTop
-                  icon={<IconAdd className="!w-3.5 text-gray-6" />}
-                  placeholder={"Account"}
-                  value={"2.869 Visitors"}
-                  barValue={50}
-                />
+        {dummyTopPagesMarket.map((item) => (
+          <CardOverview
+            key={`top-chart-${item.id}`}
+            placeholder={item.placeholder}
+            renderContent={
+              <div className="flex flex-col border-y border-y-gray-1 bg-base-bg5 mb-[4px] rounded-b-xl p-5">
+                {item.dataTopPages.map((i, x) => (
+                  <CardTop
+                    key={`data-top-${i.id}`}
+                    logo={i.logo}
+                    placeholder={i.placeholder}
+                    value={i.value}
+                    barValue={i.barValue}
+                    className={x !== item.dataTopPages.length - 1 ? "mb-5" : ""}
+                  />
+                ))}
               </div>
-            </>
-          }
-        />
-
-        <CardOverview
-          placeholder="Top Markets"
-          renderContent={
-            <>
-              <div className="flex flex-col border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5">
-                <CardTop
-                  logo="/images/logo/logo_btc.png"
-                  placeholder={"BTC"}
-                  value={"4.242 Visitors"}
-                  barValue={85}
-                  className="mb-5"
-                />
-                <CardTop
-                  logo="/images/logo/logo_eth.png"
-                  placeholder={"ETH"}
-                  value={"3.864 Visitors"}
-                  barValue={70}
-                  className="mb-5"
-                />
-                <CardTop
-                  logo="/images/logo/logo_usdt.png"
-                  placeholder={"USDT"}
-                  value={"3.468 Visitors"}
-                  barValue={60}
-                  className="mb-5"
-                />
-                <CardTop
-                  logo="/images/logo/logo_bnb.png"
-                  placeholder={"BNB"}
-                  value={"2.869 Visitors"}
-                  barValue={50}
-                />
-              </div>
-            </>
-          }
-        />
+            }
+          />
+        ))}
       </div>
 
       <div className="w-full text-lg text-gray-10 font-light mt-10">
