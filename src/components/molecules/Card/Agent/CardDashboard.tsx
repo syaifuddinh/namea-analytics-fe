@@ -28,7 +28,11 @@ export const CardDashboard: React.FC<ICardDashboard> = ({
           )}
         </div>
         <div className="flex flex-row items-center gap-2">
-          <div className="flex flex-row gap-1 items-center bg-success-1 py-[2px] pl-1 pr-[6px] rounded-3xl max-w-max">
+          <div
+            className={`flex flex-row gap-1 items-center ${
+              profit ? "bg-success-1" : "bg-alert-1"
+            } py-[2px] pl-1 pr-[6px] rounded-3xl max-w-max`}
+          >
             {profit ? (
               <IconArrowUp className="text-success-10 !w-[13px] !h-[13px]" />
             ) : (

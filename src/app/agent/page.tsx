@@ -145,7 +145,11 @@ export default function PageAgent() {
         subPlaceholder="Show a comprehensive overview of data from different sources."
       >
         <div className="flex items-center">
-          <Calendar className="w-[272px] h-8" />
+          <Calendar
+            className="w-[272px] h-8"
+            titleStyle="pr-0 tracking-[0.25px]"
+            iconStyle="!w-[1.25rem] !h-[1.25rem]"
+          />
         </div>
       </Header>
 
@@ -164,22 +168,22 @@ export default function PageAgent() {
                 <Panel label="Ethereum" value="25" variant="primary" />
               </div>
             </div>
-            <div className="flex flex-1 flex-row border-y border-y-gray-1 mb-[6px] rounded-b-xl p-5 gap-4">
+            <div className="flex flex-1 flex-row border-y border-y-gray-1 mb-[4px] rounded-b-xl p-5 gap-4 bg-base-bg5">
               <CardDashboard
                 placeholder={"Total Revenue"}
-                value={"Rp500.950.450,00"}
+                value={"Rp500.950.450"}
                 profit={true}
                 percentage={"23.8% (+24)"}
               />
               <CardDashboard
                 placeholder={"Ethereum Revenue"}
-                value={"Rp245.300.685,00"}
+                value={"Rp245.300.685"}
                 profit={false}
                 percentage={"-16.5% (-8)"}
               />
               <CardDashboard
-                placeholder={"Total Turn Over"}
-                value={"Rp500.950.450,00"}
+                placeholder={"Total Turnover"}
+                value={"Rp500.950.450"}
                 profit={true}
                 percentage={"23.8% (+24)"}
               />
