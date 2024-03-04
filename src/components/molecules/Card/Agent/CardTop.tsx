@@ -14,7 +14,7 @@ export const CardTop: React.FC<ICardTop> = ({
   return (
     <div
       className={clsx(
-        "flex flex-1 border border-gray-1 rounded-2xl bg-base-bg4 overflow-hidden p-5",
+        "flex flex-1 border border-gray-1 rounded-2xl bg-base-bg4 overflow-hidden p-[1.125rem]",
         className
       )}
     >
@@ -24,12 +24,14 @@ export const CardTop: React.FC<ICardTop> = ({
             <Image src={logo} alt="logo" width={32} height={32} />
           ) : (
             <div className="flex border border-gray-1 bg-base-bg3 w-8 h-8 items-center justify-center rounded-[4px]">
-              <IconAdd className="!w-3.5 text-gray-6" />
+              <IconAdd className="!w-[1.25rem] text-gray-6" />
             </div>
           )}
           <div className="flex flex-1 flex-col">
             <div className="flex flex-1 flex-row items-center justify-between mb-[6px]">
-              <div className="text-sm text-gray-10">{placeholder}</div>
+              <div className="text-sm text-gray-10 font-light">
+                {placeholder}
+              </div>
               <div className="text-sm text-success-10">{value}</div>
             </div>
             <div className="w-full bg-success-1 rounded-full h-1.5">
