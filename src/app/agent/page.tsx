@@ -206,7 +206,7 @@ export default function PageAgent() {
           </div>
         }
         renderContent={
-          <div className="grid grid-cols-3 border-y border-y-gray-1 bg-base-bg5 mb-[4px] rounded-b-xl p-5 gap-4">
+          <div className="grid grid-cols-3 border-y border-y-gray-1 bg-base-bg5 mb-[4px] rounded-b-xl p-[1.125rem] gap-4">
             <CardDashboard
               placeholder={"Total Member"}
               value={"54,695"}
