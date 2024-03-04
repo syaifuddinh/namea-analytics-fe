@@ -27,7 +27,7 @@ export const CardProfit: React.FC<ICardProfit> = ({
           <div
             className={clsx(
               "text-gray-10 text-[1rem]",
-              value.includes("Rp") && "flex flex-row items-center"
+              value.includes("Rp") && "flex flex-row items-center font-light"
             )}
           >
             {value}
