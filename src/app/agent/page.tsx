@@ -146,8 +146,8 @@ export default function PageAgent() {
       >
         <div className="flex items-center">
           <Calendar
-            className="w-[272px] h-8"
-            titleStyle="pr-0 tracking-[0.25px]"
+            className="!w-[272px] !h-8"
+            titleStyle="!pr-0 !tracking-[0.25px]"
             iconStyle="!w-[1.25rem] !h-[1.25rem]"
           />
         </div>
