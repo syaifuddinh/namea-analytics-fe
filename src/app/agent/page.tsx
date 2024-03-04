@@ -296,7 +296,7 @@ export default function PageAgent() {
             key={`top-chart-${item.id}`}
             placeholder={item.placeholder}
             renderContent={
-              <div className="flex flex-col border-y border-y-gray-1 bg-base-bg5 mb-[4px] rounded-b-xl p-5">
+              <div className="flex flex-col border-y border-y-gray-1 bg-base-bg5 mb-[4px] rounded-b-xl p-[1.125rem]">
                 {item.dataTopPages.map((i, x) => (
                   <CardTop
                     key={`data-top-${i.id}`}
