@@ -27,7 +27,7 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
           </div>
         </div>
         <div className="border-l border-l-gray-1 h-5" />
-        <div className="flex flex-1 flex-row items-center pl-[48px] gap-16">
+        <div className="flex flex-1 flex-row items-center pl-[48px]">
           <div className="flex flex-1 flex-col">
             <div className="text-gray-6 text-sm font-extralight mb-1">
               Profit Bitcoin

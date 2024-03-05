@@ -66,7 +66,7 @@ export default function MemberListAgent() {
               </div>
             </div>
             <div className="border-l border-l-gray-1 h-5" />
-            <div className="flex flex-1 flex-row items-center pl-12">
+            <div className="flex flex-1 flex-row items-center pl-12 gap-16">
               <div className="flex flex-col mr-[0.5rem]">
                 <div className="text-gray-6 text-sm font-extralight mb-1">
                   Recent Deposit
