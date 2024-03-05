@@ -22,7 +22,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function PageAgent() {
+export default function OverviewAgent() {
   //   const lang = await getDictionary();
   const [search, setSearch] = useState<string>("");
   const [section, setSection] = useState(0);
