@@ -3,21 +3,25 @@ import RowOptionInput from "@/components/molecules/input/row-option"
 const tabs = [
 	{
 		"value": "competition-expense",
-		"label": "Pengeluaran Lomba"
+		"label": "Pengeluaran Lomba",
+		"url": "/costing/promotional"
 	},
 	{
 		"value": "cashback",
-		"label": "Cashback"
+		"label": "Cashback",
+		"url": "/promotional"
 	},
 	{
 		"value": "event",
-		"label": "Event"
+		"label": "Event",
+		"url": "/costing/promotional/event"
 	}
 ]
 
-export default function() {
+export default function({ value = "competition-expense" }) {
 	return (
 		<RowOptionInput
+			value={value}
 			options={tabs}
 			width="320px"
 		/>
