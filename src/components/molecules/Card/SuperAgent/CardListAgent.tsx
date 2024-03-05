@@ -33,10 +33,18 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
               <div
                 className={clsx(
                   "text-sm",
-                  bitcoin.profit ? "text-gray-10" : "text-alert-10"
+                  bitcoin.profit ? "text-gray-10" : "text-alert-10",
+                  bitcoin.nominal.includes("Rp") && "flex flex-row items-center"
                 )}
               >
                 {bitcoin.nominal}
+                {bitcoin.nominal.includes("Rp") && (
+                  <div
+                    className={bitcoin.profit ? "text-gray-6" : "text-alert-6"}
+                  >
+                    ,00
+                  </div>
+                )}
               </div>
             </div>
             <div className="flex flex-1 flex-col">
@@ -44,10 +52,19 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
               <div
                 className={clsx(
                   "text-sm",
-                  ethereum.profit ? "text-gray-10" : "text-alert-10"
+                  ethereum.profit ? "text-gray-10" : "text-alert-10",
+                  ethereum.nominal.includes("Rp") &&
+                    "flex flex-row items-center"
                 )}
               >
                 {ethereum.nominal}
+                {ethereum.nominal.includes("Rp") && (
+                  <div
+                    className={ethereum.profit ? "text-gray-6" : "text-alert-6"}
+                  >
+                    ,00
+                  </div>
+                )}
               </div>
             </div>
             <div className="flex flex-1 flex-col">
@@ -55,10 +72,21 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
               <div
                 className={clsx(
                   "text-sm",
-                  totalTurnOver.profit ? "text-gray-10" : "text-alert-10"
+                  totalTurnOver.profit ? "text-gray-10" : "text-alert-10",
+                  totalTurnOver.nominal.includes("Rp") &&
+                    "flex flex-row items-center"
                 )}
               >
                 {totalTurnOver.nominal}
+                {totalTurnOver.nominal.includes("Rp") && (
+                  <div
+                    className={
+                      totalTurnOver.profit ? "text-gray-6" : "text-alert-6"
+                    }
+                  >
+                    ,00
+                  </div>
+                )}
               </div>
             </div>
             <div className="flex flex-1 flex-col">
@@ -66,10 +94,21 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
               <div
                 className={clsx(
                   "text-sm",
-                  totalProfit.profit ? "text-gray-10" : "text-alert-10"
+                  totalProfit.profit ? "text-gray-10" : "text-alert-10",
+                  totalProfit.nominal.includes("Rp") &&
+                    "flex flex-row items-center"
                 )}
               >
                 {totalProfit.nominal}
+                {totalProfit.nominal.includes("Rp") && (
+                  <div
+                    className={
+                      totalProfit.profit ? "text-gray-6" : "text-alert-6"
+                    }
+                  >
+                    ,00
+                  </div>
+                )}
               </div>
             </div>
             <button className="flex flex-1 flex-row rounded-md border border-gray-4 bg-checkbox items-center px-[10px]">
@@ -78,7 +117,7 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
                   "h-2 w-2 rounded-full",
                   status === "Active"
                     ? "bg-dot-blue"
-                    : status === "In Process"
+                    : status === "In Progress"
                     ? "bg-warning"
                     : "bg-danger-medium"
                 )}

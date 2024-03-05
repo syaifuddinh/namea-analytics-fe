@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ICardDashboardAgent } from "./types";
+import clsx from "clsx";
 
 export const CardDashboardDetail: React.FC<ICardDashboardAgent> = ({
   icon,
@@ -20,8 +21,16 @@ export const CardDashboardDetail: React.FC<ICardDashboardAgent> = ({
                 className="mb-2"
               />
               <div className="flex flex-col">
-                <div className="text-base text-gray-10 pb-[2px] font-light">
+                <div
+                  className={clsx(
+                    "text-base text-gray-10 pb-[2px] font-light",
+                    value.includes("Rp") && "flex flex-row items-center"
+                  )}
+                >
                   {value}
+                  {value.includes("Rp") && (
+                    <div className="text-gray-6">,00</div>
+                  )}
                 </div>
                 <div className="text-gray-6 text-sm font-extralight">
                   {placeholder}
