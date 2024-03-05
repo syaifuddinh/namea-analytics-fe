@@ -137,6 +137,7 @@ export default function SuperAgentDetail() {
             <div>Create Agent</div>
           </Button>
         </div>
+
         <div className="p-5 flex flex-row gap-[1rem] border-b border-base-bg3">
           <CardDashboardDetail
             icon={"/images/total-agent.png"}
