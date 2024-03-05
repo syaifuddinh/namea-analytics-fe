@@ -4,8 +4,11 @@ import {
   IconSmallChevronDown,
   IconThreeDotVertical,
 } from "@/components/atoms/Icons";
+import { CardOverview } from "@/components/molecules/Card";
+import { CardDashboard } from "@/components/molecules/Card/Agent";
 import { Header } from "@/components/molecules/Header";
 import { PageHeaderSection } from "@/components/molecules/Header/Agent";
+import Panel from "@/components/molecules/panel";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -107,6 +110,45 @@ export default function MemberListAgent() {
           </div>
         </div>
       </div>
+
+      <CardOverview
+        placeholder="Ethereum Revenue"
+        subPlaceholder="Record your ideas and to-do’s easily, so you never miss a thing."
+        containerStyle="mb-[4rem]"
+        divider={false}
+        renderContent={
+          <>
+            <div className="flex flex-row p-5 gap-2">
+              <div className="w-[60%]">
+                <Panel label="Bitcoin" value="50" variant="success" />
+              </div>
+              <div className="w-[40%]">
+                <Panel label="Ethereum" value="25" variant="primary" />
+              </div>
+            </div>
+            <div className="flex flex-1 flex-row border-y border-y-gray-1 mb-[4px] rounded-b-xl p-[1.125rem] gap-4 bg-base-bg5">
+              <CardDashboard
+                placeholder={"Total Revenue"}
+                value={"Rp500.950.450"}
+                profit={true}
+                percentage={"23.8% (+24)"}
+              />
+              <CardDashboard
+                placeholder={"Ethereum Revenue"}
+                value={"Rp245.300.685"}
+                profit={false}
+                percentage={"-16.5% (-8)"}
+              />
+              <CardDashboard
+                placeholder={"Total Turnover"}
+                value={"Rp500.950.450"}
+                profit={true}
+                percentage={"23.8% (+24)"}
+              />
+            </div>
+          </>
+        }
+      />
     </>
   );
 }
