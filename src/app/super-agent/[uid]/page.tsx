@@ -40,7 +40,7 @@ export default function SuperAgentDetail() {
         </div>
       </div>
       <div className="flex flex-1 flex-col border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mb-5">
-        <div className="flex flex-1 flex-col border-t border-b border-gray-1 mt-[6px] bg-base-bg5 rounded-t-xl">
+        <div className="flex flex-1 flex-col border-t border-b border-gray-1 mt-[4px] bg-base-bg5 rounded-t-xl">
           {dataAgent.rank <= 5 ? (
             <div className="max-w-max text-xs text-rank py-[2px] px-[10px] bg-bg-rank rounded-tl-xl rounded-br-md">
               Top {dataAgent.rank}
@@ -50,8 +50,8 @@ export default function SuperAgentDetail() {
           )}
           <div
             className={clsx(
-              "flex flex-1 flex-row px-5 pb-5  divide-x divide-gray-1 items-center",
-              dataAgent.rank > 5 ? "pt-5" : "pt-[2px]"
+              "flex flex-1 flex-row px-[1.125rem] pb-[1.125rem] divide-x divide-gray-1 items-center",
+              dataAgent.rank > 5 && "pt-[18px]"
             )}
           >
             <div className="flex flex-row items-center">
@@ -68,7 +68,7 @@ export default function SuperAgentDetail() {
                 {dataAgent.nameAgent}
               </div>
             </div>
-            <div className="flex flex-1 flex-row items-center pl-12 gap-16">
+            <div className="flex flex-1 flex-row items-center pl-[46px] gap-16">
               <div className="flex flex-col">
                 <div className="text-gray-6 text-sm mb-1 font-extralight">
                   Total Agent
@@ -86,7 +86,7 @@ export default function SuperAgentDetail() {
                   <div className="text-gray-6">,00</div>
                 </div>
               </div>
-              <button className="flex flex-row rounded-md border border-gray-4 bg-checkbox items-center px-[10px] w-[147px] h-[28px]">
+              <button className="flex flex-row rounded-md border border-gray-9 bg-checkbox items-center pl-[10px] pr-[2px] w-[147px] h-[28px]">
                 <div
                   className={clsx(
                     "bg-dot-blue h-2 w-2 rounded-full",
@@ -97,11 +97,11 @@ export default function SuperAgentDetail() {
                       : "bg-danger-medium"
                   )}
                 />
-                <div className="text-left text-gray-0 text-sm py-[6px] pl-2">
+                <div className="text-left text-gray-0 text-sm py-[6px] pl-2 font-extralight">
                   {dataAgent.status}
                 </div>
                 <div className="flex flex-1 justify-end">
-                  <IconDropdown />
+                  <IconDropdown className="!w-[1.188rem] !h-[1.15rem]" />
                 </div>
               </button>
             </div>

@@ -19,10 +19,14 @@ export default function MemberListAgent() {
     "December",
   ];
 
-  const labelStatus = [
-    { id: 1, label: "Deposit", bgColor: "bg-dot-blue" },
-    { id: 2, label: "Withdraw", bgColor: "bg-dot-blue1" },
-    { id: 3, label: "Login", bgColor: "bg-dot-blue2" },
+  const labelDay = [
+    { label: "S", active: false },
+    { label: "M", active: true },
+    { label: "T", active: true },
+    { label: "W", active: true },
+    { label: "T", active: true },
+    { label: "F", active: false },
+    { label: "S", active: false },
   ];
 
   return (
@@ -66,11 +70,25 @@ export default function MemberListAgent() {
                   26 July 2023, 09.30AM
                 </div>
               </div>
-            </div>
-            <div className="flex rounded-full flex-row bg-success-1 items-center pr-[10px] pl-2 py-[4px] h-[28px]">
-              <div className="bg-dot-blue h-2 w-2 rounded-full border-[3px] border-dot-blue-border mr-2" />
-              <div className="text-left text-success-10 text-xs font-light">
-                Active
+              <div className="flex flex-row items-center gap-[10px]">
+                {labelDay.map((item) => (
+                  <div
+                    key={`day-active-${item.label}`}
+                    className={`${
+                      item.active
+                        ? "bg-success-1 border border-success-2 text-gray-10"
+                        : "bg-base-bg3 border border-base-bg3 text-gray-6"
+                    } text-sm rounded-full py-[2px] px-[7px]`}
+                  >
+                    {item.label}
+                  </div>
+                ))}
+              </div>
+              <div className="flex rounded-md flex-row bg-checkbox border border-gray-9 items-center pr-[10px] pl-3 py-[4px] min-h-[28px]">
+                <div className="bg-dot-blue h-2 w-2 rounded-full border-[3px] border-dot-blue-border mr-2" />
+                <div className="text-left text-gray-0 text-xs font-light">
+                  Active
+                </div>
               </div>
             </div>
           </div>
