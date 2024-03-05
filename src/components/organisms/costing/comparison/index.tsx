@@ -66,6 +66,7 @@ export default function Comparison({ className }) {
 	return (
 		<Card
 			headerElement={<Header onApplyButtonClick={onApplyButtonClick} />}
+			isDividerVisible={false}
 			className={className}
 		>
 			{ contentVisible === true && (
@@ -86,9 +87,11 @@ export default function Comparison({ className }) {
 					<div className="costing-comparison_chart bg-base-bg5">
 						<CustomChart
 							variant="bar"
+							tooltipAlign="bottom"
 							maxValue={500000}
 							labels={labels}
 							xClassname="pl-[3rem] pr-[2.3rem]"
+							fixedBarWidth={31.95}
 							values={[
 								[
 									480000,

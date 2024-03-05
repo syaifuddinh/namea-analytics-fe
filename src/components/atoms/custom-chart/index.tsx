@@ -27,7 +27,8 @@ const CustomChart = ({
   minHeight = 200,
   maxHeight = 200,
   offsetY = "0px",
-  fixedBarWidth = 0,
+  fixedBarWidth = null,
+  tooltipAlign = "center",
   onGenerateTooltip,
   onGenerateLegend,
   maxAmount = 5,
@@ -205,7 +206,10 @@ const CustomChart = ({
                         <div
                           key={item.id}
                           className="z-10 absolute"
-                          style={{ bottom: item.bottom, left: item.left }}
+                          style={{
+                            bottom: tooltipAlign === "center" ? item.bottom : 0,
+                            left: item.left,
+                          }}
                         >
                           {item.element}
                         </div>

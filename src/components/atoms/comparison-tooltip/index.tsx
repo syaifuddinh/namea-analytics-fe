@@ -8,14 +8,18 @@ const ComparisonTooltip = ({ options, total }) => {
 			{ options.map((item, index) => (
 				<div
 					key={index} 
-					className="comparison-tooltip_item flex items-center justify-between px-2"
+					className="comparison-tooltip_item flex items-center justify-between py-[6px] px-[10px]"
 				>
-					<div className="text-xs text-gray-6 font-extralight">
-						{ item.label }
-					</div>	
+					<div className="flex items-center gap-2">
+						<div className={`w-[8px] h-[8px] ${index === 0 ? "bg-primary-gradient1" : (index === 1 ? "bg-primary-gradient2" : "bg-primary-gradient3")} rounded-[12px]`}>
+						</div>
+
+						<div className="text-xs text-gray-6 font-extralight">
+							{ item.label }
+						</div>	
+					</div>
 
 					<MoneyText
-						variant="warning"
 						fontSize="12px"
 					>
 						{ item.value }
