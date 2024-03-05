@@ -27,7 +27,7 @@ const CustomChart = ({
   minHeight = 200,
   maxHeight = 200,
   offsetY = "0px",
-  fixedBarWidth = null,
+  fixedBarWidth = 0,
   onGenerateTooltip,
   onGenerateLegend,
   maxAmount = 5,
