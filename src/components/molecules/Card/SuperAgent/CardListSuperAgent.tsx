@@ -44,7 +44,7 @@ export const CardListSuperAgent: React.FC<ICardListSuperAgent> = ({
               {nameAgent}
             </div>
           </div>
-          <div className="flex flex-1 flex-row items-center pl-12 gap-16">
+          <div className="flex flex-1 flex-row items-center pl-[46px] gap-16">
             <div className="flex flex-col">
               <div className="text-gray-6 text-sm font-extralight mb-1">
                 Total Agent
