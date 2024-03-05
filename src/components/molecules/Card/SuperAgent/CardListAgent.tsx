@@ -15,7 +15,7 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
   status,
 }) => {
   return (
-    <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mb-4">
+    <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mb-[1.125rem]">
       <div className="flex flex-1 flex-row p-[1.125rem] items-center ">
         <div className="flex flex-row items-center">
           <Image src={image} alt="super agent icon" width={40} height={40} />
@@ -34,7 +34,7 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
             </div>
             <div
               className={clsx(
-                "text-sm font-light tracking-[0.2px]",
+                "text-sm font-light",
                 bitcoin.profit ? "text-gray-10" : "text-alert-10",
                 bitcoin.nominal.includes("Rp") && "flex flex-row items-center"
               )}
@@ -55,7 +55,7 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
             </div>
             <div
               className={clsx(
-                "text-sm font-light tracking-[0.2px]",
+                "text-sm font-light",
                 ethereum.profit ? "text-gray-10" : "text-alert-10",
                 ethereum.nominal.includes("Rp") && "flex flex-row items-center"
               )}
@@ -76,7 +76,7 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
             </div>
             <div
               className={clsx(
-                "text-sm font-light tracking-[0.2px]",
+                "text-sm font-light",
                 totalTurnOver.profit ? "text-gray-10" : "text-alert-10",
                 totalTurnOver.nominal.includes("Rp") &&
                   "flex flex-row items-center"
@@ -100,7 +100,7 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
             </div>
             <div
               className={clsx(
-                "text-sm font-light tracking-[0.2px]",
+                "text-sm font-light",
                 totalProfit.profit ? "text-gray-10" : "text-alert-10",
                 totalProfit.nominal.includes("Rp") &&
                   "flex flex-row items-center"
