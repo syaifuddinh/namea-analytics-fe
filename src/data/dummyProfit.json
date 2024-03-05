@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "label": "Token",
+    "category": "Healthy",
+    "profitMargin": "+18",
+    "dataProfit": [
+      {
+        "id": 1,
+        "icon": true,
+        "placeholder": "Total Transaction",
+        "value": "+Rp500.950.450",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      },
+      {
+        "id": 2,
+        "icon": true,
+        "placeholder": "Profit/Loss",
+        "value": "+Rp500.950.450",
+        "profit": false,
+        "precentage": "-16.5% (-8)"
+      },
+      {
+        "id": 3,
+        "icon": false,
+        "placeholder": "Total Member",
+        "value": "65.540",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      },
+      {
+        "id": 4,
+        "icon": false,
+        "placeholder": "Total Costing",
+        "value": "+Rp500.950.450",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "label": "Token",
+    "category": "Risky",
+    "profitMargin": "-12",
+    "dataProfit": [
+      {
+        "id": 1,
+        "icon": true,
+        "placeholder": "Total Transaction",
+        "value": "+Rp500.950.450",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      },
+      {
+        "id": 2,
+        "icon": true,
+        "placeholder": "Profit/Loss",
+        "value": "+Rp500.950.450",
+        "profit": false,
+        "precentage": "-16.5% (-8)"
+      },
+      {
+        "id": 3,
+        "icon": false,
+        "placeholder": "Total Member",
+        "value": "65.540",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      },
+      {
+        "id": 4,
+        "icon": false,
+        "placeholder": "Total Costing",
+        "value": "+Rp500.950.450",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "label": "Token",
+    "category": "Healthy",
+    "profitMargin": "+18",
+    "dataProfit": [
+      {
+        "id": 1,
+        "icon": true,
+        "placeholder": "Total Transaction",
+        "value": "+Rp500.950.450",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      },
+      {
+        "id": 2,
+        "icon": true,
+        "placeholder": "Profit/Loss",
+        "value": "+Rp500.950.450",
+        "profit": false,
+        "precentage": "-16.5% (-8)"
+      },
+      {
+        "id": 3,
+        "icon": false,
+        "placeholder": "Total Member",
+        "value": "65.540",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      },
+      {
+        "id": 4,
+        "icon": false,
+        "placeholder": "Total Costing",
+        "value": "+Rp500.950.450",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "label": "Token",
+    "category": "Healthy",
+    "profitMargin": "+18",
+    "dataProfit": [
+      {
+        "id": 1,
+        "icon": true,
+        "placeholder": "Total Transaction",
+        "value": "+Rp500.950.450",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      },
+      {
+        "id": 2,
+        "icon": true,
+        "placeholder": "Profit/Loss",
+        "value": "+Rp500.950.450",
+        "profit": false,
+        "precentage": "-16.5% (-8)"
+      },
+      {
+        "id": 3,
+        "icon": false,
+        "placeholder": "Total Member",
+        "value": "65.540",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      },
+      {
+        "id": 4,
+        "icon": false,
+        "placeholder": "Total Costing",
+        "value": "+Rp500.950.450",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "label": "Token",
+    "category": "Risky",
+    "profitMargin": "-12",
+    "dataProfit": [
+      {
+        "id": 1,
+        "icon": true,
+        "placeholder": "Total Transaction",
+        "value": "+Rp500.950.450",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      },
+      {
+        "id": 2,
+        "icon": true,
+        "placeholder": "Profit/Loss",
+        "value": "+Rp500.950.450",
+        "profit": false,
+        "precentage": "-16.5% (-8)"
+      },
+      {
+        "id": 3,
+        "icon": false,
+        "placeholder": "Total Member",
+        "value": "65.540",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      },
+      {
+        "id": 4,
+        "icon": false,
+        "placeholder": "Total Costing",
+        "value": "+Rp500.950.450",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "label": "Token",
+    "category": "Healthy",
+    "profitMargin": "+18",
+    "dataProfit": [
+      {
+        "id": 1,
+        "icon": true,
+        "placeholder": "Total Transaction",
+        "value": "+Rp500.950.450",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      },
+      {
+        "id": 2,
+        "icon": true,
+        "placeholder": "Profit/Loss",
+        "value": "+Rp500.950.450",
+        "profit": false,
+        "precentage": "-16.5% (-8)"
+      },
+      {
+        "id": 3,
+        "icon": false,
+        "placeholder": "Total Member",
+        "value": "65.540",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      },
+      {
+        "id": 4,
+        "icon": false,
+        "placeholder": "Total Costing",
+        "value": "+Rp500.950.450",
+        "profit": true,
+        "precentage": "23.8% (+24)"
+      }
+    ]
+  }
+]

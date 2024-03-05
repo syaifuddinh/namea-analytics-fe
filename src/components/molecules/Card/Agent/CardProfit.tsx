@@ -1,6 +1,7 @@
 import { IconArrowDown, IconArrowUp } from "@/components/atoms/Icons";
 import clsx from "clsx";
 import { ICardProfit } from "./types";
+import { Dot } from "@/components/atoms/dot-global";
 
 export const CardProfit: React.FC<ICardProfit> = ({
   placeholder,
@@ -11,16 +12,22 @@ export const CardProfit: React.FC<ICardProfit> = ({
 }) => {
   return (
     <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden">
-      <div className="flex flex-row flex-1 border-t border-gray-1 mt-[4px] bg-base-bg5 rounded-t-xl p-5">
-        {iconDot ? iconDot : null}
-        <div className="flex flex-1 flex-col h-[88px]">
+      <div className="flex flex-row flex-1 border-t border-gray-1 mt-[4px] bg-base-bg5 rounded-t-xl p-[1.125rem]">
+        {iconDot ? (
+          profit ? (
+            <Dot className="bg-dot-blue border-dot-blue" />
+          ) : (
+            <Dot className="bg-alert-10 border-alert-2" />
+          )
+        ) : null}
+        <div className="flex flex-1 flex-col">
           <div className="text-sm text-gray-6 font-extralight mb-1">
             {placeholder}
           </div>
           <div
             className={clsx(
-              "text-gray-10 text-[1rem] mb-4",
-              value.includes("Rp") && "flex flex-row items-center"
+              "text-gray-10 text-[1rem]",
+              value.includes("Rp") && "flex flex-row items-center font-light"
             )}
           >
             {value}
@@ -36,9 +43,9 @@ export const CardProfit: React.FC<ICardProfit> = ({
             } py-[2px] pl-1 pr-[6px] rounded-3xl max-w-max`}
           >
             {profit ? (
-              <IconArrowUp className="text-success-10 !w-[1.25rem] !h-[1.25rem]" />
+              <IconArrowUp className="text-success-10 !w-[0.875rem] !h-[1.25rem]" />
             ) : (
-              <IconArrowDown className="text-alert-10 !w-[1.25rem] !h-[1.25rem]" />
+              <IconArrowDown className="text-alert-10 !w-[0.875rem] !h-[1.25rem]" />
             )}
             <div
               className={clsx(

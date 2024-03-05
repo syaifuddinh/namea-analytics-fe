@@ -9,7 +9,7 @@ export const HeaderProfit: React.FC<IHeaderProfit> = ({
   value,
 }) => {
   return (
-    <div className="flex flex-1 flex-row items-center p-5">
+    <div className="flex flex-1 flex-row items-center p-[1.125rem] border-b border-b-gray-1">
       <div className="w-8 h-8 bg-gray-1 rounded-full mr-3" />
       <div className="text-base text-gray-10 font-light flex flex-1">
         {title}
@@ -28,7 +28,7 @@ export const HeaderProfit: React.FC<IHeaderProfit> = ({
         ) : (
           <IconArrowDown className="text-success-10 !w-[13px] !h-[13px]" />
         )}
-        <div className="text-xs text-gray-6 font-medium">{`${value} Profit Margin`}</div>
+        <div className="text-xs text-gray-6 font-light">{`${value} Profit Margin`}</div>
       </div>
     </div>
   );

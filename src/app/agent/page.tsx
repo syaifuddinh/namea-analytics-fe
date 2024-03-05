@@ -26,6 +26,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
 import dummyTopPagesMarket from "@/data/dummyTopPagesMarkets.json";
+import dummyProfit from "@/data/dummyProfit.json";
 
 export default function PageAgent() {
   //   const lang = await getDictionary();
@@ -318,348 +319,56 @@ export default function PageAgent() {
       </div>
 
       <div className="grid grid-cols-3 gap-5">
-        <CardOverview
-          customHeader={
-            <HeaderProfit title={"Token"} category={"Healthy"} value={"+18"} />
-          }
-          containerStyle="mb-0"
-          divider={false}
-          renderContent={
-            <>
-              <div className="flex flex-row p-5 gap-2">
-                <div className="w-[72%]">
-                  <Panel
-                    className="min-h-0"
-                    className1="h-8"
-                    label="72%"
-                    variant="success"
-                  />
+        {dummyProfit.map((item) => (
+          <CardOverview
+            key={`profit-dashboard-${item.id}`}
+            customHeader={
+              <HeaderProfit
+                title={item.label}
+                category={item.category}
+                value={item.profitMargin}
+              />
+            }
+            containerStyle={item.id <= 3 ? "!mb-0" : "!mt-0"}
+            divider={false}
+            renderContent={
+              <>
+                <div className="flex flex-row p-[1.125rem] gap-2">
+                  <div className="w-[72%]">
+                    <Panel
+                      className="!min-h-0"
+                      className1="!h-8"
+                      label="72%"
+                      variant="success"
+                      containerLabel="!pt-[0.400rem] !pb-[0.625rem]"
+                    />
+                  </div>
+                  <div className="w-[28%]">
+                    <Panel
+                      className="!min-h-0"
+                      className1="!h-8"
+                      label="28%"
+                      variant="primary"
+                      containerLabel="!pt-[0.400rem] !pb-[0.625rem]"
+                    />
+                  </div>
                 </div>
-                <div className="w-[28%]">
-                  <Panel
-                    className="min-h-0"
-                    className1="h-8"
-                    label="28%"
-                    variant="primary"
-                  />
+                <div className="flex flex-1 flex-col border-y border-y-gray-1 bg-base-bg5 mb-[4px] rounded-b-xl p-5 gap-4">
+                  {item.dataProfit.map((x) => (
+                    <CardProfit
+                      key={`data-profit-${x.id}`}
+                      iconDot={x.icon}
+                      placeholder={x.placeholder}
+                      value={x.value}
+                      profit={x.profit}
+                      percentage={x.precentage}
+                    />
+                  ))}
                 </div>
-              </div>
-              <div className="flex flex-1 flex-col border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5 gap-4">
-                <CardProfit
-                  iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
-                  placeholder={"Total Transaction"}
-                  value={"Rp500.950.450"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-                <CardProfit
-                  iconDot={<Dot className="bg-alert-10 border-alert-2" />}
-                  placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450"}
-                  profit={false}
-                  percentage={"16.5% (-8)"}
-                />
-                <CardProfit
-                  placeholder={"Total Member"}
-                  value={"65.540"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-                <CardProfit
-                  placeholder={"Total Costing"}
-                  value={"Rp500.950.450"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-              </div>
-            </>
-          }
-        />
-        <CardOverview
-          customHeader={
-            <HeaderProfit title={"Token"} category={"Risky"} value={"-12"} />
-          }
-          containerStyle="mb-0"
-          divider={false}
-          renderContent={
-            <>
-              <div className="flex flex-row p-5 gap-2">
-                <div className="w-[72%]">
-                  <Panel
-                    className="min-h-0"
-                    className1="h-8"
-                    label="72%"
-                    variant="success"
-                  />
-                </div>
-                <div className="w-[28%]">
-                  <Panel
-                    className="min-h-0"
-                    className1="h-8"
-                    label="28%"
-                    variant="primary"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-1 flex-col border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5 gap-4">
-                <CardProfit
-                  iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
-                  placeholder={"Total Transaction"}
-                  value={"Rp500.950.450"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-                <CardProfit
-                  iconDot={<Dot className="bg-alert-10 border-alert-2" />}
-                  placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450"}
-                  profit={false}
-                  percentage={"16.5% (-8)"}
-                />
-                <CardProfit
-                  placeholder={"Total Member"}
-                  value={"65.540"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-                <CardProfit
-                  placeholder={"Total Costing"}
-                  value={"Rp500.950.450"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-              </div>
-            </>
-          }
-        />
-        <CardOverview
-          customHeader={
-            <HeaderProfit title={"Token"} category={"Healthy"} value={"+18"} />
-          }
-          containerStyle="mb-0"
-          divider={false}
-          renderContent={
-            <>
-              <div className="flex flex-row p-5 gap-2">
-                <div className="w-[72%]">
-                  <Panel
-                    className="min-h-0"
-                    className1="h-8"
-                    label="72%"
-                    variant="success"
-                  />
-                </div>
-                <div className="w-[28%]">
-                  <Panel
-                    className="min-h-0"
-                    className1="h-8"
-                    label="28%"
-                    variant="primary"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-1 flex-col border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5 gap-4">
-                <CardProfit
-                  iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
-                  placeholder={"Total Transaction"}
-                  value={"Rp500.950.450"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-                <CardProfit
-                  iconDot={<Dot className="bg-alert-10 border-alert-2" />}
-                  placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450"}
-                  profit={false}
-                  percentage={"16.5% (-8)"}
-                />
-                <CardProfit
-                  placeholder={"Total Member"}
-                  value={"65.540"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-                <CardProfit
-                  placeholder={"Total Costing"}
-                  value={"Rp500.950.450"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-              </div>
-            </>
-          }
-        />
-        <CardOverview
-          containerStyle="mt-0"
-          customHeader={
-            <HeaderProfit title={"Token"} category={"Healthy"} value={"+18"} />
-          }
-          divider={false}
-          renderContent={
-            <>
-              <div className="flex flex-row p-5 gap-2">
-                <div className="w-[72%]">
-                  <Panel
-                    className="min-h-0"
-                    className1="h-8"
-                    label="72%"
-                    variant="success"
-                  />
-                </div>
-                <div className="w-[28%]">
-                  <Panel
-                    className="min-h-0"
-                    className1="h-8"
-                    label="28%"
-                    variant="primary"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-1 flex-col border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5 gap-4">
-                <CardProfit
-                  iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
-                  placeholder={"Total Transaction"}
-                  value={"Rp500.950.450"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-                <CardProfit
-                  iconDot={<Dot className="bg-alert-10 border-alert-2" />}
-                  placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450"}
-                  profit={false}
-                  percentage={"16.5% (-8)"}
-                />
-                <CardProfit
-                  placeholder={"Total Member"}
-                  value={"65.540"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-                <CardProfit
-                  placeholder={"Total Costing"}
-                  value={"Rp500.950.450"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-              </div>
-            </>
-          }
-        />
-        <CardOverview
-          containerStyle="mt-0"
-          customHeader={
-            <HeaderProfit title={"Token"} category={"Risky"} value={"-12"} />
-          }
-          divider={false}
-          renderContent={
-            <>
-              <div className="flex flex-row p-5 gap-2">
-                <div className="w-[72%]">
-                  <Panel
-                    className="min-h-0"
-                    className1="h-8"
-                    label="72%"
-                    variant="success"
-                  />
-                </div>
-                <div className="w-[28%]">
-                  <Panel
-                    className="min-h-0"
-                    className1="h-8"
-                    label="28%"
-                    variant="primary"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-1 flex-col border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5 gap-4">
-                <CardProfit
-                  iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
-                  placeholder={"Total Transaction"}
-                  value={"Rp500.950.450"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-                <CardProfit
-                  iconDot={<Dot className="bg-alert-10 border-alert-2" />}
-                  placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450"}
-                  profit={false}
-                  percentage={"16.5% (-8)"}
-                />
-                <CardProfit
-                  placeholder={"Total Member"}
-                  value={"65.540"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-                <CardProfit
-                  placeholder={"Total Costing"}
-                  value={"Rp500.950.450"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-              </div>
-            </>
-          }
-        />
-        <CardOverview
-          containerStyle="mt-0"
-          customHeader={
-            <HeaderProfit title={"Token"} category={"Healthy"} value={"+18"} />
-          }
-          divider={false}
-          renderContent={
-            <>
-              <div className="flex flex-row p-5 gap-2">
-                <div className="w-[72%]">
-                  <Panel
-                    className="min-h-0"
-                    className1="h-8"
-                    label="72%"
-                    variant="success"
-                  />
-                </div>
-                <div className="w-[28%]">
-                  <Panel
-                    className="min-h-0"
-                    className1="h-8"
-                    label="28%"
-                    variant="primary"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-1 flex-col border-y border-y-gray-1 bg-base-bg5 mb-[6px] rounded-b-xl p-5 gap-4">
-                <CardProfit
-                  iconDot={<Dot className="bg-dot-blue border-dot-blue" />}
-                  placeholder={"Total Transaction"}
-                  value={"Rp500.950.450"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-                <CardProfit
-                  iconDot={<Dot className="bg-alert-10 border-alert-2" />}
-                  placeholder={"Profit/Loss"}
-                  value={"Rp500.950.450"}
-                  profit={false}
-                  percentage={"16.5% (-8)"}
-                />
-                <CardProfit
-                  placeholder={"Total Member"}
-                  value={"65.540"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-                <CardProfit
-                  placeholder={"Total Costing"}
-                  value={"Rp500.950.450"}
-                  profit={true}
-                  percentage={"23.8% (+24)"}
-                />
-              </div>
-            </>
-          }
-        />
+              </>
+            }
+          />
+        ))}
       </div>
     </>
   );
