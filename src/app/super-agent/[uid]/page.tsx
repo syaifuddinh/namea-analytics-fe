@@ -2,7 +2,7 @@
 import {
   IconAdd,
   IconChevronRight,
-  IconDropdown,
+  IconChevronDown,
   IconSearch,
   IconSize,
 } from "@/components/atoms/Icons";
@@ -101,7 +101,7 @@ export default function SuperAgentDetail() {
                   {dataAgent.status}
                 </div>
                 <div className="flex flex-1 justify-end">
-                  <IconDropdown className="!w-[1.188rem] !h-[1.15rem]" />
+                  <IconChevronDown className="!w-[1.188rem] !h-[1.15rem]" />
                 </div>
               </button>
             </div>
@@ -127,8 +127,9 @@ export default function SuperAgentDetail() {
 
           <SelectInput
             placeholder="All Status"
-            className="mr-2"
+            className="mr-2 !pr-1"
             placeholderClassName="w-[86px]"
+            iconStyle="!w-[1.313rem] !h-[1.5rem]"
           />
 
           <Button variant="default" paddingR="pr-[1rem]">
@@ -136,7 +137,7 @@ export default function SuperAgentDetail() {
             <div>Create Agent</div>
           </Button>
         </div>
-        <div className="p-5 flex flex-row gap-[1rem] border-b border-base-bg3">
+        <div className="p-5 flex flex-row gap-[0.75rem] border-b border-base-bg3">
           <CardDashboardDetail
             icon={"/images/total-agent.png"}
             value={"875"}

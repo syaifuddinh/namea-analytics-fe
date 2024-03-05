@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { ICalenderProps } from "./types";
-import { IconCalender, IconDropdown, IconSearch } from "../Icons";
+import { IconCalender, IconChevronDown, IconSearch } from "../Icons";
 
 export const Calendar: React.FC<ICalenderProps> = ({
   name,
@@ -27,7 +27,7 @@ export const Calendar: React.FC<ICalenderProps> = ({
         2 December - 20 December
       </div>
       <div className="flex flex-1 justify-end">
-        <IconDropdown className={iconStyle} />
+        <IconChevronDown className={iconStyle} />
       </div>
     </button>
   );

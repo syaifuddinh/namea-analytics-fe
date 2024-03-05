@@ -1,4 +1,9 @@
 "use client";
+import {
+  IconChevronDown,
+  IconSmallChevronDown,
+  IconThreeDotVertical,
+} from "@/components/atoms/Icons";
 import { Header } from "@/components/molecules/Header";
 import { PageHeaderSection } from "@/components/molecules/Header/Agent";
 import Image from "next/image";
@@ -93,7 +98,12 @@ export default function MemberListAgent() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row items-center"></div>
+            <div className="flex flex-row items-center gap-[10px]">
+              <IconThreeDotVertical className="!w-5 !h-5" />
+              <div className="bg-base-bg3 border border-gray-1 rounded-md py-[6px] px-[6px]">
+                <IconChevronDown className="!w-4 !h-4" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

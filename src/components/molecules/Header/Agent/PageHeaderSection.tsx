@@ -1,4 +1,4 @@
-import { IconDropdown } from "@/components/atoms/Icons";
+import { IconChevronDown } from "@/components/atoms/Icons";
 import { IconURL } from "@/components/atoms/Icons/Url";
 import { InputSearch } from "@/components/atoms/search";
 import clsx from "clsx";
@@ -36,7 +36,7 @@ export const PageHeaderSection: React.FC<IPageHeaderAgent> = ({
             {websiteName}
           </div>
           <div className="flex flex-1 justify-end">
-            <IconDropdown className={"!w-[1.25rem !h-[1.25rem]"} />
+            <IconChevronDown className={"!w-[1.25rem !h-[1.25rem]"} />
           </div>
         </button>
         <InputSearch
