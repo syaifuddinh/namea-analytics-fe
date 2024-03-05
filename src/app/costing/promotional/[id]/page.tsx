@@ -5,6 +5,111 @@ import {
     GlobalIcon
 } from "@/components/atoms/Icons"
 import YearOptionInput from "@/components/molecules/input/year-option"
+import Table from "@/components/atoms/table"
+import MoneyText from "@/components/atoms/text/money"
+
+const items = [
+    [
+        1, 
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+    ],
+    [
+        2, 
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+    ],
+    [
+        3, 
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+    ],
+    [
+        4, 
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+    ],
+    [
+        5, 
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+    ],
+    [
+        6, 
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+    ],
+    [
+        7, 
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+    ],
+    [
+        8, 
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+        <MoneyText variant="danger">48.652.863</MoneyText>,
+        <MoneyText>52.235.459</MoneyText>,
+    ],
+]
+
+const footers = [
+    "Total",
+    <MoneyText>98.235.459</MoneyText>,
+    <MoneyText>98.235.459</MoneyText>,
+    <MoneyText>98.235.459</MoneyText>,
+    <MoneyText>98.235.459</MoneyText>,
+    <MoneyText>98.235.459</MoneyText>,
+    <MoneyText>98.235.459</MoneyText>,
+    <MoneyText>98.235.459</MoneyText>,
+    <MoneyText>98.235.459</MoneyText>
+]
 
 export default function PromotionalCostingPage() {
   return (
@@ -34,6 +139,41 @@ export default function PromotionalCostingPage() {
 
             <YearOptionInput />
         </div>
+
+        <Table
+            className="mt-8"
+            columns={[
+                {
+                    "title": "Day"
+                },
+                {
+                    "title": "January"
+                },
+                {
+                    "title": "February"
+                },
+                {
+                    "title": "March"
+                },
+                {
+                    "title": "April"
+                },
+                {
+                    "title": "May"
+                },
+                {
+                    "title": "June"
+                },
+                {
+                    "title": "July"
+                },
+                {
+                    "title": "August"
+                },
+            ]}
+            contents={items}
+            footers={footers}
+        />
     </CostingLayout>
   );
 }
