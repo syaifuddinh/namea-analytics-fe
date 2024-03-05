@@ -59,21 +59,19 @@ export default function PageSuperAgent() {
           percentage={"23.8% (+24)"}
         />
       </div>
-      {dummyListSuperAgent.map((item) => {
-        return (
-          <CardListSuperAgent
-            key={`super-agent-${item.id}`}
-            id={item.id}
-            rank={item.rank}
-            image={item.image}
-            codeAgent={item.codeAgent}
-            nameAgent={item.nameAgent}
-            totalAgent={item.totalAgent}
-            totalProfit={item.totalProfit}
-            status={item.status}
-          />
-        );
-      })}
+      {dummyListSuperAgent.map((item) => (
+        <CardListSuperAgent
+          key={`super-agent-${item.id}`}
+          id={item.id}
+          rank={item.rank}
+          image={item.image}
+          codeAgent={item.codeAgent}
+          nameAgent={item.nameAgent}
+          totalAgent={item.totalAgent}
+          totalProfit={item.totalProfit}
+          status={item.status}
+        />
+      ))}
       <Pagination className="mt-5" totalAgent={dummyListSuperAgent.length} />
     </>
   );
