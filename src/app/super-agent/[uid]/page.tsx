@@ -108,16 +108,16 @@ export default function SuperAgentDetail() {
           </div>
         </div>
         <div className="flex flex-row flex-1 p-5 items-center">
-          <div className="flex flex-1 text-gray-10 text-base">
+          <div className="flex flex-1 text-gray-10 text-base font-light">
             Agents ({dataAgent.totalAgent})
           </div>
           <div className="flex flex-row flex-1 items-center border border-gray-1 bg-base-bg3 rounded-md p-2 mr-2 max-h-[2.25rem]">
-            <IconSearch />
+            <IconSearch className="!w-[1.313rem] !h-[1.5rem]" />
             <input
               type="text"
               name={"Search"}
               className={
-                "ml-3 bg-transparent border-0 text-gray-6 lg:text-sm w-full outline-none"
+                "ml-[0.5rem] bg-transparent border-0 text-gray-6 lg:text-sm w-full outline-none"
               }
               style={{ fontWeight: 200 }}
               placeholder={"Search super agent by name or code..."}
@@ -131,12 +131,12 @@ export default function SuperAgentDetail() {
             placeholderClassName="w-[86px]"
           />
 
-          <Button variant="default" paddingR="pr-[1.25rem]">
+          <Button variant="default" paddingR="pr-[1rem]">
             <IconAdd className="!w-[1.25rem] !h-[1.25rem] mr-1" />
             <div>Create Agent</div>
           </Button>
         </div>
-        <div className="p-5 flex flex-row gap-3 border-b border-base-bg3">
+        <div className="p-5 flex flex-row gap-[1rem] border-b border-base-bg3">
           <CardDashboardDetail
             icon={"/images/total-agent.png"}
             value={"875"}
