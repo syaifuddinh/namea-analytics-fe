@@ -16,7 +16,7 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
 }) => {
   return (
     <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mb-4">
-      <div className="flex flex-1 flex-row px-5 pb-5 divide-x divide-gray-1 items-center pt-5 ">
+      <div className="flex flex-1 flex-row p-[1.125rem] items-center ">
         <div className="flex flex-row items-center">
           <Image src={image} alt="super agent icon" width={40} height={40} />
           <div className="text-gray-10 text-xs py-1 px-2 mx-3 bg-base-bg3 rounded-3xl font-light">
@@ -26,7 +26,8 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
             {nameAgent}
           </div>
         </div>
-        <div className="flex flex-1 flex-row items-center pl-[46px]">
+        <div className="border-l border-l-gray-1 h-5" />
+        <div className="flex flex-1 flex-row items-center pl-[48px] gap-16">
           <div className="flex flex-1 flex-col">
             <div className="text-gray-6 text-sm font-extralight mb-1">
               Profit Bitcoin
@@ -117,7 +118,7 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
               )}
             </div>
           </div>
-          <button className="flex flex-1 flex-row rounded-md border border-gray-9 bg-checkbox items-center pl-[10px] pr-[2px] w-[147px] h-[28px]">
+          <button className="flex flex-1 flex-row rounded-md border border-gray-9 bg-checkbox items-center pl-[10px] pr-[2px] max-w-[147px] h-[28px]">
             <div
               className={clsx(
                 "h-2 w-2 rounded-full",

@@ -50,7 +50,7 @@ export default function SuperAgentDetail() {
           )}
           <div
             className={clsx(
-              "flex flex-1 flex-row px-[1.125rem] pb-[1.125rem] divide-x divide-gray-1 items-center",
+              "flex flex-1 flex-row px-[1.125rem] pb-[1.125rem] items-center",
               dataAgent.rank > 5 && "pt-[18px]"
             )}
           >
@@ -61,13 +61,14 @@ export default function SuperAgentDetail() {
                 width={40}
                 height={40}
               />
-              <div className="text-gray-10 text-xs py-1 px-2 mx-3  bg-base-bg3 rounded-3xl">
+              <div className="text-gray-10 text-xs py-1 px-2 mx-3 bg-base-bg3 rounded-3xl">
                 {dataAgent.codeAgent}
               </div>
               <div className="w-[160px] text-gray-10 text-sm mr-[0.125rem] font-light">
                 {dataAgent.nameAgent}
               </div>
             </div>
+            <div className="border-l border-l-gray-1 h-5" />
             <div className="flex flex-1 flex-row items-center pl-[46px] gap-16">
               <div className="flex flex-col">
                 <div className="text-gray-6 text-sm mb-1 font-extralight">
