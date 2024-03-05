@@ -78,19 +78,22 @@ export default function MemberListAgent() {
                       item.active
                         ? "bg-success-1 border border-success-2 text-gray-10"
                         : "bg-base-bg3 border border-base-bg3 text-gray-6"
-                    } text-sm rounded-full py-[2px] px-[7px]`}
+                    } flex text-sm rounded-full h-6 w-6 justify-center items-center`}
                   >
                     {item.label}
                   </div>
                 ))}
               </div>
-              <div className="flex rounded-md flex-row bg-checkbox border border-gray-9 items-center pr-[10px] pl-3 py-[4px] min-h-[28px]">
-                <div className="bg-dot-blue h-2 w-2 rounded-full border-[3px] border-dot-blue-border mr-2" />
+              <div className="flex rounded-md flex-row bg-checkbox border border-gray-9 items-center pr-[12px] pl-2 py-[4px] min-h-[28px]">
+                <div className="flex bg-dot-blue-border h-3.5 w-3.5 rounded-full items-center justify-center mr-2">
+                  <div className="bg-dot-blue h-2 w-2 rounded-full" />
+                </div>
                 <div className="text-left text-gray-0 text-xs font-light">
                   Active
                 </div>
               </div>
             </div>
+            <div className="flex flex-row items-center"></div>
           </div>
         </div>
       </div>
