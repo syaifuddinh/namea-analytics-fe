@@ -23,7 +23,7 @@ export const CardListSuperAgent: React.FC<ICardListSuperAgent> = ({
     <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mb-5">
       <div className="flex flex-1 flex-col border-t border-gray-1 mt-[4px] bg-base-bg5 rounded-t-xl">
         {rank <= 5 ? (
-          <div className="max-w-max text-xs text-rank py-[2px] px-[10px] bg-bg-rank rounded-tl-xl rounded-br-md font-light">
+          <div className="max-w-max text-xs text-rank py-[2px] pl-[10px] pr-[2px] bg-bg-rank rounded-tl-xl rounded-br-md font-light">
             Top {rank}
           </div>
         ) : (
@@ -57,8 +57,9 @@ export const CardListSuperAgent: React.FC<ICardListSuperAgent> = ({
               <div className="text-gray-6 text-sm font-extralight mb-1">
                 Total Profit
               </div>
-              <div className="text-gray-10 text-sm font-light">
+              <div className="flex flex-row items-center text-gray-10 text-sm font-light">
                 Rp{totalProfit}
+                <div className="text-gray-6">,00</div>
               </div>
             </div>
             <button className="flex flex-row rounded-md border border-checkbox bg-checkbox items-center px-[10px] py-[2px]">
