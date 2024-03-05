@@ -1,7 +1,7 @@
 import Image from "next/image";
 import clsx from "clsx";
 import { ICardListAgent } from "./types";
-import { IconChevronRight, IconDropdown } from "@/components/atoms/Icons";
+import { IconChevronRight, IconChevronDown } from "@/components/atoms/Icons";
 
 export const CardListAgent: React.FC<ICardListAgent> = ({
   rank,
@@ -126,7 +126,7 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
                 {status}
               </div>
               <div className="flex flex-1 justify-end">
-                <IconDropdown />
+                <IconChevronDown />
               </div>
             </button>
           </div>

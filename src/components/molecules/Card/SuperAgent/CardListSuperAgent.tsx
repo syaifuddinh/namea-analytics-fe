@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { ICardListSuperAgent } from "./types";
 import {
   IconChevronRight,
-  IconDropdown,
+  IconChevronDown,
   IconSize,
 } from "@/components/atoms/Icons";
 import { getLinkDetailSuperAgent } from "@/utils/linkFactory";
@@ -77,7 +77,7 @@ export const CardListSuperAgent: React.FC<ICardListSuperAgent> = ({
                 {status}
               </div>
               <div className="flex flex-1 justify-end">
-                <IconDropdown className={"!w-[1.25rem !h-[1.25rem]"} />
+                <IconChevronDown className={"!w-[1.25rem !h-[1.25rem]"} />
               </div>
             </button>
 
