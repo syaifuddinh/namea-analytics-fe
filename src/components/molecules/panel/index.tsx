@@ -11,6 +11,7 @@ export default function Panel({
   variant,
   className,
   className1,
+  containerLabel = "py-[0.625rem]",
 }: PanelProps) {
   return (
     <div className={clsx("panel relative min-h-[87px]", className)}>
@@ -21,9 +22,7 @@ export default function Panel({
         )}
       >
         <div
-          className={clsx(
-            `stripped pl-[14px] pr-4 py-[0.625rem] font-light text-[0.875rem]`
-          )}
+          className={`stripped pl-[14px] pr-4 ${containerLabel} font-light text-[0.875rem]`}
         >
           {label}
         </div>
