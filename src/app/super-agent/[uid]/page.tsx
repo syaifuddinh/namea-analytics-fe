@@ -111,7 +111,7 @@ export default function SuperAgentDetail() {
           <div className="flex flex-1 text-gray-10 text-base font-light">
             Agents ({dataAgent.totalAgent})
           </div>
-          <div className="flex flex-row flex-1 items-center border border-gray-1 bg-base-bg3 rounded-md p-2 mr-2 max-h-[2.25rem]">
+          <div className="flex flex-row flex-1 items-center border border-gray-1 bg-base-bg3 rounded-md p-2 mr-[0.75rem] max-h-[2.25rem]">
             <IconSearch className="!w-[1.313rem] !h-[1.5rem]" />
             <input
               type="text"
@@ -127,7 +127,7 @@ export default function SuperAgentDetail() {
 
           <SelectInput
             placeholder="All Status"
-            className="mr-2 !pr-1"
+            className="!mr-[0.75rem] !pr-1"
             placeholderClassName="w-[86px]"
             iconStyle="!w-[1.313rem] !h-[1.5rem]"
           />
@@ -137,7 +137,7 @@ export default function SuperAgentDetail() {
             <div>Create Agent</div>
           </Button>
         </div>
-        <div className="p-5 flex flex-row gap-[0.75rem] border-b border-base-bg3">
+        <div className="p-5 flex flex-row gap-[1rem] border-b border-base-bg3">
           <CardDashboardDetail
             icon={"/images/total-agent.png"}
             value={"875"}
