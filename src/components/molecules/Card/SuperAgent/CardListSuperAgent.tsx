@@ -32,7 +32,7 @@ export const CardListSuperAgent: React.FC<ICardListSuperAgent> = ({
         <div
           className={clsx(
             "flex flex-1 flex-row px-5 pb-5  divide-x divide-gray-1 items-center",
-            rank > 5 ? "pt-[18px]" : ""
+            rank > 5 && "pt-[18px]"
           )}
         >
           <div className="flex flex-row items-center">
