@@ -29,12 +29,12 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
         <div className="border-l border-l-gray-1 h-5" />
         <div className="flex flex-1 flex-row items-center pl-[48px]">
           <div className="flex flex-col mr-16">
-            <div className="text-gray-6 text-sm font-extralight mb-1 tracking-[0.2px]">
+            <div className="text-gray-6 text-sm font-extralight mb-1">
               Profit Bitcoin
             </div>
             <div
               className={clsx(
-                "text-sm font-light",
+                "text-sm font-light tracking-[0.2px]",
                 bitcoin.profit ? "text-gray-10" : "text-alert-10",
                 bitcoin.nominal.includes("Rp") && "flex flex-row items-center"
               )}
@@ -50,12 +50,12 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
             </div>
           </div>
           <div className="flex flex-col mr-16">
-            <div className="text-gray-6 text-sm font-extralight mb-1 tracking-[0.2px]">
+            <div className="text-gray-6 text-sm font-extralight mb-1">
               Profit Ethereum
             </div>
             <div
               className={clsx(
-                "text-sm font-light",
+                "text-sm font-light tracking-[0.2px]",
                 ethereum.profit ? "text-gray-10" : "text-alert-10",
                 ethereum.nominal.includes("Rp") && "flex flex-row items-center"
               )}
@@ -71,12 +71,12 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
             </div>
           </div>
           <div className="flex flex-col mr-16">
-            <div className="text-gray-6 text-sm font-extralight mb-1 tracking-[0.2px]">
+            <div className="text-gray-6 text-sm font-extralight mb-1">
               Total Turn Over
             </div>
             <div
               className={clsx(
-                "text-sm font-light",
+                "text-sm font-light tracking-[0.2px]",
                 totalTurnOver.profit ? "text-gray-10" : "text-alert-10",
                 totalTurnOver.nominal.includes("Rp") &&
                   "flex flex-row items-center"
@@ -95,12 +95,12 @@ export const CardListAgent: React.FC<ICardListAgent> = ({
             </div>
           </div>
           <div className="flex flex-col mr-[60px]">
-            <div className="text-gray-6 text-sm font-extralight mb-1 tracking-[0.2px]">
+            <div className="text-gray-6 text-sm font-extralight mb-1">
               Total Profit
             </div>
             <div
               className={clsx(
-                "text-sm font-light",
+                "text-sm font-light tracking-[0.2px]",
                 totalProfit.profit ? "text-gray-10" : "text-alert-10",
                 totalProfit.nominal.includes("Rp") &&
                   "flex flex-row items-center"

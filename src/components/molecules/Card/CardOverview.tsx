@@ -10,6 +10,7 @@ export const CardOverview: React.FC<ICardOverview> = ({
   className,
   containerStyle,
   divider = true,
+  containerBgColor = "border-gray-1",
 }) => {
   return (
     <div
@@ -18,7 +19,9 @@ export const CardOverview: React.FC<ICardOverview> = ({
         containerStyle
       )}
     >
-      <div className="flex flex-1 flex-col border-t border-gray-1 mt-1 bg-base-bg5 rounded-t-xl">
+      <div
+        className={`flex flex-1 flex-col border-t border-gray-1 mt-1 bg-base-bg5 rounded-t-xl ${containerBgColor}`}
+      >
         {customHeader ? (
           customHeader
         ) : (

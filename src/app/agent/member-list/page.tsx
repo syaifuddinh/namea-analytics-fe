@@ -55,7 +55,7 @@ export default function MemberListAgent() {
       />
 
       <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mb-5 mt-5">
-        <div className="flex flex-1 flex-col border-t border-gray-1 mt-[4px] bg-base-bg5 rounded-t-xl">
+        <div className="flex flex-1 flex-col border-t border-base-bg3 mt-[4px] bg-base-bg5 rounded-t-xl">
           <div className="flex flex-1 flex-row px-5 pb-5 items-center pt-[18px]">
             <div className="flex flex-row items-center">
               <Image
@@ -115,6 +115,7 @@ export default function MemberListAgent() {
         placeholder="Ethereum Revenue"
         subPlaceholder="Record your ideas and to-do’s easily, so you never miss a thing."
         containerStyle="mb-[4rem]"
+        containerBgColor="border-bg-base3"
         divider={false}
         renderContent={
           <>

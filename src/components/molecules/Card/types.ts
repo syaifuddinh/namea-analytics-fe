@@ -7,6 +7,7 @@ export interface ICardOverview {
   containerStyle?: string;
   divider?: boolean;
   customHeader?: JSX.Element;
+  containerBgColor?: string;
 }
 
 export interface ICardStatus {
