@@ -64,7 +64,7 @@ export const CardDashboardSA: React.FC<ICardDashboard> = ({
             </div>
           </div>
         </div>
-    </HeadlineCard>
-        
+      </div>
+    </div>    
   );
 };
