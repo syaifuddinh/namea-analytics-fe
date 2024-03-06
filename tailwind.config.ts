@@ -33,6 +33,7 @@ const config: Config = {
         "base-bg2": "var(--c-base-bg2)",
         "success-1": "var(--c-success1)",
         "success-2": "var(--c-success2)",
+        "success-3": "rgba(43, 205, 185, 1)",
         "success-10": "var(--c-success10)",
         "base-bg3": "var(--c-base-bg3)",
         "base-bg4": "var(--c-base-bg4)",
@@ -51,6 +52,7 @@ const config: Config = {
         "bar-color": "var(--c-bar-color)",
         "dot-blue-border": "var(--c-dot-blue-border)",
         "white-theme": "var(--c-white-theme-color)",
+        "shadow1": "rgba(0, 22, 25, 0.6)"
       },
     },
   },

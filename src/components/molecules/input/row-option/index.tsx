@@ -7,6 +7,7 @@ import { useEffect } from "react"
 export default function RowOptionInput({ 
 	value,
 	options,
+	variant = "default",
 	containerHeight="36px",
 	childrenHeight="1.75rem",
 	itemPaddingLeft="0.625rem",
@@ -19,7 +20,9 @@ export default function RowOptionInput({
 		return value
 	})
 
-	const onChangeData = newValue => {
+	const onChangeData = (newValue, e) => {
+		const href = e.target.getAttribute("href")
+		if(href === "#") e.preventDefault()
 		setDataValue(newValue)
 		onChange(newValue)
 	}
@@ -43,20 +46,15 @@ export default function RowOptionInput({
 	    >
 	    	{ 
 	    		options.map(item => (
-			    	<div
+			    	<a
 			    		key={item.value}
-			    		className={`row-option-input_item grow flex items-center justify-center py-[4px] pr-[10px] cursor-pointer ${item.value === dataValue ? "text-[var(--Gray10)] bg-[var(--base-bg3)] rounded-[6px] border border-[var(--Gray1)]" : "text-[var(--Gray6)]"}`}
+			    		href={item.url ? item.url : "#"}
+			    		className={`row-option-input_item font-extralight text-center tracking-[0.06px] text-sm leading-5 grow flex items-center justify-center py-[4px] pr-[10px] cursor-pointer ${item.value === dataValue ? "text-[var(--Gray10)] bg-[var(--base-bg3)] rounded-[6px] border border-[var(--Gray1)]" : "text-[var(--Gray6)]"}`}
 			    		style={{"maxHeight": childrenHeight, "minHeight": childrenHeight, "paddingLeft": itemPaddingLeft}}
-			    		onClick={() => onChangeData(item.value)}
+			    		onClick={(e) => onChangeData(item.value, e)}
 			    	>
-
-			    		<div
-			    			className="font-extralight text-center tracking-[0.06px] text-sm leading-5"
-			    		>
-			    			
-				    		{ item.label }
-			    		</div>
-			    	</div>
+				    	{ item.label }
+			    	</a>
 	    		))
 	    	}
 	    </div>

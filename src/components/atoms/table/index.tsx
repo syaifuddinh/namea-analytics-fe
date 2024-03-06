@@ -1,4 +1,7 @@
+"use client"
+
 import Card from "@/components/atoms/card"
+import { useState } from "react"
 
 const Table = ({ 
    columns = [],
@@ -6,6 +9,14 @@ const Table = ({
    footers = [],
    className = ""
 }) => {
+  const [activeColumn, setActiveColumn] = useState(-1)
+  const [activeRow, setActiveRow] = useState(-1)
+
+  const onColumnEnter = (colIndex, rowIndex) => {
+    setActiveColumn(colIndex)
+    setActiveRow(rowIndex)
+  }
+
   return (    
       <Card
         isDividerVisible={false}
@@ -14,6 +25,7 @@ const Table = ({
       >
           <table
               className="w-full"
+              onMouseLeave={() => { setActiveColumn(-1); setActiveRow(-1) }}
           >
             <thead>
                 <tr className="bg-base-bg3">
@@ -32,10 +44,19 @@ const Table = ({
                 { contents.map((content, index) => (
                     <tr
                         key={index}
+                        className="hover:bg-base-bg3"
                     >
                         { content.map((col, index2) => (
-                            <td key={index2} className="h-[52px] pl-4 font-extralight text-sm text-gray-10">
+                            <td
+                              key={index2}
+                              className={`relative h-[52px] pl-4 font-extralight text-sm text-gray-10 hover:border hover:border-success-3 ${activeColumn === index2 ? "bg-base-bg3" : ""}`}
+                              onMouseEnter={() => onColumnEnter(index2, index)}
+                            >
                                 { col }
+
+                                { activeColumn > -1 && (index2 !== activeColumn && index !== activeRow) && (
+                                    <div className="absolute bg-shadow1 w-full h-full top-0 left-0"></div>
+                                ) }
                             </td>
                         )) }
                     </tr>
