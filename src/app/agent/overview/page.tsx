@@ -248,7 +248,7 @@ export default function OverviewAgent() {
             divider={false}
             renderContent={
               <>
-                <div className="flex flex-row p-[1.125rem] gap-2">
+                <div className="flex flex-row px-[1.125rem] py-[1.25rem] gap-2">
                   <div className="w-[72%]">
                     <Panel
                       className="!min-h-0"
@@ -268,7 +268,7 @@ export default function OverviewAgent() {
                     />
                   </div>
                 </div>
-                <div className="flex flex-1 flex-col border-y border-y-gray-1 bg-base-bg5 mb-[4px] rounded-b-xl p-5 gap-4">
+                <div className="flex flex-1 flex-col border-y border-y-gray-1 bg-base-bg5 mb-[4px] rounded-b-xl p-[1.125rem] gap-[1.125rem]">
                   {item.dataProfit.map((x) => (
                     <CardProfit
                       key={`data-profit-${x.id}`}
