@@ -23,7 +23,7 @@ const Divider = ({
 
 					{ direction === "vertical" && (
 						<div
-							className={`w-[1px] bg-gray-1 ${className}`}
+							className={`w-[1px] max-w-[1px] bg-gray-1 ${className}`}
 							style={{ height }}
 						>
 							

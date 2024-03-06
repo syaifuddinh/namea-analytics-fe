@@ -24,6 +24,8 @@ export default function({ value = "competition-expense" }) {
 			value={value}
 			options={tabs}
 			width="320px"
+			containerHeight="40px"
+			childrenHeight="32px"
 		/>
 	)
 }
