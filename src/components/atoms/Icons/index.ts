@@ -1,6 +1,7 @@
 export * from "./Search";
 export * from "./Calender";
-export * from "./Dropdown";
+export * from "./ChevronDown";
+export * from "./ChevronUp";
 export * from "./ArrowUp";
 export * from "./ArrowDown";
 export * from "./ChevronRight";
@@ -10,6 +11,7 @@ export * from "./ArrowRight";
 export * from "./DottedLeftArrowIcon";
 export * from "./DottedRightArrowIcon";
 export * from "./Add";
+export * from "./ThreeDotVertical";
 export * from "./types";
 export * from "./cashflow/header";
 export * from "./white/uploading";

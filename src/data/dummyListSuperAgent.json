@@ -6,7 +6,7 @@
     "codeAgent": "JMS88",
     "nameAgent": "Della J. Mitchell",
     "totalAgent": 128,
-    "totalProfit": "500.950.450,00",
+    "totalProfit": "500.950.450",
     "status": "Active"
   },
   {
@@ -15,9 +15,9 @@
     "image": "/images/avatar_dummy.png",
     "codeAgent": "JMS88",
     "nameAgent": "Phil D. Lewter",
-    "totalAgent": 121,
-    "totalProfit": "500.950.450,00",
-    "status": "In Process"
+    "totalAgent": 128,
+    "totalProfit": "500.950.450",
+    "status": "In Progress"
   },
   {
     "id": "3",
@@ -26,7 +26,7 @@
     "codeAgent": "JMS88",
     "nameAgent": "Julia D. Quon",
     "totalAgent": 117,
-    "totalProfit": "500.950.450,00",
+    "totalProfit": "500.950.450",
     "status": "Active"
   },
   {
@@ -36,7 +36,7 @@
     "codeAgent": "JMS88",
     "nameAgent": "Tracy R. Thomas",
     "totalAgent": 106,
-    "totalProfit": "500.950.450,00",
+    "totalProfit": "500.950.450",
     "status": "Suspend"
   },
   {
@@ -46,7 +46,7 @@
     "codeAgent": "JMS88",
     "nameAgent": "Walter N. Parker",
     "totalAgent": 98,
-    "totalProfit": "500.950.450,00",
+    "totalProfit": "500.950.450",
     "status": "Active"
   },
   {
@@ -56,7 +56,7 @@
     "codeAgent": "JMS88",
     "nameAgent": "Phil D. Lewter",
     "totalAgent": 96,
-    "totalProfit": "500.950.450,00",
+    "totalProfit": "500.950.450",
     "status": "Active"
   },
   {
@@ -66,8 +66,8 @@
     "codeAgent": "JMS88",
     "nameAgent": "Phil D. Lewter",
     "totalAgent": 88,
-    "totalProfit": "500.950.450,00",
-    "status": "In Process"
+    "totalProfit": "500.950.450",
+    "status": "In Progress"
   },
   {
     "id": "8",
@@ -76,7 +76,7 @@
     "codeAgent": "JMS88",
     "nameAgent": "Phil D. Lewter",
     "totalAgent": 75,
-    "totalProfit": "500.950.450,00",
+    "totalProfit": "500.950.450",
     "status": "Suspend"
   },
   {
@@ -86,8 +86,8 @@
     "codeAgent": "JMS88",
     "nameAgent": "Phil D. Lewter",
     "totalAgent": 66,
-    "totalProfit": "500.950.450,00",
-    "status": "In Process"
+    "totalProfit": "500.950.450",
+    "status": "In Progress"
   },
   {
     "id": "10",
@@ -96,7 +96,7 @@
     "codeAgent": "JMS88",
     "nameAgent": "Phil D. Lewter",
     "totalAgent": 9,
-    "totalProfit": "500.950.450,00",
+    "totalProfit": "500.950.450",
     "status": "Suspend"
   }
 ]

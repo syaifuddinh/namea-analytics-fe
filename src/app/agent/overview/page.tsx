@@ -1,17 +1,8 @@
 "use client";
-import {
-  IconAdd,
-  IconArrowUp,
-  IconCalender,
-  IconChevronRight,
-  IconDropdown,
-  IconSearch,
-  IconSize,
-} from "@/components/atoms/Icons";
+import { IconChevronRight, IconChevronDown } from "@/components/atoms/Icons";
 import { IconURL } from "@/components/atoms/Icons/Url";
 import { Calendar } from "@/components/atoms/calender";
 import CustomChart from "@/components/atoms/custom-chart";
-import { Dot } from "@/components/atoms/dot-global";
 import { InputSearch } from "@/components/atoms/search";
 import { CardOverview, CardStatus } from "@/components/molecules/Card";
 import {
@@ -20,17 +11,21 @@ import {
   CardTop,
 } from "@/components/molecules/Card/Agent";
 import { Header } from "@/components/molecules/Header";
-import { HeaderProfit } from "@/components/molecules/Header/Agent";
+import {
+  HeaderProfit,
+  PageHeaderSection,
+} from "@/components/molecules/Header/Agent";
 import Panel from "@/components/molecules/panel";
+import dummyProfit from "@/data/dummyProfit.json";
+import dummyTopPagesMarket from "@/data/dummyTopPagesMarkets.json";
 import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
-import dummyTopPagesMarket from "@/data/dummyTopPagesMarkets.json";
-import dummyProfit from "@/data/dummyProfit.json";
 
-export default function PageAgent() {
+export default function OverviewAgent() {
   //   const lang = await getDictionary();
   const [search, setSearch] = useState<string>("");
+  const [section, setSection] = useState(0);
   const labels = [
     "January",
     "February",
@@ -48,98 +43,16 @@ export default function PageAgent() {
     { id: 3, label: "Login", bgColor: "bg-dot-blue2" },
   ];
 
-  const [page, setPage] = useState(0);
-
-  const labelPage = [
-    { id: 0, label: "Overview" },
-    { id: 1, label: "Member List" },
-    { id: 2, label: "Event" },
-    { id: 3, label: "Data Analyst" },
-  ];
-
   return (
     <>
-      <div className="flex flex-row flex-1 items-center mt-[44px]">
-        <button className="flex flex-row rounded-md border border-gray-1 bg-checkbox items-center pl-[10px] pr-1 py-[6px] mr-[10px]">
-          <Image
-            src="/images/avatar_dummy.png"
-            alt="super agent icon"
-            width={20}
-            height={20}
-          />
-          <div className="text-left text-gray-0 text-sm py-[2px] pl-2 mr-[38px] font-light">
-            Website Name
-          </div>
-          <div className="flex flex-1 justify-end">
-            <IconDropdown className={"!w-[1.25rem !h-[1.25rem]"} />
-          </div>
-        </button>
-        <InputSearch
-          name={"WebOrBrands"}
-          placeholder="Search website or brands"
-          onChange={(value) => setSearch(value)}
-          className="!py-[6px] !pl-2 !pr-[6px]"
-          iconClassName="!w-[1.5rem] !h-[1.25rem]"
-          className1="!ml-1"
-        />
-      </div>
-
-      <div className="flex flex-1 flex-col border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden my-5">
-        <div className="flex flex-1 flex-col border-t border-gray-1 mt-1 bg-base-bg5 rounded-t-xl">
-          <div className="flex flex-1 p-[18px] items-center bg-gray-7 ">
-            <div className="flex flex-row items-center bg-base-bg5 p-1 gap-1 rounded-[10px] border border-gray-9 text-sm text-gray-10 font-extralight">
-              {labelPage.map((item) => (
-                <button
-                  key={`label-page-${item.id}`}
-                  type="button"
-                  onClick={() => setPage(item.id)}
-                  className={clsx(
-                    "py-[4px] px-3 font-thin",
-                    page === item.id &&
-                      "border border-gray-1 rounded-md bg-base-bg3 !font-extralight"
-                  )}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="h-[10px] border-x border-x-gray-1 mx-5" />
-        <div className="flex flex-row border-y border-y-gray-1 bg-base-bg5 mb-1 rounded-b-xl justify-between p-5 items-center">
-          <div className="flex flex-row items-center">
-            <div className="flex items-center mr-4">
-              <Image
-                src="/images/avatar_dummy.png"
-                alt="super agent icon"
-                width={40}
-                height={40}
-              />
-            </div>
-            <div className="text-gray-10 text-base mr-3 font-light">
-              Website Name
-            </div>
-            <div className="flex rounded-full flex-row bg-success-1 items-center pr-[10px] pl-2 py-[4px] h-[28px]">
-              <div
-                className={clsx(
-                  "bg-dot-blue h-2 w-2 rounded-full border-[3px] border-dot-blue-border mr-2"
-                )}
-              />
-              <div className="text-left text-success-10 text-xs font-light">
-                Active
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-row items-center pr-[11px] pl-1 rounded-full border border-base-bg3 gap-2 bg-base-bg3 h-[26px]">
-            <IconURL className="!w-5 !h-5" />
-            <div className="text-sm text-gray-6 font-extralight">
-              https://binance.co
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-1 border-b border-b-base-bg3" />
+      <PageHeaderSection
+        websiteName={"Website Name"}
+        websiteStatus={"Active"}
+        websiteUrl={"https://binance.co"}
+        onChangeSearch={(value) => setSearch(value)}
+        onClickSection={(value) => setSection(value)}
+        section={section}
+      />
 
       <Header
         icon="/images/super-agent.png"
@@ -285,6 +198,8 @@ export default function PageAgent() {
                   [20000, 20000, 20000, 20000, 20000, 20000, 20000, 20000],
                   [30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000],
                 ]}
+                onGenerateTooltip={undefined}
+                onGenerateLegend={undefined}
               />
             </div>
           </>

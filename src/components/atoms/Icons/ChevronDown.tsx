@@ -1,7 +1,7 @@
 import { IIconProps, IconSize } from "./types";
 import { styles } from "./helpers";
 
-export const IconDropdown: React.FC<IIconProps> = ({
+export const IconChevronDown: React.FC<IIconProps> = ({
   size = IconSize.md,
   className,
 }) => {

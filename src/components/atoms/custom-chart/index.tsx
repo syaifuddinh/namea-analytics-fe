@@ -206,7 +206,10 @@ const CustomChart = ({
                         <div
                           key={item.id}
                           className="z-10 absolute"
-                          style={{ bottom: (tooltipAlign === "center" ? item.bottom : 0), left: item.left }}
+                          style={{
+                            bottom: tooltipAlign === "center" ? item.bottom : 0,
+                            left: item.left,
+                          }}
                         >
                           {item.element}
                         </div>

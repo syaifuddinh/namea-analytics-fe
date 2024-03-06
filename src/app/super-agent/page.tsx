@@ -28,14 +28,15 @@ export default function PageSuperAgent() {
             name={"SuperAgent"}
             placeholder="Search super agent by name or code..."
             onChange={(value) => setSearch(value)}
-            className="w-[375px] h-8 mr-2"
-            className1="ml-1"
+            className="!w-[375px] !h-8 !mr-2"
+            className1="!ml-1"
+            iconClassName="!w-[1.375rem] !h-[1.5rem]"
           />
-          <Calendar className="w-[272px] h-8" />
+          <Calendar className="!w-[272px] !h-8" />
         </div>
       </Header>
 
-      <div className="mt-8 mb-10 flex flex-row gap-6">
+      <div className="mt-8 mb-10 flex flex-row gap-[1.313rem]">
         <CardDashboardSA
           icon={"/images/total-super-agent.png"}
           placeholder={"Total Super Agent"}
@@ -48,7 +49,7 @@ export default function PageSuperAgent() {
           placeholder={"Total Active Super Agent"}
           value={"Rp500.950.450"}
           profit={false}
-          percentage={"16.5% (-8)"}
+          percentage={"-16.5% (-8)"}
         />
         <CardDashboardSA
           icon={"/images/total-revenue.png"}
@@ -58,21 +59,19 @@ export default function PageSuperAgent() {
           percentage={"23.8% (+24)"}
         />
       </div>
-      {dummyListSuperAgent.map((item) => {
-        return (
-          <CardListSuperAgent
-            key={`super-agent-${item.id}`}
-            id={item.id}
-            rank={item.rank}
-            image={item.image}
-            codeAgent={item.codeAgent}
-            nameAgent={item.nameAgent}
-            totalAgent={item.totalAgent}
-            totalProfit={item.totalProfit}
-            status={item.status}
-          />
-        );
-      })}
+      {dummyListSuperAgent.map((item) => (
+        <CardListSuperAgent
+          key={`super-agent-${item.id}`}
+          id={item.id}
+          rank={item.rank}
+          image={item.image}
+          codeAgent={item.codeAgent}
+          nameAgent={item.nameAgent}
+          totalAgent={item.totalAgent}
+          totalProfit={item.totalProfit}
+          status={item.status}
+        />
+      ))}
       <Pagination className="mt-5" totalAgent={dummyListSuperAgent.length} />
     </>
   );
