@@ -30,7 +30,7 @@ export default function PlatformCard({
 						</div>
 					</div>
 
-					<div>	
+					<div className="w-auto xl:w-[240px]">	
 						<div className="text-gray-6 font-extralight text-sm leading-5">
 							Pengeluaran Lomba
 						</div>
