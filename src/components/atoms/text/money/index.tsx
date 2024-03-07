@@ -3,6 +3,7 @@ const MoneyText = ({
   className = "",
   positivity = "plus",
   fontSize = "1rem",
+  prefix = "",
   fontWeight = 300,
   variant = "default",
 }) => {
@@ -16,6 +17,7 @@ const MoneyText = ({
       style={{ fontSize, fontWeight }}
     >
       {positivity === "minus" && "-"}
+      { prefix }
       <span className={``}>Rp{children}</span>
       <div
         className={`money-text_suffix ${

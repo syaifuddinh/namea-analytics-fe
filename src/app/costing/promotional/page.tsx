@@ -10,6 +10,7 @@ import TrendAnalysis from "@/components/organisms/costing/trend-analysis"
 import PromotionalCostingTab from "@/components/organisms/costing/promotional-costing-tab"
 import CostingLayout from "@/components/templates/costing-layout"
 import FrequencyInput from "@/components/molecules/input/frequency"
+import Divider from "@/components/atoms/divider"
 
 export default function PromotionalCostingPage() {
   return (
@@ -17,9 +18,10 @@ export default function PromotionalCostingPage() {
     	<PromotionalCostingTab />
     	<Header className="mt-8" />
     	<UploadCSV className="mt-5" />
+        <Divider className="mt-5" />
     	<CostingBreakdown
     		title="Total Pengeluaran Lomba"
-    		className="mt-[3.25rem]"
+    		className="mt-8"
             sideElement={
                 <FrequencyInput
                     variant="monthly-daily"
