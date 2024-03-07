@@ -1,9 +1,7 @@
 "use client";
-import { IconChevronRight, IconChevronDown } from "@/components/atoms/Icons";
-import { IconURL } from "@/components/atoms/Icons/Url";
+import { IconChevronRight } from "@/components/atoms/Icons";
 import { Calendar } from "@/components/atoms/calender";
 import CustomChart from "@/components/atoms/custom-chart";
-import { InputSearch } from "@/components/atoms/search";
 import { CardOverview, CardStatus } from "@/components/molecules/Card";
 import {
   CardDashboard,
@@ -18,8 +16,6 @@ import {
 import Panel from "@/components/molecules/panel";
 import dummyProfit from "@/data/dummyProfit.json";
 import dummyTopPagesMarket from "@/data/dummyTopPagesMarkets.json";
-import clsx from "clsx";
-import Image from "next/image";
 import { useState } from "react";
 
 export default function OverviewAgent() {

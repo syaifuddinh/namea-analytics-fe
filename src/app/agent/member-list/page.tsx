@@ -43,6 +43,8 @@ export default function MemberListAgent() {
     { label: "S", active: false },
   ];
 
+  const [showDetail, setShowDetail] = useState(false);
+
   return (
     <>
       <PageHeaderSection
