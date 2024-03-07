@@ -55,7 +55,7 @@ export default function TopCategory({ className = "" }) {
 			paddingTop="6px"
 			className={className}
 		>
-			<div className="grid grid-cols-2 gap-5">
+			<div className="grid grid-cols-1 lg:grid-cols-2 gap-5 p-5 bg-base-bg5">
 				{ items.map(item => (
 					<CategoryCard
 						title={item.title}

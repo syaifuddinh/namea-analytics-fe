@@ -1,7 +1,6 @@
 import IconPlusSquare from "@/assets/icons/plus-square";
 import IconMinusSquare from "@/assets/icons/minus-square";
 
-
 const BalanceLabel = ({ 
   title, 
   className, 

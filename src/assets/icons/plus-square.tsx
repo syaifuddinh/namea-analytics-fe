@@ -1,13 +1,14 @@
 import React, { SVGProps } from "react";
 
-function IconPlusSquare(props: SVGProps<SVGSVGElement>) {
+function IconPlusSquare({ width = 28, height = 28, ...props }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="28"
-      height="28"
-      viewBox="0 0 28 28"
+      width={width}
+      height={height}
+      viewBox={`0 0 ${width} ${height}`}
       fill="none"
+      {...props}
     >
       <rect width="28" height="28" rx="4" fill="#CDFBFF" fillOpacity="0.06" />
       <rect
