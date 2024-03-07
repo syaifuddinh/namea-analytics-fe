@@ -13,9 +13,12 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "tooltip-background": "linear-gradient(0deg, #092B2D, #092B2D)",
-        "primary-gradient1": "linear-gradient(270deg, #07B7AC 0%, #087981 100%)",
-        "primary-gradient2": "linear-gradient(270deg, rgba(7, 183, 172, 0.5) 0%, rgba(8, 121, 129, 0.5) 100%)",
-        "primary-gradient3": "linear-gradient(270deg, rgba(7, 183, 172, 0.3) 0%, rgba(8, 121, 129, 0.3) 100%)"
+        "primary-gradient1":
+          "linear-gradient(270deg, #07B7AC 0%, #087981 100%)",
+        "primary-gradient2":
+          "linear-gradient(270deg, rgba(7, 183, 172, 0.5) 0%, rgba(8, 121, 129, 0.5) 100%)",
+        "primary-gradient3":
+          "linear-gradient(270deg, rgba(7, 183, 172, 0.3) 0%, rgba(8, 121, 129, 0.3) 100%)",
       },
       colors: {
         checkbox: "var(--c-checkbox)",
@@ -25,6 +28,7 @@ const config: Config = {
         "alert-10": "var(--c-alert10)",
         "gray-0": "var(--c-gray0)",
         "gray-1": "var(--c-gray1)",
+        "gray-2": "var(--c-gray2)",
         "gray-4": "var(--c-gray4)",
         "gray-6": "var(--c-gray6)",
         "gray-7": "var(--c-gray7)",
@@ -52,7 +56,7 @@ const config: Config = {
         "bar-color": "var(--c-bar-color)",
         "dot-blue-border": "var(--c-dot-blue-border)",
         "white-theme": "var(--c-white-theme-color)",
-        "shadow1": "rgba(0, 22, 25, 0.6)"
+        shadow1: "rgba(0, 22, 25, 0.6)",
       },
     },
   },
