@@ -1,31 +1,18 @@
 "use client";
-import {
-  IconArrowDown,
-  IconArrowUp,
-  IconChevronDown,
-  IconChevronRight,
-  IconChevronUp,
-  IconSmallChevronDown,
-  IconThreeDotVertical,
-} from "@/components/atoms/Icons";
+import { IconArrowDown, IconArrowUp } from "@/components/atoms/Icons";
 import {
   CardDashboard,
   CardMemberList,
 } from "@/components/molecules/Card/Agent";
 import { Header } from "@/components/molecules/Header";
 import {
-  ILabelSection,
   ILabelYear,
   PageHeaderSection,
 } from "@/components/molecules/Header/Agent";
-import Panel from "@/components/molecules/panel";
-import Image from "next/image";
-import { useState } from "react";
-import dummyCrypto from "@/data/dummyCrypto.json";
 import dummyDataAnalyst from "@/data/dummyDataAnalyst.json";
-import { Pagination } from "@/components/molecules/Footer/Pagination";
-import Link from "next/link";
 import clsx from "clsx";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function DataAnalystAgent() {
   //   const lang = await getDictionary();
@@ -117,7 +104,7 @@ export default function DataAnalystAgent() {
               />
             </div>
 
-            <div className="flex flex-wrap p-[1.125rem] bg-base-bg5 border-t border-t-base-bg3 gap-6 justify-center">
+            <div className="flex p-[1.125rem] bg-base-bg5 border-t border-t-base-bg3 gap-5 justify-center">
               {dummyDataAnalyst.map((item) => (
                 <div
                   key={`data-analyst-revenue-${item.id}`}
