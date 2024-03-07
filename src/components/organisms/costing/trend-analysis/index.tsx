@@ -5,19 +5,19 @@ import PlatformCard from "./platform-card"
 const mostSpentAgents = [
 	{
 		"id": 1,
-		"title": "Platform 1",
+		"title": "PLATFORM 1",
 		"subtitle": "Top 1",
 		"balance": "500.950.450"
 	},
 	{
 		"id": 2,
-		"title": "Platform 2",
+		"title": "PLATFORM 2",
 		"subtitle": "Top 2",
 		"balance": "500.950.450"
 	},
 	{
 		"id": 3,
-		"title": "Platform 3",
+		"title": "PLATFORM 3",
 		"subtitle": "Top 3",
 		"balance": "500.950.450"
 	}
@@ -27,19 +27,19 @@ const mostSpentAgents = [
 const leastSpentAgents = [
 	{
 		"id": 1,
-		"title": "Platform 4",
+		"title": "PLATFORM 4",
 		"subtitle": "Top 1",
 		"balance": "500.950.450"
 	},
 	{
 		"id": 2,
-		"title": "Platform 5",
+		"title": "PLATFORM 5",
 		"subtitle": "Top 2",
 		"balance": "500.950.450"
 	},
 	{
 		"id": 3,
-		"title": "Platform 6",
+		"title": "PLATFORM 6",
 		"subtitle": "Top 3",
 		"balance": "500.950.450"
 	}

@@ -19,7 +19,7 @@ export default function PlatformCard({
 					{ subtitle }
 				</div>	
 
-				<div className="flex items-start justify-between px-5 mt-[2px]">	
+				<div className="flex items-start justify-between px-[1.125rem] mt-[2px]">	
 					<div className="flex items-center gap-3">
 						<div className="w-[40px] h-[40px] bg-gray-9 rounded-[42px]">
 							

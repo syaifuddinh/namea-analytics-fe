@@ -1,6 +1,7 @@
 "use client";
 
 import AgentSection from "@/components/organisms/costing/agent-section"
+import RecentCreatedEvent from "@/components/organisms/costing/recent-created-event"
 import Header from "@/components/organisms/costing/header"
 import TrendAnalysis from "@/components/organisms/costing/trend-analysis"
 import PromotionalCostingTab from "@/components/organisms/costing/promotional-costing-tab"
@@ -13,7 +14,7 @@ import MoneyText from "@/components/atoms/text/money"
 const reports = [
     {
         "title": "Total Revenue",
-        "content": <MoneyText>500.950.450</MoneyText>,
+        "content": <MoneyText prefix="+">500.950.450</MoneyText>,
         "mutation": "23.8% (+24)",
         "mutationVariant": "primary"
     },
@@ -67,6 +68,7 @@ export default function PromotionalCostingPage() {
             </div>
 
             <AgentSection className="mt-[60px]" />
+            <RecentCreatedEvent className="mt-[60px]" />
         </CostingLayout>
     );
 }
