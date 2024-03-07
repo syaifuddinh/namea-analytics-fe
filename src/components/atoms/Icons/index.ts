@@ -23,3 +23,4 @@ export * from "./costing/CostingDottedRightArrowIcon";
 export * from "./costing/CostingDottedLeftArrowIcon";
 export * from "./costing/StrongboxIcon";
 export * from "./costing/GlobalIcon";
+export * from "./costing/CostingChevronDownIcon";
