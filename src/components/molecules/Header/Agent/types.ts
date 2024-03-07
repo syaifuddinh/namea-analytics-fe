@@ -16,4 +16,10 @@ export interface IPageHeaderAgent {
 export interface ILabelSection {
   id: number;
   label: string;
+  linkPath: string;
+}
+
+export interface ILabelYear {
+  id: number;
+  label: string;
 }
