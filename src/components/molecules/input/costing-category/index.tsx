@@ -13,11 +13,13 @@ const options = [
 	}
 ]
 
-export default function CostingCategoryInput({ }) {
+export default function CostingCategoryInput({ value, onChange }) {
 	return (
 		<SelectInput
 			placeholder="Select Category"
 			options={options}
+			value={value}
+			onChange={onChange}
 		/>
 	)
 }
