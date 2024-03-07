@@ -3,6 +3,7 @@ export * from "./Calender";
 export * from "./ChevronDown";
 export * from "./ChevronUp";
 export * from "./ArrowUp";
+export * from "./MoreIcon";
 export * from "./ArrowDown";
 export * from "./ChevronRight";
 export * from "./SmallChevronDown";
