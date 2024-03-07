@@ -6,6 +6,12 @@ import Image from "next/image";
 import { useState } from "react";
 import { ILabelSection, IPageHeaderAgent } from "./types";
 import Link from "next/link";
+import {
+  getLinkAgentDataAnalyst,
+  getLinkAgentEvent,
+  getLinkAgentMemberList,
+  getLinkAgentOverview,
+} from "@/utils/linkFactory";
 
 export const PageHeaderSection: React.FC<IPageHeaderAgent> = ({
   websiteName,
@@ -16,10 +22,10 @@ export const PageHeaderSection: React.FC<IPageHeaderAgent> = ({
   section,
 }) => {
   const labelPage = [
-    { id: 0, label: "Overview" },
-    { id: 1, label: "Member List" },
-    { id: 2, label: "Event" },
-    { id: 3, label: "Data Analyst" },
+    { id: 0, label: "Overview", linkPath: getLinkAgentOverview() },
+    { id: 1, label: "Member List", linkPath: getLinkAgentMemberList() },
+    { id: 2, label: "Event", linkPath: getLinkAgentEvent() },
+    { id: 3, label: "Data Analyst", linkPath: getLinkAgentDataAnalyst() },
   ];
 
   return (
@@ -54,10 +60,9 @@ export const PageHeaderSection: React.FC<IPageHeaderAgent> = ({
           <div className="flex flex-1 p-[18px] items-center bg-gray-7 ">
             <div className="flex flex-row items-center bg-base-bg5 p-1 gap-1 rounded-[10px] border border-gray-9 text-sm text-gray-10 font-extralight">
               {labelPage.map((item: ILabelSection) => (
-                <button
+                <Link
                   key={`label-page-${item.id}`}
-                  type="button"
-                  onClick={() => onClickSection(item.id)}
+                  href={item.linkPath}
                   className={clsx(
                     "py-[4px] px-3 font-thin",
                     section === item.id &&
@@ -65,7 +70,7 @@ export const PageHeaderSection: React.FC<IPageHeaderAgent> = ({
                   )}
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
             </div>
           </div>
@@ -85,7 +90,9 @@ export const PageHeaderSection: React.FC<IPageHeaderAgent> = ({
               {websiteName}
             </div>
             <div className="flex rounded-full flex-row bg-success-1 items-center pr-[10px] pl-2 py-[4px] h-[28px]">
-              <div className="bg-dot-blue h-2 w-2 rounded-full border-[3px] border-dot-blue-border mr-2" />
+              <div className="flex bg-dot-blue-border h-3.5 w-3.5 rounded-full items-center justify-center mr-2">
+                <div className="bg-dot-blue h-2 w-2 rounded-full" />
+              </div>
               <div className="text-left text-success-10 text-xs font-light">
                 {websiteStatus}
               </div>

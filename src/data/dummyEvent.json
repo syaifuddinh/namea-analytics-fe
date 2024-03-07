@@ -1,0 +1,19 @@
+{
+  "id": 1,
+  "eventName": "Monthly Cashback 15%",
+  "descEventName": "BonusCashback",
+  "promotionPeriode": "20 Oct 2023 to 27 Oct 2023",
+  "revenueGenerated": "+Rp24.600.590",
+  "eventStatus": "Active",
+  "detailEvent": {
+    "createdBy": "Agent Name",
+    "promotionType": "Agent Name",
+    "include": "YES",
+    "bonusAmount": "100%",
+    "turnoverMultiplier": "7",
+    "minDeposit": "Rp56.235.459,00",
+    "maxDeposit": "Rp500.950.450,00",
+    "minBonus": "Rp8.000.000,00",
+    "maxBonus": "Rp24.600.590,00"
+  }
+}
