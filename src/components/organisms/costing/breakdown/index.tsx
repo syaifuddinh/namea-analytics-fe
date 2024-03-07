@@ -8,7 +8,7 @@ import CustomChart from "@/components/atoms/custom-chart"
 const Header = ({ title, sideElement}) => (
 	<div className="card_header flex items-center justify-center gap-5 h-[64px] relative">
 		<CostingDottedRightArrowIcon />
-		<div className="font-light text-gray-10 tracking-[0.04px]">
+		<div className="font-light text-center text-gray-10 tracking-[0.04px]">
 			{ title }
 		</div>
 		<CostingDottedLeftArrowIcon />

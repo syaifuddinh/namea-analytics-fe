@@ -50,7 +50,7 @@ export default function TrendAnalysis({
 }) {
 	return (
 		<div className={`${className}`}>
-			<div className="flex justify-between items-center">
+			<div className="flex gap-2 flex-col md:flex-row justify-between md:items-center">
 				<div className="trend-analysis_title font-light text-[18px] leading-[26px] text-gray-10">
 					Trend Analysis
 				</div>
@@ -58,7 +58,7 @@ export default function TrendAnalysis({
 				<DatePeriodInput />
 			</div>
 
-			<div className="flex mt-5 *:grow gap-5">
+			<div className="grid lg:grid-cols-2 grid-cols-1 mt-5 gap-5">
 				<AgentCard
 					title="Most Spent Agents"
 					className="flex flex-col p-5 gap-4"

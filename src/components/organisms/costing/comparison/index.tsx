@@ -7,6 +7,7 @@ import Button from "@/components/atoms/button"
 import BalanceCard from "./balance-card"
 import CustomChart from "@/components/atoms/custom-chart"
 import ComparisonTooltip from "@/components/atoms/comparison-tooltip"
+import CostingCategoryInput from "@/components/molecules/input/costing-category"
 
 const Header = ({ onApplyButtonClick }) => (
 	<div className="card_header">
@@ -15,9 +16,8 @@ const Header = ({ onApplyButtonClick }) => (
 		</div>
 
 		<div className="flex flex-col md:flex-row gap-[0.625rem] mt-3 *:grow">
-			<SelectInput
-				placeholder="Select Category"
-			/>
+			<CostingCategoryInput />
+
 			<SelectInput
 				placeholder="Select Month"
 			/>

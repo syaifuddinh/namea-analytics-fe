@@ -59,7 +59,7 @@ export default function GeneralCosting({ className }) {
 
 			<MonthInput />
 
-			<div className="flex flex-col lg:flex-row flex-wrap lg:*:w-[49%] mt-8 gap-5">
+			<div className="grid grid-cols-1 lg:grid-cols-2 mt-8 gap-5">
 				{
 					ledger.map((item, index) => (
 						<Withdraw
