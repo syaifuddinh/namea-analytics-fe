@@ -51,7 +51,7 @@ export default function RecentCreatedEvent({
 }) {
 	return (
 		<div className={className}>
-			<div className="flex justify-between">
+			<div className="flex flex-col md:flex-row gap-2 justify-between md:items-center">
 				<div className="font-light text-lg text-gray-10">
 					Recent Created Event				
 				</div>
