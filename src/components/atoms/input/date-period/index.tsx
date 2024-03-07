@@ -1,6 +1,6 @@
 "use client";
 
-import { IconCalender, IconChevronDown } from "@/components/atoms/Icons";
+import { IconCalender, CostingChevronDownIcon } from "@/components/atoms/Icons";
 
 export default function DatePeriodInput() {
   return (
@@ -10,7 +10,7 @@ export default function DatePeriodInput() {
         2 December - 20 December
       </div>
       <div className="flex flex-1 justify-end">
-        <IconChevronDown />
+        <CostingChevronDownIcon />
       </div>
     </div>
   );

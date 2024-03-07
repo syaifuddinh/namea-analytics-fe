@@ -2,6 +2,7 @@
 
 import AgentSection from "@/components/organisms/costing/agent-section"
 import RecentCreatedEvent from "@/components/organisms/costing/recent-created-event"
+import TopCategory from "@/components/organisms/costing/top-category"
 import Header from "@/components/organisms/costing/header"
 import TrendAnalysis from "@/components/organisms/costing/trend-analysis"
 import PromotionalCostingTab from "@/components/organisms/costing/promotional-costing-tab"
@@ -69,6 +70,7 @@ export default function PromotionalCostingPage() {
 
             <AgentSection className="mt-[60px]" />
             <RecentCreatedEvent className="mt-[60px]" />
+            <TopCategory className="mt-[60px]" />
         </CostingLayout>
     );
 }
