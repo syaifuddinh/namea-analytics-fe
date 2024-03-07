@@ -1,0 +1,198 @@
+[
+  {
+    "id": 1,
+    "weekDeposit": "July Week 1",
+    "totalDeposit": "+Rp24.600.590",
+    "weeklyDeposit": [
+      {
+        "id": 1,
+        "labelDay": "Sunday",
+        "codeDay": "S",
+        "deposit": "450.785"
+      },
+      {
+        "id": 2,
+        "labelDay": "Monday",
+        "codeDay": "M",
+        "deposit": "0"
+      },
+      {
+        "id": 3,
+        "labelDay": "Tuesday",
+        "codeDay": "T",
+        "deposit": "450.785"
+      },
+      {
+        "id": 4,
+        "labelDay": "Wednesday",
+        "codeDay": "W",
+        "deposit": "0"
+      },
+      {
+        "id": 5,
+        "labelDay": "Thursday",
+        "codeDay": "T",
+        "deposit": "450.785"
+      },
+      {
+        "id": 6,
+        "labelDay": "Friday",
+        "codeDay": "F",
+        "deposit": "0"
+      },
+      {
+        "id": 7,
+        "labelDay": "Saturday",
+        "codeDay": "S",
+        "deposit": "450.785"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "weekDeposit": "July Week 2",
+    "totalDeposit": "+Rp24.600.590",
+    "weeklyDeposit": [
+      {
+        "id": 1,
+        "labelDay": "Sunday",
+        "codeDay": "S",
+        "deposit": "0"
+      },
+      {
+        "id": 2,
+        "labelDay": "Monday",
+        "codeDay": "M",
+        "deposit": "450.785"
+      },
+      {
+        "id": 3,
+        "labelDay": "Tuesday",
+        "codeDay": "T",
+        "deposit": "0"
+      },
+      {
+        "id": 4,
+        "labelDay": "Wednesday",
+        "codeDay": "W",
+        "deposit": "450.785"
+      },
+      {
+        "id": 5,
+        "labelDay": "Thursday",
+        "codeDay": "T",
+        "deposit": "0"
+      },
+      {
+        "id": 6,
+        "labelDay": "Friday",
+        "codeDay": "F",
+        "deposit": "450.785"
+      },
+      {
+        "id": 7,
+        "labelDay": "Saturday",
+        "codeDay": "S",
+        "deposit": "450.785"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "weekDeposit": "July Week 3",
+    "totalDeposit": "+Rp24.600.590",
+    "weeklyDeposit": [
+      {
+        "id": 1,
+        "labelDay": "Sunday",
+        "codeDay": "S",
+        "deposit": "0"
+      },
+      {
+        "id": 2,
+        "labelDay": "Monday",
+        "codeDay": "M",
+        "deposit": "450.785"
+      },
+      {
+        "id": 3,
+        "labelDay": "Tuesday",
+        "codeDay": "T",
+        "deposit": "450.785"
+      },
+      {
+        "id": 4,
+        "labelDay": "Wednesday",
+        "codeDay": "W",
+        "deposit": "0"
+      },
+      {
+        "id": 5,
+        "labelDay": "Thursday",
+        "codeDay": "T",
+        "deposit": "450.785"
+      },
+      {
+        "id": 6,
+        "labelDay": "Friday",
+        "codeDay": "F",
+        "deposit": "450.785"
+      },
+      {
+        "id": 7,
+        "labelDay": "Saturday",
+        "codeDay": "S",
+        "deposit": "0"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "weekDeposit": "July Week 4",
+    "totalDeposit": "+Rp24.600.590",
+    "weeklyDeposit": [
+      {
+        "id": 1,
+        "labelDay": "Sunday",
+        "codeDay": "S",
+        "deposit": "0"
+      },
+      {
+        "id": 2,
+        "labelDay": "Monday",
+        "codeDay": "M",
+        "deposit": "450.785"
+      },
+      {
+        "id": 3,
+        "labelDay": "Tuesday",
+        "codeDay": "T",
+        "deposit": "450.785"
+      },
+      {
+        "id": 4,
+        "labelDay": "Wednesday",
+        "codeDay": "W",
+        "deposit": "0"
+      },
+      {
+        "id": 5,
+        "labelDay": "Thursday",
+        "codeDay": "T",
+        "deposit": "450.785"
+      },
+      {
+        "id": 6,
+        "labelDay": "Friday",
+        "codeDay": "F",
+        "deposit": "450.785"
+      },
+      {
+        "id": 7,
+        "labelDay": "Saturday",
+        "codeDay": "S",
+        "deposit": "0"
+      }
+    ]
+  }
+]

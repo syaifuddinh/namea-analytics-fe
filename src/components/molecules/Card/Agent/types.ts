@@ -2,9 +2,10 @@ export interface ICardDashboard {
   icon?: string;
   placeholder: string;
   value: string;
-  profit: boolean;
-  percentage: string;
+  profit?: boolean;
+  percentage?: string;
   desc?: string;
+  valueStyle?: string;
 }
 
 export interface ICardTop {
