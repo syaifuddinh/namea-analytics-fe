@@ -22,7 +22,7 @@ import Panel from "@/components/molecules/panel";
 import Image from "next/image";
 import { useState } from "react";
 import dummyCrypto from "@/data/dummyCrypto.json";
-import dummyEvent from "@/data/dummyEvent.json";
+import dummyDataAnalyst from "@/data/dummyDataAnalyst.json";
 import { Pagination } from "@/components/molecules/Footer/Pagination";
 import Link from "next/link";
 import clsx from "clsx";
@@ -117,36 +117,43 @@ export default function DataAnalystAgent() {
               />
             </div>
 
-            <div className="p-[1.125rem] bg-base-bg5 border-t border-t-base-bg3">
-              <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2">
-                <div className="flex flex-col flex-1 border-t border-gray-1 mt-[4px] bg-base-bg5 rounded-t-xl py-[1.125rem] items-center">
-                  <div className="px-[1.125rem]">JAN</div>
-                  <div className="border-b border-b-white" />
-                  <div className="px-[1.125rem]">33M</div>
-                  <div className="border-b border-b-white" />
-                  <div className="px-[1.125rem]">
-                    <div
-                      className={`flex flex-row gap-1 items-center ${
-                        true ? "bg-success-1" : "bg-alert-1"
-                      } py-[2px] pl-1 pr-[6px] rounded-3xl max-w-max`}
-                    >
-                      {true ? (
-                        <IconArrowUp className="text-success-10 !w-[13px] !h-[13px]" />
-                      ) : (
-                        <IconArrowDown className="text-alert-10 !w-[13px] !h-[13px]" />
-                      )}
+            <div className="flex flex-wrap p-[1.125rem] bg-base-bg5 border-t border-t-base-bg3 gap-6 justify-center">
+              {dummyDataAnalyst.map((item) => (
+                <div
+                  key={`data-analyst-revenue-${item.id}`}
+                  className="flex flex-row border border-gray-1 rounded-2xl bg-base-bg2"
+                >
+                  <div className="flex flex-col border-t border-gray-1 mt-1 bg-base-bg5 rounded-t-xl divide-y divide-base-bg3">
+                    <div className="flex w-full p-2 justify-center text-gray-6 text-sm">
+                      {item.month}
+                    </div>
+                    <div className="flex w-full p-2 justify-center text-gray-6 text-sm">
+                      {item.revenue}
+                    </div>
+                    <div className="flex w-full p-2 justify-center">
                       <div
-                        className={clsx(
-                          "text-xs font-light",
-                          true ? "text-success-10" : "text-alert-10"
-                        )}
+                        className={`flex flex-row gap-1 items-center ${
+                          item.profit ? "bg-success-1" : "bg-alert-1"
+                        } py-[2px] pl-1 pr-[6px] rounded-3xl max-w-max`}
                       >
-                        +23.8%
+                        {item.profit ? (
+                          <IconArrowUp className="text-success-10 !w-[13px] !h-[13px]" />
+                        ) : (
+                          <IconArrowDown className="text-alert-10 !w-[13px] !h-[13px]" />
+                        )}
+                        <div
+                          className={clsx(
+                            "text-xs font-light",
+                            item.profit ? "text-success-10" : "text-alert-10"
+                          )}
+                        >
+                          {item.percentage}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
           </>
         }
