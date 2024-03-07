@@ -41,7 +41,7 @@ export default function Home() {
       </div>
 
       <div className="dashboard_content mt-[32px]">
-        <div className="flex gap-[20px]">
+        <div className="flex flex-col lg:flex-row gap-[20px]">
           <MonthlyInsightCard
             title={"December Total Profit"}
             mutationVariant="primary"
@@ -58,16 +58,16 @@ export default function Home() {
           />
         </div>
 
-        <div className="flex gap-[20px] mt-[60px]">
-          <div className="w-[73.29%]">
+        <div className="flex flex-col lg:flex-row gap-[20px] mt-[60px]">
+          <div className="lg:w-[73.29%]">
             <CostingOverviewCard />
           </div>
-          <div className="w-[26.71%]">
+          <div className="lg:w-[26.71%]">
             <ProfitSummaryCard />
           </div>
         </div>
 
-        <div className="grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-[20px] mt-[60px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[20px] mt-[60px]">
           <WalletCard title="Turn Over" variant="turnover" />
           <WalletCard title="Revenue" variant="revenue" />
         </div>

@@ -10,7 +10,7 @@ const CashflowOverviewCard = ({ className }) => {
       description="Record your ideas and to-do’s easily, so you never miss a thing."
       className={className}
     >
-      <div className="flex flex-col md:flex-row items-start gap-4 p-[20px]">        
+      <div className="flex flex-col lg:flex-row items-start gap-4 p-[20px]">        
         <div className="w-full grow bg-base-bg4 border border-gray-1 rounded-xl border-solid pl-5 pr-[22px] py-[1.125rem]">
           <BalanceLabel
               title="Total Cash Balance"

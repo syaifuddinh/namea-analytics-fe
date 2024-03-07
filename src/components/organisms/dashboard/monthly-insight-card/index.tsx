@@ -24,7 +24,7 @@ const Header = ({
 }) => {
 	return (
 		<div className="card_header max-h-[5.626rem]">
-			<div className="card_header-container flex justify-between items-start">
+			<div className="card_header-container flex  justify-between items-start">
 				<div className="card_header_title flex items-center gap-2">
 					<Icon
 						src="dollar.svg"

@@ -17,21 +17,23 @@ const Header = ({ onApplyButtonClick }) => (
 			Costing Comparation
 		</div>
 
-		<div className="flex flex-col md:flex-row gap-[0.625rem] mt-3 *:grow">
-			<CostingCategoryInput
-				value={null}
-				onChange={(newValue) => {}}
-			/>
+		<div className="flex flex-col md:flex-row gap-2.5 mt-3">
+			<div className="grow *:grow flex gap-2.5 flex-col md:flex-row *:w-[33.3333%]">
+				<CostingCategoryInput
+					value={null}
+					onChange={(newValue) => {}}
+				/>
 
-			<MonthSelectInput
-				value={null}
-				onChange={(newValue) => {}}
-			/>
+				<MonthSelectInput
+					value={null}
+					onChange={(newValue) => {}}
+				/>
 
-			<YearSelectInput
-				value={null}
-				onChange={(newValue) => {}}
-			/>
+				<YearSelectInput
+					value={null}
+					onChange={(newValue) => {}}
+				/>
+			</div>
 
 			<Button
 				variant="default"

@@ -23,19 +23,19 @@ const Header = () => {
 const CostingOverviewCard = () => {
   return (
     <Card headerElement={<Header />} isDividerVisible={false}>
-      <div className="p-[20px] bg-[#03020C0D] flex gap-[8px]">
-        <div className="w-1/2">
+      <div className="p-[20px] bg-[#03020C0D] flex flex-col md:flex-row gap-[8px]">
+        <div className="md:w-1/2">
           <Panel label="Operation Cost" value="50" variant="success" />
         </div>
-        <div className="w-1/4">
+        <div className="md:w-1/4">
           <Panel label="Promotion Cost" value="25" variant="primary" />
         </div>
-        <div className="w-1/4">
+        <div className="md:w-1/4">
           <Panel label="Other Cost" value="25" variant="danger" />
         </div>
       </div>
 
-      <div className="costing-overview-card_footer p-[20px] grid grid-rows-3 md:grid-rows-1 grid-cols-3 gap-[16px] bg-[var(--base-bg5)]">
+      <div className="costing-overview-card_footer p-[20px] grid grid-cols-1 md:grid-cols-3 gap-[16px] bg-[var(--base-bg5)]">
         <Review
           title="Operation Cost"
           description="To run company operations."
