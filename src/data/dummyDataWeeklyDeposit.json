@@ -2,7 +2,7 @@
   {
     "id": 1,
     "weekDeposit": "July Week 1",
-    "totalDeposit": "+Rp24.600.590",
+    "totalDeposit": "Rp24.600.590",
     "weeklyDeposit": [
       {
         "id": 1,
@@ -51,7 +51,7 @@
   {
     "id": 2,
     "weekDeposit": "July Week 2",
-    "totalDeposit": "+Rp24.600.590",
+    "totalDeposit": "Rp24.600.590",
     "weeklyDeposit": [
       {
         "id": 1,
@@ -100,7 +100,7 @@
   {
     "id": 3,
     "weekDeposit": "July Week 3",
-    "totalDeposit": "+Rp24.600.590",
+    "totalDeposit": "Rp24.600.590",
     "weeklyDeposit": [
       {
         "id": 1,
@@ -149,7 +149,7 @@
   {
     "id": 4,
     "weekDeposit": "July Week 4",
-    "totalDeposit": "+Rp24.600.590",
+    "totalDeposit": "Rp24.600.590",
     "weeklyDeposit": [
       {
         "id": 1,

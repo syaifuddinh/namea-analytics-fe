@@ -103,7 +103,7 @@ export default function EventAgent() {
                   Revenue Generated
                 </div>
                 <div className="flex flex-row items-center text-gray-10 text-sm font-light">
-                  +Rp24.600.590
+                  Rp24.600.590
                   <div className="text-sm text-gray-6 font-extralight">,00</div>
                 </div>
               </div>
@@ -338,7 +338,7 @@ export default function EventAgent() {
                   Revenue Generated
                 </div>
                 <div className="flex flex-row items-center text-gray-10 text-sm font-light">
-                  +Rp24.600.590
+                  Rp24.600.590
                   <div className="text-sm text-gray-6 font-extralight">,00</div>
                 </div>
               </div>
@@ -393,7 +393,7 @@ export default function EventAgent() {
                   Revenue Generated
                 </div>
                 <div className="flex flex-row items-center text-gray-10 text-sm font-light">
-                  +Rp24.600.590
+                  Rp24.600.590
                   <div className="text-sm text-gray-6 font-extralight">,00</div>
                 </div>
               </div>
@@ -448,7 +448,7 @@ export default function EventAgent() {
                   Revenue Generated
                 </div>
                 <div className="flex flex-row items-center text-gray-10 text-sm font-light">
-                  +Rp24.600.590
+                  Rp24.600.590
                   <div className="text-sm text-gray-6 font-extralight">,00</div>
                 </div>
               </div>
