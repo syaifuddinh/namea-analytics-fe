@@ -86,7 +86,7 @@ export default function MemberListAgent() {
                   26 July 2023, 09.30AM
                 </div>
               </div>
-              <div className="flex flex-row items-center gap-[10px] mr-[58px]">
+              <div className="flex flex-row items-center gap-[10px] mr-16">
                 {labelDay.map((item) => (
                   <div
                     key={`day-active-${item.label}`}
@@ -100,11 +100,11 @@ export default function MemberListAgent() {
                   </div>
                 ))}
               </div>
-              <div className="flex rounded-md flex-row bg-checkbox border border-gray-9 items-center pr-[12px] pl-2 py-[4px] min-h-[28px]">
+              <div className="flex rounded-md flex-row bg-checkbox border border-gray-9 items-center pr-[12px] pl-2 py-[4px] min-h-[28px] max-w-[79px] min-w-[79px] max-h-[28px]">
                 <div className="flex bg-dot-blue-border h-3.5 w-3.5 rounded-full items-center justify-center mr-2">
                   <div className="bg-dot-blue h-2 w-2 rounded-full" />
                 </div>
-                <div className="text-left text-gray-0 text-xs font-light">
+                <div className="text-left text-gray-0 text-sm font-extralight">
                   Active
                 </div>
               </div>
