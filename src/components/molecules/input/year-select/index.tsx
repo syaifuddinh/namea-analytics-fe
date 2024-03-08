@@ -21,12 +21,13 @@ const options = [
 	},
 ]
 
-export default function MonthSelectInput({ value, onChange }) {
+export default function YearSelectInput({ value, onChange }) {
 	return (
 		<SelectInput
 			placeholder="Select Year"
 			options={options}
 			value={value}
+			variant="multiple"
 			onChange={onChange}
 		/>
 	)

@@ -59,6 +59,7 @@ export default function MonthSelectInput({ value, onChange }) {
 			placeholder="Select Month"
 			options={options}
 			value={value}
+			variant="multiple"
 			onChange={onChange}
 		/>
 	)
