@@ -181,13 +181,13 @@ export default function MemberListAgent() {
             <div className="flex flex-1 flex-row border-b border-b-base-bg3 p-[1.125rem] gap-4">
               <CardDashboard
                 placeholder={"Total Deposit"}
-                value={"+Rp500.950.450"}
+                value={"Rp500.950.450"}
                 valueStyle="!mb-0"
                 profit={true}
               />
               <CardDashboard
                 placeholder={"Total Withdrawal"}
-                value={"-Rp500.950.450"}
+                value={"Rp500.950.450"}
                 valueStyle="!mb-0"
                 profit={false}
               />

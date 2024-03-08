@@ -92,13 +92,13 @@ export default function DataAnalystAgent() {
             <div className="flex flex-1 flex-row rounded-b-xl p-[1.125rem] gap-4">
               <CardDashboard
                 placeholder={"Total Revenue"}
-                value={"+Rp500.950.450"}
+                value={"Rp500.950.450"}
                 profit={true}
                 percentage={"23.8% (+24)"}
               />
               <CardDashboard
                 placeholder={"Total Turnover"}
-                value={"-Rp500.950.450"}
+                value={"Rp500.950.450"}
                 profit={false}
                 percentage={"-16.5% (-8)"}
               />
