@@ -90,24 +90,40 @@ export default function SelectInput({
             if(variant === "single") {
                 setDataValue(newValue)
                 setDataLabel(newLabel)
+                if(onChange) onChange(newValue)
             } else if(variant === "multiple") {
                 const newData = [...multipleSelectedData, { value: newValue, label: newLabel }];
                 const newDataValue = dataValue === null ? [ newValue ] : [ ...dataValue, newValue ];
                 setDataValue(newDataValue)
                 setMultipleSelectedData(newData)
+                if(onChange) onChange(newDataValue)
             }
             setIsDropdownVisible(false)
             window.removeEventListener("click", onClickBrowser)
-            if(onChange) onChange(newValue)
         }
 
     const onClickInput = () => {
         if(options.length < 1) return
-            initiateDropdown()
+        initiateDropdown()
         setIsDropdownVisible(true)
         setTimeout(() => {
             window.addEventListener("click", onClickBrowser)
         }, 500)
+    }
+
+    const onDeleteMultipleData = (deletedValue) => {
+        if(variant !== "multiple") return;
+        const newDataValue = [...dataValue].filter(item => item !== deletedValue)
+        setDataValue(newDataValue)
+
+        const newMultipleSelectedData = [...multipleSelectedData].filter(item => item.value !== deletedValue)
+        setMultipleSelectedData(newMultipleSelectedData)
+
+        setIsDropdownVisible(false)
+
+        if(!onChange) return
+        onChange(newDataValue)
+
     }
 
     return (
@@ -136,7 +152,11 @@ export default function SelectInput({
                 { dataValue && variant === "multiple" && (
                     <div className="flex flex-wrap gap-1 ml-[3px]">
                         { multipleSelectedData.map(item => (
-                            <Chip key={item.value} title={item.label} />
+                            <Chip
+                                key={item.value}
+                                title={item.label}
+                                onClose={() => onDeleteMultipleData(item.value)}
+                            />
                         )) }
                     </div>
                 ) }

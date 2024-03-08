@@ -21,7 +21,15 @@ const options = [
 	},
 ]
 
-export default function YearSelectInput({ value, onChange }) {
+export default function YearSelectInput({ 
+	value, 
+	variant = "single",
+	onChange 
+}: {
+	value: string | string[],
+	variant: "single"|"multiple",
+	onChange: (newValue: string|string[]) => void,
+}) {
 	return (
 		<SelectInput
 			placeholder="Select Year"
