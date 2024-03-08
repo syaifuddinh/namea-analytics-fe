@@ -53,12 +53,21 @@ const options = [
 	},
 ]
 
-export default function MonthSelectInput({ value, onChange }) {
+export default function MonthSelectInput({ 
+	value, 
+	variant = "single",
+	onChange 
+}: {
+	value: string | string[],
+	variant: "single"|"multiple",
+	onChange: (newValue: string|string[]) => void,
+}) {
 	return (
 		<SelectInput
 			placeholder="Select Month"
 			options={options}
 			value={value}
+			variant={variant}
 			onChange={onChange}
 		/>
 	)

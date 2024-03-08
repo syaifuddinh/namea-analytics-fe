@@ -26,11 +26,13 @@ const Header = ({ onApplyButtonClick }) => (
 
 				<MonthSelectInput
 					value={null}
-					onChange={(newValue) => {}}
+					variant="multiple"
+					onChange={(newValue) => { console.log(newValue) }}
 				/>
 
 				<YearSelectInput
 					value={null}
+					variant="multiple"
 					onChange={(newValue) => {}}
 				/>
 			</div>

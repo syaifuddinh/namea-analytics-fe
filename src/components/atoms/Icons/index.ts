@@ -4,6 +4,7 @@ export * from "./ChevronDown";
 export * from "./ChevronUp";
 export * from "./ArrowUp";
 export * from "./MoreIcon";
+export * from "./CloseIcon";
 export * from "./ArrowDown";
 export * from "./ChevronRight";
 export * from "./SmallChevronDown";
