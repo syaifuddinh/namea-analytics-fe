@@ -61,7 +61,7 @@ export default function TrendAnalysis({
 			<div className="grid lg:grid-cols-2 grid-cols-1 mt-5 gap-5">
 				<AgentCard
 					title="Most Spent Agents"
-					className="flex flex-col p-5 gap-4"
+					className="flex flex-col py-5 px-[1.125rem]  gap-4"
 				>
 					{ mostSpentAgents.map(item => (
 						<PlatformCard
