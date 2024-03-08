@@ -62,7 +62,7 @@ export default function MemberListAgent() {
         subPlaceholder="Monitor Member Information"
       />
 
-      <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mb-5 mt-5">
+      <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mb-5 mt-[1.375rem]">
         <div className="flex flex-1 flex-col border-t border-base-bg3 mt-[4px] bg-base-bg5 rounded-t-xl">
           <div className="flex flex-1 flex-row px-5 pb-5 items-center pt-[18px]">
             <div className="flex flex-row items-center">
@@ -72,13 +72,13 @@ export default function MemberListAgent() {
                 width={40}
                 height={40}
               />
-              <div className="w-[160px] text-gray-10 text-sm mr-[0.125rem] ml-4 font-light">
+              <div className="w-[167px] text-gray-10 text-sm mr-[0.125rem] ml-4 font-light">
                 Tobias J. Bourgault
               </div>
             </div>
             <div className="border-l border-l-gray-1 h-5" />
-            <div className="flex flex-1 flex-row items-center pl-12 gap-16">
-              <div className="flex flex-col mr-[0.5rem]">
+            <div className="flex flex-1 flex-row items-center pl-12">
+              <div className="flex flex-col mr-16">
                 <div className="text-gray-6 text-sm font-extralight mb-1">
                   Recent Deposit
                 </div>
@@ -86,7 +86,7 @@ export default function MemberListAgent() {
                   26 July 2023, 09.30AM
                 </div>
               </div>
-              <div className="flex flex-row items-center gap-[10px]">
+              <div className="flex flex-row items-center gap-[10px] mr-[58px]">
                 {labelDay.map((item) => (
                   <div
                     key={`day-active-${item.label}`}
@@ -109,10 +109,10 @@ export default function MemberListAgent() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row items-center gap-[10px]">
+            <div className="flex flex-row items-center gap-[17px]">
               <IconThreeDotVertical className="!w-5 !h-5" />
-              <div className="bg-base-bg3 border border-gray-1 rounded-md py-[6px] px-[6px]">
-                <IconChevronDown className="!w-4 !h-4" />
+              <div className="bg-base-bg3 border border-gray-1 rounded-md p-1">
+                <IconChevronDown className="!w-[1.375rem] !h-[1.375rem]" />
               </div>
             </div>
           </div>
