@@ -24,22 +24,6 @@ export default function DataAnalystAgent() {
     { id: 2, label: "2023" },
   ];
 
-  const labelProvider = [
-    { label: "Layer1/Layer2" },
-    { label: "Metaverse" },
-    { label: "Meme" },
-    { label: "Liquid" },
-    { label: "+3" },
-  ];
-
-  const labelMarkets = [
-    { label: "BTC" },
-    { label: "ETH" },
-    { label: "USDT" },
-    { label: "BNB" },
-    { label: "+3" },
-  ];
-
   const [showDetail, setShowDetail] = useState(false);
 
   return (

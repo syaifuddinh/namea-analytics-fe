@@ -22,7 +22,7 @@ export interface LabelDayProps {
   active?: boolean;
 }
 
-export interface ICardDashboard {
+export interface ICardDashboard_ {
   icon?: string;
   placeholder: string;
   value: string;
@@ -30,4 +30,32 @@ export interface ICardDashboard {
   percentage?: string;
   desc?: string;
   valueStyle?: string;
+}
+
+export interface ICryptoProps {
+  id: number;
+  logo: string;
+  cryptoCode: string;
+  cryptoName: string;
+  totalBuy: string;
+}
+
+export interface WeeklyDeposit {
+  id: number;
+  codeDay: string;
+  deposit: string;
+}
+export interface IWeeklyDeposit {
+  id: number;
+  weekDeposit: string;
+  totalDeposit: string;
+  weeklyDeposit: WeeklyDeposit[];
+}
+
+export interface ICardRecentMarkets {
+  data: ICryptoProps[];
+}
+
+export interface ICardWeeklyDeposit {
+  data: IWeeklyDeposit[];
 }
