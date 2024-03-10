@@ -1,8 +1,8 @@
 import { IconArrowDown, IconArrowUp } from "@/components/atoms/Icons";
 import clsx from "clsx";
-import { ICardDashboard } from "./types";
+import { ICardDashboard_ } from "./types";
 
-export const CardDashboard: React.FC<ICardDashboard> = ({
+export const CardDashboard_: React.FC<ICardDashboard_> = ({
   icon,
   placeholder,
   value,

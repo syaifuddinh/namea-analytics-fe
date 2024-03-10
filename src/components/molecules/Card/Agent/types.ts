@@ -26,3 +26,7 @@ export interface ICardProfit {
   desc?: string;
   className?: string;
 }
+
+export interface ICardContainer {
+  children?: JSX.Element;
+}
