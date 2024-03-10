@@ -7,6 +7,7 @@ import {
 } from "@/components/atoms/Icons";
 import {
   CardDashboard,
+  CardInfoMember,
   CardMemberList,
 } from "@/components/molecules/Card/Agent";
 import { Header } from "@/components/molecules/Header";
@@ -33,6 +34,8 @@ export default function MemberListAgent() {
     "December",
   ];
 
+  const [showDetail, setShowDetail] = useState(false);
+
   const labelDay = [
     { label: "S", active: false },
     { label: "M", active: true },
@@ -42,8 +45,6 @@ export default function MemberListAgent() {
     { label: "F", active: false },
     { label: "S", active: false },
   ];
-
-  const [showDetail, setShowDetail] = useState(false);
 
   return (
     <>
@@ -64,116 +65,24 @@ export default function MemberListAgent() {
 
       <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mb-5 mt-[1.375rem]">
         <div className="flex flex-1 flex-col border-t border-base-bg3 mt-[4px] bg-base-bg5 rounded-t-xl">
-          <div className="flex flex-1 flex-row px-5 pb-5 items-center pt-[18px]">
-            <div className="flex flex-row items-center">
-              <Image
-                src={"/images/avatar_dummy.png"}
-                alt="super agent icon"
-                width={40}
-                height={40}
-              />
-              <div className="w-[167px] text-gray-10 text-sm mr-[0.125rem] ml-4 font-light">
-                Tobias J. Bourgault
-              </div>
-            </div>
-            <div className="border-l border-l-gray-1 h-5" />
-            <div className="flex flex-1 flex-row items-center pl-12">
-              <div className="flex flex-col mr-16">
-                <div className="text-gray-6 text-sm font-extralight mb-1">
-                  Recent Deposit
-                </div>
-                <div className="flex flex-row items-center text-gray-10 text-sm font-light">
-                  26 July 2023, 09.30AM
-                </div>
-              </div>
-              <div className="flex flex-row items-center gap-[10px] mr-16">
-                {labelDay.map((item) => (
-                  <div
-                    key={`day-active-${item.label}`}
-                    className={`${
-                      item.active
-                        ? "bg-success-1 border border-success-2 text-gray-10"
-                        : "bg-base-bg3 border border-base-bg3 text-gray-6"
-                    } flex text-sm rounded-full h-6 w-6 justify-center items-center`}
-                  >
-                    {item.label}
-                  </div>
-                ))}
-              </div>
-              <div className="flex rounded-md flex-row bg-checkbox border border-gray-9 items-center pr-[12px] pl-2 py-[4px] min-h-[28px] max-w-[79px] min-w-[79px] max-h-[28px]">
-                <div className="flex bg-dot-blue-border h-3.5 w-3.5 rounded-full items-center justify-center mr-2">
-                  <div className="bg-dot-blue h-2 w-2 rounded-full" />
-                </div>
-                <div className="text-left text-gray-0 text-sm font-extralight">
-                  Active
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row items-center gap-[17px]">
-              <IconThreeDotVertical className="!w-5 !h-5" />
-              <div className="bg-base-bg3 border border-gray-1 rounded-md p-1">
-                <IconChevronDown className="!w-[1.375rem] !h-[1.375rem]" />
-              </div>
-            </div>
-          </div>
+          <CardInfoMember
+            image={"/images/avatar_dummy.png"}
+            nameAgent={"Tobias J. Bourgault"}
+            depositDate={"26 July 2023, 09.30AM"}
+            statusAgent={"Active"}
+          />
         </div>
       </div>
 
       <CardMemberList
         containerBgColor="border-bg-base3"
         customHeader={
-          <div className="flex flex-1 flex-row px-5 pb-5 items-center pt-[18px]">
-            <div className="flex flex-row items-center">
-              <Image
-                src={"/images/avatar_dummy.png"}
-                alt="super agent icon"
-                width={40}
-                height={40}
-              />
-              <div className="w-[160px] text-gray-10 text-sm mr-[0.125rem] ml-4 font-light">
-                Felicitas A. Nieves
-              </div>
-            </div>
-            <div className="border-l border-l-gray-1 h-5" />
-            <div className="flex flex-1 flex-row items-center pl-12 gap-16">
-              <div className="flex flex-col mr-[0.5rem]">
-                <div className="text-gray-6 text-sm font-extralight mb-1">
-                  Recent Deposit
-                </div>
-                <div className="flex flex-row items-center text-gray-10 text-sm font-light">
-                  26 July 2023, 09.30AM
-                </div>
-              </div>
-              <div className="flex flex-row items-center gap-[10px]">
-                {labelDay.map((item) => (
-                  <div
-                    key={`day-active-${item.label}`}
-                    className={`${
-                      item.active
-                        ? "bg-success-1 border border-success-2 text-gray-10"
-                        : "bg-base-bg3 border border-base-bg3 text-gray-6"
-                    } flex text-sm rounded-full h-6 w-6 justify-center items-center`}
-                  >
-                    {item.label}
-                  </div>
-                ))}
-              </div>
-              <div className="flex rounded-md flex-row bg-checkbox border border-gray-9 items-center pr-[12px] pl-2 py-[4px] min-h-[28px]">
-                <div className="flex bg-dot-blue-border h-3.5 w-3.5 rounded-full items-center justify-center mr-2">
-                  <div className="bg-dot-blue h-2 w-2 rounded-full" />
-                </div>
-                <div className="text-left text-gray-0 text-xs font-light">
-                  Active
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row items-center gap-[10px]">
-              <IconThreeDotVertical className="!w-5 !h-5" />
-              <div className="bg-base-bg3 border border-gray-1 rounded-md py-[6px] px-[6px]">
-                <IconChevronUp className="!w-4 !h-4" />
-              </div>
-            </div>
-          </div>
+          <CardInfoMember
+            image={"/images/avatar_dummy.png"}
+            nameAgent={"Felicitas A. Nieves"}
+            depositDate={"26 July 2023, 09.30AM"}
+            statusAgent={"Active"}
+          />
         }
         divider={false}
         renderContent={
@@ -295,172 +204,34 @@ export default function MemberListAgent() {
 
       <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mb-5 mt-5">
         <div className="flex flex-1 flex-col border-t border-base-bg3 mt-[4px] bg-base-bg5 rounded-t-xl">
-          <div className="flex flex-1 flex-row px-5 pb-5 items-center pt-[18px]">
-            <div className="flex flex-row items-center">
-              <Image
-                src={"/images/avatar_dummy.png"}
-                alt="super agent icon"
-                width={40}
-                height={40}
-              />
-              <div className="w-[160px] text-gray-10 text-sm mr-[0.125rem] ml-4 font-light">
-                Thomas J. Jones
-              </div>
-            </div>
-            <div className="border-l border-l-gray-1 h-5" />
-            <div className="flex flex-1 flex-row items-center pl-12 gap-16">
-              <div className="flex flex-col mr-[0.5rem]">
-                <div className="text-gray-6 text-sm font-extralight mb-1">
-                  Recent Deposit
-                </div>
-                <div className="flex flex-row items-center text-gray-10 text-sm font-light">
-                  26 July 2023, 09.30AM
-                </div>
-              </div>
-              <div className="flex flex-row items-center gap-[10px]">
-                {labelDay.map((item) => (
-                  <div
-                    key={`day-active-${item.label}`}
-                    className={`${
-                      item.active
-                        ? "bg-success-1 border border-success-2 text-gray-10"
-                        : "bg-base-bg3 border border-base-bg3 text-gray-6"
-                    } flex text-sm rounded-full h-6 w-6 justify-center items-center`}
-                  >
-                    {item.label}
-                  </div>
-                ))}
-              </div>
-              <div className="flex rounded-md flex-row bg-checkbox border border-gray-9 items-center pr-[12px] pl-2 py-[4px] min-h-[28px]">
-                <div className="flex bg-dot-blue-border h-3.5 w-3.5 rounded-full items-center justify-center mr-2">
-                  <div className="bg-dot-blue h-2 w-2 rounded-full" />
-                </div>
-                <div className="text-left text-gray-0 text-xs font-light">
-                  Active
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row items-center gap-[10px]">
-              <IconThreeDotVertical className="!w-5 !h-5" />
-              <div className="bg-base-bg3 border border-gray-1 rounded-md py-[6px] px-[6px]">
-                <IconChevronDown className="!w-4 !h-4" />
-              </div>
-            </div>
-          </div>
+          <CardInfoMember
+            image={"/images/avatar_dummy.png"}
+            nameAgent={"Thomas J. Jones"}
+            depositDate={"26 July 2023, 09.30AM"}
+            statusAgent={"Active"}
+          />
         </div>
       </div>
 
       <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mb-5 mt-5">
         <div className="flex flex-1 flex-col border-t border-base-bg3 mt-[4px] bg-base-bg5 rounded-t-xl">
-          <div className="flex flex-1 flex-row px-5 pb-5 items-center pt-[18px]">
-            <div className="flex flex-row items-center">
-              <Image
-                src={"/images/avatar_dummy.png"}
-                alt="super agent icon"
-                width={40}
-                height={40}
-              />
-              <div className="w-[160px] text-gray-10 text-sm mr-[0.125rem] ml-4 font-light">
-                Clifford A. Correa
-              </div>
-            </div>
-            <div className="border-l border-l-gray-1 h-5" />
-            <div className="flex flex-1 flex-row items-center pl-12 gap-16">
-              <div className="flex flex-col mr-[0.5rem]">
-                <div className="text-gray-6 text-sm font-extralight mb-1">
-                  Recent Deposit
-                </div>
-                <div className="flex flex-row items-center text-gray-10 text-sm font-light">
-                  26 July 2023, 09.30AM
-                </div>
-              </div>
-              <div className="flex flex-row items-center gap-[10px]">
-                {labelDay.map((item) => (
-                  <div
-                    key={`day-active-${item.label}`}
-                    className={`${
-                      item.active
-                        ? "bg-success-1 border border-success-2 text-gray-10"
-                        : "bg-base-bg3 border border-base-bg3 text-gray-6"
-                    } flex text-sm rounded-full h-6 w-6 justify-center items-center`}
-                  >
-                    {item.label}
-                  </div>
-                ))}
-              </div>
-              <div className="flex rounded-md flex-row bg-checkbox border border-gray-9 items-center pr-[12px] pl-2 py-[4px] min-h-[28px]">
-                <div className="flex bg-dot-blue-border h-3.5 w-3.5 rounded-full items-center justify-center mr-2">
-                  <div className="bg-dot-blue h-2 w-2 rounded-full" />
-                </div>
-                <div className="text-left text-gray-0 text-xs font-light">
-                  Active
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row items-center gap-[10px]">
-              <IconThreeDotVertical className="!w-5 !h-5" />
-              <div className="bg-base-bg3 border border-gray-1 rounded-md py-[6px] px-[6px]">
-                <IconChevronDown className="!w-4 !h-4" />
-              </div>
-            </div>
-          </div>
+          <CardInfoMember
+            image={"/images/avatar_dummy.png"}
+            nameAgent={"Clifford A. Correa"}
+            depositDate={"26 July 2023, 09.30AM"}
+            statusAgent={"Active"}
+          />
         </div>
       </div>
 
       <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mb-5 mt-5">
         <div className="flex flex-1 flex-col border-t border-base-bg3 mt-[4px] bg-base-bg5 rounded-t-xl">
-          <div className="flex flex-1 flex-row px-5 pb-5 items-center pt-[18px]">
-            <div className="flex flex-row items-center">
-              <Image
-                src={"/images/avatar_dummy.png"}
-                alt="super agent icon"
-                width={40}
-                height={40}
-              />
-              <div className="w-[160px] text-gray-10 text-sm mr-[0.125rem] ml-4 font-light">
-                Jesus T. Heffner
-              </div>
-            </div>
-            <div className="border-l border-l-gray-1 h-5" />
-            <div className="flex flex-1 flex-row items-center pl-12 gap-16">
-              <div className="flex flex-col mr-[0.5rem]">
-                <div className="text-gray-6 text-sm font-extralight mb-1">
-                  Recent Deposit
-                </div>
-                <div className="flex flex-row items-center text-gray-10 text-sm font-light">
-                  26 July 2023, 09.30AM
-                </div>
-              </div>
-              <div className="flex flex-row items-center gap-[10px]">
-                {labelDay.map((item) => (
-                  <div
-                    key={`day-active-${item.label}`}
-                    className={`${
-                      item.active
-                        ? "bg-success-1 border border-success-2 text-gray-10"
-                        : "bg-base-bg3 border border-base-bg3 text-gray-6"
-                    } flex text-sm rounded-full h-6 w-6 justify-center items-center`}
-                  >
-                    {item.label}
-                  </div>
-                ))}
-              </div>
-              <div className="flex rounded-md flex-row bg-checkbox border border-gray-9 items-center pr-[12px] pl-2 py-[4px] min-h-[28px]">
-                <div className="flex bg-dot-blue-border h-3.5 w-3.5 rounded-full items-center justify-center mr-2">
-                  <div className="bg-dot-blue h-2 w-2 rounded-full" />
-                </div>
-                <div className="text-left text-gray-0 text-xs font-light">
-                  Active
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row items-center gap-[10px]">
-              <IconThreeDotVertical className="!w-5 !h-5" />
-              <div className="bg-base-bg3 border border-gray-1 rounded-md py-[6px] px-[6px]">
-                <IconChevronDown className="!w-4 !h-4" />
-              </div>
-            </div>
-          </div>
+          <CardInfoMember
+            image={"/images/avatar_dummy.png"}
+            nameAgent={"Jesus T. Heffner"}
+            depositDate={"26 July 2023, 09.30AM"}
+            statusAgent={"Active"}
+          />
         </div>
       </div>
 

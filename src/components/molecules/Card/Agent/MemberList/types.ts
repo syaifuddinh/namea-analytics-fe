@@ -10,6 +10,18 @@ export interface ICardMemberList {
   containerBgColor?: string;
 }
 
+export interface ICardInfoMember {
+  image: string;
+  nameAgent: string;
+  depositDate: string;
+  statusAgent: string;
+}
+
+export interface LabelDayProps {
+  label?: string;
+  active?: boolean;
+}
+
 export interface ICardDashboard {
   icon?: string;
   placeholder: string;
