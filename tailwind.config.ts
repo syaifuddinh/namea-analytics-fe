@@ -21,6 +21,8 @@ const config: Config = {
           "linear-gradient(270deg, rgba(7, 183, 172, 0.3) 0%, rgba(8, 121, 129, 0.3) 100%)",
         "primary-gradient4":
           "radial-gradient(120.05% 100% at 50% 50%, rgba(205, 251, 255, 0) 33.78%, rgba(205, 251, 255, 0.04) 100%)",
+        "primary-gradient5":
+          "radial-gradient(59.29% 202.34% at 50% 50%, rgba(31, 100, 103, 0.2) 0%, rgba(9, 43, 45, 0) 100%)",
       },
       colors: {
         checkbox: "var(--c-checkbox)",

@@ -7,6 +7,7 @@ import {
 import YearOptionInput from "@/components/molecules/input/year-option"
 import Table from "@/components/atoms/table"
 import MoneyText from "@/components/atoms/text/money"
+import CostingContext from "@/components/organisms/costing/costing-context"
 
 const items = [
     [
@@ -173,6 +174,7 @@ export default function PromotionalCostingPage() {
             ]}
             contents={items}
             footers={footers}
+            contextElement={<CostingContext />}
         />
     </CostingLayout>
   );
