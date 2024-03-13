@@ -9,6 +9,8 @@ export const Header: React.FC<IHeader> = ({
   children,
   className,
   divider = false,
+  textStyle = "tracking-[0.7px]",
+  subStyle = "tracking-[0.06px]",
 }) => {
   return (
     <div
@@ -26,10 +28,14 @@ export const Header: React.FC<IHeader> = ({
           </div>
         ) : null}
         <div className="dashboard_header_content">
-          <div className="text-[1.063rem] font-light leading-[26px] tracking-[0.7px] text-white-theme">
+          <div
+            className={`text-[1.063rem] font-light leading-[26px] ${textStyle} text-white-theme`}
+          >
             {placeholder}
           </div>
-          <div className="text-gray-6 text-sm leading-5 font-extralight mt-[2px] tracking-[0.06px]">
+          <div
+            className={`text-gray-6 text-sm leading-5 font-extralight mt-[2px] ${subStyle}`}
+          >
             {subPlaceholder}
           </div>
         </div>
