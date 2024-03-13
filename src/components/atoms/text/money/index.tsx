@@ -1,11 +1,23 @@
+import { ReactElement } from "react"
+
 const MoneyText = ({
-  children,
-  className = "",
-  positivity = "plus",
-  fontSize = "1rem",
-  prefix = "",
-  fontWeight = 300,
-  variant = "default",
+    children,
+    className = "",
+    positivity = "plus",
+    fontSize = "1rem",
+    prefix = "",
+    fontWeight = 300,
+    variant = "default",
+    suffixVariant = "default"
+}: {
+    children: ReactElement,
+    className?: string,
+    positivity?: "plus"|"minus",
+    fontSize?: string,
+    prefix?: string,
+    fontWeight?: number
+    variant?: "default" | "danger" | "warning",
+    suffixVariant?: "default" | "plain"
 }) => {
   return (
     <div
@@ -19,13 +31,20 @@ const MoneyText = ({
       {positivity === "minus" && "-"}
       { prefix }
       <span className={``}>Rp{children}</span>
-      <div
-        className={`money-text_suffix ${
-          variant === "default" ? "text-[var(--gray-theme-color)]" : ""
-        } ${variant === "danger" ? "text-alert-6" : ""}`}
-      >
-        ,00
-      </div>
+
+      { suffixVariant === "plain" && (
+          <span>,00</span>
+      ) }
+
+      { suffixVariant === "default" && (
+          <div
+            className={`money-text_suffix ${
+              variant === "default" ? "text-[var(--gray-theme-color)]" : ""
+            } ${variant === "danger" ? "text-alert-6" : ""}`}
+          >
+              ,00
+          </div>
+      ) }
     </div>
   );
 };
