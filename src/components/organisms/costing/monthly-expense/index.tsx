@@ -64,7 +64,7 @@ export default function MonthlyExpense({ className }) {
 
 			<MonthInput className="mt-3" />
 
-			<div className="monthly-expense_filter flex mt-8">
+			<div className="monthly-expense_filter flex gap-2.5 mt-8">
 				<InputSearch
 		            name={"SuperAgent"}
 		            placeholder="Search agent...."
