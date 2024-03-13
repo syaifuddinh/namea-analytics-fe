@@ -24,7 +24,9 @@ export const Pagination: React.FC<IPagination> = ({
       )}
     >
       <div className="flex flex-row items-center gap-2 h-[40px]">
-        <div className="text-gray-6 text-sm font-extralight">Item per page</div>
+        <div className="text-gray-6 text-sm font-extralight">
+          Items per page
+        </div>
         <div className="flex flex-row items-center bg-base-bg3 rounded-[4px] pl-[10px] pr-1 py-[2px]">
           <div className="text-gray-10 text-xs font-light pr-[2px]">10</div>
           <button>

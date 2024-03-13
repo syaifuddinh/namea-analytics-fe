@@ -2,7 +2,7 @@
   {
     "id": 1,
     "eventName": "Monthly Cashback 15%",
-    "descEventName": "BonusCashback",
+    "descEventName": "Bonus Cashback",
     "promotionPeriode": "20 Oct 2023 to 27 Oct 2023",
     "revenueGenerated": "Rp24.600.590",
     "eventStatus": "Active",
@@ -21,7 +21,7 @@
   {
     "id": 2,
     "eventName": "Monthly Cashback 30%",
-    "descEventName": "BonusCashback",
+    "descEventName": "Bonus Cashback",
     "promotionPeriode": "20 Oct 2023 to 27 Oct 2023",
     "revenueGenerated": "Rp24.600.590",
     "eventStatus": "Active",
@@ -40,7 +40,7 @@
   {
     "id": 3,
     "eventName": "Monthly Cashback 10%",
-    "descEventName": "BonusCashback",
+    "descEventName": "Bonus Cashback",
     "promotionPeriode": "20 Oct 2023 to 27 Oct 2023",
     "revenueGenerated": "Rp24.600.590",
     "eventStatus": "Active",
@@ -59,7 +59,7 @@
   {
     "id": 4,
     "eventName": "Monthly Cashback 25%",
-    "descEventName": "BonusCashback",
+    "descEventName": "Bonus Cashback",
     "promotionPeriode": "20 Oct 2023 to 27 Oct 2023",
     "revenueGenerated": "Rp24.600.590",
     "eventStatus": "Active",
@@ -78,7 +78,7 @@
   {
     "id": 5,
     "eventName": "Monthly Cashback 10%",
-    "descEventName": "BonusCashback",
+    "descEventName": "Bonus Cashback",
     "promotionPeriode": "20 Oct 2023 to 27 Oct 2023",
     "revenueGenerated": "Rp24.600.590",
     "eventStatus": "Active",
