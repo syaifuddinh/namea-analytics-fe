@@ -7,6 +7,7 @@ import {
 } from "@/components/atoms/Icons"
 import StatusLabel from "@/components/atoms/status-label"
 import EventCard from "@/components/atoms/card/event"
+import EventOverview from "@/components/organisms/costing/event-overview"
 
 export default function PromotionalCostingPage() {
     return (
@@ -41,6 +42,8 @@ export default function PromotionalCostingPage() {
                 isContentVisibleInitially={true}
                 isControlVisible={false}
             />
+
+            <EventOverview className="mt-[60px]" />
         </CostingLayout>
     );
 }
