@@ -6,7 +6,7 @@ const TitleText = ({
 	children: ReactElement
 }) => {
 	return (
-		<div className="title-text font-light text-lg text-gray-10">	
+		<div className="title-text font-light text-lg text-gray-10 leading-[26px]">	
 			{ children }
 		</div>	
 	)

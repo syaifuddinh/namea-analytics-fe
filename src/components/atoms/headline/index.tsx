@@ -1,3 +1,5 @@
+import TitleText from "@/components/atoms/text/title"
+
 export default function Headline({ title, description, children, icon, className = "" }) {
 	return (
 		<div
@@ -7,9 +9,9 @@ export default function Headline({ title, description, children, icon, className
 				{ icon }
 
 				<div className="cashflow-header_sign">
-					<div className="cashflow-header_title font-light text-[18px] text-[var(--Gray10)] leading-[26px]">
+					<TitleText>
 						{ title }
-					</div>
+					</TitleText>
 					<div className="cashflow-header_description font-extralight text-sm leading-5 text-[var(--Gray6)]">
 						{ description }
 					</div>
