@@ -19,7 +19,7 @@ export const CardInfoEvent: React.FC<ICardInfoEvent> = ({
   onPressShow,
 }) => {
   return (
-    <div className="flex flex-1 flex-row px-5 pb-5 items-center pt-[20px]">
+    <div className="flex flex-1 flex-row px-5 pb-5 items-center pt-5">
       <div className="flex flex-row items-center">
         <Image src={image} alt="image event icon" width={106} height={64} />
         <div className="flex flex-col w-[185px] ml-4 mr-[80px]">

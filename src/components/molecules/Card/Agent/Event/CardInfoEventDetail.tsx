@@ -30,7 +30,7 @@ export const CardInfoEventDetail: React.FC<ICardInfoEventDetail> = ({
 
   return (
     <>
-      <div className="flex flex-col p-[1.125rem] gap-y-[1.125rem] gap-x-4">
+      <div className="flex flex-col p-[1.125rem] gap-y-5 gap-x-4">
         <div className="flex flex-row items-center">
           <div className="flex flex-col w-[235px] gap-1">
             <div className="text-sm text-gray-6 font-extralight">
