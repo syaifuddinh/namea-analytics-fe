@@ -4,7 +4,7 @@ export const CardWeeklyDepositAnalysis: React.FC<ICardWeeklyDeposit> = ({
   data,
 }) => {
   return (
-    <div className="bg-base-bg5 border-t border-t-base-bg3 p-[1.125rem]">
+    <div className="bg-base-bg5 border-t border-t-base-bg3 p-[1.188rem]">
       <div className="text-gray-10 text-sm font-light mb-3">
         Weekly Deposit Analysis
       </div>
@@ -12,19 +12,19 @@ export const CardWeeklyDepositAnalysis: React.FC<ICardWeeklyDeposit> = ({
         {data.map((item: IWeeklyDeposit) => (
           <div
             key={`total-weekly-deposit-${item.id}`}
-            className="flex flex-row items-center bg-base-bg4 border border-base-bg3 rounded-xl p-[1.125rem]"
+            className="flex flex-row items-center bg-base-bg4 border border-base-bg3 rounded-xl py-[1.25rem] px-[1.188rem]"
           >
-            <div className="flex flex-1 flex-col mr-[97px]">
-              <div className="flex flex-1 flex-row items-center gap-[10px] mb-1">
-                <div className="text-xs text-gray-6 font-extralight">
+            <div className="flex flex-col mr-[97px]">
+              <div className="flex flex-row items-center gap-[10px] mb-[6px]">
+                <div className="text-sm text-gray-6 font-extralight">
                   Total Deposit
                 </div>
                 <div className="bg-gray-2 h-[6px] w-[6px] rounded-full" />
-                <div className="text-xs text-gray-10 font-extralight">
+                <div className="text-sm text-gray-10 font-extralight">
                   {item.weekDeposit}
                 </div>
               </div>
-              <div className="flex flex-row items-center text-sm text-gray-10">
+              <div className="flex flex-row items-center text-sm text-gray-10 font-light">
                 {item.totalDeposit}
                 <div className="text-sm text-gray-6">,00</div>
               </div>
