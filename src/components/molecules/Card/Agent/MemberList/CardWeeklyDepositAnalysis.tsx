@@ -14,7 +14,7 @@ export const CardWeeklyDepositAnalysis: React.FC<ICardWeeklyDeposit> = ({
             key={`total-weekly-deposit-${item.id}`}
             className="flex flex-row items-center bg-base-bg4 border border-base-bg3 rounded-xl p-[1.188rem]"
           >
-            <div className="flex w-[189px] flex-col mr-[97px]">
+            <div className="flex min-w-[189px] flex-col mr-[97px]">
               <div className="flex flex-row items-center gap-[10px] mb-[6px]">
                 <div className="text-sm text-gray-6 font-extralight">
                   Total Deposit
@@ -30,7 +30,7 @@ export const CardWeeklyDepositAnalysis: React.FC<ICardWeeklyDeposit> = ({
               </div>
             </div>
             <div className="border-l border-l-gray-1 h-6" />
-            <div className="flex flex-1 flex-row items-center ml-[46px] gap-3">
+            <div className="flex flex-row items-center ml-[46px] gap-3">
               {item.weeklyDeposit.map((x: WeeklyDeposit) => (
                 <div
                   key={`weekly-deposit-${x.id}`}
