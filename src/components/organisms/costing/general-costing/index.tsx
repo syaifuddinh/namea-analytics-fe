@@ -4,6 +4,7 @@ import { FinancialStatementImage1 } from "@/components/atoms/Icons"
 import { FinancialStatementImage2 } from "@/components/atoms/Icons"
 import { FinancialStatementImage5 } from "@/components/atoms/Icons"
 import { FinancialStatementImage6 } from "@/components/atoms/Icons"
+import TitleText from "@/components/atoms/text/title"
 
 const ledger = [
 	{
@@ -53,9 +54,9 @@ const ledger = [
 export default function GeneralCosting({ className }) {
 	return (
 		<div className={`${className}`}>
-			<div className="font-light mb-3 text-lg leading-[26px] text-gray-10">
+			<TitleText className="mb-3">
 				Monthly General Costing
-			</div>
+			</TitleText>
 
 			<MonthInput />
 

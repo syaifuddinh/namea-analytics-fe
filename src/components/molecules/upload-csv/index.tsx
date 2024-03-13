@@ -1,5 +1,6 @@
 import YearOptionInput from "@/components/molecules/input/year-option"
 import UploadButton from "@/components/molecules/button/upload"
+import TitleText from "@/components/atoms/text/title"
 import "./index.style.css"
 
 export default function UploadCSV({
@@ -12,9 +13,9 @@ export default function UploadCSV({
 			style={{ paddingTop }}
 		>
 			<div className="upload-csv_entry">
-				<div className="upload-csv_title font-light text-normal text-[var(--Gray10)] leading-[26px]">
+				<TitleText fontSize="16px">
 					Upload CSV
-				</div>
+				</TitleText>
 				<div className="upload-csv_description mt-1 font-extralight text-sm leading-5 text-[var(--Gray6)] tracking-[0.04px]">
 					Syncs all your cashflow data by uploading your CSV file here.
 				</div>

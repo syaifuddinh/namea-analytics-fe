@@ -10,12 +10,13 @@ import ComparisonTooltip from "@/components/atoms/comparison-tooltip"
 import CostingCategoryInput from "@/components/molecules/input/costing-category"
 import MonthSelectInput from "@/components/molecules/input/month-select"
 import YearSelectInput from "@/components/molecules/input/year-select"
+import TitleText from "@/components/atoms/text/title"
 
 const Header = ({ onApplyButtonClick }) => (
 	<div className="card_header">
-		<div className="font-light text-gray-10">
+		<TitleText fontSize="16px">
 			Costing Comparation
-		</div>
+		</TitleText>
 
 		<div className="flex flex-col md:flex-row gap-2.5 mt-3">
 			<div className="grow *:grow flex gap-2.5 flex-col md:flex-row *:w-[33.3333%]">
