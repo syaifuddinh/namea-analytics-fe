@@ -23,7 +23,7 @@ export const CardRecentMarkets: React.FC<ICardRecentMarkets> = ({ data }) => {
               </div>
             </div>
             <div className="flex flex-row items-center ">
-              <div className="text-sm text-gray-6 font-extralight mr-[2px]">
+              <div className="text-sm text-gray-6 font-light mr-1 tracking-[0.2px]">
                 TotalBuy:
               </div>
               <div className="flex flex-row items-center text-sm text-gray-10 font-extralight">

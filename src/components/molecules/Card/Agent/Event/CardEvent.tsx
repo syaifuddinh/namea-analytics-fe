@@ -1,54 +1,54 @@
-import clsx from "clsx";
+import { CardInfoEvent } from "./CardInfoEvent";
+import { CardInfoEventDetail } from "./CardInfoEventDetail";
 import { ICardEvent } from "./types";
 
 export const CardEvent: React.FC<ICardEvent> = ({
+  id,
+  currentId,
   placeholder,
-  subPlaceholder,
-  customHeader,
-  renderHeader,
-  renderContent,
-  className,
-  containerStyle,
-  divider = true,
-  containerBgColor = "border-gray-1",
+  desc,
+  promoPeriod,
+  revenueGenerated,
+  statusEvent,
+  showDetail,
+  onPressShow,
+  detailEvent,
 }) => {
   return (
-    <div
-      className={clsx(
-        "flex flex-1 flex-col border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mt-5 mb-5",
-        containerStyle
-      )}
-    >
+    <div className="flex flex-1 flex-col border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mt-5 mb-5">
       <div
-        className={`flex flex-1 flex-col border-y border-gray-1 mt-1 bg-base-bg5 rounded-t-xl ${containerBgColor}`}
+        className={`flex flex-1 flex-col ${
+          currentId === id && showDetail ? "border-y " : "border-t"
+        } border-gray-1 mt-1 bg-base-bg5 rounded-t-xl border-bg-base3`}
       >
-        {customHeader ? (
-          customHeader
-        ) : (
-          <div
-            className={clsx(
-              "flex flex-1 p-5 items-center bg-gray-7 ",
-              className
-            )}
-          >
-            <div className="flex flex-col gap-[4px]">
-              <div className="text-base text-gray-10 font-light">
-                {placeholder}
-              </div>
-              {subPlaceholder ? (
-                <div className="text-gray-6 text-sm pr-2 font-extralight">
-                  {subPlaceholder}
-                </div>
-              ) : null}
-            </div>
-            {renderHeader}
-          </div>
-        )}
+        <CardInfoEvent
+          image={"/images/image_event.png"}
+          placeholder={placeholder}
+          desc={desc}
+          promoPeriod={promoPeriod}
+          revenueGenerated={revenueGenerated}
+          statusEvent={statusEvent}
+          id={id}
+          currentId={currentId}
+          showDetail={showDetail}
+          onPressShow={onPressShow}
+        />
       </div>
-      {divider ? (
-        <div className="h-[10px] border-x border-x-gray-1 mx-5" />
-      ) : null}
-      {renderContent}
+      {currentId === id && showDetail && (
+        <>
+          <CardInfoEventDetail
+            createdBy={detailEvent?.createdBy}
+            promotionType={detailEvent?.promotionType}
+            include={detailEvent?.include}
+            bonusAmount={detailEvent?.bonusAmount}
+            turnoverMultiplier={detailEvent?.turnoverMultiplier}
+            minDeposit={detailEvent?.minDeposit}
+            maxDeposit={detailEvent?.maxDeposit}
+            minBonus={detailEvent?.minBonus}
+            maxBonus={detailEvent?.maxBonus}
+          />
+        </>
+      )}
     </div>
   );
 };

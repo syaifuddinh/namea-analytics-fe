@@ -1,17 +1,22 @@
 import {
   IconChevronDown,
+  IconChevronUp,
   IconThreeDotVertical,
 } from "@/components/atoms/Icons";
 import Image from "next/image";
 import { ICardInfoEvent } from "./types";
 
 export const CardInfoEvent: React.FC<ICardInfoEvent> = ({
+  id,
+  currentId,
   image,
   placeholder,
   desc,
   promoPeriod,
   revenueGenerated,
   statusEvent,
+  showDetail,
+  onPressShow,
 }) => {
   return (
     <div className="flex flex-1 flex-row px-5 pb-5 items-center pt-[18px]">
@@ -54,9 +59,16 @@ export const CardInfoEvent: React.FC<ICardInfoEvent> = ({
       </div>
       <div className="flex flex-row items-center gap-[10px]">
         <IconThreeDotVertical className="!w-5 !h-5" />
-        <div className="bg-base-bg3 border border-gray-1 rounded-md py-[6px] px-[6px]">
-          <IconChevronDown className="!w-4 !h-4" />
-        </div>
+        <button
+          onClick={onPressShow}
+          className="bg-base-bg3 border border-gray-1 rounded-md py-[6px] px-[6px]"
+        >
+          {currentId === id && showDetail ? (
+            <IconChevronUp className="!w-[1.375rem] !h-[1.375rem]" />
+          ) : (
+            <IconChevronDown className="!w-[1.375rem] !h-[1.375rem]" />
+          )}
+        </button>
       </div>
     </div>
   );

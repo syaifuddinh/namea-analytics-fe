@@ -26,18 +26,22 @@ export default function EventAgent() {
   //   const lang = await getDictionary();
   const [search, setSearch] = useState<string>("");
   const [section, setSection] = useState(2);
-  const labels = [
-    "January",
-    "February",
-    "May",
-    "June",
-    "July",
-    "August",
-    "October",
-    "December",
-  ];
 
   const [showDetail, setShowDetail] = useState(false);
+  const [currentIdCard, setCurrentIdCard] = useState(0);
+
+  const toggleShow = (id: number) => {
+    console.log("hit");
+    if (currentIdCard === id) {
+      setShowDetail(!showDetail);
+      setCurrentIdCard(id);
+    } else if (currentIdCard !== id) {
+      if (!showDetail) {
+        setShowDetail(true);
+      }
+      setCurrentIdCard(id);
+    }
+  };
 
   return (
     <>
@@ -56,77 +60,21 @@ export default function EventAgent() {
         subPlaceholder="All on going event created by agent"
       />
 
-      <CardContainer>
-        <CardInfoEvent
-          image={"/images/image_event.png"}
-          placeholder={"Monthly Cashback 15%"}
-          desc={"Bonus Cashback"}
-          promoPeriod={"20 Oct 2023 to 27 Oct 2023"}
-          revenueGenerated={"Rp24.600.590"}
-          statusEvent={"Active"}
+      {dummyEvent.map((item) => (
+        <CardEvent
+          key={`event-${item.id}`}
+          id={item.id}
+          currentId={currentIdCard}
+          placeholder={item.eventName}
+          desc={item.descEventName}
+          promoPeriod={item.promotionPeriode}
+          revenueGenerated={item.revenueGenerated}
+          statusEvent={item.eventStatus}
+          detailEvent={item.detailEvent}
+          showDetail={showDetail}
+          onPressShow={() => toggleShow(item.id)}
         />
-      </CardContainer>
-
-      <CardEvent
-        containerBgColor="border-bg-base3"
-        customHeader={
-          <CardInfoEvent
-            image={"/images/image_event.png"}
-            placeholder={"Monthly Cashback 15%"}
-            desc={"Bonus Cashback"}
-            promoPeriod={"20 Oct 2023 to 27 Oct 2023"}
-            revenueGenerated={"Rp24.600.590"}
-            statusEvent={"Active"}
-          />
-        }
-        divider={false}
-        renderContent={
-          <CardInfoEventDetail
-            createdBy={dummyEvent.detailEvent.createdBy}
-            promotionType={dummyEvent.detailEvent.promotionType}
-            include={dummyEvent.detailEvent.include}
-            bonusAmount={dummyEvent.detailEvent.bonusAmount}
-            turnoverMultiplier={dummyEvent.detailEvent.turnoverMultiplier}
-            minDeposit={dummyEvent.detailEvent.minDeposit}
-            maxDeposit={dummyEvent.detailEvent.maxDeposit}
-            minBonus={dummyEvent.detailEvent.minBonus}
-            maxBonus={dummyEvent.detailEvent.maxBonus}
-          />
-        }
-      />
-
-      <CardContainer>
-        <CardInfoEvent
-          image={"/images/image_event.png"}
-          placeholder={"Monthly Cashback 10%"}
-          desc={"Bonus Cashback"}
-          promoPeriod={"20 Oct 2023 to 27 Oct 2023"}
-          revenueGenerated={"Rp24.600.590"}
-          statusEvent={"Active"}
-        />
-      </CardContainer>
-
-      <CardContainer>
-        <CardInfoEvent
-          image={"/images/image_event.png"}
-          placeholder={"Monthly Cashback 25%"}
-          desc={"Bonus Cashback"}
-          promoPeriod={"20 Oct 2023 to 27 Oct 2023"}
-          revenueGenerated={"Rp24.600.590"}
-          statusEvent={"Active"}
-        />
-      </CardContainer>
-
-      <CardContainer>
-        <CardInfoEvent
-          image={"/images/image_event.png"}
-          placeholder={"Monthly Cashback 10%"}
-          desc={"Bonus Cashback"}
-          promoPeriod={"20 Oct 2023 to 27 Oct 2023"}
-          revenueGenerated={"Rp24.600.590"}
-          statusEvent={"Active"}
-        />
-      </CardContainer>
+      ))}
     </>
   );
 }
