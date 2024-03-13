@@ -3,14 +3,19 @@ import { ICardInfoMember, ICardMemberList, LabelDayProps } from "./types";
 import Image from "next/image";
 import {
   IconChevronDown,
+  IconChevronUp,
   IconThreeDotVertical,
 } from "@/components/atoms/Icons";
 
 export const CardInfoMember: React.FC<ICardInfoMember> = ({
+  id,
+  currentId,
   image,
   nameAgent,
   depositDate,
   statusAgent,
+  showDetail,
+  onPressShow,
 }) => {
   const labelDay = [
     { label: "S", active: false },
@@ -62,12 +67,19 @@ export const CardInfoMember: React.FC<ICardInfoMember> = ({
           </div>
         </div>
       </div>
-      <div className="flex flex-row items-center gap-[17px]">
+      <button
+        onClick={onPressShow}
+        className="flex flex-row items-center gap-[17px]"
+      >
         <IconThreeDotVertical className="!w-5 !h-5" />
         <div className="bg-base-bg3 border border-gray-1 rounded-md p-1">
-          <IconChevronDown className="!w-[1.375rem] !h-[1.375rem]" />
+          {currentId === id && showDetail ? (
+            <IconChevronUp className="!w-[1.375rem] !h-[1.375rem]" />
+          ) : (
+            <IconChevronDown className="!w-[1.375rem] !h-[1.375rem]" />
+          )}
         </div>
-      </div>
+      </button>
     </div>
   );
 };

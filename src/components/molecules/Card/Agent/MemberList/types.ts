@@ -1,20 +1,22 @@
 export interface ICardMemberList {
-  placeholder?: string;
-  subPlaceholder?: string;
-  renderHeader?: JSX.Element;
-  renderContent?: JSX.Element;
-  className?: string;
-  containerStyle?: string;
-  divider?: boolean;
-  customHeader?: JSX.Element;
-  containerBgColor?: string;
+  id?: number;
+  currentId?: number;
+  nameAgent: string;
+  depositDate: string;
+  statusAgent: string;
+  showDetail?: boolean;
+  onPressShow?: () => void;
 }
 
 export interface ICardInfoMember {
+  id?: number;
+  currentId?: number;
   image: string;
   nameAgent: string;
   depositDate: string;
   statusAgent: string;
+  showDetail?: boolean;
+  onPressShow?: () => void;
 }
 
 export interface LabelDayProps {
