@@ -23,18 +23,18 @@ export const Pagination: React.FC<IPagination> = ({
         className
       )}
     >
-      <div className="flex flex-row items-center gap-2">
+      <div className="flex flex-row items-center gap-2 h-[40px]">
         <div className="text-gray-6 text-sm font-extralight">Item per page</div>
         <div className="flex flex-row items-center bg-base-bg3 rounded-[4px] pl-[10px] pr-1 py-[2px]">
           <div className="text-gray-10 text-xs font-light pr-[2px]">10</div>
           <button>
-            <IconSmallChevronDown className="!w-[1.25rem] !h-[1.5rem]" />
+            <IconSmallChevronDown className="!w-[1rem] !h-[1.5rem]" />
           </button>
         </div>
       </div>
-      <div className="flex flex-row items-center rounded-lg px-4 bg-base-bg5 border border-base-bg3 text-sm">
+      <div className="flex flex-row items-center rounded-lg px-4 bg-base-bg5 border border-base-bg3 text-sm h-[40px]">
         <button className="flex flex-row items-center pr-5">
-          <IconArrowLeft />
+          <IconArrowLeft className="!w-[1.25rem] !h-[1.5rem]" />
           <div className="text-gray-6 pl-2 font-light">Previous</div>
         </button>
         <div className="flex flex-row items-center">
@@ -57,7 +57,7 @@ export const Pagination: React.FC<IPagination> = ({
           <IconArrowRight className="!w-[1.25rem] !h-[1.5rem]" />
         </button>
       </div>
-      <div className="text-gray-6 text-sm font-extralight">
+      <div className="flex text-gray-6 text-sm font-extralight h-[40px] items-center">
         {totalAgent} Agents in total
       </div>
     </div>
