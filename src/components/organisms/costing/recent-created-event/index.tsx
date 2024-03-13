@@ -1,4 +1,4 @@
-import EventCard from "./event-card"
+import EventCard from "@/components/atoms/card/event"
 import Button from "@/components/atoms/button"
 
 const items = [

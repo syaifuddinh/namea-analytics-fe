@@ -29,9 +29,21 @@ export default function EventCard({
 	description,
 	thumbnail,
 	period,
-	revenue
+	revenue,
+	className = "",
+	isContentVisibleInitially = false,
+	isControlVisible = true
+}: {
+	title: string,
+	description: string,
+	thumbnail: string,
+	period: string,
+	revenue: string,
+	className?: string,
+	isContentVisibleInitially?: boolean,
+	isControlVisible?: boolean
 }) {
-	const [isContentVisible, setIsContentVisible] = useState(false)
+	const [isContentVisible, setIsContentVisible] = useState(isContentVisibleInitially)
 
 	const onClickControl = () => {
 		setIsContentVisible(!isContentVisible)
@@ -42,6 +54,7 @@ export default function EventCard({
 			paddingTop="6px"
 			isUsePaddingBottom={false}
 			isDividerVisible={false}
+			className={className}
 		>
 			<div className="p-5 flex items-center justify-between rounded-t-[12px] bg-base-bg5 border-t border-base-bg3">
 				<div className="flex flex-col gap-3 lg:gap-0 lg:flex-row lg:items-center">
@@ -76,19 +89,20 @@ export default function EventCard({
 					<Badge title="Active" isTileVisible={true} />
 				</div>
 
+				{ isControlVisible === true && (
+					<div className="flex items-center gap-2.5">
+						<button className="w-[32px] h-[32px] flex items-center justify-center bg-[transparent]">
+							<MoreIcon />
+						</button>
 
-				<div className="flex items-center gap-2.5">
-					<button className="w-[32px] h-[32px] flex items-center justify-center bg-[transparent]">
-						<MoreIcon />
-					</button>
-
-					<button
-						className={`${isContentVisible === true ? "rotate-180" : ""} w-[32px] h-[32px] rounded-[6px] bg-base-bg3 border border-gray-1 flex justify-center items-center`}
-						onClick={onClickControl}
-					>
-						<IconChevronDown />
-					</button>
-				</div>
+						<button
+							className={`${isContentVisible === true ? "rotate-180" : ""} w-[32px] h-[32px] rounded-[6px] bg-base-bg3 border border-gray-1 flex justify-center items-center`}
+							onClick={onClickControl}
+						>
+							<IconChevronDown />
+						</button>
+					</div>
+				) }
 			</div>
 
 			{ isContentVisible === true && (
@@ -161,6 +175,7 @@ export default function EventCard({
 							variant="link"
 							className="lg:ml-[92px]"
 							width="121px"
+							url="/costing/promotional/event/1"
 						>
 							More Detail
 						</Button>

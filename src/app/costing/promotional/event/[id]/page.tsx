@@ -1,0 +1,46 @@
+"use client";
+
+import CostingLayout from "@/components/templates/costing-layout"
+import Breadcrumb from "@/components/atoms/breadcrumb"
+import {
+    IconArrowLeft
+} from "@/components/atoms/Icons"
+import StatusLabel from "@/components/atoms/status-label"
+import EventCard from "@/components/atoms/card/event"
+
+export default function PromotionalCostingPage() {
+    return (
+        <CostingLayout activeMenu="promotional-costing" >
+            <Breadcrumb
+                options={[{ title: "Pengeluaran Lomba" }, { title: "Details" }]}
+            />
+
+            <div className="mt-6 flex flex-col md:flex-row gap-3 md:items-center justify-between">
+                <div>
+                    <div className="flex items-center">
+                        <a href="/costing/promotional/event">
+                            <IconArrowLeft />                    
+                        </a>
+                        <div className="event_detail-title ml-2.5 font-light text-gray-10 text-lg">
+                            Monthly Cashback 15%
+                        </div>
+
+                        <StatusLabel title="Active" className="ml-[26px]" />
+                    </div>
+                </div>
+
+            </div>
+
+            <EventCard
+                thumbnail={"/images/costing/event-thumbnail.png"}
+                title={"Monthly Cashback 35%"}
+                description={"Bonus Cashback"}
+                period={"20 Oct 2023 to 27 Oct 2023"}
+                revenue={"24.600.590"}
+                className="mt-[33px]"
+                isContentVisibleInitially={true}
+                isControlVisible={false}
+            />
+        </CostingLayout>
+    );
+}

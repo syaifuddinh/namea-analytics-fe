@@ -7,12 +7,14 @@ export default function Button({
     variant = "default",
     paddingR = "pr-[0.625rem]",
     width = "145px",
+    url = "#",
     onClick = () => {},
 }: {
     children: ReactElement,
     className?: string,
     variant?: "default"|"link",
     padding?: string,
+    url?: string,
     onClick?: () => void
 }) {
     return (
@@ -28,7 +30,7 @@ export default function Button({
 
             { variant === "link" && (
                 <a
-                    href="#"
+                    href={url}
                     className={`flex items-center h-[36px] bg-base-bg3 border border-gray-1 rounded-[8px] pl-3 pr-[6px] ${className}`}
                     style={{ width }}
                 >
