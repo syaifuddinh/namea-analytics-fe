@@ -30,14 +30,14 @@ export const CardInfoEventDetail: React.FC<ICardInfoEventDetail> = ({
   return (
     <>
       <div className="flex flex-col p-[1.125rem] gap-y-[1.125rem] gap-x-4">
-        <div className="flex flex-row items-center gap-[70px]">
-          <div className="flex flex-col w-[142px] gap-1">
+        <div className="flex flex-row items-center">
+          <div className="flex flex-col w-[235px] gap-1">
             <div className="text-sm text-gray-6 font-extralight">
               Created by
             </div>
             <div className="text-sm text-gray-10 font-light">{createdBy}</div>
           </div>
-          <div className="flex flex-col w-[142px] gap-1">
+          <div className="flex flex-col w-[235px] gap-1">
             <div className="text-sm text-gray-6 font-extralight">
               Promotion Type
             </div>
@@ -45,17 +45,17 @@ export const CardInfoEventDetail: React.FC<ICardInfoEventDetail> = ({
               {promotionType}
             </div>
           </div>
-          <div className="flex flex-col w-[142px] gap-1">
+          <div className="flex flex-col w-[235px] gap-1">
             <div className="text-sm text-gray-6 font-extralight">Include?</div>
             <div className="text-sm text-gray-10 font-light">{include}</div>
           </div>
-          <div className="flex flex-col w-[142px] gap-1">
+          <div className="flex flex-col w-[235px] gap-1">
             <div className="text-sm text-gray-6 font-extralight">
               Bonus Amount
             </div>
             <div className="text-sm text-gray-10 font-light">{bonusAmount}</div>
           </div>
-          <div className="flex flex-col w-[142px] gap-1">
+          <div className="flex flex-col w-[235px] gap-1">
             <div className="text-sm text-gray-6 font-extralight">
               Turnover Multiplier
             </div>
@@ -65,26 +65,26 @@ export const CardInfoEventDetail: React.FC<ICardInfoEventDetail> = ({
           </div>
         </div>
 
-        <div className="flex flex-row items-center gap-[70px]">
-          <div className="flex flex-col w-[142px] gap-1">
+        <div className="flex flex-row items-center">
+          <div className="flex flex-col w-[235px] gap-1">
             <div className="text-sm text-gray-6 font-extralight">
               Min. Deposit
             </div>
             <div className="text-sm text-gray-10 font-light">{minDeposit}</div>
           </div>
-          <div className="flex flex-col w-[142px] gap-1">
+          <div className="flex flex-col w-[235px] gap-1">
             <div className="text-sm text-gray-6 font-extralight">
               Max. Deposit
             </div>
             <div className="text-sm text-gray-10 font-light">{maxDeposit}</div>
           </div>
-          <div className="flex flex-col w-[142px] gap-1">
+          <div className="flex flex-col w-[235px] gap-1">
             <div className="text-sm text-gray-6 font-extralight">
               Min. Bonus
             </div>
             <div className="text-sm text-gray-10 font-light">{minBonus}</div>
           </div>
-          <div className="flex flex-col w-[142px] gap-1">
+          <div className="flex flex-col w-[235px] gap-1">
             <div className="text-sm text-gray-6 font-extralight">
               Max. Bonus
             </div>

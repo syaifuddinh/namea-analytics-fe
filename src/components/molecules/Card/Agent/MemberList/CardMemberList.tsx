@@ -16,15 +16,11 @@ export const CardMemberList: React.FC<ICardMemberList> = ({
   showDetail,
   onPressShow,
 }) => {
-  console.log("id ==>", id);
-  console.log("currentId ==>", currentId);
-  console.log("showDetail ==>", showDetail);
-
   return (
     <div className="flex flex-1 flex-col border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mt-5 mb-5">
       <div
         className={`flex flex-1 flex-col ${
-          showDetail ? "border-y " : "border-t"
+          currentId === id && showDetail ? "border-y " : "border-t"
         } border-gray-1 mt-1 bg-base-bg5 rounded-t-xl border-bg-base3`}
       >
         <CardInfoMember
