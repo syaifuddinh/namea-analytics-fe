@@ -2,7 +2,7 @@
 import { IconArrowDown, IconArrowUp } from "@/components/atoms/Icons";
 import {
   CardDashboard,
-  CardMemberList,
+  CardDataAnalyst,
 } from "@/components/molecules/Card/Agent";
 import { Header } from "@/components/molecules/Header";
 import {
@@ -17,27 +17,11 @@ import { useState } from "react";
 export default function DataAnalystAgent() {
   //   const lang = await getDictionary();
   const [search, setSearch] = useState<string>("");
-  const [section, setSection] = useState(0);
+  const [section, setSection] = useState(3);
   const labelYear = [
     { id: 0, label: "2021" },
     { id: 1, label: "2022" },
     { id: 2, label: "2023" },
-  ];
-
-  const labelProvider = [
-    { label: "Layer1/Layer2" },
-    { label: "Metaverse" },
-    { label: "Meme" },
-    { label: "Liquid" },
-    { label: "+3" },
-  ];
-
-  const labelMarkets = [
-    { label: "BTC" },
-    { label: "ETH" },
-    { label: "USDT" },
-    { label: "BNB" },
-    { label: "+3" },
   ];
 
   const [showDetail, setShowDetail] = useState(false);
@@ -59,7 +43,7 @@ export default function DataAnalystAgent() {
         subPlaceholder="Monitor the performance of your platform seamlessly throughout the entire year."
       />
 
-      <CardMemberList
+      <CardDataAnalyst
         containerBgColor="border-bg-base3"
         customHeader={
           <div className="flex flex-1 flex-row items-center p-[1.125rem]">

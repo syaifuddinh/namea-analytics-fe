@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nameAgent": "Tobias J. Bourgault",
+    "depositDate": "26 July 2023, 09.30AM",
+    "statusAgent": "Active"
+  },
+  {
+    "id": 2,
+    "nameAgent": "Felicitas A. Nieves",
+    "depositDate": "26 July 2023, 09.30AM",
+    "statusAgent": "Active"
+  },
+  {
+    "id": 3,
+    "nameAgent": "Thomas J. Jones",
+    "depositDate": "26 July 2023, 09.30AM",
+    "statusAgent": "Active"
+  },
+  {
+    "id": 4,
+    "nameAgent": "Clifford A. Correa",
+    "depositDate": "26 July 2023, 09.30AM",
+    "statusAgent": "Active"
+  },
+  {
+    "id": 5,
+    "nameAgent": "Jesus T. Heffner",
+    "depositDate": "26 July 2023, 09.30AM",
+    "statusAgent": "Active"
+  }
+]

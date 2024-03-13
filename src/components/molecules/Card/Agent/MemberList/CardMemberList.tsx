@@ -1,54 +1,71 @@
 import clsx from "clsx";
 import { ICardMemberList } from "./types";
+import { CardInfoMember } from "./CardInfoMember";
+import { CardRecentMarkets } from "./CardRecentMarkets";
+import { CardWeeklyDepositAnalysis } from "./CardWeeklyDepositAnalysis";
+import { CardDashboard } from "../CardDashboard";
+import dummyCrypto from "@/data/dummyCrypto.json";
+import dummyWeeklyDeposit from "@/data/dummyDataWeeklyDeposit.json";
 
 export const CardMemberList: React.FC<ICardMemberList> = ({
-  placeholder,
-  subPlaceholder,
-  customHeader,
-  renderHeader,
-  renderContent,
-  className,
-  containerStyle,
-  divider = true,
-  containerBgColor = "border-gray-1",
+  id,
+  currentId,
+  nameAgent,
+  depositDate,
+  statusAgent,
+  showDetail,
+  onPressShow,
 }) => {
   return (
-    <div
-      className={clsx(
-        "flex flex-1 flex-col border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mt-5 mb-5",
-        containerStyle
-      )}
-    >
+    <div className="flex flex-1 flex-col border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mt-5 mb-5">
       <div
-        className={`flex flex-1 flex-col border-y border-gray-1 mt-1 bg-base-bg5 rounded-t-xl ${containerBgColor}`}
+        className={`flex flex-1 flex-col ${
+          currentId === id && showDetail ? "border-y " : "border-t"
+        } border-gray-1 mt-1 bg-base-bg5 rounded-t-xl border-bg-base3`}
       >
-        {customHeader ? (
-          customHeader
-        ) : (
-          <div
-            className={clsx(
-              "flex flex-1 p-5 items-center bg-gray-7 ",
-              className
-            )}
-          >
-            <div className="flex flex-col gap-[4px]">
-              <div className="text-base text-gray-10 font-light">
-                {placeholder}
-              </div>
-              {subPlaceholder ? (
-                <div className="text-gray-6 text-sm pr-2 font-extralight">
-                  {subPlaceholder}
-                </div>
-              ) : null}
-            </div>
-            {renderHeader}
-          </div>
-        )}
+        <CardInfoMember
+          id={id}
+          image={"/images/avatar_dummy.png"}
+          nameAgent={nameAgent}
+          depositDate={depositDate}
+          statusAgent={statusAgent}
+          showDetail={showDetail}
+          currentId={currentId}
+          onPressShow={onPressShow}
+        />
       </div>
-      {divider ? (
-        <div className="h-[10px] border-x border-x-gray-1 mx-5" />
-      ) : null}
-      {renderContent}
+      {currentId === id && showDetail && (
+        <>
+          <div className="flex flex-1 flex-row border-b border-b-base-bg3 p-[1.125rem] gap-4">
+            <CardDashboard
+              placeholder={"Total Deposit"}
+              value={"Rp500.950.450"}
+              valueStyle="!mb-0"
+              profit={true}
+            />
+            <CardDashboard
+              placeholder={"Total Withdrawal"}
+              value={"Rp500.950.450"}
+              valueStyle="!mb-0"
+              profit={false}
+            />
+            <CardDashboard
+              placeholder={"Avg. buy amount"}
+              value={"Rp120.950"}
+              valueStyle="!mb-0"
+              profit={true}
+            />
+            <CardDashboard
+              placeholder={"Last Login"}
+              value={"12 July 2023, 11:59PM"}
+              valueStyle="!mb-0"
+            />
+          </div>
+
+          <CardRecentMarkets data={dummyCrypto} />
+          <CardWeeklyDepositAnalysis data={dummyWeeklyDeposit} />
+        </>
+      )}
     </div>
   );
 };
