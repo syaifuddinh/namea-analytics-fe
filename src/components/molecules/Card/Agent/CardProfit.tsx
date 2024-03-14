@@ -12,7 +12,7 @@ export const CardProfit: React.FC<ICardProfit> = ({
 }) => {
   return (
     <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden">
-      <div className="flex flex-row flex-1 border-t border-gray-1 mt-[4px] bg-base-bg5 rounded-t-xl p-5">
+      <div className="flex flex-row flex-1 border-t border-gray-1 mt-[4px] bg-base-bg5 rounded-t-xl pl-4 pr-5 py-5">
         {iconDot ? (
           <div className="flex mt-1 mr-2">
             <Dot profit={profit} />
