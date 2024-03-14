@@ -21,7 +21,7 @@ export default function Button({
         <>
             { variant === "default" && (
                 <button
-                    className={`button default flex flex-row justify-center rounded-md border bg-checkbox items-center ${paddingR} pl-[0.625rem] py-2 max-h-[2.25rem] text-gray-10 border-dot-blue text-sm font-light ${className}`}
+                    className={`button default flex flex-row justify-center rounded-lg border bg-checkbox items-center ${paddingR} pl-[0.625rem] py-2 max-h-[2.25rem] text-gray-10 border-dot-blue text-sm font-light ${className}`}
                     onClick={onClick}
                 >
                     {children}

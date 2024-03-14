@@ -13,7 +13,7 @@ export default function Chip({
                 { title }
             </div>
             <div
-            	className="cursor-pointer ml-1"
+            	className="cursor-pointer ml-[7px]"
             	onClick={onClose}
             >
             	<CloseIcon />

@@ -13,12 +13,12 @@ import YearSelectInput from "@/components/molecules/input/year-select"
 import TitleText from "@/components/atoms/text/title"
 
 const Header = ({ onApplyButtonClick }) => (
-	<div className="card_header">
+	<div className="border-y border-base-bg3 h-[112px] pt-5 px-5 bg-base-bg5">
 		<TitleText fontSize="16px">
 			Costing Comparation
 		</TitleText>
 
-		<div className="flex flex-col md:flex-row gap-2.5 mt-3">
+		<div className="flex flex-col md:flex-row gap-2.5 mt-2.5 w-full">
 			<div className="grow *:grow flex gap-2.5 flex-col md:flex-row *:w-[33.3333%]">
 				<CostingCategoryInput
 					value={null}
@@ -40,7 +40,7 @@ const Header = ({ onApplyButtonClick }) => (
 
 			<Button
 				variant="default"
-				className="max-w-[106px]"
+				className="max-w-[106px] min-w-[106px]"
 				onClick={onApplyButtonClick}
 			>
 				Apply Filters
@@ -81,6 +81,7 @@ export default function Comparison({ className }) {
 			headerElement={<Header onApplyButtonClick={onApplyButtonClick} />}
 			isDividerVisible={false}
 			className={className}
+			paddingTop="6px"
 		>
 			{ contentVisible === true && (
 				<div id="costing-comparison_content">
