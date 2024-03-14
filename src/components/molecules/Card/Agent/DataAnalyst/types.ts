@@ -11,3 +11,10 @@ export interface ICardAnalyst {
   showDetail?: boolean;
   onPressShow?: () => void;
 }
+
+export interface ICardMonthlyAnalyst {
+  month: string;
+  revenue: string;
+  profit: boolean;
+  percentage: string;
+}
