@@ -4,6 +4,7 @@ import { FinancialStatementImage1 } from "@/components/atoms/Icons"
 import { FinancialStatementImage2 } from "@/components/atoms/Icons"
 import { FinancialStatementImage5 } from "@/components/atoms/Icons"
 import { FinancialStatementImage6 } from "@/components/atoms/Icons"
+import { Pagination } from "@/components/molecules/Footer/Pagination";
 
 const members = [
 	{
@@ -65,6 +66,8 @@ export default function EventEnrolledMember({
 					/>
 				)) }
 			</div>
+
+			<Pagination className="mt-[40px]" totalAgent={5} />
 		</div>
 	)
 }
