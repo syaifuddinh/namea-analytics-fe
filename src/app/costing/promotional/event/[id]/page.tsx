@@ -8,6 +8,7 @@ import {
 import StatusLabel from "@/components/atoms/status-label"
 import EventCard from "@/components/atoms/card/event"
 import EventOverview from "@/components/organisms/costing/event-overview"
+import EventDeposit from "@/components/organisms/costing/event-deposit"
 
 export default function PromotionalCostingPage() {
     return (
@@ -44,6 +45,7 @@ export default function PromotionalCostingPage() {
             />
 
             <EventOverview className="mt-[60px]" />
+            <EventDeposit className="mt-[60px]" />
         </CostingLayout>
     );
 }
