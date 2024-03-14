@@ -1,5 +1,5 @@
-import EventCard from "./event-card"
-import { IconChevronRight } from "@/components/atoms/Icons"
+import EventCard from "@/components/atoms/card/event"
+import Button from "@/components/atoms/button"
 
 const items = [
 	{
@@ -56,13 +56,9 @@ export default function RecentCreatedEvent({
 					Recent Created Event				
 				</div>
 
-				<a href="#" className="flex items-center h-[36px] w-[145px] bg-base-bg3 text-sm border border-gray-1 rounded-[8px] pl-3 pr-[6px]">
-					<div className="text-gray-6 font-extralight">
-						View All Events
-					</div>
-
-					<IconChevronRight />
-				</a>
+				<Button variant="link">
+					View All Event
+				</Button>
 			</div>
 
 			<div className="mt-5 flex flex-col gap-5">

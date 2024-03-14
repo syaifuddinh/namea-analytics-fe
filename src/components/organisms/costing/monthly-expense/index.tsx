@@ -2,6 +2,7 @@ import MonthInput from "@/components/molecules/input/month"
 import { InputSearch } from "@/components/atoms/search";
 import DatePeriodInput from "@/components/atoms/input/date-period"
 import ExpenseCard from "./expense-card"
+import TitleText from "@/components/atoms/text/title"
 
 const items = [
 	{
@@ -57,13 +58,13 @@ const items = [
 export default function MonthlyExpense({ className }) {
 	return (
 		<div className={className}>
-			<div className="monthly-expense_title font-light text-[18px] leading-[26px] text-gray-10">
+			<TitleText>
 				Monthly Pengeluaran Lomba
-			</div>
+			</TitleText>
 
 			<MonthInput className="mt-3" />
 
-			<div className="monthly-expense_filter flex mt-8">
+			<div className="monthly-expense_filter flex gap-2.5 mt-8">
 				<InputSearch
 		            name={"SuperAgent"}
 		            placeholder="Search agent...."

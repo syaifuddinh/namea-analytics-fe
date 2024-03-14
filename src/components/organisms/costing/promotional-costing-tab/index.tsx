@@ -26,6 +26,7 @@ export default function({ value = "competition-expense" }) {
 			width="320px"
 			containerHeight="40px"
 			childrenHeight="32px"
+			onChange={() => {}}
 		/>
 	)
 }

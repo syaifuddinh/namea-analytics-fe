@@ -35,7 +35,7 @@ export default function YearSelectInput({
 			placeholder="Select Year"
 			options={options}
 			value={value}
-			variant="multiple"
+			variant={variant}
 			onChange={onChange}
 		/>
 	)

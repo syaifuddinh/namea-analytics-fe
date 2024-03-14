@@ -1,6 +1,7 @@
 import DatePeriodInput from "@/components/atoms/input/date-period"
 import AgentCard from "./agent-card"
 import PlatformCard from "./platform-card"
+import TitleText from "@/components/atoms/text/title"
 
 const mostSpentAgents = [
 	{
@@ -51,9 +52,9 @@ export default function TrendAnalysis({
 	return (
 		<div className={`${className}`}>
 			<div className="flex gap-2 flex-col md:flex-row justify-between md:items-center">
-				<div className="trend-analysis_title font-light text-[18px] leading-[26px] text-gray-10">
+				<TitleText>
 					Trend Analysis
-				</div>
+				</TitleText>
 
 				<DatePeriodInput />
 			</div>

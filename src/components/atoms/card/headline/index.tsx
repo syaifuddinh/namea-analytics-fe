@@ -1,8 +1,11 @@
-"use client"
+import { ReactElement } from "react"
 
 const HeadlineCard = ({
 	children,
 	className = "",
+}: {
+	children: ReactElement,
+	className?: string
 }) => {
 	return (
 		<div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden">
