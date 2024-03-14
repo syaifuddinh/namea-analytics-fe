@@ -34,7 +34,7 @@ export const Pagination: React.FC<IPagination> = ({
           </button>
         </div>
       </div>
-      <div className="flex flex-row items-center rounded-lg px-4 bg-base-bg5 border border-base-bg3 text-sm h-[40px]">
+      <div className="flex flex-row items-center rounded-lg pl-4 pr-5 bg-base-bg5 border border-base-bg3 text-sm h-[40px]">
         <button className="flex flex-row items-center pr-5">
           <IconArrowLeft className="!w-[1.25rem] !h-[1.5rem]" />
           <div className="text-gray-6 pl-2 font-light">Previous</div>
@@ -54,7 +54,7 @@ export const Pagination: React.FC<IPagination> = ({
           ))}
         </div>
 
-        <button className="flex flex-row items-center pl-5">
+        <button className="flex flex-row items-center pl-4">
           <div className="text-gray-6 pr-2 font-light">Next</div>
           <IconArrowRight className="!w-[1.25rem] !h-[1.5rem]" />
         </button>
