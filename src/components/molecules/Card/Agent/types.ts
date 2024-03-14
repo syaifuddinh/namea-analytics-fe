@@ -6,6 +6,8 @@ export interface ICardDashboard {
   percentage?: string;
   desc?: string;
   valueStyle?: string;
+  pContainer?: string;
+  currencyStyle?: string;
 }
 
 export interface ICardTop {

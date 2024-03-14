@@ -1,26 +1,9 @@
 "use client";
-import {
-  IconChevronDown,
-  IconChevronRight,
-  IconChevronUp,
-  IconSmallChevronDown,
-  IconThreeDotVertical,
-} from "@/components/atoms/Icons";
-import {
-  CardContainer,
-  CardDashboard,
-  CardInfoEvent,
-  CardInfoEventDetail,
-  CardEvent,
-} from "@/components/molecules/Card/Agent";
+import { CardEvent } from "@/components/molecules/Card/Agent";
 import { Header } from "@/components/molecules/Header";
 import { PageHeaderSection } from "@/components/molecules/Header/Agent";
-import Panel from "@/components/molecules/panel";
-import Image from "next/image";
-import { useState } from "react";
-import dummyCrypto from "@/data/dummyCrypto.json";
 import dummyEvent from "@/data/dummyEvent.json";
-import { Pagination } from "@/components/molecules/Footer/Pagination";
+import { useState } from "react";
 
 export default function EventAgent() {
   //   const lang = await getDictionary();
@@ -31,7 +14,6 @@ export default function EventAgent() {
   const [currentIdCard, setCurrentIdCard] = useState(0);
 
   const toggleShow = (id: number) => {
-    console.log("hit");
     if (currentIdCard === id) {
       setShowDetail(!showDetail);
       setCurrentIdCard(id);
@@ -57,6 +39,8 @@ export default function EventAgent() {
       <Header
         icon="/images/super-agent.png"
         placeholder="On Going Event"
+        textStyle="tracking-[0.5px]"
+        subStyle="tracking-[0px]"
         subPlaceholder="All on going event created by agent"
       />
 

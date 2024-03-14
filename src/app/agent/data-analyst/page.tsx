@@ -18,6 +18,7 @@ export default function DataAnalystAgent() {
   //   const lang = await getDictionary();
   const [search, setSearch] = useState<string>("");
   const [section, setSection] = useState(3);
+  const [yearIdx, setYearIdx] = useState(0);
   const labelYear = [
     { id: 0, label: "2021" },
     { id: 1, label: "2022" },
@@ -54,17 +55,17 @@ export default function DataAnalystAgent() {
             <div className="flex flex-1 items-center justify-end">
               <div className="flex flex-row items-center bg-base-bg5 p-1 gap-1 rounded-[10px] border border-gray-9 text-sm text-gray-10 font-extralight">
                 {labelYear.map((item: ILabelYear) => (
-                  <Link
+                  <button
                     key={`label-page-${item.id}`}
-                    href={{}}
+                    onClick={() => setYearIdx(item.id)}
                     className={clsx(
-                      "py-[4px] px-3 font-thin",
-                      section === item.id &&
+                      "py-[4px] px-[10px] font-thin",
+                      yearIdx === item.id &&
                         "border border-gray-1 rounded-md bg-base-bg3 !font-extralight"
                     )}
                   >
                     {item.label}
-                  </Link>
+                  </button>
                 ))}
               </div>
             </div>
@@ -73,32 +74,34 @@ export default function DataAnalystAgent() {
         divider={false}
         renderContent={
           <>
-            <div className="flex flex-1 flex-row rounded-b-xl p-[1.125rem] gap-4">
+            <div className="flex flex-1 flex-row rounded-b-xl p-[1.25rem] gap-4">
               <CardDashboard
                 placeholder={"Total Revenue"}
                 value={"Rp500.950.450"}
                 profit={true}
                 percentage={"23.8% (+24)"}
+                pContainer="p-[1.125rem]"
               />
               <CardDashboard
                 placeholder={"Total Turnover"}
                 value={"Rp500.950.450"}
                 profit={false}
                 percentage={"-16.5% (-8)"}
+                pContainer="p-[1.125rem]"
               />
             </div>
 
-            <div className="flex p-[1.125rem] bg-base-bg5 border-t border-t-base-bg3 gap-5 justify-center">
+            <div className="flex p-[1.125rem] bg-base-bg5 border-t border-t-base-bg3 gap-5 justify-center overflow-hidden">
               {dummyDataAnalyst.map((item) => (
                 <div
                   key={`data-analyst-revenue-${item.id}`}
-                  className="flex flex-row border border-gray-1 rounded-2xl bg-base-bg2"
+                  className="flex flex-row border border-gray-1 rounded-2xl bg-base-bg2 !w-[85px] overflow-hidden"
                 >
-                  <div className="flex flex-col border-t border-gray-1 mt-1 bg-base-bg5 rounded-t-xl divide-y divide-base-bg3">
+                  <div className="flex flex-col border-t border-gray-1 mt-1 bg-base-bg5 rounded-t-xl divide-y divide-base-bg3 !w-[85px]">
                     <div className="flex w-full p-2 justify-center text-gray-6 text-sm">
                       {item.month}
                     </div>
-                    <div className="flex w-full p-2 justify-center text-gray-6 text-sm">
+                    <div className="flex w-full p-2 justify-center text-gray-10 text-sm">
                       {item.revenue}
                     </div>
                     <div className="flex w-full p-2 justify-center">

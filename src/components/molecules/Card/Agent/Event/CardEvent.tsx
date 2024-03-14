@@ -35,19 +35,17 @@ export const CardEvent: React.FC<ICardEvent> = ({
         />
       </div>
       {currentId === id && showDetail && (
-        <>
-          <CardInfoEventDetail
-            createdBy={detailEvent?.createdBy}
-            promotionType={detailEvent?.promotionType}
-            include={detailEvent?.include}
-            bonusAmount={detailEvent?.bonusAmount}
-            turnoverMultiplier={detailEvent?.turnoverMultiplier}
-            minDeposit={detailEvent?.minDeposit}
-            maxDeposit={detailEvent?.maxDeposit}
-            minBonus={detailEvent?.minBonus}
-            maxBonus={detailEvent?.maxBonus}
-          />
-        </>
+        <CardInfoEventDetail
+          createdBy={detailEvent?.createdBy}
+          promotionType={detailEvent?.promotionType}
+          include={detailEvent?.include}
+          bonusAmount={detailEvent?.bonusAmount}
+          turnoverMultiplier={detailEvent?.turnoverMultiplier}
+          minDeposit={detailEvent?.minDeposit}
+          maxDeposit={detailEvent?.maxDeposit}
+          minBonus={detailEvent?.minBonus}
+          maxBonus={detailEvent?.maxBonus}
+        />
       )}
     </div>
   );

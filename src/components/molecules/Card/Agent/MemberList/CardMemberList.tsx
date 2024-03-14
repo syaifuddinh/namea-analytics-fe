@@ -46,8 +46,8 @@ export const CardMemberList: React.FC<ICardMemberList> = ({
             <CardDashboard
               placeholder={"Total Withdrawal"}
               value={"Rp500.950.450"}
-              valueStyle="!mb-0"
-              profit={false}
+              valueStyle="!mb-0 !text-alert-10"
+              currencyStyle="text-alert-6"
             />
             <CardDashboard
               placeholder={"Avg. buy amount"}

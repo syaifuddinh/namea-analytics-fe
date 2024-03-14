@@ -5,4 +5,6 @@ export interface IHeader {
   className?: string;
   children?: React.ReactNode;
   divider?: boolean;
+  textStyle?: string;
+  subStyle?: string;
 }

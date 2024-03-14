@@ -12,13 +12,11 @@ export const CardProfit: React.FC<ICardProfit> = ({
 }) => {
   return (
     <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden">
-      <div className="flex flex-row flex-1 border-t border-gray-1 mt-[4px] bg-base-bg5 rounded-t-xl p-5">
+      <div className="flex flex-row flex-1 border-t border-gray-1 mt-[4px] bg-base-bg5 rounded-t-xl pl-4 pr-5 py-5">
         {iconDot ? (
-          profit ? (
-            <Dot className="bg-dot-blue border-dot-blue" />
-          ) : (
-            <Dot className="bg-alert-10 border-alert-2" />
-          )
+          <div className="flex mt-1 mr-2">
+            <Dot profit={profit} />
+          </div>
         ) : null}
         <div className="flex flex-1 flex-col">
           <div className="text-sm text-gray-6 font-extralight mb-1">

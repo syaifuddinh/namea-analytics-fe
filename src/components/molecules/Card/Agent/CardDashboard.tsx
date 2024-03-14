@@ -10,29 +10,26 @@ export const CardDashboard: React.FC<ICardDashboard> = ({
   percentage,
   desc,
   valueStyle = "mb-4",
+  pContainer = "p-5",
+  currencyStyle = "text-gray-6",
 }) => {
   return (
     <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden">
-      <div className="flex flex-col flex-1 border-t border-gray-1 mt-[4px] bg-base-bg5 rounded-t-xl p-5">
+      <div
+        className={`flex flex-col flex-1 border-t border-gray-1 mt-[4px] bg-base-bg5 rounded-t-xl ${pContainer}`}
+      >
         <div className="text-sm text-gray-6 font-extralight mb-1">
           {placeholder}
         </div>
         <div
           className={clsx(
-            `text-[1rem] ${valueStyle}`,
-            value.includes("Rp") && "flex flex-row items-center",
-            profit === undefined || profit ? "!text-gray-10" : "!text-alert-10"
+            `text-[1rem] ${valueStyle} text-gray-10`,
+            value.includes("Rp") && "flex flex-row items-center"
           )}
         >
           {value}
           {value.includes("Rp") && (
-            <div
-              className={`${
-                profit ? "!text-gray-6" : "!text-alert-6"
-              } text-[1rem] font-light`}
-            >
-              ,00
-            </div>
+            <div className={`${currencyStyle} text-[1rem] font-light`}>,00</div>
           )}
         </div>
         {percentage && (
