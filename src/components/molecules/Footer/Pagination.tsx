@@ -43,7 +43,7 @@ export const Pagination: React.FC<IPagination> = ({
           {x.map((item) => (
             <button
               key={item.label}
-              className={`px-[15px] py-[10px] font-light ${
+              className={`px-[15.5px] py-[10px] font-light ${
                 item.active
                   ? "text-gray-10 border border-base-bg3 bg-base-bg3"
                   : "text-gray-6 border-r border-r-base-bg3"
