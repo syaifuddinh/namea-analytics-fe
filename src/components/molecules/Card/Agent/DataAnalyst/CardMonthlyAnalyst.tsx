@@ -9,8 +9,8 @@ export const CardMonthlyAnalyst: React.FC<ICardMonthlyAnalyst> = ({
   percentage,
 }) => {
   return (
-    <div className="border border-gray-1 rounded-2xl bg-base-bg2 w-[81.172px]">
-      <div className="flex flex-col border-t border-gray-1 mt-1 bg-base-bg5 rounded-t-xl w-[81.172px]">
+    <div className="border border-gray-1 rounded-[10px] bg-base-bg2 w-[83.172px] overflow-hidden">
+      <div className="flex flex-col border-t border-gray-1 mt-1 bg-base-bg5 rounded-t-[10px] w-[83.172px]">
         <div className="flex p-2 justify-center text-gray-6 text-sm">
           {month}
         </div>
