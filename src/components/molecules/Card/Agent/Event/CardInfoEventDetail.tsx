@@ -94,7 +94,7 @@ export const CardInfoEventDetail: React.FC<ICardInfoEventDetail> = ({
         </div>
       </div>
 
-      <div className="flex flex-row p-[1.125rem] bg-base-bg5 border-t border-t-base-bg3">
+      <div className="flex flex-row px-[1.125rem] pb-[1.125rem] pt-5 bg-base-bg5 border-t border-t-base-bg3">
         <div className="flex flex-row items-center">
           <div className="flex flex-col mr-12">
             <div className="text-sm text-gray-6 font-extralight mb-2">
