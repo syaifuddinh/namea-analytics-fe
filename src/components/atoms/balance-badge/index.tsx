@@ -18,7 +18,7 @@ const BalanceBadge = ({
 }) => {
   return (    
       <div
-        className={`flex flex-col gap-2 sm:flex-row sm:items-center justify-between bg-base-bg4 flex pr-4 py-[7px] border border-base-bg3 rounded-lg border-solid ${className}`}
+        className={`h-[42px] flex flex-col gap-2 sm:flex-row sm:items-center justify-between bg-base-bg4 flex pr-4 py-[7px] border border-base-bg3 rounded-lg border-solid ${className}`}
         style={{paddingLeft}}
        >
 
