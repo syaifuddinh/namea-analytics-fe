@@ -3,8 +3,8 @@ import MoneyText from "@/components/atoms/text/money"
 import Divider from "@/components/atoms/divider"
 import { GlobalIcon } from "@/components/atoms/Icons"
 import {
-  CostingDottedLeftArrowIcon,
-  CostingDottedRightArrowIcon
+  PromotionalArrowLeft,
+  PromotionalArrowRight
 } from "@/components/atoms/Icons";
 
 export default function ExpenseCard({ title, balance }) {
@@ -37,11 +37,11 @@ export default function ExpenseCard({ title, balance }) {
 				</div>
 
 				<div className="w-full h-[40px] gap-3 bg-base-bg3 flex justify-center items-center">
-					<CostingDottedLeftArrowIcon className="w-[59px] h-[19px]" />
+					<PromotionalArrowLeft />
 					<div className="text-gray-6 font-extralight text-sm">
 						More Detail
 					</div>
-					<CostingDottedRightArrowIcon />
+					<PromotionalArrowRight />
 				</div>
 			</a>
 		</Card>
