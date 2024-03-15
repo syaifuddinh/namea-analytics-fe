@@ -2,8 +2,6 @@
 
 import UploadCSV from "@/components/organisms/costing/upload-csv"
 import CostingBreakdown from "@/components/organisms/costing/breakdown"
-import GeneralCosting from "@/components/organisms/costing/general-costing"
-import Comparison from "@/components/organisms/costing/comparison"
 import MonthlyExpense from "@/components/organisms/costing/monthly-expense"
 import Header from "@/components/organisms/costing/header"
 import TrendAnalysis from "@/components/organisms/costing/trend-analysis"
@@ -30,7 +28,7 @@ export default function PromotionalCostingPage() {
             }
     	/>
         <TrendAnalysis className="mt-[3.25rem]" />
-        <MonthlyExpense className="mt-[3.25rem]" />
+        <MonthlyExpense className="mt-[93px]" />
     </CostingLayout>
   );
 }

@@ -69,11 +69,18 @@ export default function MonthlyExpense({ className }) {
 		            name={"SuperAgent"}
 		            placeholder="Search agent...."
 		            onChange={(value) => {}}
-		            className="h-[2.25rem]"
-		            className1="ml-1"
+		            className="h-[2.25rem] grow"
+		            className1="placeholder:text-gray-6 placeholder:font-light"
+		            iconClassName="min-w-[20px] max-w-[20px]"
+		            paddingLeft="9px"
+		            inputMarginLeft="7px"
+		            borderRadius="8px"
 		        />
 
-		        <DatePeriodInput />
+		        <DatePeriodInput
+		        	borderRadius="8px"
+		        	className="min-w-[276px]"
+		        />
 			</div>
 
 			<div className="monthly-expense_content mt-5 gap-5 grid grid-cols-4 ">

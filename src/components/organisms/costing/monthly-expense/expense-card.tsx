@@ -12,9 +12,12 @@ export default function ExpenseCard({ title, balance }) {
 		<Card
 			isDividerVisible={false}
 			isUsePaddingBottom={false}
+			paddingTop="6px"
 		>
-			<a href="/costing/promotional/1" className="h-[142px] flex flex-col justify-between bg-base-bg5 pt-5 border-t border-base-bg3 rounded-t-[12px]">
-				<div className="px-5">
+			<a
+				href="/costing/promotional/1" 
+				className="h-[142px] flex flex-col justify-between bg-base-bg5 pt-[18.5px] border-t border-base-bg3 rounded-t-[12px]">
+				<div className="pl-[19px] pr-5">
 					<div className="flex gap-2 items-center w-[104px] h-[28px] bg-base-bg4 justify-center border border-gray-1 rounded-[6px]">
 						<GlobalIcon />
 						<Divider direction="vertical" height="12px" />
