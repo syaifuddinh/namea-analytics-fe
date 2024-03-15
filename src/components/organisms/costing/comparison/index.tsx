@@ -98,13 +98,13 @@ export default function Comparison({ className }) {
 						)) }
 					</div>
 					
-					<div className="costing-comparison_chart bg-base-bg5">
+					<div className="costing-comparison_chart border-b border-base-bg3 bg-base-bg5 rounded-b-xl overflow-hidden">
 						<CustomChart
 							variant="bar"
 							tooltipAlign="bottom"
 							maxValue={500000}
 							labels={labels}
-							xClassname="pl-[3rem] pr-[2.3rem]"
+							xClassname="pl-[51px] pr-[44px]"
 							fixedBarWidth={31.95}
 							values={[
 								[
@@ -165,7 +165,7 @@ export default function Comparison({ className }) {
 			) }
 
 			{ contentVisible === false && (
-				<div className="p-4 bg-base-bg5">
+				<div className="p-4 bg-base-bg5 border-b border-base-bg3 rounded-b-xl">
 					<div className="no-data flex flex-col items-center justify-center h-[275px]">
 						<img src="/images/crocodile.svg" alt="no-data-image" />
 						<div className="no-data_description text-gray-6 text-sm font-extralight">

@@ -9,11 +9,12 @@ export default function Withdraw({
 	icon 
 }) {
 	return (
-		<div className="border-t border-gray-1 pt-1 rounded-t-[16px]">
+		<div className="border-t border-gray-1 pt-1.5 rounded-t-[16px] bg-base-bg2">
 			<Card
 				isDividerVisible={false}
 				topRadius="12px"
 				bottomRadius="16px"
+				className="max-h-[84px]"
 			>
 				<div className="flex flex-col sm:flex-row justify-between gap-2 sm:items-center py-[0.875rem] px-5">
 					<div className="flex items-center gap-4">
@@ -34,7 +35,7 @@ export default function Withdraw({
 
 					<div className="withdraw_balance flex items-center">
 						<Divider direction="vertical" />
-						<div className="ml-[57px]">
+						<div className="ml-[57px] w-[164px]">
 							<div className="font-extralight text-sm leading-5 text-gray-6">
 								Amount Spent
 							</div>
@@ -42,7 +43,7 @@ export default function Withdraw({
 							<MoneyText
 								fontSize="0.875rem"
 								fontWeight={400}
-								className="mt-1"
+								className="mt-[3px]"
 							>
 								{ balance }
 							</MoneyText>
