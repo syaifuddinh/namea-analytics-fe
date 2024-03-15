@@ -14,10 +14,8 @@ const Card = ({
 }) => {
   return (
     <div
-      className={`card ${
-        isUsePaddingBottom === true ? "pb-1" : ""
-      } border border-gray1 ${className}`}
-      style={{"paddingTop": paddingTop, "borderTopLeftRadius": topRadius, "borderTopRightRadius": topRadius, "borderBottomLeftRadius": bottomRadius, "borderBottomRightRadius": bottomRadius}}
+      className={`card border border-gray-1 ${className}`}
+      style={{"paddingTop": paddingTop, "borderTopLeftRadius": topRadius, "borderTopRightRadius": topRadius, "borderBottomLeftRadius": bottomRadius, "borderBottomRightRadius": bottomRadius, paddingBottom: (isUsePaddingBottom === true ? paddingBottom : "0px") }}
     >
       <div className="card_container">
         {headerElement}

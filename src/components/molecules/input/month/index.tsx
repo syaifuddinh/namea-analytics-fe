@@ -74,6 +74,8 @@ export default function FrequencyInput({
 	    		containerHeight="44px"
 	    		childrenHeight="36px"
 	    		onChange={onChange}
+	    		borderRadius="0.75rem"
+	    		childrenBorderRadius="0.5rem"
 	    		options={frequencies}
 	    	/>
 	    </div>

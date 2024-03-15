@@ -54,7 +54,7 @@ const ledger = [
 export default function GeneralCosting({ className }) {
 	return (
 		<div className={`${className}`}>
-			<TitleText className="mb-3">
+			<TitleText className="mb-[10px]">
 				Monthly General Costing
 			</TitleText>
 
