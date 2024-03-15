@@ -12,7 +12,7 @@ export default function ExpenseCard({ title, balance }) {
 		<Card
 			isDividerVisible={false}
 			isUsePaddingBottom={false}
-			paddingTop="6px"
+			paddingTop="4px"
 		>
 			<a
 				href="/costing/promotional/1" 
@@ -30,17 +30,18 @@ export default function ExpenseCard({ title, balance }) {
 						className="mt-[10px]"
 						variant="danger"
 						positivity="minus"
+						fontWeight={400}
 					>
 						{ balance }
 					</MoneyText>
 				</div>
 
 				<div className="w-full h-[40px] gap-3 bg-base-bg3 flex justify-center items-center">
-					<CostingDottedLeftArrowIcon height={18.53} width={59.38}/>
+					<CostingDottedLeftArrowIcon className="w-[59px] h-[19px]" />
 					<div className="text-gray-6 font-extralight text-sm">
 						More Detail
 					</div>
-					<CostingDottedRightArrowIcon height={18.53} width={59.38}/>
+					<CostingDottedRightArrowIcon />
 				</div>
 			</a>
 		</Card>
