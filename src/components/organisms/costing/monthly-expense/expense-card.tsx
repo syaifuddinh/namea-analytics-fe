@@ -4,7 +4,8 @@ import Divider from "@/components/atoms/divider"
 import { GlobalIcon } from "@/components/atoms/Icons"
 import {
   PromotionalArrowLeft,
-  PromotionalArrowRight
+  PromotionalArrowRight,
+  IconChevronRight
 } from "@/components/atoms/Icons";
 
 export default function ExpenseCard({ title, balance }) {
@@ -38,8 +39,12 @@ export default function ExpenseCard({ title, balance }) {
 
 				<div className="w-full h-[40px] gap-3 bg-base-bg3 flex justify-center items-center">
 					<PromotionalArrowLeft />
-					<div className="text-gray-6 font-extralight text-sm">
-						More Detail
+					<div className="flex items-center">
+						<div className="text-gray-6 font-extralight text-sm">
+							More detail
+						</div>
+
+						<IconChevronRight className="min-w-[20px] max-w-[20px]" />
 					</div>
 					<PromotionalArrowRight />
 				</div>
