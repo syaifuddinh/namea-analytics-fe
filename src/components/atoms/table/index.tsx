@@ -75,7 +75,7 @@ const Table = ({
                         { columns.map(column => (
                             <th
                                 key={column.title}
-                                className="font-extralight text-gray-6 pl-4 h-[52px]"
+                                className="font-extralight text-gray-6 pl-4 h-[52px] text-sm"
                             >
                                 { column.title }
                             </th>
@@ -111,7 +111,7 @@ const Table = ({
                   { footers && (
                       <tr className="bg-base-bg3">
                           { footers.map((item, index) => (
-                              <td key={index} className="h-[52px] pl-4 font-extralight text-gray-10">
+                              <td key={index} className="h-[52px] pl-4 font-extralight text-gray-10 text-sm">
                                   { item }
                               </td>
                           )) }
