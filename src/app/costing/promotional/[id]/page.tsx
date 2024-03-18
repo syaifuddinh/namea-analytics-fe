@@ -129,7 +129,7 @@ export default function PromotionalCostingPage() {
                         Website 1
                     </div>
                 </div>
-                <div className="mt-[2px] ml-8 flex items-center gap-1.5">
+                <div className="mt-[2px] ml-[2.125rem] flex items-center gap-1.5">
                     <GlobalIcon />
                     
                     <div className="promotional_detail-description font-extralight text-sm text-gray-6">

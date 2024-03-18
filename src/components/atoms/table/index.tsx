@@ -78,7 +78,7 @@ const Table = ({
                             <th
                                 key={column.title}
                                 className="font-extralight text-gray-6 pl-[19px] h-[52px] text-sm text-left"
-                                style={{ minWidth: (index < columnWidths.length ? columnWidths[index] : "auto"), maxWidth: (index < columnWidths.length ? columnWidths[index] : "auto") }}
+                                style={{ minWidth: (index < columnWidths.length ? columnWidths[index] : "auto"), maxWidth: (index < columnWidths.length ? columnWidths[index] : "auto"), width: (index < columnWidths.length ? columnWidths[index] : "auto") }}
                             >
                                 { column.title }
                             </th>
@@ -96,7 +96,7 @@ const Table = ({
                                 <td
                                     key={index2}
                                     className={`relative h-[52px] pl-[19px] font-extralight text-sm text-gray-10 relative ${activeColumn === index2 ? "bg-base-bg3" : ""}`}
-                                    style={{ minWidth: (index2 < columnWidths.length ? columnWidths[index2] : "auto"), maxWidth: (index2 < columnWidths.length ? columnWidths[index2] : "auto") }}
+                                    style={{ minWidth: (index2 < columnWidths.length ? columnWidths[index2] : "auto"), maxWidth: (index2 < columnWidths.length ? columnWidths[index2] : "auto"), width: (index2 < columnWidths.length ? columnWidths[index2] : "auto") }}
                                     onMouseEnter={e => onColumnEnter(index2, index, e)}
                                     onContextMenu={e => onColumnContext(e)}
                                 >
