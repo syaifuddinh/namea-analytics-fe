@@ -13,7 +13,7 @@ import YearSelectInput from "@/components/molecules/input/year-select"
 import TitleText from "@/components/atoms/text/title"
 
 const Header = ({ onApplyButtonClick }) => (
-	<div className="border-y border-base-bg3 h-[112px] pt-5 px-5 bg-base-bg5">
+	<div className="border-y border-base-bg3 h-[112px] pt-[1.125rem] px-5 bg-base-bg5">
 		<TitleText fontSize="16px">
 			Costing Comparation
 		</TitleText>
