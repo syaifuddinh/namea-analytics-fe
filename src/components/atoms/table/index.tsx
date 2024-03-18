@@ -77,8 +77,8 @@ const Table = ({
                         { columns.map((column, index) => (
                             <th
                                 key={column.title}
-                                className="font-extralight text-gray-6 pl-4 h-[52px] text-sm"
-                                style={{ minWidth: (index < columnWidths.length ? columnWidths[index] : "auto") }}
+                                className="font-extralight text-gray-6 pl-4 h-[52px] text-sm text-left"
+                                style={{ minWidth: (index < columnWidths.length ? columnWidths[index] : "auto"), maxWidth: (index < columnWidths.length ? columnWidths[index] : "auto") }}
                             >
                                 { column.title }
                             </th>
@@ -96,7 +96,7 @@ const Table = ({
                                 <td
                                     key={index2}
                                     className={`relative h-[52px] pl-4 font-extralight text-sm text-gray-10 relative ${activeColumn === index2 ? "bg-base-bg3" : ""}`}
-                                    style={{ minWidth: (index2 < columnWidths.length ? columnWidths[index2] : "auto") }}
+                                    style={{ minWidth: (index2 < columnWidths.length ? columnWidths[index2] : "auto"), maxWidth: (index2 < columnWidths.length ? columnWidths[index2] : "auto") }}
                                     onMouseEnter={e => onColumnEnter(index2, index, e)}
                                     onContextMenu={e => onColumnContext(e)}
                                 >
