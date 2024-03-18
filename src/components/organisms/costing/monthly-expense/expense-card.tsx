@@ -38,7 +38,7 @@ export default function ExpenseCard({ title, balance }) {
 				</div>
 
 				<div className="w-full h-[40px] gap-3 bg-base-bg3 flex justify-center items-center">
-					<PromotionalArrowLeft />
+					<PromotionalArrowLeft className="w-[65px] h-auto" />
 					<div className="flex items-center">
 						<div className="text-gray-6 font-extralight text-sm">
 							More detail
@@ -46,7 +46,7 @@ export default function ExpenseCard({ title, balance }) {
 
 						<IconChevronRight className="min-w-[20px] max-w-[20px]" />
 					</div>
-					<PromotionalArrowRight />
+					<PromotionalArrowRight  className="w-[65px] h-auto" />
 				</div>
 			</a>
 		</Card>
