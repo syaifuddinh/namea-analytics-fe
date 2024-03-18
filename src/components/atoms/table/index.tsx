@@ -10,6 +10,7 @@ type ColumnType = {
 
 const Table = ({ 
     columns = [],
+    columnWidths = [],
     contents = [],
     footers = [],
     className = "",
@@ -18,6 +19,7 @@ const Table = ({
     columns: ColumnType[],
     contents: any[][],
     footers: any[],
+    columnWidths?: string[],
     className?: string,
     contextElement?: ReactElement
 }) => {
@@ -72,10 +74,11 @@ const Table = ({
               >
                 <thead>
                     <tr className="bg-base-bg3">
-                        { columns.map(column => (
+                        { columns.map((column, index) => (
                             <th
                                 key={column.title}
                                 className="font-extralight text-gray-6 pl-4 h-[52px] text-sm"
+                                style={{ minWidth: (index < columnWidths.length ? columnWidths[index] : "auto") }}
                             >
                                 { column.title }
                             </th>
@@ -87,12 +90,13 @@ const Table = ({
                     { contents.map((content, index) => (
                         <tr
                             key={index}
-                            className="hover:bg-base-bg3"
+                            className={`hover:bg-base-bg3 *:border-b *:border-r *:border-base-bg3 ${index === 0 ? "*:border-t" : ""}`}
                         >
                             { content.map((col, index2) => (
                                 <td
                                     key={index2}
-                                    className={`relative h-[52px] pl-4 font-extralight text-sm text-gray-10 hover:border hover:border-success-3 ${activeColumn === index2 ? "bg-base-bg3" : ""}`}
+                                    className={`relative h-[52px] pl-4 font-extralight text-sm text-gray-10 relative ${activeColumn === index2 ? "bg-base-bg3" : ""}`}
+                                    style={{ minWidth: (index2 < columnWidths.length ? columnWidths[index2] : "auto") }}
                                     onMouseEnter={e => onColumnEnter(index2, index, e)}
                                     onContextMenu={e => onColumnContext(e)}
                                 >
@@ -101,6 +105,10 @@ const Table = ({
                                     { activeColumn > -1 && (index2 !== activeColumn && index !== activeRow) && (
                                         <div className="absolute bg-shadow1 w-full h-full top-0 left-0"></div>
                                     ) }
+
+                                    { activeColumn === index2 && activeRow === index && (
+                                      <div className="absolute w-full h-full left-0 top-0 border border-success-3"></div>
+                                    )}
                                 </td>
                             )) }
                         </tr>
