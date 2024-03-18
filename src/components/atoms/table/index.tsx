@@ -95,7 +95,7 @@ const Table = ({
                             { content.map((col, index2) => (
                                 <td
                                     key={index2}
-                                    className={`relative h-[52px] pl-[19px] font-extralight text-sm text-gray-10 relative ${activeColumn === index2 ? "bg-base-bg3" : ""}`}
+                                    className={`relative h-[52px] pl-[19px] pr-[19px] font-extralight text-sm text-gray-10 relative ${activeColumn === index2 ? "bg-base-bg3" : ""}`}
                                     style={{ minWidth: (index2 < columnWidths.length ? columnWidths[index2] : "auto"), maxWidth: (index2 < columnWidths.length ? columnWidths[index2] : "auto"), width: (index2 < columnWidths.length ? columnWidths[index2] : "auto") }}
                                     onMouseEnter={e => onColumnEnter(index2, index, e)}
                                     onContextMenu={e => onColumnContext(e)}
@@ -119,7 +119,7 @@ const Table = ({
                   { footers && (
                       <tr className="bg-base-bg3">
                           { footers.map((item, index) => (
-                              <td key={index} className="h-[52px] pl-[19px] font-extralight text-gray-10 text-sm">
+                              <td key={index} className="h-[52px] pl-[19px] pr-[19px] font-extralight text-gray-10 text-sm">
                                   { item }
                               </td>
                           )) }
