@@ -17,14 +17,14 @@ export default function AgentCard({
 	revenue: string
 }) {
 	return (
-		<div className="agent-card bg-primary-gradient4 border border-gray-1 p-1 rounded-[16px]">
+		<div className="agent-card bg-primary-gradient4 border border-gray-1 p-[3px] rounded-[18px]">
 			<div className="bg-base-bg5 h-[80px] rounded-[12px] overflow-hidden border border-base-bg3">
 				<div className="text-warning text-xs bg-bg-rank w-[50px] h-[20px] pl-[10px] pt-[2px] rounded-br-[6px]">
 					{ subtitle }
 				</div>
 
 				<div className="px-5 flex justify-between items-center">
-					<div className="flex items-center">
+					<div className="flex items-center gap-4">
 						<div>{ icon }</div>
 						<div className="ml-[6px] font-light text-sm text-gray-10 leading-5">
 							{ title }
@@ -41,7 +41,7 @@ export default function AgentCard({
 						Active Events
 					</div>
 
-					<div className="text-gray-10 font-light leading-5 mt-1">
+					<div className="text-gray-10 font-light leading-5 mt-1 text-sm">
 						{ activeEvent } Active Events
 					</div>
 				</div>

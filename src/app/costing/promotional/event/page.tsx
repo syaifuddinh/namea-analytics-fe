@@ -15,13 +15,13 @@ import MoneyText from "@/components/atoms/text/money"
 const reports = [
     {
         "title": "Total Revenue",
-        "content": <MoneyText prefix="+">500.950.450</MoneyText>,
+        "content": <MoneyText prefix="+" letterSpacing="0.2px">500.950.450</MoneyText>,
         "mutation": "23.8% (+24)",
         "mutationVariant": "primary"
     },
     {
         "title": "Active Event",
-        "content": "42/64",
+        "content": <div><span>42/</span><span className="text-gray-6">64</span></div>,
         "mutation": "-16.5% (-8)",
         "mutationVariant": "danger"
     },
@@ -49,7 +49,7 @@ export default function PromotionalCostingPage() {
             <div className="mt-8 flex flex-col lg:flex-row gap-5">
                 { reports.map(report => (
                 	<HeadlineCard key={report.title}>
-                		<div className="p-5">
+                		<div className="p-5 pb-[18px]">
     	            		<div className="text-gray-6 text-sm font-extralight">
     	            			{ report.title }
     	            		</div>

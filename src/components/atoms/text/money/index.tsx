@@ -8,7 +8,8 @@ const MoneyText = ({
     prefix = "",
     fontWeight = 300,
     variant = "default",
-    suffixVariant = "default"
+    suffixVariant = "default",
+    letterSpacing = "inherit"
 }: {
     children: ReactElement,
     className?: string,
@@ -16,6 +17,7 @@ const MoneyText = ({
     fontSize?: string,
     prefix?: string,
     fontWeight?: number
+    letterSpacing?: string,
     variant?: "default" | "danger" | "warning",
     suffixVariant?: "default" | "plain"
 }) => {
@@ -26,14 +28,16 @@ const MoneyText = ({
       } ${variant === "danger" ? "text-alert-10" : ""} ${
         variant === "warning" ? "text-warning" : ""
       } `}
-      style={{ fontSize, fontWeight }}
+      style={{ fontSize, fontWeight, letterSpacing }}
     >
       {positivity === "minus" && "-"}
       { prefix }
-      <span className={``}>Rp{children}</span>
+      <span className={``} style={{ letterSpacing }}>
+        Rp{children}
+      </span>
 
       { suffixVariant === "plain" && (
-          <span>,00</span>
+          <span style={{ letterSpacing }}>,00</span>
       ) }
 
       { suffixVariant === "default" && (
@@ -41,6 +45,7 @@ const MoneyText = ({
             className={`money-text_suffix ${
               variant === "default" ? "text-[var(--gray-theme-color)]" : ""
             } ${variant === "danger" ? "text-alert-6" : ""}`}
+            style={{ letterSpacing }}
           >
               ,00
           </div>

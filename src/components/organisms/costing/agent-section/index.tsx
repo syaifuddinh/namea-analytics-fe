@@ -87,8 +87,7 @@ export default function AgentSection({
 				All Agent				
 			</div>
 
-			<div className="grid mt-5 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-				
+			<div className="grid mt-[18px] grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">				
 				{ items.map(item => (
 					<AgentCard
 						key={item.id}
