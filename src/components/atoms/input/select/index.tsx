@@ -1,6 +1,6 @@
 "use client";
 
-import { IconChevronDown } from "@/components/atoms/Icons";
+import { CostingChevronDownIcon } from "@/components/atoms/Icons";
 import { useState } from "react"
 import { useRef } from "react"
 import { useEffect } from "react"
@@ -135,7 +135,7 @@ export default function SelectInput({
             >
                 { !dataValue && (
                     <div
-                        className={`text-gray-6 text-sm font-extralight ${placeholderClassName} ml-3 mr-[6px] text-left`}
+                        className={`text-gray-6 text-sm font-light ${placeholderClassName} ml-[11px] tracking-[0.1px] mr-[6px] text-left`}
                     >
                         { placeholder }
                     </div>
@@ -143,7 +143,7 @@ export default function SelectInput({
 
                 { dataValue && variant === "single" && (
                     <div
-                        className={`text-gray-0 text-sm font-extralight ${placeholderClassName} ml-3 mr-[6px] text-left`}
+                        className={`text-gray-0 text-sm font-light ${placeholderClassName} ml-[11px] tracking-[0.1px] mr-[6px] text-left`}
                     >
                         { dataLabel }
                     </div>
@@ -160,8 +160,8 @@ export default function SelectInput({
                         )) }
                     </div>
                 ) }
-                <div className="flex flex-1 justify-end">
-                    <IconChevronDown className={iconStyle} />
+                <div className="flex flex-1 justify-end mr-1">
+                    <CostingChevronDownIcon className={iconStyle} />
                 </div>
             </button>
 

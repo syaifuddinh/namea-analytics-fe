@@ -6,6 +6,7 @@ const BalanceLabel = ({
     variant,
     balance,
     paddingLeft = "5px",
+    paddingRight = "16px",
     positivity = "plus" 
 }: {
     title: string,
@@ -13,6 +14,7 @@ const BalanceLabel = ({
     variant: "default"|"danger",
     balance: string,
     paddingLeft?: string,
+    paddingRight?: string,
     positivity?: "plus"|"minus"
 }) => {
   return (    
@@ -28,6 +30,7 @@ const BalanceLabel = ({
           )}
           positivity={positivity}
           paddingLeft={paddingLeft}
+          paddingRight={paddingRight}
           className={className}
       />
   );

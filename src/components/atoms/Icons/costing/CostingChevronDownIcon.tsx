@@ -10,14 +10,14 @@ export const CostingChevronDownIcon: React.FC<IIconProps> = (props) => {
         fill="none"
         {...props}
       >
-        <path
-          stroke="#CDFBFF"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeOpacity={0.6}
-          strokeWidth={1.5}
-          d="M9 1 5 5 1 1"
-        />
+          <path
+              stroke="#CDFBFF"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeOpacity={0.6}
+              strokeWidth={1.5}
+              d="M9 1 5 5 1 1"
+          />
       </svg>
   );
 };

@@ -5,7 +5,7 @@ import { StrongboxIcon } from "@/components/atoms/Icons"
 export default function BalanceCard({ year, balance }) {
 	return (
 		<SecondaryCard
-			className="bg-base-bg4 px-5 pt-5"
+			className="bg-base-bg4 pl-[1.125rem] pr-5 pt-[19px]"
 			borderRadius="0.75rem"
 		>
 			<div className="flex items-center gap-2">
@@ -19,7 +19,8 @@ export default function BalanceCard({ year, balance }) {
 				variant="default"
 				balance={balance}
 				positivity="plus"
-				paddingLeft="7px"
+				paddingLeft="6px"
+				paddingRight="14px"
 				className="mt-[11px]"
 			/>
 		</SecondaryCard>
