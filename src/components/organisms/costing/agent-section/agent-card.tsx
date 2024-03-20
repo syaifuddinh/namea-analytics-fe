@@ -35,8 +35,8 @@ export default function AgentCard({
 				</div>
 			</div>
 
-			<div className="flex h-[88px] flex *:grow items-center justify-between">
-				<div className="flex flex-col items-center">
+			<div className="flex h-[88px] flex items-center justify-center">
+				<div className="flex flex-col items-center w-[199.5px] py-6">
 					<div className="font-extralight text-sm leading-5 text-gray-6">
 						Active Events
 					</div>
@@ -48,13 +48,13 @@ export default function AgentCard({
 
 				<Divider height="48px" direction="vertical" />
 
-				<div className="flex flex-col items-center">
+				<div className="flex flex-col items-center w-[199.5px] py-6">
 					<div className="font-extralight text-sm leading-5 text-gray-6">
 						Revenue Generated
 					</div>
 
 					<MoneyText
-						className="mt-1"
+						className="mt-[2px]"
 						fontSize="14px"
 					>
 						{ revenue }
