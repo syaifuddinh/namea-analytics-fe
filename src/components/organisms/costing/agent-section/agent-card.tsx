@@ -35,7 +35,7 @@ export default function AgentCard({
 				</div>
 			</div>
 
-			<div className="flex h-[88px] flex items-center justify-center">
+			<div className="flex h-[92px] flex items-center justify-center">
 				<div className="flex flex-col items-center w-[199.5px] py-6">
 					<div className="font-extralight text-sm leading-5 text-gray-6">
 						Active Events
@@ -56,6 +56,7 @@ export default function AgentCard({
 					<MoneyText
 						className="mt-[2px]"
 						fontSize="14px"
+						letterSpacing="0.2px"
 					>
 						{ revenue }
 					</MoneyText>
