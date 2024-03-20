@@ -57,7 +57,7 @@ export default function RecentCreatedEvent({
 				</div>
 
 				<Button variant="link">
-					View All Event
+					View All Events
 				</Button>
 			</div>
 

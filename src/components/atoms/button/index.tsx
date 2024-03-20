@@ -1,5 +1,6 @@
 import { ReactElement } from "react"
 import { IconChevronRight } from "@/components/atoms/Icons"
+import { CostingChevronRightIcon } from "@/components/atoms/Icons"
 
 export default function Button({
     children,
@@ -31,14 +32,14 @@ export default function Button({
             { variant === "link" && (
                 <a
                     href={url}
-                    className={`flex items-center h-[36px] bg-base-bg3 border border-gray-1 rounded-[8px] pl-3 pr-[6px] ${className}`}
+                    className={`flex items-center h-[36px] bg-base-bg3 border border-gray-1 rounded-[8px] pl-3 pr-[5px] gap-[4px] ${className}`}
                     style={{ width }}
                 >
                   <div className="text-gray-6 text-sm font-extralight">
                      { children }
                   </div>
 
-                  <IconChevronRight />
+                  <CostingChevronRightIcon className="h-[20px]" />
                 </a>
             ) }
         </>
