@@ -33,6 +33,8 @@ const CustomChart = ({
     onGenerateLegend,
     maxAmount = 5,
     yChartStyle = "",
+    yPaddingTop = "1.25rem",
+    yPaddingRight = "0.75rem"
 }) => {
   const gridElement = useRef(null);
   const canvasElement = useRef(null);
@@ -114,7 +116,8 @@ const CustomChart = ({
       <div className="flex">
         {isShowYAxes === true && (
           <div
-            className={`custom-chart_y flex flex-col gap-[24px] py-[20px] px-[12px] border-r border-base-bg3 max-w-[3.4378rem] min-w-[3.4378rem] min-h-[16rem] ${yChartStyle}`}
+            className={`custom-chart_y flex flex-col gap-[24px] pb-5 pl-3 border-r border-base-bg3 max-w-[3.4378rem] min-w-[3.4378rem] min-h-[16rem] ${yChartStyle}`}
+            style={{ "paddingTop": yPaddingTop, "paddingRight": yPaddingRight }}
           >
             {yAxeLabels.map((item) => (
               <div

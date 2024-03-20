@@ -105,6 +105,8 @@ export default function Comparison({ className }) {
 							maxValue={500000}
 							labels={labels}
 							xClassname="pl-[51px] pr-[44px]"
+							yPaddingTop="19px"
+							yPaddingTop="13px"
 							fixedBarWidth={31.95}
 							values={[
 								[
