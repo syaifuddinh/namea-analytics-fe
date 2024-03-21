@@ -13,12 +13,15 @@ import EventEnrolledMember from "@/components/organisms/costing/event-enrolled-m
 
 export default function PromotionalCostingPage() {
     return (
-        <CostingLayout activeMenu="promotional-costing" >
+        <CostingLayout
+            activeMenu="promotional-costing"
+            contentMarginTop="42px"
+        >
             <Breadcrumb
-                options={[{ title: "Pengeluaran Lomba" }, { title: "Details" }]}
+                options={[{ title: "Event" }, { title: "Details" }]}
             />
 
-            <div className="mt-6 flex flex-col md:flex-row gap-3 md:items-center justify-between">
+            <div className="mt-[30px] flex flex-col md:flex-row gap-3 md:items-center justify-between">
                 <div>
                     <div className="flex items-center">
                         <a href="/costing/promotional/event">

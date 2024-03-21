@@ -87,7 +87,7 @@ export default function Comparison({ className }) {
 				<div id="costing-comparison_content">
 					<div
 						id="costing-comparison_expenses"
-						className="sm:h-[154px] flex items-center flex-col sm:flex-row sm:*:h-[114px] *:grow *:w-full gap-4 px-5"
+						className="sm:h-[154px] flex items-center flex-col sm:flex-row sm:*:h-[114px] *:grow *:w-full gap-4 pl-[19px] pr-5"
 					>
 						{ expenses.map(item => (
 							<BalanceCard
@@ -106,7 +106,6 @@ export default function Comparison({ className }) {
 							labels={labels}
 							xClassname="pl-[51px] pr-[44px]"
 							yPaddingTop="19px"
-							yPaddingTop="13px"
 							fixedBarWidth={31.95}
 							values={[
 								[
