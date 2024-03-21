@@ -9,6 +9,7 @@ const Card = ({
   paddingTop = "4px",
   topRadius="16px",
   bottomRadius="16px",
+  dividerPaddingLeft="20px",
   isUsePaddingBottom = true,
   isDividerVisible = true,
 }) => {
@@ -20,7 +21,10 @@ const Card = ({
       <div className="card_container">
         {headerElement}
         {isDividerVisible === true && (
-          <div className="card_divider px-[20px] h-2.5">
+          <div
+              className="card_divider pr-[20px] h-2.5"
+              style={{ "paddingLeft": dividerPaddingLeft }}
+           >
             <div className="card_divider__border h-2.5"></div>
           </div>
         )}

@@ -22,7 +22,8 @@ export default function EventDeposit({
 		<Card
 			className={className}
 			headerElement={<Header />}
-			paddingTop="6px"
+			paddingTop="5px"
+			dividerPaddingLeft="18px"
 		>
 			<div className="bg-base-bg5 flex flex-col md:flex-row md:h-[284px] border-y border-base-bg3">
 				<div className="grow p-5 grid grid-cols-1 gap-5 min-w-[275px]">

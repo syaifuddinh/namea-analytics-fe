@@ -24,6 +24,8 @@ export default function DepositCard({
 				subtitle={<MutationLabel variant={mutationVariant} value={mutation} />}
 				positivity="plus"
 				className="mt-2.5"
+				paddingLeft="6px"
+				paddingRight="8px"
 			/>
 		</div>
 	)

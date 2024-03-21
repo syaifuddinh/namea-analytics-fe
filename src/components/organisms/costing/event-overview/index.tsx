@@ -23,6 +23,9 @@ export default function EventOverview({
 		          value={"Rp500.950.450"}
 		          profit={true}
 		          percentage={"23.8% (+24)"}
+		          topLineGap="6px"
+		          contentMarginTop="19px"
+		          contentMarginX="19px"
 		        />
 
 				<CardDashboardSA
@@ -31,6 +34,9 @@ export default function EventOverview({
 		          value={"Rp500.950.450"}
 		          profit={false}
 		          percentage={"16.5% (-8)"}
+		          topLineGap="6px"
+		          contentMarginTop="19px"
+		          contentMarginX="19px"
 		        />
 		        
 				<CardDashboardSA
@@ -39,6 +45,9 @@ export default function EventOverview({
 		          value={"Rp500.950.450"}
 		          profit={true}
 		          percentage={"23.8% (+24)"}
+		          topLineGap="6px"
+		          contentMarginTop="19px"
+		          contentMarginX="19px"
 		        />
 			</div>
 		</div>

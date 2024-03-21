@@ -11,12 +11,21 @@ export const CardDashboardSA: React.FC<ICardDashboard> = ({
   percentage,
   className,
   imgStyle = "mb-[0.375rem]",
+  topLineGap = "4px",
+  contentMarginTop = "1.125rem",
+  contentMarginX = "1.125rem",
   valueStyle,
 }) => {
   return (
     <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden">
-      <div className="flex flex-1 border-t border-gray-1 mt-[4px] bg-base-bg5 rounded-t-xl">
-        <div className="flex flex-1 border-t border-x border-gray-1 mt-[1.125rem] mx-[1.125rem] bg-base-bg4 rounded-t-xl">
+      <div
+          className="flex flex-1 border-t border-gray-1 bg-base-bg5 rounded-t-xl"
+          style={{ "marginTop": topLineGap }}
+       >
+        <div
+            className="flex flex-1 border-t border-x border-gray-1 bg-base-bg4 rounded-t-xl"
+            style={{ "marginTop": contentMarginTop, "marginLeft": contentMarginX, "marginRight": contentMarginX }}
+        >
           <div className="flex items-center">
             <div className="flex flex-col gap-[0.125rem] m-5">
               <Image
