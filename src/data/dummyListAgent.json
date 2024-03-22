@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "rank": 1,
+    "image": "/images/avatar_dummy.png",
+    "codeAgent": "JMS88",
+    "nameAgent": "Della J. Mitchell",
+    "bitcoin": {
+      "profit": true,
+      "nominal": "Rp8.000.000"
+    },
+    "ethereum": {
+      "profit": false,
+      "nominal": "-Rp6.860.700"
+    },
+    "totalTurnOver": {
+      "profit": true,
+      "nominal": "Rp24.600.590"
+    },
+    "totalProfit": {
+      "profit": true,
+      "nominal": "Rp56.235.459"
+    },
+    "status": "Active"
+  },
+  {
+    "id": 2,
+    "rank": 2,
+    "image": "/images/avatar_dummy.png",
+    "codeAgent": "JMS88",
+    "nameAgent": "Phil D. Lewter",
+    "bitcoin": {
+      "profit": true,
+      "nominal": "Rp8.000.000"
+    },
+    "ethereum": {
+      "profit": false,
+      "nominal": "-Rp6.860.700"
+    },
+    "totalTurnOver": {
+      "profit": true,
+      "nominal": "Rp24.600.590"
+    },
+    "totalProfit": {
+      "profit": true,
+      "nominal": "Rp56.235.459"
+    },
+    "status": "In Progress"
+  },
+  {
+    "id": 3,
+    "rank": 3,
+    "image": "/images/avatar_dummy.png",
+    "codeAgent": "JMS88",
+    "nameAgent": "Julia D. Quon",
+    "bitcoin": {
+      "profit": true,
+      "nominal": "Rp8.000.000"
+    },
+    "ethereum": {
+      "profit": false,
+      "nominal": "-Rp6.860.700"
+    },
+    "totalTurnOver": {
+      "profit": true,
+      "nominal": "Rp24.600.590"
+    },
+    "totalProfit": {
+      "profit": true,
+      "nominal": "Rp56.235.459"
+    },
+    "status": "Active"
+  },
+  {
+    "id": 4,
+    "rank": 4,
+    "image": "/images/avatar_dummy.png",
+    "codeAgent": "JMS88",
+    "nameAgent": "Tracy R. Thomas",
+    "bitcoin": {
+      "profit": true,
+      "nominal": "Rp8.000.000"
+    },
+    "ethereum": {
+      "profit": false,
+      "nominal": "-Rp6.860.700"
+    },
+    "totalTurnOver": {
+      "profit": true,
+      "nominal": "Rp24.600.590"
+    },
+    "totalProfit": {
+      "profit": true,
+      "nominal": "Rp56.235.459"
+    },
+    "status": "Suspend"
+  },
+  {
+    "id": 5,
+    "rank": 5,
+    "image": "/images/avatar_dummy.png",
+    "codeAgent": "JMS88",
+    "nameAgent": "Walter N. Parker",
+    "bitcoin": {
+      "profit": true,
+      "nominal": "Rp8.000.000"
+    },
+    "ethereum": {
+      "profit": false,
+      "nominal": "-Rp6.860.700"
+    },
+    "totalTurnOver": {
+      "profit": true,
+      "nominal": "Rp24.600.590"
+    },
+    "totalProfit": {
+      "profit": true,
+      "nominal": "Rp56.235.459"
+    },
+    "status": "Active"
+  },
+  {
+    "id": 6,
+    "rank": 6,
+    "image": "/images/avatar_dummy.png",
+    "codeAgent": "JMS88",
+    "nameAgent": "Phil D. Lewter",
+    "bitcoin": {
+      "profit": true,
+      "nominal": "Rp8.000.000"
+    },
+    "ethereum": {
+      "profit": false,
+      "nominal": "-Rp6.860.700"
+    },
+    "totalTurnOver": {
+      "profit": true,
+      "nominal": "Rp24.600.590"
+    },
+    "totalProfit": {
+      "profit": true,
+      "nominal": "Rp56.235.459"
+    },
+    "status": "Active"
+  },
+  {
+    "id": 7,
+    "rank": 7,
+    "image": "/images/avatar_dummy.png",
+    "codeAgent": "JMS88",
+    "nameAgent": "Phil D. Lewter",
+    "bitcoin": {
+      "profit": true,
+      "nominal": "Rp8.000.000"
+    },
+    "ethereum": {
+      "profit": false,
+      "nominal": "-Rp6.860.700"
+    },
+    "totalTurnOver": {
+      "profit": true,
+      "nominal": "Rp24.600.590"
+    },
+    "totalProfit": {
+      "profit": true,
+      "nominal": "Rp56.235.459"
+    },
+    "status": "In Progress"
+  },
+  {
+    "id": 8,
+    "rank": 8,
+    "image": "/images/avatar_dummy.png",
+    "codeAgent": "JMS88",
+    "nameAgent": "Phil D. Lewter",
+    "bitcoin": {
+      "profit": true,
+      "nominal": "Rp8.000.000"
+    },
+    "ethereum": {
+      "profit": false,
+      "nominal": "-Rp6.860.700"
+    },
+    "totalTurnOver": {
+      "profit": true,
+      "nominal": "Rp24.600.590"
+    },
+    "totalProfit": {
+      "profit": true,
+      "nominal": "Rp56.235.459"
+    },
+    "status": "Suspend"
+  },
+  {
+    "id": 9,
+    "rank": 9,
+    "image": "/images/avatar_dummy.png",
+    "codeAgent": "JMS88",
+    "nameAgent": "Phil D. Lewter",
+    "bitcoin": {
+      "profit": true,
+      "nominal": "Rp8.000.000"
+    },
+    "ethereum": {
+      "profit": false,
+      "nominal": "-Rp6.860.700"
+    },
+    "totalTurnOver": {
+      "profit": true,
+      "nominal": "Rp24.600.590"
+    },
+    "totalProfit": {
+      "profit": true,
+      "nominal": "Rp56.235.459"
+    },
+    "status": "In Progress"
+  },
+  {
+    "id": 10,
+    "rank": 10,
+    "image": "/images/avatar_dummy.png",
+    "codeAgent": "JMS88",
+    "nameAgent": "Phil D. Lewter",
+    "bitcoin": {
+      "profit": true,
+      "nominal": "Rp8.000.000"
+    },
+    "ethereum": {
+      "profit": false,
+      "nominal": "-Rp6.860.700"
+    },
+    "totalTurnOver": {
+      "profit": true,
+      "nominal": "Rp24.600.590"
+    },
+    "totalProfit": {
+      "profit": true,
+      "nominal": "Rp56.235.459"
+    },
+    "status": "Suspend"
+  }
+]

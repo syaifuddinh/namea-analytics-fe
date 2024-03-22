@@ -1,8 +1,21 @@
-import "./index.style.css"
+import { ReactElement } from "react"
 
-const TitleText = ({ children }) => {
+const TitleText = ({ 
+	children,
+	fontSize = "18px", 
+	fontWeight = 300, 
+	className = "" 
+}: {
+	children: ReactElement,
+	fontSize?: string,
+	fontWeight?: string|number,
+	className?: string
+}) => {
 	return (
-		<div className="title-text font-base text-lg leading-[26px] tracking-[0.06px]">	
+		<div
+			className={`title-text text-gray-10 leading-[26px] ${className}`}
+			style={{ fontSize, fontWeight }}
+		>	
 			{ children }
 		</div>	
 	)

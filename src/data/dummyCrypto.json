@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "logo": "/images/logo/logo_btc.png",
+    "cryptoCode": "BTC",
+    "cryptoName": "Bitcoin",
+    "totalBuy": "Rp24.600.590"
+  },
+  {
+    "id": 2,
+    "logo": "/images/logo/logo_usdc.png",
+    "cryptoCode": "USDC",
+    "cryptoName": "USD Coin",
+    "totalBuy": "Rp24.600.590"
+  },
+  {
+    "id": 3,
+    "logo": "/images/logo/logo_sol.png",
+    "cryptoCode": "SOL",
+    "cryptoName": "Solana",
+    "totalBuy": "Rp24.600.590"
+  },
+  {
+    "id": 4,
+    "logo": "/images/logo/logo_ada.png",
+    "cryptoCode": "ADA",
+    "cryptoName": "Cordano",
+    "totalBuy": "Rp24.600.590"
+  },
+  {
+    "id": 5,
+    "logo": "/images/logo/logo_xrp.png",
+    "cryptoCode": "XRP",
+    "cryptoName": "Ripple",
+    "totalBuy": "Rp24.600.590"
+  },
+  {
+    "id": 6,
+    "logo": "/images/logo/logo_avax.png",
+    "cryptoCode": "AVAX",
+    "cryptoName": "Avalanche",
+    "totalBuy": "Rp24.600.590"
+  }
+]

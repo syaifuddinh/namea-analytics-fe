@@ -1,38 +1,36 @@
 import CardCashflowOverview from "@/components/atoms/card/cashflow-overview";
 import Checkbox from "@/components/atoms/input/select/checkbox";
-import IconPlusSquare from "@/assets/icons/plus-square";
-import IconMinusSquare from "@/assets/icons/minus-square";
 import CustomChart from "@/components/atoms/custom-chart"
+import BalanceLabel from "@/components/atoms/balance-label"
 
-const CashflowOverviewCard = () => {
+const CashflowOverviewCard = ({ className }) => {
   return (
     <CardCashflowOverview
       title="Cash Flow Overview"
       description="Record your ideas and to-do’s easily, so you never miss a thing."
+      className={className}
     >
-      <div className="flex items-start gap-4 p-[20px]">
-        <div className="w-2/4 bg-base-bg4 border border-gray-1 rounded-xl border-solid pl-5 pr-[22px] py-[1.125rem]">
-          <div className="flex items-center justify-between bg-base-bg4 flex items-center pl-[5px] pr-4 py-[7px] border border-base-bg3 rounded-lg border-solid">
-            <div className="flex items-center gap-[10px]">
-              <div><IconPlusSquare /></div>
-              <div className="font-extralight text-gray-6 text-sm tracking-[0.02px]">Total Cash Balance</div>
-            </div>
-            <div className="tracking-[0.2px] text-gray-10 font-light -tracking-[0.16px]">Rp694.354.766,<span className="text-gray-6">00</span></div>
-          </div>
+      <div className="flex flex-col lg:flex-row items-start gap-4 p-[20px]">        
+        <div className="w-full grow bg-base-bg4 border border-gray-1 rounded-xl border-solid pl-5 pr-[22px] py-[1.125rem]">
+          <BalanceLabel
+              title="Total Cash Balance"
+              variant="default"
+              balance="694.354.766"
+              positivity="plus"
+          />
         </div>
-        
-        <div className="w-2/4 bg-base-bg4 border border-gray-1 rounded-xl border-solid pl-5 pr-[22px] py-[1.125rem]">
-          <div className="flex items-center justify-between bg-base-bg4 flex items-center pl-[5px] pr-4 py-[7px] border border-base-bg3 rounded-lg border-solid">
-            <div className="flex items-center gap-[10px]">
-              <div><IconMinusSquare /></div>
-              <div className="text-gray-6 text-sm font-extralight tracking-[0.02px]">Total Outstanding Debt</div>
-            </div>
-            <div className="font-light tracking-[0.2px] text-alert-10 -tracking-[0.16px]">Rp694.354.766,<span className="text-alert-6">00</span></div>
-          </div>
+
+        <div className="w-full grow bg-base-bg4 border border-gray-1 rounded-xl border-solid pl-5 pr-[22px] py-[1.125rem]">
+          <BalanceLabel
+              title="Total Outstanding Debt"
+              variant="danger"
+              positivity="minus"
+              balance="694.354.766"
+          />
         </div>
       </div>
 
-			<div className="bg-base-bg5 border-y-base-bg3 border-y border-solid flex items-center justify-between px-5 py-[11px]">
+			<div className="bg-base-bg5 border-y-base-bg3 border-y border-solid flex gap-2 flex-col md:flex-row md:items-center justify-between px-5 py-[11px]">
 				<div className="font-extralight text-sm text-gray-6 tracking-[0.04px]">2023 Yearly Cashflow Breakdown</div>
 				<div className="caption-1-400 text-gray-6 flex items-center gap-5">
 					<Checkbox id="cashflow" label="Cashflow" />

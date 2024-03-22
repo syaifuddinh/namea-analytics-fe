@@ -6,6 +6,10 @@ import MutationLabel from "@/components/atoms/mutation-label";
 import TinyText from "@/components/atoms/text/tiny";
 import Pile from "@/components/atoms/pile";
 import Icon from "@/components/atoms/icon";
+import {
+  DottedLeftArrowIcon,
+  DottedRightArrowIcon
+} from "@/components/atoms/Icons";
 
 const CurrencyCard = ({ 
 	currencyName,
@@ -45,10 +49,7 @@ const CurrencyCard = ({
 			<div className="px-[3px] pb-[3px]">
 				<div className="px-[12px] flex justify-between bg-base-bg5 rounded-t-[4px] rounded-b-[6px] border border-[var(--base-bg3)] max-h-[3.75rem]">
 					<div className="mt-[12px] mb-[29px]">
-						<Icon
-							src="dot-pattern.svg"
-							alt="dot pattern"
-						/>
+						<DottedLeftArrowIcon />
 					</div>
 					<div className="flex gap-2.5 items-center justify-center">
 						<Pile
@@ -61,10 +62,7 @@ const CurrencyCard = ({
 					</div>
 
 					<div className="mt-[29px] mb-[12px]">
-						<Icon
-							src="dot-pattern-2.svg"
-							alt="dot pattern 2"
-						/>
+						<DottedRightArrowIcon />
 					</div>
 				</div>
 			</div>

@@ -14,11 +14,13 @@
 		{
 			"id": "super-agent",
 			"name": "super agent",
+			"url": "/super-agent",
 			"childrens": []
 		},
 		{
 			"id": "agent",
 			"name": "agent",
+			"url": "/agent/overview",
 			"childrens": []
 		},
 		{
@@ -39,6 +41,7 @@
 		{
 			"id": "costing",
 			"name": "costing",
+			"url": "/costing",
 			"childrens": [
 				{
 					"id": "costing-item",

@@ -7,6 +7,13 @@ import { useEffect } from "react"
 export default function RowOptionInput({ 
 	value,
 	options,
+	variant = "default",
+	containerHeight="36px",
+	childrenHeight="1.75rem",
+	childrenBorderRadius="6px",
+	itemPaddingLeft="0.625rem",
+	width="216px",
+	borderRadius="0.625rem",
 	onChange
 }: FrequencyInputType) {
 	const [datasets, setDatasets] = useState(options)
@@ -15,7 +22,9 @@ export default function RowOptionInput({
 		return value
 	})
 
-	const onChangeData = newValue => {
+	const onChangeData = (newValue, e) => {
+		const href = e.target.getAttribute("href")
+		if(href === "#") e.preventDefault()
 		setDataValue(newValue)
 		onChange(newValue)
 	}
@@ -33,22 +42,21 @@ export default function RowOptionInput({
 	}, [value])
 
  	return (
-	    <div className="row-option-input border border-[var(--Gray4)] rounded-[0.625rem] p-[0.21rem] flex gap-1 -tracking-[0.14px] min-h-[36px] max-h-[36px] min-w-[216px] max-w-[216px]">
+	    <div
+	    	className="row-option-input border border-[var(--Gray4)] p-[0.21rem] flex gap-1 -tracking-[0.14px]"
+	    	style={{"minWidth": width, "width": width, "maxWidth": width, "maxHeight": containerHeight, "minHeight": containerHeight, "borderRadius": borderRadius}}
+	    >
 	    	{ 
 	    		options.map(item => (
-			    	<div
+			    	<a
 			    		key={item.value}
-			    		className={`row-option-input_item max-h-[1.75rem] py-[4px] px-[10px] cursor-pointer ${item.value === dataValue ? "text-[var(--Gray10)] bg-[var(--base-bg3)] rounded-[6px] border border-[var(--Gray1)]" : "text-[var(--Gray6)]"}`}
-			    		onClick={() => onChangeData(item.value)}
+			    		href={item.url ? item.url : "#"}
+			    		className={`row-option-input_item font-extralight text-center tracking-[0.06px] text-sm leading-5 grow flex items-center justify-center py-[4px] pr-[10px] cursor-pointer ${item.value === dataValue ? "text-[var(--Gray10)] bg-[var(--base-bg3)] border border-[var(--Gray1)]" : "text-[var(--Gray6)]"}`}
+			    		style={{"maxHeight": childrenHeight, "minHeight": childrenHeight, "paddingLeft": itemPaddingLeft, "borderRadius": childrenBorderRadius}}
+			    		onClick={(e) => onChangeData(item.value, e)}
 			    	>
-
-			    		<div
-			    			className="font-extralight tracking-[0.06px] text-sm leading-5"
-			    		>
-			    			
-				    		{ item.label }
-			    		</div>
-			    	</div>
+				    	{ item.label }
+			    	</a>
 	    		))
 	    	}
 	    </div>

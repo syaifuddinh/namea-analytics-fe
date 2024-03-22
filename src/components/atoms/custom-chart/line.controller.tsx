@@ -207,7 +207,9 @@ const useLineController = (
             })
 
             if(onGenerateTooltip) {
-                const tooltipLeftValue = lineLeftValue + 4  
+                const tooltipWidth = 131
+                let tooltipLeftValue = lineLeftValue + 4  
+                if(tooltipLeftValue + tooltipWidth > gridWidth) tooltipLeftValue = lineLeftValue - tooltipWidth - 4
                 const tooltipLeft = tooltipLeftValue + "px"
                 const tooltipBottom = lineBottomValue + "px"
                 const tooltipId = generateId()
