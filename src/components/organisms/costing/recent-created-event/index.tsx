@@ -132,7 +132,7 @@ export default function RecentCreatedEvent({
 				</Button>
 			</div>
 
-			<div className="mt-5 flex flex-col">
+			<div className="mt-5 flex flex-col *:mb-0 [&:nth-child(1)]:*:mt-0">
 				
 				{ items.map(item => (
 					<CardEvent
