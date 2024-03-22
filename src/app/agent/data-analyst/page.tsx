@@ -1,4 +1,5 @@
 "use client";
+
 import { IconArrowDown, IconArrowUp } from "@/components/atoms/Icons";
 import {
   CardDashboard,
@@ -14,6 +15,7 @@ import dummyDataAnalyst from "@/data/dummyDataAnalyst.json";
 import clsx from "clsx";
 import Link from "next/link";
 import { useState } from "react";
+import LineChart from "@/components/atoms/line-chart"
 
 export default function DataAnalystAgent() {
   //   const lang = await getDictionary();
@@ -92,16 +94,22 @@ export default function DataAnalystAgent() {
               />
             </div>
 
-            <div className="flex p-[1.125rem] bg-base-bg5 border-t border-t-base-bg3 gap-5 justify-center">
-              {dummyDataAnalyst.map((item) => (
-                <CardMonthlyAnalyst
-                  key={`monthly-analyst-${item.id}`}
-                  month={item.month}
-                  revenue={item.revenue}
-                  profit={item.profit}
-                  percentage={item.percentage}
-                />
-              ))}
+            <div className="bg-base-bg5 border-t border-t-base-bg3">
+                <div className="flex p-[1.125rem] gap-5 justify-center">
+                  {dummyDataAnalyst.map((item) => (
+                    <CardMonthlyAnalyst
+                      key={`monthly-analyst-${item.id}`}
+                      month={item.month}
+                      revenue={item.revenue}
+                      profit={item.profit}
+                      percentage={item.percentage}
+                    />
+                  ))}
+                </div>
+
+                <div className="px-5 pb-5">
+                  <LineChart className="mt-5" />
+                </div>
             </div>
           </>
         }

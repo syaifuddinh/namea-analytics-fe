@@ -13,7 +13,7 @@ export default function EventOverview({
 	return (
 		<div className={className}>
 			<TitleText>
-				Ovent Overview
+				Event Overview
 			</TitleText>
 
 			<div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
