@@ -108,7 +108,11 @@ export default function DataAnalystAgent() {
                 </div>
 
                 <div className="px-5 pb-5">
-                  <LineChart className="mt-5" />
+                  <LineChart
+                      className="mt-5"
+                      maxValue={100}
+                      values={[50, 40, 50, 30, 70, 60, 15, 50, 40, 30, 55, 100]}
+                  />
                 </div>
             </div>
           </>
