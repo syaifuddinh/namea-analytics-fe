@@ -111,7 +111,7 @@ export default function DataAnalystAgent() {
                   <LineChart
                       className="mt-5"
                       maxValue={100}
-                      values={[50, 40, 50, 30, 70, 60, 15, 50, 40, 30, 55, 100]}
+                      values={[80, 60, 40, 60, 20, 80, 60, 20, 60, 40, 20, 40, 80]}
                   />
                 </div>
             </div>
