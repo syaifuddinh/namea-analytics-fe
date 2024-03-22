@@ -9,7 +9,7 @@ export default function Pile({
 }) {
   return (
     <div
-    	className={`pile ${variant} ${variant === "secondary-success" ? "bg-success-10 outline-success-2" : ""}`}
+    	className={`pile ${variant} ${variant === "secondary-success" ? "bg-success-10 outline-success-2" : ""} ${className}`}
     	style={{width: size, height: size, outlineWidth: outlineWidth + "px", ...style}}
     >
         

@@ -15,12 +15,12 @@ export default function DepositCard({
 }) {
 	return (
 		<div className="event-deposit-card border border-gray-1 rounded-xl px-5 h-[112px] bg-base-bg4 flex flex-col justify-center">
-			<div className="font-extralight text-sm leading-5 text-gray-6">
+			<div className="font-extralight text-sm leading-5 text-gray-6 pt-[1px]">
 				{ title }
 			</div>	
 
 			<BalanceBadge
-				title={<MoneyText>{ balance }</MoneyText>}
+				title={<MoneyText letterSpacing="0.2px">{ balance }</MoneyText>}
 				subtitle={<MutationLabel variant={mutationVariant} value={mutation} />}
 				positivity="plus"
 				className="mt-2.5"

@@ -14,6 +14,7 @@ export const CardDashboardSA: React.FC<ICardDashboard> = ({
   topLineGap = "4px",
   contentMarginTop = "1.125rem",
   contentMarginX = "1.125rem",
+  bodyMarginLeft = "20px",
   valueStyle,
 }) => {
   return (
@@ -27,7 +28,10 @@ export const CardDashboardSA: React.FC<ICardDashboard> = ({
             style={{ "marginTop": contentMarginTop, "marginLeft": contentMarginX, "marginRight": contentMarginX }}
         >
           <div className="flex items-center">
-            <div className="flex flex-col gap-[0.125rem] m-5">
+            <div
+                className="flex flex-col gap-[0.125rem] m-5"
+                style={{ "marginLeft": bodyMarginLeft }}
+              >
               <Image
                 src={icon}
                 alt=""

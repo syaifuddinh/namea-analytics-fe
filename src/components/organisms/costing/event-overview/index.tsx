@@ -33,10 +33,11 @@ export default function EventOverview({
 		          placeholder={"Member Joined"}
 		          value={"Rp500.950.450"}
 		          profit={false}
-		          percentage={"16.5% (-8)"}
+		          percentage={"-16.5% (-8)"}
 		          topLineGap="6px"
 		          contentMarginTop="19px"
 		          contentMarginX="19px"
+		          bodyMarginLeft="19px"
 		        />
 		        
 				<CardDashboardSA
@@ -48,6 +49,7 @@ export default function EventOverview({
 		          topLineGap="6px"
 		          contentMarginTop="19px"
 		          contentMarginX="19px"
+		          bodyMarginLeft="19px"
 		        />
 			</div>
 		</div>
