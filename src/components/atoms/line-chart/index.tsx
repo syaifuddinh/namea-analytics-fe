@@ -16,6 +16,8 @@ export default function LineChart({
 }) {
     const boardRef = useRef(null)
     const [chartValues, setChartValues] = useState([])
+    const [boardHeight, setBoardHeight] = useState(0)
+    const [boardWidth, setBoardWidth] = useState(0)
 
     const [dotList, setDotList] = useState(() => {
         const response = [];
@@ -32,6 +34,8 @@ export default function LineChart({
         const boardEl = boardRef.current
         const dimension = boardEl.getBoundingClientRect()
         const { width, height } = dimension
+        setBoardHeight(height)
+        setBoardWidth(width)
         const length = values.length
         const gap = width / (length - 1)
         const newChartValues = []
@@ -46,7 +50,9 @@ export default function LineChart({
                 id: generateId(),
                 value: item,
                 left,
-                bottom
+                bottom,
+                leftValue,
+                bottomValue
             })
         })
 
@@ -69,7 +75,7 @@ export default function LineChart({
 
             <div
                 ref={boardRef}
-                className="absolute top-0 left-0 w-full h-full"
+                className="absolute z-10 top-0 left-0 w-full h-full"
              >
                 { chartValues.map(item => (
                     <Pile
@@ -81,6 +87,22 @@ export default function LineChart({
                     />
                 )) }
             </div>
+            <svg width={boardWidth} height={boardHeight} className="absolute top-0 left-0">
+                { chartValues.map((item, index) => (
+                    <>
+                        { index < chartValues.length - 1 && (
+                            <line
+                                key={item.id}
+                                x1={item.leftValue}
+                                y1={index === 0 ? (boardHeight * 0.95) - item.bottomValue : (item.bottomValue  - (boardHeight * 0.96) > -1 ? item.bottomValue  - (boardHeight * 0.96) : -(item.bottomValue  - (boardHeight * 0.96)) )}
+                                x2={chartValues[index + 1].leftValue}
+                                y2={chartValues[index + 1].bottomValue - (boardHeight * 0.96) > -1 ? chartValues[index + 1].bottomValue - (boardHeight * 0.96) : -(chartValues[index + 1].bottomValue - (boardHeight * 0.96))}
+                                style={{ stroke: "rgba(43, 205, 185, 0.2)", strokeWidth: 1 }}
+                            />
+                        ) }
+                    </>
+                )) }    
+            </svg>
         </div>
     )
 }
