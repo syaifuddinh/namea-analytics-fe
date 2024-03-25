@@ -128,10 +128,13 @@ export const CardInfoEventDetail: React.FC<ICardInfoEventDetail> = ({
           </div>
         </div>
 
-        <div className="flex flex-row items-center self-end bg-base-bg3 border border-gray-1 text-sm text-gray-6 pl-3 pr-2 py-2 h-[36px] rounded-lg font-extralight">
+        <a
+            className="flex flex-row items-center self-end bg-base-bg3 border border-gray-1 text-sm text-gray-6 pl-3 pr-2 py-2 h-[36px] rounded-lg font-extralight"
+            href="/costing/promotional/event/1"
+        >
           More Detail
           <IconChevronRight className="ml-[6px] !w-[1.313rem] !h-[1.5rem]" />
-        </div>
+        </a>
       </div>
     </>
   );
