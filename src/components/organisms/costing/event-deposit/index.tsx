@@ -26,7 +26,7 @@ export default function EventDeposit({
 			dividerPaddingLeft="18px"
 		>
 			<div className="bg-base-bg5 flex flex-col md:flex-row md:h-[284px] border-y border-base-bg3">
-				<div className="grow p-5 pt-[19px] grid grid-cols-1 gap-5 min-w-[275px]">
+				<div className="grow p-5 pt-[18px] grid grid-cols-1 gap-5 min-w-[275px]">
 					<DepositCard
 						title="Total Deposit"
 						balance="694.354.766"
