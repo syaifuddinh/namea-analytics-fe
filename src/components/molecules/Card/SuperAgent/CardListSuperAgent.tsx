@@ -20,7 +20,7 @@ export const CardListSuperAgent: React.FC<ICardListSuperAgent> = ({
   status,
 }) => {
   return (
-    <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mb-5">
+    <div className="flex flex-1 border border-gray-1 rounded-2xl bg-base-bg2 overflow-hidden mb-5 hover:mb-10 hover:bg-base-bg5">
       <div className="flex flex-1 flex-col border-t border-gray-1 mt-[4px] bg-base-bg5 rounded-t-xl">
         {rank <= 5 ? (
           <div className="max-w-max text-xs text-rank py-[2px] px-[10px] bg-bg-rank rounded-tl-xl rounded-br-md font-light">
