@@ -10,36 +10,36 @@ const members = [
 	{
 		"id": 1,
 		"thumbnail": <FinancialStatementImage1 />,
-		"name": "Agent Name",
-		"date": "26 July 2023, 09:30AM",
+		"name": "Agent name",
+		"date": "26 July 2023, 09.30AM",
 		"claimed": "500.950.450"
 	},
 	{
 		"id": 2,
 		"thumbnail": <FinancialStatementImage1 />,
-		"name": "Agent Name",
-		"date": "26 July 2023, 09:30AM",
+		"name": "Agent name",
+		"date": "26 July 2023, 09.30AM",
 		"claimed": "500.950.450"
 	},
 	{
 		"id": 3,
 		"thumbnail": <FinancialStatementImage1 />,
-		"name": "Agent Name",
-		"date": "26 July 2023, 09:30AM",
+		"name": "Agent name",
+		"date": "26 July 2023, 09.30AM",
 		"claimed": "500.950.450"
 	},
 	{
 		"id": 4,
 		"thumbnail": <FinancialStatementImage1 />,
-		"name": "Agent Name",
-		"date": "26 July 2023, 09:30AM",
+		"name": "Agent name",
+		"date": "26 July 2023, 09.30AM",
 		"claimed": "500.950.450"
 	},
 	{
 		"id": 5,
 		"thumbnail": <FinancialStatementImage1 />,
-		"name": "Agent Name",
-		"date": "26 July 2023, 09:30AM",
+		"name": "Agent name",
+		"date": "26 July 2023, 09.30AM",
 		"claimed": "500.950.450"
 	},
 ]
