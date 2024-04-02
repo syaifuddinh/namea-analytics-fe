@@ -21,7 +21,7 @@ export default function MemberCard({
 		<Card
 			isDividerVisible={false}
 			isUsePaddingBottom={false}
-			paddingTop="6px"
+			paddingTop="5px"
 		>
 			<div className="bg-base-bg5 border-t border-base-bg3 rounded-t-xl px-5 h-[84px] flex items-center justify-between">
 				<div className="flex items-center">

@@ -50,7 +50,7 @@ export default function PromotionalCostingPage() {
 
             <EventOverview className="mt-[60px]" />
             <EventDeposit className="mt-[60px]" />
-            <EventEnrolledMember className="mt-[66px]" />
+            <EventEnrolledMember className="mt-[58px]" />
         </CostingLayout>
     );
 }
